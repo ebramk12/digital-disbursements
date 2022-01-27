@@ -1,6 +1,6 @@
 {
-  "title": "Digital Disbursements Platform",
-  "name": "DigitalDisbursementsPlatform",
+  "title": "Digital Disbursements",
+  "name": "DigitalDisbursements",
   "brand": "Fiserv",
   "brandLogoURL": "https://raw.githubusercontent.com/Fiserv/Developer-Portal-Tenant-API/develop/assets/images/Fiserv_Logo.jpg",
   "solution": "merchants",
@@ -31,11 +31,11 @@
     "logoURL": "https://raw.githubusercontent.com/Fiserv/Developer-Portal-Tenant-API/develop/assets/images/Portal_Logo.png",
     "description": "To onboard properly into the Developer Studio as a tenant each product must support these APIs so that we can retrieve product specific API specifications and documentation.",
     "longDescription":"To onboard properly into the Developer Studi as a tenant each product must support these APIs so that we can retrieve product specific API specifications and documentation.",
-    "apiSpecification": "/v1/apis/DigitalDisbursementsPlatform",
-    "layout": "/v1/layouts/DigitalDisbursementsPlatform",
-    "documentation": "/v1/docs/DigitalDisbursementsPlatform",
-    "documenttree": "/v1/docs/DigitalDisbursementsPlatform",
-    "documenttreeV2": "/v2/docs/DigitalDisbursementsPlatform",
+    "apiSpecification": "/v1/apis/DigitalDisbursements",
+    "layout": "/v1/layouts/DigitalDisbursements",
+    "documentation": "/v1/docs/DigitalDisbursements",
+    "documenttree": "/v1/docs/DigitalDisbursements",
+    "documenttreeV2": "/v2/docs/DigitalDisbursements",
     "feature":[
       {
         "name": "sandBox",
@@ -57,17 +57,17 @@
   },
    "supportConfig": [{ 
 		"bug": {
-			"label": "bug,digitaldisbursementsplatform",
+			"label": "bug,DigitalDisbursements",
 			"template": "bug.md",
 			"assignees": "paul.mohl@fiserv.com,mandeep.yadav@fiserv.com"
 		},
 		"feedback": {
-			"label": "feedback,digitaldisbursementsplatform",
+			"label": "feedback,DigitalDisbursements",
 			"template": "feedback.md",
 			"assignees": "paul.mohl@fiserv.com"
 		},
 		"enhancement": {
-			"label": "enhancement,digitaldisbursementsplatform",
+			"label": "enhancement,DigitalDisbursements",
 			"template": "feature.md",
 			"assignees": "paul.mohl@fiserv.com"
 		}
