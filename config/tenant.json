@@ -3,7 +3,7 @@
   "name": "DigitalDisbursements",
   "brand": "Fiserv",
   "brandLogoURL": "https://raw.githubusercontent.com/Fiserv/Developer-Portal-Tenant-API/develop/assets/images/Fiserv_Logo.jpg",
-  "solution": "merchants",
+  "solution": ["merchants","carat"],
   "brandDescription": "REPLACE ME",
   "categories": [
     {
