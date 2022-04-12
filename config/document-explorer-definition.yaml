@@ -34,7 +34,7 @@
       open: true
       sections:
       - title: Contact Us
-        link: docs/introduction/contact-us.md
+        link: docs/introduction/contact-us1.md
       - title: Testing
         link: docs/getting-started/setup-tenant/setup-tenant.md
 - sections:
