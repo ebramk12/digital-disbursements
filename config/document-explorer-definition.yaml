@@ -34,10 +34,6 @@
       open: true
       sections:
       - title: Contact Us
-        link: docs/introduction/contact-us1.md
-      - title: Testing
-        link: docs/getting-started/setup-tenant/setup-tenant.md
-      - title: Testing123
         link: docs/introduction/contact.md
 - sections:
   - title: Getting Started
