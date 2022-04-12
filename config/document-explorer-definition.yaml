@@ -30,7 +30,7 @@
 
 - sections:
     - title: Introduction
-      link: docs/introduction/introduction.md
+      link: docs/documentation/changelog.md
       open: true
       sections:
       - title: Contact Us
