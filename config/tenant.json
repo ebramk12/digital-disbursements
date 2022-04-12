@@ -59,17 +59,17 @@
 		"bug": {
 			"label": "bug,DigitalDisbursements",
 			"template": "bug.md",
-			"assignees": "paul.mohl@fiserv.com,mandeep.yadav@fiserv.com"
+			"assignees": "shirish.joshi@fiserv.com,venkatasrinivasa.maridu@fiserv.com"
 		},
 		"feedback": {
 			"label": "feedback,DigitalDisbursements",
 			"template": "feedback.md",
-			"assignees": "paul.mohl@fiserv.com"
+			"assignees": "shirish.joshi@fiserv.com,venkatasrinivasa.maridu@fiserv.com"
 		},
 		"enhancement": {
 			"label": "enhancement,DigitalDisbursements",
 			"template": "feature.md",
-			"assignees": "paul.mohl@fiserv.com"
+			"assignees": "sreedhar.potturi@fiserv.com"
 		}
 	}]
 }
