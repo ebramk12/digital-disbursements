@@ -71,7 +71,7 @@ You've now got
 * Your Github repoistory cloned
 * Your tenant config files have been edited
 * Stoplight is connected to the repoistory
-* You have an API specification file and markdown files edited
+* You have an API specification file and markdown files edited. Test
 
 
 ___
