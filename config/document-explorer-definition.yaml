@@ -35,6 +35,9 @@
       sections:
       - title: Contact Us
         link: docs/introduction/contact-us.md
+      sections:
+        - title: Testing
+        link: docs/getting-started/setup-tenant/setup-tenant.md
 - sections:
   - title: Getting Started
     link: docs/getting-started.md
