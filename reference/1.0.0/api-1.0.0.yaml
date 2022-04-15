@@ -21,6 +21,8 @@ servers:
 paths:
   /ddp/v1/recipients/{recipientId}/accounts:
     post:
+      x-group-name: Add Cards
+      x-proxy-name: Add new card
       tags:
         - Digital Disbursement Platform Accounts APIs - Add Cards
       description: This API collects the funding information and stores in the user wallet for Disbursement. It creates a new record in user's profile.
@@ -103,6 +105,8 @@ paths:
                 $ref: '#/components/schemas/ServerError'
 
     get:
+      x-group-name: Add Cards
+      x-proxy-name: Get list of accounts
       tags:
         - Digital Disbursement Platform Accounts APIs - Add Cards
       description: This API retrieve the list of accounts associated with recipient profile.
