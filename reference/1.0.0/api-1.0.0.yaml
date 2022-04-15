@@ -182,6 +182,8 @@ paths:
 
   /ddp/v1/recipients/{recipientId}/accounts/{id}:
     get:
+      x-group-name: Add Cards
+      x-proxy-name: Get accounts
       tags:
         - Digital Disbursement Platform Accounts APIs - Add Cards
       description: This API retrieve the list of accounts associated with recipient profile.
