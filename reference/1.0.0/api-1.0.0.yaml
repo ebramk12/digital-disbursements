@@ -263,6 +263,8 @@ paths:
                 $ref: '#/components/schemas/ServerError'
 
     patch:
+      x-group-name: Update Cards
+      x-proxy-name: Updates Debit card details
       tags:
         - Digital Disbursement Platform Accounts APIs - Add Cards
       description: This API updates the Debit card details for existing card.
@@ -352,6 +354,8 @@ paths:
                 
   /ddp/v1/recipients/{recipientId}/cards/session:
     post:
+      x-group-name: Add Money Network Card
+      x-proxy-name: Init Money Network Card
       tags:
         - Digital Disbursement Platform APIs - Add Money Network Card
       description: This API is to initialize the session for New Money Network Card for Recipients on Disbursement portal.
@@ -439,6 +443,8 @@ paths:
 
   /ddp/v1/recipients/{recipientId}/cards:
     post:
+      x-group-name: Add Money Network Card
+      x-proxy-name: Create Money Network Card
       tags:
         - Digital Disbursement Platform APIs - Add Money Network Card
       description: This API is to create the New Money Network Card for Recipients on Disbursement portal.
