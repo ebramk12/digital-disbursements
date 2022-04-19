@@ -25,7 +25,9 @@
         "releaseNotesPath": "/release-notes/release-notes-1.0.0.md",
         "apiSpecFileNames": [
 	  "AccountVaultingService/ddp-account-services",
-	  "PayoutService/ddp-payment-services"
+	  "PayoutService/ddp-payment-services",
+	  "Recipient Services/ddp-recipient-services",	
+	  "NotificationService/ddp-notification-services"
 	]
       }
   ],
