@@ -183,7 +183,7 @@ paths:
       x-child-product-name: PayoutService
       tags:
         - Digital Disbursement Platform Payment APIs
-      description: This API is to cancel the transaction using transaction Id, only in case money is not disburse and in Initialization status. In case of ACH, cancelation can be done untill payment went out to backend payment processing engine. This should be used in case of multi recipeint transaction.
+      description: This API is to approve the transaction using transaction Id, only in case money is not disburse and in Initialization status. In case of ACH, cancelation can be done untill payment went out to backend payment processing engine. This should be used in case of multi recipeint transaction.
       parameters:
         - in: header
           name: Api-Key
@@ -260,7 +260,7 @@ paths:
   /ddp/v1/payments/{id}/disburse:
     patch:
       x-group-name: Payment
-      x-proxy-name: Disbursement
+      x-proxy-name: Disburse
       x-child-product-name: PayoutService
       tags:
         - Digital Disbursement Platform Payment APIs
