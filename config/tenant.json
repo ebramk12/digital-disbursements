@@ -24,7 +24,7 @@
         "versionType": "major",
         "releaseNotesPath": "/release-notes/release-notes-1.0.0.md",
         "apiSpecFileNames": [
-	  "AccountVaultingService/ddp-account-services",
+	  "AccountVaultingService/ddp-account-services-new",
 	  "PayoutService/ddp-payment-services",
 	  "Recipient Services/ddp-recipient-services",	
 	  "NotificationService/ddp-notification-services",
