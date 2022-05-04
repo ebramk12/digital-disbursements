@@ -11,7 +11,7 @@ info:
     Recipient Profile on Disbursement portal.
 
 servers:
-  - url:  https://qa.api.firstdata.com
+  - url:  https://int.api.firstdata.com
     description: This url is for QA testing.
   - url:  https://int.api.firstdata.com
     description: This url is for customer testing.
