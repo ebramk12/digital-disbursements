@@ -43,6 +43,7 @@
     "documentation": "/v1/docs/DigitalDisbursements",
     "documenttree": "/v1/docs/DigitalDisbursements",
     "documenttreeV2": "/v2/docs/DigitalDisbursements",
+    "sandbox": "/v1/sandboxrun/DigitalDisbursements",
     "feature":[
       {
         "name": "sandBox",
