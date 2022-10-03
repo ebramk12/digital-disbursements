@@ -27,7 +27,6 @@
 	  "AccountVaultingService/ddp-account-services",
 	  "PayoutService/ddp-payment-services",
 	  "Recipient Services/ddp-recipient-services",	
-	  "NotificationService/ddp-notification-services",
 	  "TransactionHistoryService/ddp-transactionhx-services"
 	]
       }
