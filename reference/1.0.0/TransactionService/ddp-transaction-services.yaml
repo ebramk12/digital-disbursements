@@ -19,9 +19,9 @@ servers:
 paths:
   /ddp/v1/transactions/recipients/{id}:
     get:
-      # x-group-name: Recipient Transactions
+      x-group-name: Transaction Service
       x-proxy-name: Get Transactions by Recipient Id
-      x-child-product-name: Transaction Service
+      # x-child-product-name: Transaction Service
       tags:
         - Digital Disbursement Platform Transactions APIs.
       description: This API returns all transactions associated with recipient. This included transactions Initialized and Disbursed both.
@@ -120,9 +120,9 @@ paths:
 
   /ddp/v1/transactions:
     get:
-      # x-group-name: Merchant Transactions
+      x-group-name: Transaction Service
       x-proxy-name: Get Transactions
-      x-child-product-name: Transaction Service
+      # x-child-product-name: Transaction Service
       tags:
         - Digital Disbursement Platform Transactions APIs.
       description: This API returns all transactions associated with merchant. This included transactions Initialized and Disbursed both.
@@ -215,9 +215,9 @@ paths:
 
   /ddp/v1/transactions/{transactionId}:
     get:
-      # x-group-name: Transactions
+      x-group-name: Transaction Service
       x-proxy-name: Get Transaction
-      x-child-product-name: Transaction Service
+      # x-child-product-name: Transaction Service
       tags:
         - Digital Disbursement Platform Transactions APIs.
       description: This API returns all transactions associated for a given transaction Id or merchant transaction Id.
@@ -288,9 +288,9 @@ paths:
 
   /ddp/v1/transactions/{transactionId}/payments/{paymentId}:
     get:
-      # x-group-name: Transactions
+      x-group-name: Transaction Service
       x-proxy-name: Get Payment
-      x-child-product-name: Transaction Service
+      # x-child-product-name: Transaction Service
       tags:
         - Digital Disbursement Platform Transactions APIs.
       description: This API retuns a payment transaction record associated with transaction id and payment id.
