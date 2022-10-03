@@ -28,7 +28,6 @@
 	  "PayoutService/ddp-payment-services",
 	  "Recipient Services/ddp-recipient-services",	
 	  "NotificationService/ddp-notification-services",
-	  "RoutingNumberValidation/ddp-account-validation",
 	  "TransactionHistoryService/ddp-transactionhx-services"
 	]
       }
