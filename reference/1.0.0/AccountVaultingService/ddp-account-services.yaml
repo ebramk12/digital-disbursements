@@ -354,6 +354,7 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/ServerError'
+  
   /v1/recipients/{recipientId}/accounts/validate:
     post:
       x-group-name: Recipient Accounts
@@ -402,7 +403,6 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/ServerError'
-
 
   /ddp/v1/recipients/{recipientId}/cards/session:
     post:
