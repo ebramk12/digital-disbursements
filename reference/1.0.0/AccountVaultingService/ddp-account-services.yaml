@@ -359,7 +359,7 @@ paths:
     post:
       x-group-name: Recipient Accounts
       x-proxy-name: Validate Account
-      x-child-product-name: RoutingNumberValidation
+      x-child-product-name: Account Vaulting Service
       tags:
         -  Digital Disbursement Platform API - Validate ACH Routing Number
       parameters:
