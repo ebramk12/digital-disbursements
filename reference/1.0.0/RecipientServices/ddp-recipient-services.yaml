@@ -21,9 +21,9 @@ servers:
 paths:
   /ddp/v1/recipients:
     post:
-      x-group-name: Recipient Accounts
-      x-proxy-name: Onboard Recipient
-      x-child-product-name: RecipientService
+      # x-group-name: Recipient Accounts
+      x-proxy-name: Create Recipient
+      x-child-product-name: Recipient Service
       tags:
         - Digital Disbursement Platform Recipient APIs.
       description: This API is to onboard recipient profile on Digital Disbursement Platform.
@@ -102,9 +102,9 @@ paths:
                 $ref: '#/components/schemas/ServerError'
 
     get:
-      x-group-name: Recipient Accounts
-      x-proxy-name: List Recipients
-      x-child-product-name: RecipientService
+      # x-group-name: Recipient Accounts
+      x-proxy-name: Get Recipients
+      x-child-product-name: Recipient Service
       tags:
         - Digital Disbursement Platform Recipient APIs.
       description: This API is to get list of recipient associated with merchant. This will return all approved recipient. Use search criteria to narrow down the list.
@@ -237,9 +237,9 @@ paths:
 
   /ddp/v1/recipients/{id}:
     get:
-      x-group-name: Recipient Accounts
-      x-proxy-name: Recipient Profile
-      x-child-product-name: RecipientService
+      # x-group-name: Recipient Accounts
+      x-proxy-name: Get Recipient
+      x-child-product-name: Recipient Service
       tags:
         - Digital Disbursement Platform Recipient APIs.
       description: This API is fetch the  recipient profile on Digital Disbursement Platform.
@@ -313,9 +313,9 @@ paths:
                 $ref: '#/components/schemas/ServerError'
 
     patch:
-      x-group-name: Recipient Accounts
-      x-proxy-name: Recipient Profile
-      x-child-product-name: RecipientService
+      # x-group-name: Recipient Accounts
+      x-proxy-name: Update Recipient
+      x-child-product-name: Recipient Service
       tags:
         - Digital Disbursement Platform Recipient APIs.
       description: This API is to patch the  recipient profile on Digital Disbursement Platform.

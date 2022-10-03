@@ -21,8 +21,8 @@ paths:
   /ddp/v1/recipients/{recipientId}/accounts:
     post:
       x-group-name: Recipient Accounts
-      x-proxy-name: Add Account
-      x-child-product-name: AccountVaultingService
+      x-proxy-name: Create Account
+      x-child-product-name: Account Vaulting Service
       tags:
         - Digital Disbursement Platform Accounts APIs
       description: This API collects the funding information and stores in the user wallet for Disbursement. It creates a new record in user's profile.
@@ -107,7 +107,7 @@ paths:
     get:
       x-group-name: Recipient Accounts
       x-proxy-name: Get Accounts
-      x-child-product-name: AccountVaultingService
+      x-child-product-name: Account Vaulting Service
       tags:
         - Digital Disbursement Platform Accounts APIs
       description: This API retrieve the list of accounts associated with recipient profile.
@@ -185,7 +185,7 @@ paths:
     get:
       x-group-name: Recipient Accounts
       x-proxy-name: Get Account
-      x-child-product-name: AccountVaultingService
+      x-child-product-name: Account Vaulting Service
       tags:
         - Digital Disbursement Platform Accounts APIs
       description: This API retrieve the list of accounts associated with recipient profile.
@@ -267,7 +267,7 @@ paths:
     patch:
       x-group-name: Recipient Accounts
       x-proxy-name: Update Account
-      x-child-product-name: AccountVaultingService
+      x-child-product-name: Account Vaulting Service
       tags:
         - Digital Disbursement Platform Accounts APIs
       description: This API updates the Debit card details for existing card.
@@ -359,7 +359,7 @@ paths:
     post:
       x-group-name: Money Network Card
       x-proxy-name: Initialize Session
-      x-child-product-name: AccountVaultingService
+      x-child-product-name: Account Vaulting Service
       tags:
         - Digital Disbursement Platform - Add Money Network Card
       description: This API is to initialize the session for New Money Network Card for Recipients on Disbursement portal.
@@ -448,8 +448,8 @@ paths:
   /ddp/v1/recipients/{recipientId}/cards:
     post:
       x-group-name: Money Network Card
-      x-proxy-name: Create New Card
-      x-child-product-name: AccountVaultingService
+      x-proxy-name: Create Card
+      x-child-product-name: Account Vaulting Service
       tags:
         - Digital Disbursement Platform - Add Money Network Card
       description: This API is to create the New Money Network Card for Recipients on Disbursement portal.

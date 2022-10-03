@@ -26,8 +26,8 @@
         "apiSpecFileNames": [
 	  "AccountVaultingService/ddp-account-services",
 	  "PayoutService/ddp-payment-services",
-	  "Recipient Services/ddp-recipient-services",	
-	  "TransactionHistoryService/ddp-transactionhx-services"
+	  "RecipientServices/ddp-recipient-services",	
+	  "TransactionService/ddp-transaction-services"
 	]
       }
   ],

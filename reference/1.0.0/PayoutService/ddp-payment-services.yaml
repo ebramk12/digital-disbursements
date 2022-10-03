@@ -21,9 +21,9 @@ servers:
 paths:
   /ddp/v1/payments:
     post:
-      x-group-name: Payment
-      x-proxy-name: Create
-      x-child-product-name: PayoutService
+      # x-group-name: Payment
+      x-proxy-name: Create Payment
+      x-child-product-name: Payout Service
       tags:
         - Digital Disbursement Platform Payment APIs
       description: This API can be use for disbursement of fund to individual of company recipeint.
@@ -97,9 +97,9 @@ paths:
 
   /ddp/v1/payments/{id}/cancel:
     patch:
-      x-group-name: Payment
-      x-proxy-name: Cancel
-      x-child-product-name: PayoutService
+      # x-group-name: Payment
+      x-proxy-name: Cancel Payment
+      x-child-product-name: Payout Service
       tags:
         - Digital Disbursement Platform Payment APIs
       description: This API is to cancel the transaction using transaction Id, only in case money is not disburse and in Initialization status. In case of ACH, cancelation can be done untill payment went out to backend payment processing engine. This should be used in case of multi recipeint transaction.
@@ -178,9 +178,9 @@ paths:
 
   /ddp/v1/payments/{id}/approve:
     patch:
-      x-group-name: Payment
-      x-proxy-name: Approve
-      x-child-product-name: PayoutService
+      # x-group-name: Payment
+      x-proxy-name: Approve Payment
+      x-child-product-name: Payout Service
       tags:
         - Digital Disbursement Platform Payment APIs
       description: This API is to approve the transaction using transaction Id, only in case money is not disburse and in Initialization status. In case of ACH, cancelation can be done untill payment went out to backend payment processing engine. This should be used in case of multi recipeint transaction.
@@ -259,9 +259,9 @@ paths:
 
   /ddp/v1/payments/{id}/disburse:
     patch:
-      x-group-name: Payment
-      x-proxy-name: Disburse
-      x-child-product-name: PayoutService
+      # x-group-name: Payment
+      x-proxy-name: Disburse Payment
+      x-child-product-name: Payout Service
       tags:
         - Digital Disbursement Platform Payment APIs
       description: This API collects the payment and other details for payment disbursement. This will be used by recipient to accept the money by providing funding information.
@@ -345,9 +345,9 @@ paths:
 
   /ddp/v1/payments/{id}/methods:
     get:
-      x-group-name: Payment
-      x-proxy-name: Payment Methods
-      x-child-product-name: PayoutService
+      # x-group-name: Payment
+      x-proxy-name: Get Payment Methods
+      x-child-product-name: Payout Service
       tags:
         - Digital Disbursement Platform Payment APIs
       description: This API returns all the different payment methods a merchant is subscribed and fee associated with those methods.
