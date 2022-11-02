@@ -573,8 +573,8 @@ components:
           default: false
           writeOnly: true
       example:
-        value: bjensen@example.com
-        type: work
+        value: "bjensen@example.com"
+        type: "work"
         primary: true
 
     MerchantInfo:
@@ -696,9 +696,9 @@ components:
           description: Defines the extension of the phone number.
           type: string
       example:
-        code: +91
-        value: 704-884-2754
-        type: billing
+        countryCode: "USA"
+        value: "704-884-2754"
+        type: "billing"
         extension: "2145"
 
     RecipientProfileInfo:
@@ -942,6 +942,8 @@ components:
         - ACCOUNT_NUMBER
         - DATE_OF_BIRTH
         - PHONE_NUMBER
+      example: "SPECIAL_CODE"
+
 
     Requestor:
       description: This is to identify request requestor.
