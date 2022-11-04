@@ -1441,6 +1441,7 @@ components:
         - TOKEN
         - VENMO
         - PAYPAL
+      example: PREPAID
 
     TSPID:
       description: A reference id provided to merchant in the response. This is to identtify source of tokenReferenceId. probabile values are define as enum.
