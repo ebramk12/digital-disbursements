@@ -42,11 +42,11 @@ paths:
           name: Timestamp
           description: >-
             Epoch timestamp in the request initiating system
-
-            Note:- Value supplied by Dev Studio
           required: true
+          readOnly: true
           schema:
             type: string
+          example: Value supplied by Dev Studio  
         - in: header
           name: Authorization
           description: >-
