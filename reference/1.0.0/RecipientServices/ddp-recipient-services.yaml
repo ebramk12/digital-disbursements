@@ -815,7 +815,7 @@ components:
         - ACCOUNT_NUMBER
         - DATE_OF_BIRTH
         - PHONE_NUMBER
-      example: "SPECIAL_CODE"
+      example: "DATE_OF_BIRTH"
 
 
     Requestor:
