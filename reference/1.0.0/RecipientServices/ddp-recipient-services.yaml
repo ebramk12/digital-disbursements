@@ -425,9 +425,7 @@ components:
       description: Email address for the user.
       type: object
       required:
-        - type
         - value
-        - primary
       properties:
         type:
           description: >-
@@ -437,18 +435,15 @@ components:
             additional type values to be used at the discretion of the service
             client.
           type: string
-          writeOnly: true
         value:
           description: The value SHOULD be specified according to RFC5321.
           type: string
-          writeOnly: true
         primary:
           description: >-
             Defines if this entry is to be used as the primary or default for
             the user.
           type: boolean
           default: false
-          writeOnly: true
       example:
         value: "bjensen@example.com"
         type: "work"
