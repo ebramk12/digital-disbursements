@@ -803,6 +803,7 @@ components:
         - LOCKED
         - HOLD
         - CLOSED
+      example: "ACTIVE"    
 
     RecipientIdentifier:
       description: Recipient's Identification Type.
@@ -824,6 +825,7 @@ components:
       enum:
         - MERCHANT
         - RECIPIENT
+      example: "MERCHANT"  
 
     Reason:
       description: Reason code for the status Change Or Create
@@ -836,6 +838,7 @@ components:
         - SIGNUP
       default: CLIENT_INITIATED
       readOnly: true
+      example: "CLIENT_INITIATED"
 
 #-------------------------------------
 # response Models
