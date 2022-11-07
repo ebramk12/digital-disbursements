@@ -583,11 +583,11 @@ components:
       type: object
       required:
        - recipientType
+       - recipientId
        - firstName
        - lastName
        - doingBusinessAs
        - emailAddress
-       - MerchantCustomerId/recipientId
        - recipientIdentifier
        - recipientIdentifierValue
        - address
