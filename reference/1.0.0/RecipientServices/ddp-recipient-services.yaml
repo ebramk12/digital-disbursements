@@ -77,7 +77,8 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/RecipientProfileRequest'
+              $ref: '#/components/schemas/RecipientProfileRequest' 
+
       responses:
         '201':
           description: Recipient Profile  Creation Success
@@ -158,7 +159,6 @@ paths:
           required: true
           schema:
             type: string
-
 
       responses:
         '200':
@@ -840,9 +840,7 @@ components:
       readOnly: true
       example: "CLIENT_INITIATED"
 
-#-------------------------------------
-# response Models
-#-------------------------------------
+
 
     NoContent:
       description: The request succeeded but there’s really nothing to show.
@@ -873,4 +871,4 @@ components:
       type: object
       properties:
         error:
-          $ref: '#/components/schemas/Error'
+          $ref: '#/components/schemas/Error' 
