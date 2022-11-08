@@ -8,7 +8,7 @@ info:
   title: Digital Disbursement Platform Recipient APIs.
   description: >-
     This Specification document lists the APIs required to onboard
-    Recipient Profile on Disbursement portal.
+    Recipient Profile on Digital Disbursement portal.
 
 servers:
   - url:  https://qa.api.firstdata.com
