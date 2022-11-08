@@ -22,7 +22,7 @@ paths:
   /ddp/v1/payments:
     post:
       x-group-name: Payment Service
-      x-proxy-name: Direct Disbursement
+      x-proxy-name: Create & Pay 
       # x-child-product-name: Payout Service
       tags:
         - Digital Disbursement Platform Payment APIs
@@ -175,13 +175,13 @@ paths:
                 $ref: '#/components/schemas/ServerError'
 
   /ddp/v1/payments/{id}/disburse:
-    patch:
+    post:
       x-group-name: Payment Service
-      x-proxy-name: Disburse Payment
+      x-proxy-name: Disburse Payment 
       # x-child-product-name: Payout Service
       tags:
         - Digital Disbursement Platform Payment APIs
-      description: This API collects the payment and other details for payment disbursement. This will be used by recipient to accept the money by providing funding information.
+      description: This API collects the Payment information make a payment.
       parameters:
         - in: header
           name: Api-Key
@@ -227,7 +227,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/DisbursementRequest'
+              $ref: '#/components/schemas/DisbursePayment'
       responses:
         '201':
           description: Disbursement response - Success
@@ -353,6 +353,40 @@ components:
           minItems: 1
           items:
               $ref: '#/components/schemas/RecipientInfo'
+        merchantTransactionId:
+          description: Provided by merchant and must be associated with transaction Id.
+          type: string
+          example: "b4d44892-5b8d-11ed-9b6a-0242ac120002"
+          writeOnly: true
+        batchNumber:
+          description: Provided by FED to merchant.
+          type: string
+          example: "0242ac120002"
+          writeOnly: true
+        applyDate:
+          $ref: '#/components/schemas/ApplyDate'
+        customFields:
+          type: array
+          minItems: 0
+          items:
+            $ref: '#/components/schemas/NVP'
+          uniqueItems: true
+          
+    DisbursePayment:
+      title: Initialization request object model.
+      type: object
+      required:
+        - amount
+        - recipient
+        - merchantTransactionId
+      properties:
+        amount:
+          $ref: '#/components/schemas/Amount'
+        recipient:
+          type: array
+          minItems: 1
+          items:
+              $ref: '#/components/schemas/RecipientInformation'
         merchantTransactionId:
           description: Provided by merchant and must be associated with transaction Id.
           type: string
@@ -661,6 +695,50 @@ components:
             $ref: '#/components/schemas/Paypal'
         echeck:
             $ref: '#/components/schemas/ECheck'
+
+    RecipientInformation:
+      description: Details about recipient and amount associated with the recipient.
+      type: object
+      required:
+        - recipientProfileInfo
+        - payments
+      properties:
+        recipientProfileInfo:
+            $ref: '#/components/schemas/RecipientProfileInformation'
+        description:
+            $ref: '#/components/schemas/Description'
+        payments:
+            $ref: '#/components/schemas/PaymentInfo'
+        source:
+            $ref: '#/components/schemas/FundingSourceType'
+        card:
+            $ref: '#/components/schemas/Card'
+        ach:
+            $ref: '#/components/schemas/ACH'
+        prepaid:
+            $ref: '#/components/schemas/Prepaid'
+        venmo:
+            $ref: '#/components/schemas/Venmo'
+        paypal:
+            $ref: '#/components/schemas/Paypal'
+        echeck:
+            $ref: '#/components/schemas/ECheck'
+    
+    RecipientProfileInformation:
+      description: This Request model is for Recipient Profile information
+      type: object
+      required:
+       - recipientType
+       - firstName
+       - lastName
+       - emailAddress
+       - DateOfBirth/TIN
+       - merchantCustomerId/recipientId
+       - address
+      properties:
+        merchantCustomerId:
+           $ref: '#/components/schemas/MerchantCustomerId'
+
 
     RecipientProfileInfo:
       description: This Request model is for Recipient Profile information
