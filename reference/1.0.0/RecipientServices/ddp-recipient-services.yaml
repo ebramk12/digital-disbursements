@@ -884,7 +884,7 @@ components:
 
   example:
     MinimalRequest:
-      value: {merchant: {merchantCustomerId: 9876543234567}, recipient: {recipientType: "Consumer", emailAddress:{type:'work',value:'test'}}}
+      value: {merchant: {merchantCustomerId: 9876543234567}, recipient: {recipientType: 'Consumer', emailAddress: {type:'work',value:'test'}}}
     FullRequest:
-      value: {merchant: {merchantCustomerId: 9876543234567}, recipient: {recipientType: 'Consumer', emailAddress:{type:'work',value:'test'}}}
+      value: {merchant: {merchantCustomerId: 9876543234567}, recipient: {recipientType: 'Consumer', emailAddress: {type:'work',value:'test'}}}
 
