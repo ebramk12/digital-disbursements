@@ -847,9 +847,7 @@ components:
       readOnly: true
       example: "CLIENT_INITIATED"
 
-#-------------------------------------
-# response Models
-#-------------------------------------
+
 
     NoContent:
       description: The request succeeded but there’s really nothing to show.
@@ -881,10 +879,12 @@ components:
       properties:
         error:
           $ref: '#/components/schemas/Error'
-
+  
+#-------------------------------------
+# Examples 
+#-------------------------------------
   example:
     MinimalRequest:
       value: {merchant: {merchantCustomerId: 9876543234567}, recipient: {recipientType: 'Consumer', emailAddress: {type:'work',value:'test'}}}
     FullRequest:
       value: {merchant: {merchantCustomerId: 9876543234567}, recipient: {recipientType: 'Consumer', emailAddress: {type:'work',value:'test'}}}
-
