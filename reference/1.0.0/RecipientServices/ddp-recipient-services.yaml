@@ -885,5 +885,9 @@ components:
   example:
     MinimalRequest:  
       value:
+        merchant:
+          merchantCustomerId: 123456 
     FullRequest:  
       value:
+        merchant:
+          merchantCustomerId: 123456 
