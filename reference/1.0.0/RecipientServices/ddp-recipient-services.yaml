@@ -29,10 +29,10 @@ paths:
         - Digital Disbursement Platform Recipient APIs.
       description: This API is to onboard recipient profile on Digital Disbursement Platform.
       parameters:
-        - {$ref: '#/components/parameters/ApiKeyHeader'}
-        - {$ref: '#/components/parameters/TimestampHeader'}
-        - {$ref: '#/components/parameters/AuthorizationHeader'}
-        - {$ref: '#/components/parameters/ClientRequestIdHeader'}
+        - $ref: '#/components/parameters/ApiKeyHeader'
+        - $ref: '#/components/parameters/TimestampHeader'
+        - $ref: '#/components/parameters/AuthorizationHeader'
+        - $ref: '#/components/parameters/ClientRequestIdHeader'
 
       requestBody:
         description: Details required to add the recipient.
@@ -74,10 +74,10 @@ paths:
         - Digital Disbursement Platform Recipient APIs.
       description: This API is fetch the  recipient profile on Digital Disbursement Platform.
       parameters:
-        - {$ref: '#/components/parameters/ApiKeyHeader'}
-        - {$ref: '#/components/parameters/TimestampHeader'}
-        - {$ref: '#/components/parameters/AuthorizationHeader'}
-        - {$ref: '#/components/parameters/ClientRequestIdHeader'}
+        - $ref: '#/components/parameters/ApiKeyHeader'
+        - $ref: '#/components/parameters/TimestampHeader'
+        - $ref: '#/components/parameters/AuthorizationHeader'
+        - $ref: '#/components/parameters/ClientRequestIdHeader'
 
       responses:
         200:
