@@ -23,6 +23,7 @@ paths:
     post:
       x-group-name: Recipient Service
       x-proxy-name: Create Recipient
+      x-default-example: FullRequest
       # x-child-product-name: Recipient Service
       tags:
         - Digital Disbursement Platform Recipient APIs.
@@ -78,6 +79,13 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/RecipientProfileRequest' 
+            examples:
+              Minimal Request:
+                summary: Minimal Request
+                $ref: '#/components/examples/MinimalRequest'
+              Full Request:
+                summary: Full Request
+                $ref: '#/components/examples/FullRequest'
 
       responses:
         '201':
@@ -871,4 +879,115 @@ components:
       type: object
       properties:
         error:
-          $ref: '#/components/schemas/Error' 
+          $ref: '#/components/schemas/Error'
+  examples:
+    MinimalRequest:
+      value: {
+              "merchant": {
+                "merchantCustomerId": 9876543234567
+              },
+              "recipient": {
+                "recipientType": "Consumer",
+                "recipientId": "0d3c99f9-d7dd-4e0e-9c86-71d189ecdc95",
+                "firstName": "First Name",
+                "lastName": "Last Name",
+                "dateOfBirth": "11/11/2011",
+                "emailAddress": {
+                  "type": "work",
+                  "value": "bjensen@example.com",
+                  "primary": true
+                },
+                "phoneNumber": {
+                  "countryCode": "USA",
+                  "value": "704-884-2754",
+                  "type": "billing",
+                  "extension": "2145"
+                },
+                "recipientIdentifier": "DATE_OF_BIRTH",
+                "recipientIdentifierValue": "03/12/2011",
+                "status": "ACTIVE",
+                "reason": "CLIENT_INITIATED",
+                "guest": true,
+                "address": {
+                  "type": "work",
+                  "houseNumberOrName": "string",
+                  "street": "100 Universal City Plaza",
+                  "city": "Hollywood",
+                  "stateOrProvince": "CA",
+                  "postalCode": "91608",
+                  "country": "USA",
+                  "formatted": "100 Universal City Plaza\nHollywood, CA 91608 US",
+                  "primary": true
+                },
+                "Description": "New Recipinet",
+                "ceatedBy": "User1234",
+                "updatedBy": "User1235"
+              }
+            }
+    FullRequest:
+      value: {
+              "merchant": {
+                "merchantCustomerId": 9876543234567
+              },
+              "recipient": {
+                "recipientType": "Consumer",
+                "recipientId": "0d3c99f9-d7dd-4e0e-9c86-71d189ecdc95",
+                "firstName": "First Name",
+                "lastName": "Last Name",
+                "doingBusinessAs": "Last Name",
+                "dateOfBirth": "11/11/2011",
+                "tin": "345-55-2345",
+                "ssn": "633-55-2345",
+                "emailAddress": {
+                  "type": "work",
+                  "value": "bjensen@example.com",
+                  "primary": true
+                },
+                "additionalEmailAddresses": [
+                  {
+                    "type": "work",
+                    "value": "bjensen@example.com",
+                    "primary": true
+                  }
+                ],
+                "userId": "passw0rd!",
+                "password": "passw0rd!",
+                "phoneNumber": {
+                  "countryCode": "USA",
+                  "value": "704-884-2754",
+                  "type": "billing",
+                  "extension": "2145"
+                },
+                "recipientIdentifier": "DATE_OF_BIRTH",
+                "recipientIdentifierValue": "03/12/2011",
+                "status": "ACTIVE",
+                "reason": "CLIENT_INITIATED",
+                "guest": true,
+                "address": {
+                  "type": "work",
+                  "houseNumberOrName": "string",
+                  "street": "100 Universal City Plaza",
+                  "city": "Hollywood",
+                  "stateOrProvince": "CA",
+                  "postalCode": "91608",
+                  "country": "USA",
+                  "formatted": "100 Universal City Plaza\nHollywood, CA 91608 US",
+                  "primary": true
+                },
+                "Description": "New Recipinet",
+                "ceatedBy": "User1234",
+                "updatedBy": "User1235"
+              },
+              "customFields": [
+                {
+                  "key": "string",
+                  "value": "string",
+                  "valueAsList": [
+                    {
+                      "Id": "string",
+                      "value": "string"
+                    }
+                  ]
+                }
+              ]
+            }
