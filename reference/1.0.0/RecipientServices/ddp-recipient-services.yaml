@@ -749,7 +749,6 @@ components:
             - field: example id
               message: exampleId is mandatory
 
-
 #-------------------------------------
 # ENUM Models
 #-------------------------------------
@@ -801,9 +800,6 @@ components:
       default: CLIENT_INITIATED
       readOnly: true
       example: "CLIENT_INITIATED"
-
-
-
     NoContent:
       description: The request succeeded but there’s really nothing to show.
     BadRequest:
