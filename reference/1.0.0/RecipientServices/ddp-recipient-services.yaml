@@ -879,10 +879,12 @@ components:
       properties:
         error:
           $ref: '#/components/schemas/Error' 
+
 #-------------------------------------
 # Examples 
 #-------------------------------------
-  example:
+
+  examples:
     MinimalRequest:
       value: {merchant: {merchantCustomerId: 9876543234567}, recipient: {recipientType: 'Consumer', emailAddress: {type:'work',value:'test'}}}
     FullRequest:
