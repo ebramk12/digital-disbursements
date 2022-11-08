@@ -883,8 +883,8 @@ components:
           $ref: '#/components/schemas/Error'
 
   example:
-    MinimalRequest:  
-      value: {merchant: {merchantCustomerId: 9876543234567}, recipient: {recipientType: 'Consumer', emailAddress:{type:'work',value:'test'}}
-    FullRequest:  
-      value: {merchant: {merchantCustomerId: 9876543234567}, recipient: {recipientType: 'Consumer', emailAddress:{type:'work',value:'test'}}
+    MinimalRequest:
+      value: {merchant: {merchantCustomerId: 9876543234567}, recipient: {recipientType: "Consumer", emailAddress:{type:'work',value:'test'}}}
+    FullRequest:
+      value: {merchant: {merchantCustomerId: 9876543234567}, recipient: {recipientType: 'Consumer', emailAddress:{type:'work',value:'test'}}}
 
