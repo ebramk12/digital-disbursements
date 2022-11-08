@@ -78,6 +78,13 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/RecipientProfileRequest'
+        example:   
+          minimal:
+            summary: Minimal Request 
+            $ref: '#/components/example/MinimalRequest'   
+          full:
+            summary: Full Request 
+            $ref: '#/components/example/FullRequest'   
       responses:
         '201':
           description: Recipient Profile  Creation Success
@@ -874,3 +881,9 @@ components:
       properties:
         error:
           $ref: '#/components/schemas/Error'
+
+  example:
+    MinimalRequest:  
+      value:
+    FullRequest:  
+      value:
