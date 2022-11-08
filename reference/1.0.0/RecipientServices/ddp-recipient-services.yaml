@@ -137,8 +137,7 @@ components:
         proxies. The key uniquely identifies the client app.
       required: true
       schema:
-        type: string
-      default: Value supplied by Dev Studio  
+        type: Value supplied by Dev Studio
     TimestampHeader:
       in: header
       name: Timestamp
@@ -146,8 +145,7 @@ components:
         Epoch timestamp in the request initiating system
       required: true
       schema:
-        type: string  
-      default: Value supplied by Dev Studio   
+        type: Value supplied by Dev Studio  
     AuthorizationHeader:
       in: header
       name: Authorization
@@ -156,8 +154,7 @@ components:
         {hmacToken}`
       required: true
       schema:
-        type: string  
-      default: Value supplied by Dev Studio 
+        type: Value supplied by Dev Studio  
     ClientRequestIdHeader:
       in: header
       name: Client-Request-Id
@@ -171,8 +168,8 @@ components:
         increases the risk of duplicate transactions.
       required: true
       schema:
-        type: string  
-      default: Value supplied by Dev Studio     
+        type: Value supplied by Dev Studio  
+    
   responses:
     BadRequest:
       description: The request cannot be validated.
