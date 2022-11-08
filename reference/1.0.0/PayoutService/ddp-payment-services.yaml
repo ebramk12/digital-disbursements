@@ -22,7 +22,7 @@ paths:
   /ddp/v1/payments:
     post:
       x-group-name: Payment Service
-      x-proxy-name: Create Payment
+      x-proxy-name: Direct Disbursement
       # x-child-product-name: Payout Service
       tags:
         - Digital Disbursement Platform Payment APIs
