@@ -878,8 +878,7 @@ components:
       type: object
       properties:
         error:
-          $ref: '#/components/schemas/Error'
-  
+          $ref: '#/components/schemas/Error' 
 #-------------------------------------
 # Examples 
 #-------------------------------------
