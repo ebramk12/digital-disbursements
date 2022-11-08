@@ -279,6 +279,17 @@ paths:
                 $ref: '#/components/schemas/ServerError'
 
 components:
+#-------------------------------------
+# Examples 
+#-------------------------------------
+
+  examples:
+    MinimalRequest:
+      value: {merchant: {merchantCustomerId: 9876543234567}, recipient: {recipientType: 'Consumer', emailAddress: {type:'work',value:'test'}}}
+    FullRequest:
+      value: {merchant: {merchantCustomerId: 9876543234567}, recipient: {recipientType: 'Consumer', emailAddress: {type:'work',value:'test'}}}
+
+
   schemas:
 #------------------------------------------
 # Request/ Reponse Model
@@ -879,13 +890,3 @@ components:
       properties:
         error:
           $ref: '#/components/schemas/Error' 
-
-#-------------------------------------
-# Examples 
-#-------------------------------------
-
-  examples:
-    MinimalRequest:
-      value: {merchant: {merchantCustomerId: 9876543234567}, recipient: {recipientType: 'Consumer', emailAddress: {type:'work',value:'test'}}}
-    FullRequest:
-      value: {merchant: {merchantCustomerId: 9876543234567}, recipient: {recipientType: 'Consumer', emailAddress: {type:'work',value:'test'}}}
