@@ -1492,3 +1492,11 @@ components:
           ach:
             accountNumber: '92658250156'
             routingNumber: '999999999'
+    UpdateAccountFullRequest:
+      value:
+        accounts:
+          card:
+            expiryDate:
+              month: '09'
+              year: '22'
+              default: true
