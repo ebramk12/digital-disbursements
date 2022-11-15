@@ -32,7 +32,7 @@
     - title: Introduction
       link: docs/introduction/introduction.md
     - title: Interactive guide
-      link: docs/introduction/interactive-guide.md
+      link: docs/interactive-guide/interactive-guide.md
     - title: Frequently Asked Questions
       link: docs/faq/faq.md
 #      open: true
