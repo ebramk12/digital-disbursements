@@ -216,7 +216,7 @@ paths:
               DeactivateVaultedAccount: { summary: Deactivate vaulted account, $ref: '#/components/examples/DeactivateVaultedAccountRequest' }
               ActivateInactiveAccount: { summary: Reactivate vaulted account, $ref: '#/components/examples/ActivateInactiveAccountRequest' }
               UpdateDefaultPaymentMethod: { summary: Update recipient default payment method, default flag should be in respective payment method(ach, card, prepaid), $ref: '#/components/examples/UpdateDefaultPaymentMethodRequest' }
-              UpdateAccountFull: { summary: Default includes all fields, $ref: '#/components/examples/UpdateAccountFullRequest' }
+              DefaultRequest: { summary: Default includes all fields, $ref: '#/components/examples/UpdateAccountFullRequest' }
       responses:
         '204':
           description: Success
@@ -1465,13 +1465,18 @@ components:
             accountNumber: '4005550000000019'
             default: true
     UpdateCardExpiryRequest:
-      value:
-        accounts:
-          card:
-            expiryDate:
-              month: '09'
-              year: '22'
-              default: true
+      value: {
+          "accounts": {
+            "card": {
+              "expiryDate": {
+                "month": "09",
+                "year": "20"
+              },
+              "default": true
+            }
+          }
+      }
+
     DeactivateVaultedAccountRequest:
       value:
         accounts:
@@ -1481,10 +1486,13 @@ components:
         accounts:
           status: 'ACTIVE'
     UpdateDefaultPaymentMethodRequest:
-      value:
-        accounts:
-          ach:
-            default: true
+      value: {
+          "accounts": {
+               "ach" : {
+                    "default" : true
+               }
+          }
+      }
     AchAccountVaultRequest:
       value:
         accounts:
@@ -1492,12 +1500,17 @@ components:
             accountNumber: '92658250156'
             routingNumber: '999999999'
     UpdateAccountFullRequest:
-      value:
-        accounts:
-          ach:
-            default: true
-          card:
-            expiryDate:
-              month: '09'
-              year: '22'
-            default: false
+      value: {
+      "accounts": {
+        "card": {
+          "expiryDate": {
+            "month": "09",
+            "year": "20"
+          },
+          "default": true
+        },
+        "ach": {
+          "default": true
+        }
+      }
+    }
