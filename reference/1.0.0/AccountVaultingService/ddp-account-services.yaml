@@ -23,6 +23,7 @@ paths:
       x-group-name: Recipient Accounts
       x-proxy-name: Create Account
       x-child-product-name: Account Vaulting Service
+      x-default-example: DefaultRequest
       tags:
         - Digital Disbursement Platform Accounts Vault Payment method APIs
       summary: Vault payment method.
@@ -47,7 +48,7 @@ paths:
               PrepaidCardNumber:  {summary: Vault Prepaid card information, $ref: '#/components/examples/PrepaidCardVaultRequest'}
               PrepaidCardAccountNumber:  {summary: Vault Prepaid card information, $ref: '#/components/examples/PrepaidCardAccountVaultRequest'}
               AchAccount:  {summary: Vault ACH account information, $ref: '#/components/examples/AchAccountVaultRequest'}
-              default: {$ref: '#/components/schemas/AccountRequest'}
+              DefaultRequest: {summary: Vault account information, $ref: '#/components/examples/AddAccountDefaultRequest'}
       responses:
         '201':
           description: Success
@@ -1501,3 +1502,110 @@ components:
               month: '09'
               year: '22'
             default: false
+    AddAccountDefaultRequest:
+      value:
+      {
+        "accounts": {
+          "card": {
+            "cardNumber": "4111111111111111",
+            "nameOnCard": "John Smith",
+            "billingAddress": {
+              "type": "work",
+              "street": "100 Universal City Plaza",
+              "city": "Hollywood",
+              "stateOrProvince": "CA",
+              "postalCode": "91608",
+              "country": "US",
+              "formatted": "100 Universal City Plaza\nHollywood, CA 91608 US",
+              "primary": true
+            },
+            "billingPhone": {
+              "code": 91,
+              "value": "704-884-2754",
+              "type": "billing",
+              "extension": "2145"
+            },
+            "expiryDate": {
+              "month": "09",
+              "year": "20"
+            },
+            "token": {
+              "tokenId": "292bb6b886fc4446894f878b7e32bd5e",
+              "tokenProvider": "TRANS_ARMOR",
+              "tspId": 400,
+              "expiryDate": {
+                "month": "09",
+                "year": "20"
+              }
+            },
+            "nickName": "John",
+            "default": true
+          },
+          "ach": {
+            "accountNumber": "92658250156",
+            "routingNumber": "999999999",
+            "type": "SAVINGS",
+            "token": {
+              "tokenId": "292bb6b886fc4446894f878b7e32bd5e",
+              "tokenProvider": "TRANS_ARMOR",
+              "tspId": 400,
+              "expiryDate": {
+                "month": "09",
+                "year": "20"
+              }
+            },
+            "nickName": "John",
+            "default": false
+          },
+          "prepaid": {
+            "cardNumber": "6759-6498-2643-0010",
+            "accountNumber": "4226-4982-6438-0010",
+            "token": {
+              "tokenId": "292bb6b886fc4446894f878b7e32bd5e",
+              "tokenProvider": "TRANS_ARMOR",
+              "tspId": 400,
+              "expiryDate": {
+                "month": "09",
+                "year": "20"
+              }
+            },
+            "nickName": "John",
+            "default": true
+          },
+          "venmo": {
+            "phone": {
+              "code": 91,
+              "value": "704-884-2754",
+              "type": "billing",
+              "extension": "2145"
+            },
+            "subject": "string",
+            "message": "string"
+          },
+          "paypal": {
+            "email": {
+              "value": "bjensen@example.com",
+              "type": "work",
+              "primary": true
+            },
+            "subject": "string",
+            "message": "string",
+            "phone": {
+              "code": 91,
+              "value": "704-884-2754",
+              "type": "billing",
+              "extension": "2145"
+            },
+            "paypalPayerId": "string"
+          },
+          "token": {
+            "tokenId": "292bb6b886fc4446894f878b7e32bd5e",
+            "tokenProvider": "TRANS_ARMOR",
+            "tspId": 400,
+            "expiryDate": {
+              "month": "09",
+              "year": "20"
+            }
+          }
+        }
+      }
