@@ -91,7 +91,12 @@ paths:
         - $ref: '#/components/parameters/TimestampHeader'
         - $ref: '#/components/parameters/AuthorizationHeader'
         - $ref: '#/components/parameters/ClientRequestIdHeader'
-
+        - in: path
+          name: id
+          description: Unique Id associated with Recipient Profile while set up. The value can be MerchantCustomerId or RecipientId. Merchant provision through Apigee should always pass MerchantCustomerId.
+          required: true
+          schema:
+            type: string
     patch:
       x-group-name: Recipient Service
       x-proxy-name: Update Recipient
@@ -126,6 +131,12 @@ paths:
         - $ref: '#/components/parameters/TimestampHeader'
         - $ref: '#/components/parameters/AuthorizationHeader'
         - $ref: '#/components/parameters/ClientRequestIdHeader'
+        - in: path
+          name: id
+          description: Unique Id associated with Recipient Profile while set up. The value can be MerchantCustomerId or RecipientId. Merchant provision through Apigee should always pass MerchantCustomerId.
+          required: true
+          schema:
+            type: string
 
 components:
   parameters:
