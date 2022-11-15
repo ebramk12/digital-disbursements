@@ -1,3 +1,3 @@
-# How we can help you
+## Some frequently asked questions
 
-[What are the recipient types available for claim digital payments?](?path=docs/faq/ans/recipientTpes.md)
+[What are the recipient types available for claim digital payments?](?path=faq/ans/recipientTpes.md)
