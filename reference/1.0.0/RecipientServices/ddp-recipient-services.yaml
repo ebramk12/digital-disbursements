@@ -97,6 +97,7 @@ paths:
           required: true
           schema:
             type: string
+
     patch:
       x-group-name: Recipient Service
       x-proxy-name: Update Recipient
