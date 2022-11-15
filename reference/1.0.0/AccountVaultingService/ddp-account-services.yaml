@@ -190,6 +190,7 @@ paths:
       x-group-name: Recipient Accounts
       x-proxy-name: Update Account
       x-child-product-name: Account Vaulting Service
+      x-default-example: CompleteUpdateAccount
       tags:
         - Digital Disbursement Platform Accounts APIs
       summary: Update vaulted payment method
@@ -215,7 +216,7 @@ paths:
               DeactivateVaultedAccount: { summary: Deactivate vaulted account, $ref: '#/components/examples/DeactivateVaultedAccountRequest' }
               ActivateInactiveAccount: { summary: Reactivate vaulted account, $ref: '#/components/examples/ActivateInactiveAccountRequest' }
               UpdateDefaultPaymentMethod: { summary: Update recipient default payment method, default flag should be in respective payment method(ach, card, prepaid), $ref: '#/components/examples/UpdateDefaultPaymentMethodRequest' }
-              default: { $ref: '#/components/schemas/UpdateAccountRequest' }
+              UpdateAccountFull: { summary: Default includes all fields, $ref: '#/components/examples/UpdateAccountFullRequest' }
       responses:
         '204':
           description: Success
@@ -1490,3 +1491,13 @@ components:
           ach:
             accountNumber: '92658250156'
             routingNumber: '999999999'
+    UpdateAccountFullRequest:
+      value:
+        accounts:
+          ach:
+            default: true
+          card:
+            expiryDate:
+              month: '09'
+              year: '22'
+            default: false
