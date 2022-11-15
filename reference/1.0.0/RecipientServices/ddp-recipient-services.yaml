@@ -97,6 +97,8 @@ paths:
           required: true
           schema:
             type: string
+
+  /ddp/v1/recipients/{id}:
     patch:
       x-group-name: Recipient Service
       x-proxy-name: Update Recipient
