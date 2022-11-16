@@ -36,9 +36,12 @@ paths:
             schema:
               $ref: '#/components/schemas/RecipientProfileRequest'
             examples:
-              Minimal Request:
-                summary: Minimal Request
-                $ref: '#/components/examples/MinimalRequest'
+              Consumer Request:
+                summary: Consumer Request
+                $ref: '#/components/examples/ConsumerRequest'
+              Company Request:
+                summary: Company Request
+                $ref: '#/components/examples/CompanyRequest'
               Full Request:
                 summary: Full Request
                 $ref: '#/components/examples/FullRequest'
@@ -885,29 +888,27 @@ components:
 # Examples
 #-------------------------------------  
   examples:
-    MinimalRequest:
+    ConsumerRequest:
       value: {
               "merchant": {
-                "merchantCustomerId": 9876543234567
+                "merchantCustomerId": "Consumer1234"
               },
               "recipient": {
                 "recipientType": "Consumer",
                 "firstName": "First Name",
                 "lastName": "Last Name",
-                "dateOfBirth": "11/11/2011",
+                "dateOfBirth": "01/01/2000",
                 "emailAddress": {
                   "type": "work",
-                  "value": "bjensen@example.com",
+                  "value": "first.last@email.com",
                   "primary": true
                 },
                 "phoneNumber": {
                   "countryCode": "USA",
-                  "value": "704-884-2754",
+                  "value": "123-456-7890",
                   "type": "home",
-                  "extension": "2145"
+                  "extension": "0000"
                 },
-                "recipientIdentifier": "DATE_OF_BIRTH",
-                "recipientIdentifierValue": "11/11/2011",
                 "guest": true,
                 "address": {
                   "type": "work",
@@ -919,8 +920,45 @@ components:
                   "formatted": "100 Universal City Plaza, Hollywood, CA 91608 US",
                   "primary": true
                 },
+                "recipientIdentifier": "DATE_OF_BIRTH",
+                "recipientIdentifierValue": "01/01/2000",
               }
             }
+    CompanyRequest:
+      value: {
+              "merchant": {
+                "merchantCustomerId": "Company1234"
+              },
+              "recipient": {
+                "recipientType": "Company",
+                "tin": "123456789",
+                "doingBusinessAs": "Company Name",
+                "emailAddress": {
+                  "type": "work",
+                  "value": "company@email.com",
+                  "primary": true
+                },
+                "phoneNumber": {
+                  "code": 1,
+                  "value": "123-456-7890",
+                  "type": "home",
+                  "extension": "0000"
+                },
+                "guest": true,
+                "address": {
+                  "type": "work",
+                  "street": "100 Universal City Plaza",
+                  "city": "Hollywood",
+                  "stateOrProvince": "CA",
+                  "postalCode": "91608",
+                  "country": "USA",
+                  "formatted": "100 Universal City Plaza, Hollywood, CA 91608 US",
+                  "primary": true
+                },
+                "recipientIdentifier": "SPECIAL_CODE",
+                "recipientIdentifierValue": "1234567890",
+              }
+            }            
     FullRequest:
       value: {
               "merchant": {
