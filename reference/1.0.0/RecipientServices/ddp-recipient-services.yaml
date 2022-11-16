@@ -23,7 +23,7 @@ paths:
     post:
       x-group-name: Recipient Service
       x-proxy-name: Create Recipient
-      x-default-example: FullRequest
+      x-default-example: Consumer Request
       # x-child-product-name: Recipient Service
       tags:
         - Digital Disbursement Platform Recipient APIs.
