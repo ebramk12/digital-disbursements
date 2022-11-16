@@ -791,39 +791,39 @@ components:
 #------------------------------------------
   responses:
     BadRequest:
-      description: The request cannot be validated.
+      description: Invalid request format/data.
       content:
         application/json:
           schema: {$ref: '#/components/schemas/Error'}
           example:
-            value:  {
-                      "code": "400005",
-                      "message": "Invalid request format/data.",
-                      "category": "common",
-                      "developerInfo": {
-                        "developerMessage": "Invalid request format/data.",
-                        "fieldError": [
-                          {
-                            "field": "doingBusinessAs",
-                            "message": "Doing Business As is missing."
-                          }
-                        ]
-                      }
-                    }
+            {
+              "code": "400005",
+              "message": "Invalid request format/data.",
+              "category": "common",
+              "developerInfo": {
+                "developerMessage": "Invalid request format/data.",
+                "fieldError": [
+                  {
+                    "field": "doingBusinessAs",
+                    "message": "Doing Business As is missing."
+                  }
+                ]
+              }
+            }
     Unauthorized:
       x-model-version: 1.0
-      description: The request was unauthorized.
+      description: Invalid requestor or Authorization.
       content:
         application/json:
           schema: {$ref: '#/components/schemas/Error'}
           example:
-            value:  {
-                      "code": "401021",
-                      "message": "Invalid requestor or Authorization",
-                      "developerInfo": {
-                          "developerMessage": "Invalid requestor or Authorization"
-                      }
-                    }
+            {
+              "code": "401021",
+              "message": "Invalid requestor or Authorization",
+              "developerInfo": {
+                  "developerMessage": "Invalid requestor or Authorization"
+              }
+            }
     NotFound:
       x-model-version: 1.0
       description: The requested resource does not exist.
