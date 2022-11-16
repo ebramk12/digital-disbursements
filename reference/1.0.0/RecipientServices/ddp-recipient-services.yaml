@@ -19,47 +19,6 @@ servers:
     description: This is production url.
 
 paths:
-  /ddp/v1/recipients/{id}:
-    patch:
-      x-group-name: Recipient Service
-      x-proxy-name: Update Recipient
-      # x-child-product-name: Recipient Service
-      tags:
-        - Digital Disbursement Platform Recipient APIs.
-      description: This API is to patch the  recipient profile on Digital Disbursement Platform.
-      requestBody:
-        description: Details required to add the recipient.
-        required: true
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/UpdateRecipientRequest'
-      responses:
-        200:
-          description: Success
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/UpdateProfileResponse'
-        400:
-          $ref: '#/components/responses/BadRequest'
-        401:
-          $ref: '#/components/responses/Unauthorized'
-        409:
-          $ref: '#/components/responses/ServerError'
-        500:
-          $ref: '#/components/responses/ServerError'
-      parameters:
-        - $ref: '#/components/parameters/ApiKeyHeader'
-        - $ref: '#/components/parameters/TimestampHeader'
-        - $ref: '#/components/parameters/AuthorizationHeader'
-        - $ref: '#/components/parameters/ClientRequestIdHeader'
-        - in: path
-          name: id
-          description: Unique Id associated with Recipient Profile while set up. The value can be MerchantCustomerId or RecipientId. Merchant provision through Apigee should always pass MerchantCustomerId.
-          required: true
-          schema:
-            type: string
   /ddp/v1/recipients:
     post:
       x-group-name: Recipient Service
@@ -138,7 +97,46 @@ paths:
           required: true
           schema:
             type: string
-
+    patch:
+      x-group-name: Recipient Service
+      x-proxy-name: Update Recipient
+      # x-child-product-name: Recipient Service
+      tags:
+        - Digital Disbursement Platform Recipient APIs.
+      description: This API is to patch the  recipient profile on Digital Disbursement Platform.
+      requestBody:
+        description: Details required to add the recipient.
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/UpdateRecipientRequest'
+      responses:
+        200:
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/UpdateProfileResponse'
+        400:
+          $ref: '#/components/responses/BadRequest'
+        401:
+          $ref: '#/components/responses/Unauthorized'
+        409:
+          $ref: '#/components/responses/ServerError'
+        500:
+          $ref: '#/components/responses/ServerError'
+      parameters:
+        - $ref: '#/components/parameters/ApiKeyHeader'
+        - $ref: '#/components/parameters/TimestampHeader'
+        - $ref: '#/components/parameters/AuthorizationHeader'
+        - $ref: '#/components/parameters/ClientRequestIdHeader'
+        - in: path
+          name: id
+          description: Unique Id associated with Recipient Profile while set up. The value can be MerchantCustomerId or RecipientId. Merchant provision through Apigee should always pass MerchantCustomerId.
+          required: true
+          schema:
+            type: string
 
 components:
   parameters:
