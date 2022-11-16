@@ -191,12 +191,20 @@ components:
         application/json:
           schema: {$ref: '#/components/schemas/Error'}
           example:
-            gatewayResponse:
-              transactionProcessingDetails: {apiTraceId: 7027b61dbf7645399d204dbfa0de0870,
-                clientRequestId: 9bb0664a21fc48e3a1cef1f067fced3f}
-            error:
-            - {type: GATEWAY, code: '105', field: amount.currency, message: Invalid
-                amount or currency}
+            value:  {
+                        "code": "400005",
+                        "message": "Invalid request format/data.",
+                        "category": "common",
+                        "developerInfo": {
+                            "developerMessage": "Invalid request format/data.",
+                            "fieldError": [
+                                {
+                                    "field": "doingBusinessAs",
+                                    "message": "Doing Business As is missing."
+                                }
+                            ]
+                        }
+                    }
     Unauthorized:
       x-model-version: 1.0
       description: The request was unauthorized.
@@ -204,11 +212,13 @@ components:
         application/json:
           schema: {$ref: '#/components/schemas/Error'}
           example:
-            gatewayResponse:
-              transactionProcessingDetails: {apiTraceId: 7027b61dbf7645399d204dbfa0de0870,
-                clientRequestId: 9bb0664a21fc48e3a1cef1f067fced3f}
-            error:
-            - {type: APIM, message: ApiKey and/or Authentication supplied are invalid.}
+            value: {
+                        "code": "401021",
+                        "message": "Invalid requestor or Authorization",
+                        "developerInfo": {
+                            "developerMessage": "Invalid requestor or Authorization"
+                        }
+                    }
     NotFound:
       x-model-version: 1.0
       description: The requested resource does not exist.
@@ -216,11 +226,14 @@ components:
         application/json:
           schema: {$ref: '#/components/schemas/Error'}
           example:
-            gatewayResponse:
-              transactionProcessingDetails: {apiTraceId: 7027b61dbf7645399d204dbfa0de0870,
-                clientRequestId: 9bb0664a21fc48e3a1cef1f067fced3f}
-            error:
-            - {type: APIM, message: Resource not found.}
+            value:  {
+                        "code": "404001",
+                        "message": "No data found for the request.",
+                        "category": "common",
+                        "developerInfo": {
+                            "developerMessage": "No data found for the request."
+                        }
+                    }
     RequestTimeout:
       x-model-version: 1.0
       description: The request was timed out due to not receiving the request in time.
