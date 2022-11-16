@@ -797,18 +797,18 @@ components:
           schema: {$ref: '#/components/schemas/Error'}
           example:
             value:  {
-                        "code": "400005",
-                        "message": "Invalid request format/data.",
-                        "category": "common",
-                        "developerInfo": {
-                            "developerMessage": "Invalid request format/data.",
-                            "fieldError": [
-                                {
-                                    "field": "doingBusinessAs",
-                                    "message": "Doing Business As is missing."
-                                }
-                            ]
-                        }
+                      "code": "400005",
+                      "message": "Invalid request format/data.",
+                      "category": "common",
+                      "developerInfo": {
+                        "developerMessage": "Invalid request format/data.",
+                        "fieldError": [
+                          {
+                            "field": "doingBusinessAs",
+                            "message": "Doing Business As is missing."
+                          }
+                        ]
+                      }
                     }
     Unauthorized:
       x-model-version: 1.0
@@ -817,12 +817,12 @@ components:
         application/json:
           schema: {$ref: '#/components/schemas/Error'}
           example:
-            value: {
-                        "code": "401021",
-                        "message": "Invalid requestor or Authorization",
-                        "developerInfo": {
-                            "developerMessage": "Invalid requestor or Authorization"
-                        }
+            value:  {
+                      "code": "401021",
+                      "message": "Invalid requestor or Authorization",
+                      "developerInfo": {
+                          "developerMessage": "Invalid requestor or Authorization"
+                      }
                     }
     NotFound:
       x-model-version: 1.0
@@ -832,12 +832,12 @@ components:
           schema: {$ref: '#/components/schemas/Error'}
           example:
             value:  {
-                        "code": "404001",
-                        "message": "No data found for the request.",
-                        "category": "common",
-                        "developerInfo": {
-                            "developerMessage": "No data found for the request."
-                        }
+                      "code": "404001",
+                      "message": "No data found for the request.",
+                      "category": "common",
+                      "developerInfo": {
+                          "developerMessage": "No data found for the request."
+                      }
                     }
     Conflict:
       x-model-version: 1.0
@@ -847,18 +847,18 @@ components:
           schema: {$ref: '#/components/schemas/Error'}
           example:
             value:  {
-                        "code": "409001",
-                        "message": "Conflict with existing record.",
-                        "category": "common",
-                        "developerInfo": {
-                            "developerMessage": "Conflict with existing record.",
-                            "fieldError": [
-                                {
-                                "field": "merchantCustomerId",
-                                "message": "Merchant Customer Id must be unique."
-                                }
-                            ]
-                        }
+                      "code": "409001",
+                      "message": "Conflict with existing record.",
+                      "category": "common",
+                      "developerInfo": {
+                        "developerMessage": "Conflict with existing record.",
+                        "fieldError": [
+                          {
+                            "field": "merchantCustomerId",
+                            "message": "Merchant Customer Id must be unique."
+                          }
+                        ]
+                      }
                     }
     RequestTimeout:
       x-model-version: 1.0
