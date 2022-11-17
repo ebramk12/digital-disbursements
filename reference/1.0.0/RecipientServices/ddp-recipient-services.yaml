@@ -738,7 +738,6 @@ components:
 #-------------------------------------
 # Error Models
 #-------------------------------------
-
     Error:
       description: (Response Only) Model for error messaging
       type: object
@@ -777,16 +776,16 @@ components:
                   message:
                     description: Information specific to a property or attribute.
                     type: string
-          example:
-            code: '40000'
-            message: Example Error
-            category: example
-            developerInfo:
-              developerMessage: Invalid Message format in request payload
-              moreInfo: 'https://www.example.com/errors/40000'
-              fieldError:
-                - field: example id
-                  message: exampleId is mandatory
+        example:
+          code: '40000'
+          message: Example Error
+          category: example
+          developerInfo:
+            developerMessage: Invalid Message format in request payload
+            moreInfo: 'https://www.example.com/errors/40000'
+            fieldError:
+              - field: example id
+                message: exampleId is mandatory
 #------------------------------------------
 # Error Reponses 
 #------------------------------------------
