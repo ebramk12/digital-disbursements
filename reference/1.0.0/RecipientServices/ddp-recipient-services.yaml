@@ -874,7 +874,7 @@ components:
                       "developerInfo": {
                           "developerMessage": "The request was timed out."
                       }
-                    }    ServerError:
+                    }
       x-model-version: 1.0
       description: An unexpected internal server error occurred.
       content:
