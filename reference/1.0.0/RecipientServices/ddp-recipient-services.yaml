@@ -862,28 +862,33 @@ components:
                     }
     RequestTimeout:
       x-model-version: 1.0
-      description: The request was timed out due to not receiving the request in time.
+      description: The request was timed out due.
       content:
         application/json:
           schema: {$ref: '#/components/schemas/Error'}
           example:
-            gatewayResponse:
-              transactionProcessingDetails: {apiTraceId: 7027b61dbf7645399d204dbfa0de0870,
-                clientRequestId: 9bb0664a21fc48e3a1cef1f067fced3f}
-            error:
-            - {type: APIM, message: Broken client connectivity.}
-    ServerError:
+            value:  {
+                      "code": "408",
+                      "message": "The request was timed out.",
+                      "category": "common",
+                      "developerInfo": {
+                          "developerMessage": "The request was timed out."
+                      }
+                    }    ServerError:
       x-model-version: 1.0
       description: An unexpected internal server error occurred.
       content:
         application/json:
           schema: {$ref: '#/components/schemas/Error'}
           example:
-            gatewayResponse:
-              transactionProcessingDetails: {apiTraceId: 7027b61dbf7645399d204dbfa0de0870,
-                clientRequestId: 9bb0664a21fc48e3a1cef1f067fced3f}
-              error:
-              - {type: GATEWAY, message: Error sending request to Transarmor.}
+            value:  {
+                      "code": "500",
+                      "message": "An unexpected internal server error occurred.",
+                      "category": "common",
+                      "developerInfo": {
+                          "developerMessage": "An unexpected internal server error occurred."
+                      }
+                    }
 #-------------------------------------
 # Examples
 #-------------------------------------  
