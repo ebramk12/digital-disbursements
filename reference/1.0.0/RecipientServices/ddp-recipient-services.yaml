@@ -831,14 +831,14 @@ components:
         application/json:
           schema: {$ref: '#/components/schemas/Error'}
           example:
-            value:  {
-                      "code": "404001",
-                      "message": "No data found for the request.",
-                      "category": "common",
-                      "developerInfo": {
-                          "developerMessage": "No data found for the request."
-                      }
-                    }
+            {
+              "code": "404001",
+              "message": "No data found for the request.",
+              "category": "common",
+              "developerInfo": {
+                  "developerMessage": "No data found for the request."
+              }
+            }
     Conflict:
       x-model-version: 1.0
       description: The requeste conflict with existing record.
@@ -846,20 +846,20 @@ components:
         application/json:
           schema: {$ref: '#/components/schemas/Error'}
           example:
-            value:  {
-                      "code": "409001",
-                      "message": "Conflict with existing record.",
-                      "category": "common",
-                      "developerInfo": {
-                        "developerMessage": "Conflict with existing record.",
-                        "fieldError": [
-                          {
-                            "field": "merchantCustomerId",
-                            "message": "Merchant Customer Id must be unique."
-                          }
-                        ]
-                      }
-                    }
+            {
+              "code": "409001",
+              "message": "Conflict with existing record.",
+              "category": "common",
+              "developerInfo": {
+                "developerMessage": "Conflict with existing record.",
+                "fieldError": [
+                  {
+                    "field": "merchantCustomerId",
+                    "message": "Merchant Customer Id must be unique."
+                  }
+                ]
+              }
+            }
     RequestTimeout:
       x-model-version: 1.0
       description: The request was timed out due.
@@ -867,14 +867,14 @@ components:
         application/json:
           schema: {$ref: '#/components/schemas/Error'}
           example:
-            value:  {
-                      "code": "408",
-                      "message": "The request was timed out.",
-                      "category": "common",
-                      "developerInfo": {
-                          "developerMessage": "The request was timed out."
-                      }
-                    }
+            {
+              "code": "408",
+              "message": "The request was timed out.",
+              "category": "common",
+              "developerInfo": {
+                  "developerMessage": "The request was timed out."
+              }
+            }
     ServerError:
       x-model-version: 1.0
       description: An unexpected internal server error occurred.
@@ -882,14 +882,14 @@ components:
         application/json:
           schema: {$ref: '#/components/schemas/Error'}
           example:
-            value:  {
-                      "code": "500",
-                      "message": "An unexpected internal server error occurred.",
-                      "category": "common",
-                      "developerInfo": {
-                          "developerMessage": "An unexpected internal server error occurred."
-                      }
-                    }
+            {
+              "code": "500",
+              "message": "An unexpected internal server error occurred.",
+              "category": "common",
+              "developerInfo": {
+                  "developerMessage": "An unexpected internal server error occurred."
+              }
+            }
 #-------------------------------------
 # Examples
 #-------------------------------------  
