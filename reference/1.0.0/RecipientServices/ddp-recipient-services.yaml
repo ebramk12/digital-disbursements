@@ -604,48 +604,6 @@ components:
       type: string
       example: Consumer
 
-#-------------------------------------
-# Error Models
-#-------------------------------------
-
-    Error:
-      description: (Response Only) Model for error messaging
-      type: object
-      properties:
-        code:
-          type: string
-          description: >-
-            Uniquely identifies an error condition. Client applications need to
-            read and handle errors based on this.
-        message:
-          type: string
-          description: A generic description of the error condition.
-        category:
-          type: string
-          description: The resource associated with the error condition.
-        developerInfo:
-          type: object
-          description: >-
-            Information that needs to be understood by the client developers and
-            should not be interpreted for application processing.
-          properties:
-            developerMessage:
-              type: string
-              description: An elaborative description of the error description.
-            moreInfo:
-              type: string
-              description: Link to the error in Developer page.
-            fieldError:
-              description: Detailed information about message format errors.
-              type: array
-              items:
-                properties:
-                  field:
-                    description: The property or attribute associated with the error
-                    type: string
-                  message:
-                    description: Information specific to a property or attribute.
-                    type: string
 
 #-------------------------------------
 # ENUM Models
@@ -776,6 +734,59 @@ components:
       schema:
         type: string
       example: Value supplied by Dev Studio
+
+#-------------------------------------
+# Error Models
+#-------------------------------------
+
+    Error:
+      description: (Response Only) Model for error messaging
+      type: object
+      properties:
+        code:
+          type: string
+          description: >-
+            Uniquely identifies an error condition. Client applications need to
+            read and handle errors based on this.
+        message:
+          type: string
+          description: A generic description of the error condition.
+        category:
+          type: string
+          description: The resource associated with the error condition.
+        developerInfo:
+          type: object
+          description: >-
+            Information that needs to be understood by the client developers and
+            should not be interpreted for application processing.
+          properties:
+            developerMessage:
+              type: string
+              description: An elaborative description of the error description.
+            moreInfo:
+              type: string
+              description: Link to the error in Developer page.
+            fieldError:
+              description: Detailed information about message format errors.
+              type: array
+              items:
+                properties:
+                  field:
+                    description: The property or attribute associated with the error
+                    type: string
+                  message:
+                    description: Information specific to a property or attribute.
+                    type: string
+          example:
+            code: '40000'
+            message: Example Error
+            category: example
+            developerInfo:
+              developerMessage: Invalid Message format in request payload
+              moreInfo: 'https://www.example.com/errors/40000'
+              fieldError:
+                - field: example id
+                  message: exampleId is mandatory
 #------------------------------------------
 # Error Reponses 
 #------------------------------------------
@@ -836,6 +847,7 @@ components:
         application/json:
           schema: {$ref: '#/components/schemas/Error'}
           example:
+          
             value:  {
                       "code": "409001",
                       "message": "Conflict with existing record.",
@@ -857,11 +869,14 @@ components:
         application/json:
           schema: {$ref: '#/components/schemas/Error'}
           example:
-            gatewayResponse:
-              transactionProcessingDetails: {apiTraceId: 7027b61dbf7645399d204dbfa0de0870,
-                clientRequestId: 9bb0664a21fc48e3a1cef1f067fced3f}
-            error:
-            - {type: APIM, message: Broken client connectivity.}
+            value:  {
+                      "code": "408",
+                      "message": "No data found for the request.",
+                      "category": "common",
+                      "developerInfo": {
+                          "developerMessage": "No data found for the request."
+                      }
+                    }
     ServerError:
       x-model-version: 1.0
       description: An unexpected internal server error occurred.
@@ -869,11 +884,14 @@ components:
         application/json:
           schema: {$ref: '#/components/schemas/Error'}
           example:
-            gatewayResponse:
-              transactionProcessingDetails: {apiTraceId: 7027b61dbf7645399d204dbfa0de0870,
-                clientRequestId: 9bb0664a21fc48e3a1cef1f067fced3f}
-              error:
-              - {type: GATEWAY, message: Error sending request to Transarmor.}
+            value:  {
+                      "code": "500",
+                      "message": "An unexpected internal server error occurred.",
+                      "category": "common",
+                      "developerInfo": {
+                          "developerMessage": "An unexpected internal server error occurred."
+                      }
+                    }
 #-------------------------------------
 # Examples
 #-------------------------------------  
