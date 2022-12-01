@@ -35,6 +35,8 @@
       link: docs/interactive-guide/interactive-guide.md
     - title: Frequently Asked Questions
       link: docs/faq/faq.md
+    - title: Request a Sandbox
+      link: docs/sandbox/sandbox.md
 #      open: true
 #      sections:
 #      - title: Contact Us
