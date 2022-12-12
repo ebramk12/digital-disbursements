@@ -7,3 +7,6 @@
 [How should we differentiate between a declined payment response?](?path=docs/faq/ans/dpr.md)
 
 [What is TIN? Also, which use case involves passing value for TIN](?path=docs/faq/ans/tin.md)
+
+[Since merchantCustomerID is unique to the customers ,does that mean if the same customer has made withdrawals multiple times, then when we disburse to the customer, the merchantCustomerID will be the same?](?path=docs/faq/ans/uniquMCID.md)
+
