@@ -10,3 +10,8 @@
 
 [Since merchantCustomerID is unique to the customers ,does that mean if the same customer has made withdrawals multiple times, then when we disburse to the customer, the merchantCustomerID will be the same?](?path=docs/faq/ans/uniquMCID.md)
 
+[Is the mobile number mandatory for create recipient?](?path=docs/faq/ans/isMobile.md)
+
+[Why is Consumer recipient GUEST value is passed as True? Why is this required when posting the recipient?](?path=docs/faq/ans/recipientGuest.md)
+
+[What are Recipient Identifier Types? How are they used in integration for Consumer?](?path=docs/faq/ans/recipientIdentifier.md)
