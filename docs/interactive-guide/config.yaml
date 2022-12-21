@@ -1,0 +1,5 @@
+version: 1.0.0
+interactive-guide:
+- link: interactive-guide/api-flow/apiflow.md
+  title: How to Create, Read, Update, and Delete a Recipient Profile
+  type: interactive-guide
