@@ -39,9 +39,9 @@
       link: docs/sandbox/request.md
 #      open: true
 
-#- Interactive guide:
-#    - title: How to Create, Read, Update, and Delete a Customer Profile
-#      link: docs/interactive-guide/api-flow/apiflow.md
+- Interactive guide:
+    - title: How to Create, Read and Update a Recipient Profile
+      link: docs/interactive-guide/api-flow/apiflow.md
 
 #      sections:
 #      - title: Contact Us
