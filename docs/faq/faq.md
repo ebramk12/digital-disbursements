@@ -16,6 +16,13 @@
 
 [What are Recipient Identifier Types? How are they used in integration for Consumer?](?path=docs/faq/ans/recipientIdentifier.md)
 
-[what are the IPS to be whitelisted for webhooks by client?](?path=docs/faq/ans/webhookIp.md)
+[what are the IPS to be whitelisted for webhooks by client?](?path=docs/faq/ans/webhookIP.md)
 
 [Do DDP support HMAC in web hook notification?](?path=docs/faq/ans/webhookNotification.md)
+
+[What is the process for generating and agreeing about the secret key for the HMAC to secure the notifications?](?path=docs/faq/ans/hmacgeneration.md)
+
+[What is the process for generating and agreeing about the secret key for the HMAC to secure the notifications?](?path=docs/faq/ans/environmentURL.md)
+
+[Will we receive a response and notification at the same time (if we send a POST Payment request do we expect to receive a response and to be notified also for that status)?](?path=docs/faq/ans/notificationResponse.md)
+
