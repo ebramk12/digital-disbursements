@@ -38,6 +38,11 @@
     - title: Request a Sandbox
       link: docs/sandbox/request.md
 #      open: true
+
+#- Interactive guide:
+#    - title: How to Create, Read, Update, and Delete a Customer Profile
+#      link: docs/interactive-guide/api-flow/apiflow.md
+
 #      sections:
 #      - title: Contact Us
 #        link: docs/introduction/contact.md
