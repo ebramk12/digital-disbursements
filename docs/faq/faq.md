@@ -15,3 +15,7 @@
 [Why is Consumer recipient GUEST value is passed as True? Why is this required when posting the recipient?](?path=docs/faq/ans/recipientGuest.md)
 
 [What are Recipient Identifier Types? How are they used in integration for Consumer?](?path=docs/faq/ans/recipientIdentifier.md)
+
+[what are the IPS to be whitelisted for webhooks by client?](?path=docs/faq/ans/webhookIp.md)
+
+[Do DDP support HMAC in web hook notification?](?path=docs/faq/ans/webhookNotification.md)
