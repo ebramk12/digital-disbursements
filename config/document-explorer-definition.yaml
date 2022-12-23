@@ -39,6 +39,7 @@
       link: docs/sandbox/request.md
     - title: Recipes
       link: docs/sandbox/request.md
+      open: true
       - sections:
           - title: API Flow
             link: docs/introduction/contact.md
