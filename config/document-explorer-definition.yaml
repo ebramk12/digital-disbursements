@@ -37,10 +37,11 @@
       link: docs/faq/faq.md
     - title: Request a Sandbox
       link: docs/sandbox/request.md
-#      open: true
+     open: true
 #- recipes:
 #    - title: How to Create, Read, Update, and Delete a Customer Profile
 #      link: recipes/customerRegistration.md
+#       open: true
 #      sections:
 #      - title: Contact Us
 #        link: docs/introduction/contact.md
