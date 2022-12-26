@@ -31,15 +31,27 @@
 - sections:
     - title: Introduction
       link: docs/introduction/introduction.md
+- sections:
     - title: Interactive guide
-      link: docs/interactive-guide/interactive-guide.md
+    link: docs/interactive-guide/interactive-guide.md
+    sections:
+    - title: API Flow
+      link: docs/interactive-guide/api-flow/apiflow.md
+      sections:
+        - title: How to Create, Read and Update Recipient Profiles
+           link: docs/interactive-guide/api-flow/apiflow.md
+    - title: Portal Flow
+      sections:
+        - title: PORTAL Flow
+          link: docs/interactive-guide/portal-flow/portalflow.md
+      - title: How to Initialization, Single Consumer Recipient
+         link: docs/interactive-guide/portal-flow/apiflow.md
+- sections:
     - title: Frequently Asked Questions
       link: docs/faq/faq.md
+- sections:
     - title: Request a Sandbox
       link: docs/sandbox/request.md
-    - title: Recipes
-      link: docs/sandbox/request.md
-
 # - sections:
 #   - title: Getting Started
 #     link: docs/getting-started.md
