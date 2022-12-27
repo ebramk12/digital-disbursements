@@ -31,8 +31,8 @@
 - sections:
     - title: Introduction
       link: docs/introduction/introduction.md
-    - title: Interactive guide
-      link: docs/interactive-guide/interactive-guide.md
+#   - title: Interactive guide
+#     link: docs/interactive-guide/interactive-guide.md
     - title: Frequently Asked Questions
       link: docs/faq/faq.md
     - title: Request a Sandbox
@@ -42,18 +42,15 @@
     link: docs/interactive-guide/interactive-guide.md
     sections:
     - title: API Flow
-      link: docs/interactive-guide/interactive-guide.md
       sections:
-      - title: PIN Debit
-        link: docs/interactive-guide/interactive-guide.md
-      - title: Regional Debit
-        link: docs/interactive-guide/interactive-guide.md
+      - title: How to Create, Read and Update Receipient Profiles
+        link: docs/interactive-guide/api-flow/apiflow.md
+      - title: How to Vault Account
+        link: docs/interactive-guide/api-flow/apiflow.md
     - title: PORTAL Flow
       sections:
-      - title: EMV Chip
-        link: docs/interactive-guide/interactive-guide.md
-      - title: Manual Entry
-        link: docs/interactive-guide/interactive-guide.md
+      - title: How to Initiate Payment
+        link: docs/interactive-guide/portal-flow/portalflow.md
 #      open: true
 #      sections:
 #      - title: Contact Us
