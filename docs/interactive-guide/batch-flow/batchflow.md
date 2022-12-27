@@ -1,4 +1,4 @@
-																#BATCH FILE
+											#BATCH FILE
 																
 # File Name Standard
 
@@ -39,7 +39,6 @@ The below table identifies the parameters of File format.
 | `LAST_NAME` |  		|   		|		 | Conditional 		| recipient last name should be sent if the recipient type is "Consumer" |
 | `DATE_OF_BIRTH` |  		|   		|		 | Conditional 		| Value should be empty |
 | `TIN` |  		|   		|		 | Conditional 		| TIN should be sent if the recipient is "Company" |
-
 | `PHONE_NUMBER` |  		|   		|		 | Optional 		| Value should be empty |
 | `PHONE_NUMBER_EXTENSION` |  		|   		|		 | Optional 		| Value should be empty |
 | `STREET` |  		|   		|		 | Yes 		| recipient address street|
