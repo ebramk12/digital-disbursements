@@ -37,6 +37,23 @@
       link: docs/faq/faq.md
     - title: Request a Sandbox
       link: docs/sandbox/request.md
+- sections:
+  - title: Interactive guide
+    link: docs/interactive-guide/interactive-guide.md
+    sections:
+    - title: API Flow
+      link: docs/interactive-guide/interactive-guide.md
+      sections:
+      - title: PIN Debit
+        link: docs/interactive-guide/interactive-guide.md
+      - title: Regional Debit
+        link: docs/interactive-guide/interactive-guide.md
+    - title: PORTAL Flow
+      sections:
+      - title: EMV Chip
+        link: docs/interactive-guide/interactive-guide.md
+      - title: Manual Entry
+        link: docs/interactive-guide/interactive-guide.md
 #      open: true
 #      sections:
 #      - title: Contact Us
