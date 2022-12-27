@@ -51,6 +51,10 @@
       sections:
       - title: How to Initiate Payment
         link: docs/interactive-guide/portal-flow/portalflow.md
+    - title: BATCH Flow
+      sections:
+      - title: BATCH File
+        link: docs/interactive-guide/batch-flow/batchflow.md
 #      open: true
 #      sections:
 #      - title: Contact Us
