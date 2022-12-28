@@ -30,4 +30,4 @@
 
 [Is there any transaction limits for a individual recipient?] (?path=docs/faq/ans/recipientLimit.md)
 
-[What are all custom fields available in payment Request?] (?path=docs/faq/ans/customFileds.md)
+[What are all custom fields available in payment Request?] (?path=docs/faq/ans/customFields.md)
