@@ -49,8 +49,8 @@
         link: docs/interactive-guide/api-flow/apiflow.md
     - title: PORTAL Flow
       sections:
-      - title: How to Initiate Payment
-        link: docs/interactive-guide/portal-flow/portalflow.md
+      - title: How to Initiate Single Consumer Payment
+        link: docs/interactive-guide/portal-flow/singleConsumerflow.md
     - title: BATCH Flow
       sections:
       - title: BATCH File
