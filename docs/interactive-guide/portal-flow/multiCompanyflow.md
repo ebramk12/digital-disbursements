@@ -33,11 +33,11 @@ Prod: [https://prod.api.firstdata.com/ddp/v1/payments](https://prod.api.firstdat
 
 ## Headers
 
-Content-Type:application/json
-Client-Request-Id:{{$guid}}
-Api-Key:{{clientKey}}
-Authorization:HMAC {{signature}}
-Timestamp:{{time}}
+Content-Type:application/json <br>
+Client-Request-Id:{{$guid}} <br>
+Api-Key:{{clientKey}} <br>
+Authorization:HMAC {{signature}} <br>
+Timestamp:{{time}} <br>
 
 ## Sample Request (Minimal information)
 
