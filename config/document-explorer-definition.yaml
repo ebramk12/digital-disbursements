@@ -46,15 +46,13 @@
       - title: Introduction
         link: docs/interactive-guide/api-flow/apiflow.md
       - title: How to Create, Read and Update Receipient Profiles
-        Sections:
+        sections:
         - title: Create Recipient
           link: docs/interactive-guide/api-flow/create-recipient.md
         - title: Update Recipient
           link: docs/interactive-guide/api-flow/update-recipient.md
         - title: Get Recipient
           link: docs/interactive-guide/api-flow/retrieve-recipient.md
-      - title: How to Create Single Use Token
-        link: docs/interactive-guide/api-flow/create-nonce-token.md
       - title: How to Rerieve Encryption Key
         link: docs/interactive-guide/api-flow/create-public-token.md
       - title: How to Rerieve Single Use Token
@@ -62,7 +60,7 @@
       - title: How to Save Payment Method (Acount Vaulting)
         link: docs/interactive-guide/api-flow/vault-payent.md
       - title: How to Initiate, Cancel, and View Transactions
-        Sections:
+        sections:
         - title: How to initiate a Transaction.
           link: docs/interactive-guide/api-flow/create-disbursement.md
         - title: How to view a Transaction.
