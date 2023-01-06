@@ -38,48 +38,48 @@
     - title: Request a Sandbox
       link: docs/sandbox/request.md
 - sections:
-  - title: Interactive guide
-    link: docs/interactive-guide/interactive-guide.md
-    sections:
-    - title: API Flow
-      link: docs/interactive-guide/api-flow/apiflow.md
+    - title: Interactive guide
+      link: docs/interactive-guide/interactive-guide.md
       sections:
-      - title: How to Create, Read and Update Receipient Profiles
-        sections:
-        - title: Create Recipient
-          link: docs/interactive-guide/api-flow/create-recipient.md
-        - title: Update Recipient
-          link: docs/interactive-guide/api-flow/update-recipient.md
-        - title: Get Recipient
-          link: docs/interactive-guide/api-flow/retrieve-recipient.md
-      - title: How to Rerieve Encryption Key
-        link: docs/interactive-guide/api-flow/create-public-token.md
-      - title: How to Rerieve Single Use Token
-        link: docs/interactive-guide/api-flow/create-nonce-token.md
-      - title: How to Save Payment Method (Acount Vaulting)
-        link: docs/interactive-guide/api-flow/vault-payent.md
-      - title: How to Initiate, Cancel, and View Transactions
-        sections:
-        - title: How to initiate a Transaction.
-          link: docs/interactive-guide/api-flow/create-disbursement.md
-        - title: How to view a Transaction.
-          link: docs/interactive-guide/api-flow/get-transaction-details.md
-        - title: How to Cancel a Transaction.
-          link: docs/interactive-guide/api-flow/cancel-payment.md
-    - title: PORTAL Flow
-      sections:
-      - title: How to Initiate Single Consumer Payment
-        link: docs/interactive-guide/portal-flow/singleConsumerflow.md
-      - title: How to Initiate Multi Consumer Payment
-        link: docs/interactive-guide/portal-flow/multiConsumerflow.md
-      - title: How to Initiate Single Company Payment
-        link: docs/interactive-guide/portal-flow/singleCompanyflow.md
-      - title: How to Initiate Multi Company Payment
-        link: docs/interactive-guide/portal-flow/multiCompanyflow.md
-    - title: BATCH Flow
-      sections:
-      - title: BATCH File
-        link: docs/interactive-guide/batch-flow/batchflow.md
+        - title: API Flow
+          link: docs/interactive-guide/api-flow/apiflow.md
+          sections:
+            - title: How to Create, Read and Update Receipient Profiles
+              sections:
+                - title: Create Recipient
+                  link: docs/interactive-guide/api-flow/create-recipient.md
+                - title: Update Recipient
+                  link: docs/interactive-guide/api-flow/update-recipient.md
+                - title: Get Recipient
+                  link: docs/interactive-guide/api-flow/retrieve-recipient.md
+            - title: How to Rerieve Encryption Key
+              link: docs/interactive-guide/api-flow/create-public-token.md
+            - title: How to Rerieve Single Use Token
+              link: docs/interactive-guide/api-flow/create-nonce-token.md
+            - title: How to Save Payment Method (Acount Vaulting)
+              link: docs/interactive-guide/api-flow/vault-payent.md
+            - title: How to Initiate, Cancel, and View Transactions
+              sections:
+                - title: How to initiate a Transaction.
+                  link: docs/interactive-guide/api-flow/create-disbursement.md
+                - title: How to view a Transaction.
+                  link: docs/interactive-guide/api-flow/get-transaction-details.md
+                - title: How to Cancel a Transaction.
+                  link: docs/interactive-guide/api-flow/cancel-payment.md
+        - title: PORTAL Flow
+          sections:
+            - title: How to Initiate Single Consumer Payment
+              link: docs/interactive-guide/portal-flow/singleConsumerflow.md
+            - title: How to Initiate Multi Consumer Payment
+              link: docs/interactive-guide/portal-flow/multiConsumerflow.md
+            - title: How to Initiate Single Company Payment
+              link: docs/interactive-guide/portal-flow/singleCompanyflow.md
+            - title: How to Initiate Multi Company Payment
+              link: docs/interactive-guide/portal-flow/multiCompanyflow.md
+        - title: BATCH Flow
+          sections:
+            - title: BATCH File
+              link: docs/interactive-guide/batch-flow/batchflow.md
 #      open: true
 #      sections:
 #      - title: Contact Us
