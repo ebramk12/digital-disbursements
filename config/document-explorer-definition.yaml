@@ -40,13 +40,12 @@
 - sections:
   - title: Interactive guide
     link: docs/interactive-guide/interactive-guide.md
-  - sections:
+    sections:
     - title: API Flow
-    - sections:
-      - title: Introduction
-        link: docs/interactive-guide/api-flow/apiflow.md
+      link: docs/interactive-guide/api-flow/apiflow.md
+      sections:
       - title: How to Create, Read and Update Receipient Profiles
-      - sections:
+        sections:
         - title: Create Recipient
           link: docs/interactive-guide/api-flow/create-recipient.md
         - title: Update Recipient
@@ -60,7 +59,7 @@
       - title: How to Save Payment Method (Acount Vaulting)
         link: docs/interactive-guide/api-flow/vault-payent.md
       - title: How to Initiate, Cancel, and View Transactions
-      - sections:
+        sections:
         - title: How to initiate a Transaction.
           link: docs/interactive-guide/api-flow/create-disbursement.md
         - title: How to view a Transaction.
@@ -68,7 +67,7 @@
         - title: How to Cancel a Transaction.
           link: docs/interactive-guide/api-flow/cancel-payment.md
     - title: PORTAL Flow
-    - sections:
+      sections:
       - title: How to Initiate Single Consumer Payment
         link: docs/interactive-guide/portal-flow/singleConsumerflow.md
       - title: How to Initiate Multi Consumer Payment
@@ -78,7 +77,7 @@
       - title: How to Initiate Multi Company Payment
         link: docs/interactive-guide/portal-flow/multiCompanyflow.md
     - title: BATCH Flow
-    - sections:
+      sections:
       - title: BATCH File
         link: docs/interactive-guide/batch-flow/batchflow.md
 #      open: true
