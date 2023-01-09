@@ -26,7 +26,7 @@ The examples given in this guide are close to the minimal requirements to execut
 - Portal Flow
 
 ## Functionalities Out-of-Scope
-### API &; Portal
+### API & Portal
 - Webhooks
 - Hosted Pages
 - Customized Email Templates
