@@ -45,6 +45,7 @@
       link: docs/interactive-guide/api-flow/apiflow.md
       sections:
         - title: How to Create, Read and Update Receipient Profiles (Test)
+          link: docs/interactive-guide/api-flow/create-recipient.md
           sections:
           - title: Create Recipient
             link: docs/interactive-guide/api-flow/create-recipient.md
