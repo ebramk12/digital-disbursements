@@ -220,3 +220,5 @@ Timestamp:{{time}} <br>
     }
 }
 ```
+
+[![Try it out](../../../../assets/images/button.png)](../api/?type=post&path=/ddp/v1/payments/)
