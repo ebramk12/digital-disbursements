@@ -26,28 +26,28 @@ The below table identifies the parameters of File format.
 
 ##Mapping Details
 
-| Field Name | Position | Datatype | Length | Required | Comments |
-| -------- | -------| --------- | -------| ---------| ------------------------------------- |
-| `AMOUNT` |  		|   		|		 | Yes 		| amount to be used to initiate payment |
-| `CURRENCY` |  		|   		|		 | No 		| currency used to initiate the payment. default is set to USD if value is not present |
-| `MERCHANT_ID` |  		|   		|		 | Yes 		| merchant who initiated the request |
-| `MERCHANT_CUSTOMER_ID OR VENDOR_ID` |  		|   		|		 | Yes 		| merchant who initiated the request |
-| `PAYMENT_TYPE OR DISBURSEMENT_TYPE` |  		|   		|		 | Yes 		| free text - Type of disbursement - Wages, Claims, promotions,Loans, refund etc- refer the extract taken from QA environment "types-of-payment-types.txt"  |
-| `RECIPIENT_TYPE` |  		|   		|		 | Yes 		| recipient type. possible values Consumer/Company |
-| `EMAIL` |  		|   		|		 | Yes 		| recipient email address |
-| `FIRST_NAME` |  		|   		|		 | Conditional 		| recipient first name should be sent if the recipient type is "Consumer" |
-| `LAST_NAME` |  		|   		|		 | Conditional 		| recipient last name should be sent if the recipient type is "Consumer" |
-| `DATE_OF_BIRTH` |  		|   		|		 | Conditional 		| Value should be empty |
-| `TIN` |  		|   		|		 | Conditional 		| TIN should be sent if the recipient is "Company" |
-| `PHONE_NUMBER` |  		|   		|		 | Optional 		| Value should be empty |
-| `PHONE_NUMBER_EXTENSION` |  		|   		|		 | Optional 		| Value should be empty |
-| `STREET` |  		|   		|		 | Yes 		| recipient address street|
-| `CITY` |  		|   		|		 | Yes 		| recipient city street |
-| `STATE` |  		|   		|		 | Yes 		| recipient state street |
-| `POSTAL_CODE` |  		|   		|		 | Yes 		| recipient address postal code|
-| `COUNTRY` |  		|   		|		 | Yes 		| recipient address country |
-| `DBA` |  		|   		|		 | Conditional 		| DBA should be sent if the recipient Company name  |
-| `MERCHANT_TRANSACTION_ID OR REFERENCE_ID` |  		|   		|		 | Yes 		| unique for each request |
-| `CUSTOM_FIELDS` |  		|   		|		 | No 		| optional and value will be list of key value pairs(key and value pairs will be delimited by colon( : )) and delimited by comma(,) |
+| Field Name 		  | Datatype  | Maximum Length | Required | Comments |
+| ------------------- | --------- | ---------------| ---------| ------------------------------------- |
+| `AMOUNT` 			  |  String	  |				   | &#10004;	| amount to be used to initiate payment |
+| `CURRENCY` 		  |  String	  |		 		   | No 		| currency used to initiate the payment. default is set to USD if value is not present |
+| `MERCHANT_ID` 	  | String	  |		 32		   | &#10004;	| merchant who initiated the request |
+| `MERCHANT_CUSTOMER_ID OR VENDOR_ID` | String  |	 32  | &#10004;	| merchant who initiated the request |
+| `PAYMENT_TYPE OR DISBURSEMENT_TYPE` | String  |  20 | &#10004;	| free text - Type of disbursement - Wages, Claims, promotions,Loans, refund etc- refer the extract taken from QA environment "types-of-payment-types.txt"  |
+| `RECIPIENT_TYPE` 	  |  String	|		 			| &#10004;	| recipient type. possible values Consumer/Company |
+| `EMAIL` 			  |  String	|		 			| &#10004;	| recipient email address |
+| `FIRST_NAME` 		  |  String	|		 			| Conditional 	| recipient first name should be sent if the recipient type is "Consumer" |
+| `LAST_NAME` 		  |  String	|		 			| Conditional 	| recipient last name should be sent if the recipient type is "Consumer" |
+| `DATE_OF_BIRTH` 	  |  String	|		 			| Conditional 	| Value should be empty |
+| `TIN` 			  |	 String	|		 			| Conditional 	| TIN should be sent if the recipient is "Company" |
+| `PHONE_NUMBER`	  |  String	|		 			| 				| Value should be empty |
+| `PHONE_NUMBER_EXTENSION` |  String  |		 		| 				| Value should be empty |
+| `STREET` 			  | String	|		 			| &#10004;	| recipient address street|
+| `CITY` 			  |	String	|					| &#10004;	| recipient city street |
+| `STATE`			  | String	|		 			| &#10004;	| recipient state street |
+| `POSTAL_CODE` 	  | String	|		 			| &#10004;	| recipient address postal code|
+| `COUNTRY` 		  | String	|		 			| &#10004;	| recipient address country |
+| `DBA`				  | String	|   				| Conditional | DBA should be sent if the recipient Company name  |
+| `MERCHANT_TRANSACTION_ID OR REFERENCE_ID` | String	|	| &#10004;	| unique for each request |
+| `CUSTOM_FIELDS` 	  |	String	|				    | 			| optional and value will be list of key value pairs(key and value pairs will be delimited by colon( : )) and delimited by comma(,) |
 
 

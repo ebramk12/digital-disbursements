@@ -15,22 +15,22 @@ Objective Merchant will want to initiate a payment for a Multi company recipient
 ##Request Variables
 
 | Name 					| 	Type 	| Maximum Length | Required  |
-| --------------------- | -------	| ---------------| --------	 | 
-| `Amount:currency` 	|  	String	| -				 |	&#10004; | 
-| `Amount:total` 		|  	Number	| -				 |	&#10004; | 
-| `merchantCustomerId` 	|  	String	| -				 |	&#10004; | 
-| `recipientType` 		|  	String	| 32			 |  &#10004; | 
-| `tin` 				|  	String	| -				 |	&#10004; | 
-| `emailAddress` 		|  	String	| -				 |	&#10004; | 
-| `phoneNumber`			|  	String	|  	 	  -		 |  		 |
-| `recipientIdentifier` |  	String	| Accepted values [Last_4_of_SSN, SPECIAL_CODE, ACCOUNT_NUMBER, DATE_OF_BIRTH, PHONE_NUMBER] | &#10004; | 
-| `recipientIdentifierValue` |  String	|-			 |	&#10004; |
+| --------------------- | -------	| ---------------| --------  | 
+| `Amount:currency` 	|  	String	| 20			 |	&#10004; | 
+| `Amount:total` 		|  	Number	| (16,4)		 |	&#10004; | 
+| `merchantCustomerId` 	|  	String	| 100			 |	&#10004; | 
+| `recipientType` 		|  	String	| 100			 |  &#10004; | 
+| `tin` 				|  	String	| 10			 |	&#10004; | 
+| `emailAddress` 		|  	String	| 100			 |	&#10004; | 
+| `phoneNumber`			|  	String	|  50			 |  		 |
+| `recipientIdentifier` |  	String	| 100 (Accepted values [Last_4_of_SSN, SPECIAL_CODE, ACCOUNT_NUMBER, DATE_OF_BIRTH, PHONE_NUMBER]) | &#10004; | 
+| `recipientIdentifierValue` |  String	| 100		 |	&#10004; |
 | `address` 			|  	String	| -				 |	&#10004; | 
 | `payments` 			|  	String	| -				 |	&#10004; | 
-| `merchantTransactionId` |  String	| -				 |	&#10004; | 
-| `batchNumber` 		|  	String	| -	  		 	 | 		 	 |
+| `merchantTransactionId` |  String	| 100			 |	&#10004; | 
+| `batchNumber` 		|  	String	| 100  		 	 | 		 	 |
 | `customFields` 		|  	String	| -		   		 | 			 |
-| `doingBusinessAs` 	|  	String	| -				 |	&#10004; | 
+| `doingBusinessAs` 	|  	String	| 100			 |	&#10004; |  
 
 ## Sample Request (Minimal information)
 
