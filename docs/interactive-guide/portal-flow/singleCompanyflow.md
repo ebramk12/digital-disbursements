@@ -2,16 +2,15 @@
 
 Objective Merchant will want to initiate a payment for a single company recipient through the merchant portal and send email to recipient for the payment disbursement.
 
----
 ##Endpoint
 
 <!-- theme: success -->
- HTTP Method: **POST**
+>HTTP Method: **POST**
 
-'Non-prod: https://int.api.firstdata.com/ddp/v1/payments'
+>Non-prod: https://int.api.firstdata.com/ddp/v1/payments
 
->'Prod: https://prod.api.firstdata.com/ddp/v1/payments'
----
+>Prod: https://prod.api.firstdata.com/ddp/v1/payments
+
 
 ##Request Variables
 

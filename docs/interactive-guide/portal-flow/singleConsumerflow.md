@@ -1,4 +1,4 @@
-##Description
+#Description
 
 Objective Merchant will want to initiate a payment for a single consumer recipient through the merchant portal and send email to recipient for the payment disbursement.
 
@@ -11,25 +11,25 @@ Non-prod: [https://int.api.firstdata.com/ddp/v1/payments](https://int.api.firstd
 Prod: [https://prod.api.firstdata.com/ddp/v1/payments](https://prod.api.firstdata.com/ddp/v1/payments)
   
 
-##Parameters
+##Request Variables
 
-| Name 					| Datatype 	| Parameter Type | Required | Max Length |
-| --------------------- | -------	| -------------- | ---------| -----------|
-| `Amount:currency` 	|  	String	|   	Body	 | yes 		| -			 |
-| `Amount:total` 		|  	Number	|   	Body	 | yes 		| -			 |
-| `merchantCustomerId` 	|  	String	|   	Body	 | yes 		| -			 |
-| `recipientType` 		|  	String	|   	Body	 | yes 		| 32		 |
-| `firstName` 			|  	String	|   	Body	 | yes 		| -			 |
-| `lastName` 			|  	String	|   	Body	 | yes 		| -			 |
-| `emailAddress` 		|  	String	|   	Body	 | yes 		| -			 |
-| `phoneNumber`			|  	String	|   	Object	 | optional | -			 |
-| `recipientIdentifier` |  	String	|   	Body	 | yes 		| Accepted values [Last_4_of_SSN, SPECIAL_CODE, ACCOUNT_NUMBER, DATE_OF_BIRTH, PHONE_NUMBER]			 |
-| `recipientIdentifierValue` |  String	|   	Body	 | yes 	| -			 |
-| `address` 			|  	String	|   	Body	 | yes 		| -			 |
-| `payments` 			|  	String	|   	Body	 | yes 		| -			 |
-| `merchantTransactionId` |  	String	|   	Body	 | yes 	| -			 |
-| `batchNumber` 		|  	String	|   	Body	 | optional | -			 |
-| `customFields` 		|  	String	|   	Body	 | optional | -			 |
+| Name 					| 	Type 	| Maximum Length | Required  |
+| --------------------- | -------	| ---------------|-------- 	 | 
+| `Amount:currency` 	|  	String	| -				 |	&#10004; | 
+| `Amount:total` 		|  	Number	| -				 |	&#10004; | 
+| `merchantCustomerId` 	|  	String	| -				 |	&#10004; | 
+| `recipientType` 		|  	String	| 32			 |  &#10004; | 
+| `firstName` 			|  	String	| -				 |	&#10004; | 
+| `lastName` 			|  	String	| -				 |	&#10004; | 
+| `emailAddress` 		|  	String	| -				 |	&#10004; | 
+| `phoneNumber`			|  	String	|  	 	  -		 |  		 |
+| `recipientIdentifier` |  	String	| Accepted values [Last_4_of_SSN, SPECIAL_CODE, ACCOUNT_NUMBER, DATE_OF_BIRTH, PHONE_NUMBER] | &#10004; | 
+| `recipientIdentifierValue` |  String	|-			 |	&#10004; |
+| `address` 			|  	String	| -				 |	&#10004; | 
+| `payments` 			|  	String	| -				 |	&#10004; | 
+| `merchantTransactionId` |  String	| -				 |	&#10004; | 
+| `batchNumber` 		|  	String	| -	  		 	 | 		 	 |
+| `customFields` 		|  	String	| -		   		 | 			 |
 
 ## Headers
 
@@ -221,4 +221,4 @@ Timestamp:{{time}} <br>
 }
 ```
 
-[![Try it out](../../../../assets/images/button.png)](../api/?type=post&path=/ddp/v1/payments/)
+[![Try it out](../../../../assets/images/button.png)](../api/?type=post&path=/ddp/v1/payments)
