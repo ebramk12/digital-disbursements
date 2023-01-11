@@ -7,9 +7,9 @@ Objective Merchant will want to initiate a payment for a single company recipien
 <!-- theme: success -->
 >HTTP Method: **POST**
 
->Non-prod: https://int.api.firstdata.com/ddp/v1/payments
+>Non-prod: [https://int.api.firstdata.com/ddp/v1/payments](https://int.api.firstdata.com/ddp/v1/payments)
 
->Prod: https://prod.api.firstdata.com/ddp/v1/payments
+>Prod: [https://prod.api.firstdata.com/ddp/v1/payments](https://prod.api.firstdata.com/ddp/v1/payments)
 
 
 ##Request Variables
