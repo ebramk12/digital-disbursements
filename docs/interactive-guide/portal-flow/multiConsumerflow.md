@@ -15,7 +15,7 @@ Objective Merchant will want to initiate a payment for a Multi consumer recipien
 ##Request Variables
 
 | Name 					| 	Type 	| Maximum Length | Required  |
-| --------------------- | -------	| ---------------|-------- 	 | 
+| --------------------- | -------	| ---------------| --------	 | 
 | `Amount:currency` 	|  	String	| -				 |	&#10004; | 
 | `Amount:total` 		|  	Number	| -				 |	&#10004; | 
 | `merchantCustomerId` 	|  	String	| -				 |	&#10004; | 
