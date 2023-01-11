@@ -5,7 +5,7 @@ Merchant can only cancel payments that are in a “Pending” status. Once a dis
 ##Endpoint
 
 <!-- theme: success -->
->**HTTP Method**: `POST`
+>**HTTP Method**: `PATCH`
 
 >**Non-prod**: `https://int.api.firstdata.com/ddp/v1/payments/{merchantTransactionId}/cancel`
 
@@ -53,4 +53,4 @@ Merchant can only cancel payments that are in a “Pending” status. Once a dis
 }
 ```
 
-[![Try it out](../../../../assets/images/button.png)](../api/?type=post&path=/ddp/v1/payments/{id}/cancel)
+[![Try it out](../../../../assets/images/button.png)](../api/?type=patch&path=/ddp/v1/payments/{id}/cancel)
