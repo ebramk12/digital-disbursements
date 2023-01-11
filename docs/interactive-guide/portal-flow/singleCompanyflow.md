@@ -6,11 +6,11 @@ Objective Merchant will want to initiate a payment for a single company recipien
 ##Endpoint
 
 <!-- theme: success -->
-> HTTP Method: **POST**
+ HTTP Method: **POST**
 
 'Non-prod: https://int.api.firstdata.com/ddp/v1/payments'
 
-'Prod: https://prod.api.firstdata.com/ddp/v1/payments'
+>'Prod: https://prod.api.firstdata.com/ddp/v1/payments'
 ---
 
 ##Request Variables
@@ -31,7 +31,7 @@ Objective Merchant will want to initiate a payment for a single company recipien
 | `merchantTransactionId` |  String	| -				 |	&#10004; | 
 | `batchNumber` 		|  	String	| -	  		 	 | 		 	 |
 | `customFields` 		|  	String	| -		   		 | 			 |
-| `doingBusinessAs` 	|  	String	| -				 |	#10004;  | 
+| `doingBusinessAs` 	|  	String	| -				 |	&#10004; | 
 
 ## Headers
 
