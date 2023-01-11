@@ -77,6 +77,8 @@
         link: docs/interactive-guide/portal-flow/singleCompanyflow.md
       - title: How to Initiate Multi Company Payment
         link: docs/interactive-guide/portal-flow/multiCompanyflow.md
+      - title: How to Cancel a Payment
+        link: docs/interactive-guide/portal-flow/cancelPaymentflow.md
     - title: BATCH Flow
       sections:
       - title: BATCH File

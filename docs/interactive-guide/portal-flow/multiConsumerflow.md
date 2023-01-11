@@ -32,14 +32,6 @@ Objective Merchant will want to initiate a payment for a Multi consumer recipien
 | `batchNumber` 		|  	String	| -	  		 	 | 		 	 |
 | `customFields` 		|  	String	| -		   		 | 			 |
 
-## Headers
-
-Content-Type:application/json <br>
-Client-Request-Id:{{$guid}} <br>
-Api-Key:{{clientKey}} <br>
-Authorization:HMAC {{signature}} <br>
-Timestamp:{{time}} <br>
-
 ## Sample Request (Minimal information)
 
 ```json
