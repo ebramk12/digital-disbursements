@@ -2,7 +2,7 @@
 ## Create a Recipient
 
 ### Description
-This request will create a recipient for card vaulting or payment purposes. This is always the first step that needs to be taken to do any transactions or calls on the system. 
+This request will create a recipient for card vaulting or payment purposes. This is always the first step that needs to be taken to do any transactions or calls on the system.  
 
 <!-- theme: success -->
 >### Special Considerations
