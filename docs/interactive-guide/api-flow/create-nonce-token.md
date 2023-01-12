@@ -3,7 +3,7 @@
 ### Description
 In this request you will utilize the publicKey returned in step 4 to encrypt your PCI data. Once that is done you will pass that data into this call and receive a nonce token to be used in the upcoming step. Keep in mind the encrypted payload for each variable should be surrounded by `ENC[ ]` as shown in the examples.
 
-<!-- Theme: Failure -->
+<!-- theme: failure -->
 >### **Header Change**
 >| Header Key | Change |
 >| ---------- | ------ |

@@ -58,7 +58,7 @@
       - title: How to Rerieve Single Use Token
         link: docs/interactive-guide/api-flow/create-nonce-token.md
       - title: How to Save Payment Method (Acount Vaulting)
-        link: docs/interactive-guide/api-flow/vault-payent.md
+        link: docs/interactive-guide/api-flow/vault-payment.md
       - title: How to Initiate, Cancel, and View Transactions
         sections:
         - title: How to initiate a Transaction.
