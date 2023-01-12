@@ -8,6 +8,7 @@ In this request you will utilize the publicKey returned in step 4 to encrypt you
 >| Header Key | Change |
 >| ---------- | ------ |
 >| Authorization |  changes to `Bearer <tokenId>` (generated from Step 2, example below) |
->`Autorization: Bearer AGG596cV67WF8DjYLE3kS6nSu36x`
+>
+>> *Example `Autorization: Bearer AGG596cV67WF8DjYLE3kS6nSu36x`*
 
 [![See Examples](../../../../assets/images/button.png)]()
