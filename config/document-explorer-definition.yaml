@@ -44,6 +44,8 @@
     - title: API Flow
       link: docs/interactive-guide/api-flow/apiflow.md
       sections:
+      - title: Header Setup
+        link: docs/interactive-guide/api-flow/header_sample.md
       - title: How to Create, Read and Update Recipient Profiles
         link: docs/interactive-guide/api-flow/create-recipient.md
         sections:
