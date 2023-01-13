@@ -5,19 +5,19 @@ The header of Each API call will contain several parameters. It is important tha
 <!-- theme: success -->
 >| Key               | value            |
 >| ----------------- | ---------------- |
->| Content-Type      | application/json |
->| Client-Request-Id | "Any unique ID, usually a guid. Must be unique per each request" |
->| Api-Key           | "Your Sandbox KEY goes here" |
->| Authorization     | HMAC "Encrypted payload as signature here, shown below" |
->| Timestamp         | "Current time in EPOCH notation" |
+>| Content-Type      | "application/json" |
+>| Client-Request-Id | Any unique ID, usually a guid. Must be unique per each request |
+>| Api-Key           | Your Sandbox **KEY** goes here |
+>| Authorization     | "HMAC " followed by the Encrypted payload as signature, shown below |
+>| Timestamp         | Current time in EPOCH notation |
 
 ## Example
-```
-Content-Type:application/json
-Client-Request-Id:4da61bfb-6852-4f2a-9462-733276f633d7
-Api-Key: YMgw8VSrYMG6WTIUnoUUGv7hF9Aqh3EO
-Authorization:HMAC W5X9NAlPgSNsfQX55fXbXrk3arzL6KxcCTA6SrnxL+U=
-Timestamp: 1607368688646
+```JSON
+"Content-Type":"application/json"
+"Client-Request-Id":"4da61bfb-6852-4f2a-9462-733276f633d7"
+"Api-Key": "YMgw8VSrYMG6WTIUnoUUGv7hF9Aqh3EO"
+"Authorization" : "HMAC W5X9NAlPgSNsfQX55fXbXrk3arzL6KxcCTA6SrnxL+U="
+"Timestamp": "1607368688646"
 ```
 
 ## How to generate HMAC Signature
@@ -38,20 +38,24 @@ HMAC signature is used in all calls made to our API and is necessary to receive 
 - Take the raw signature and HMAC encrypt it using SHA256 against the environment secret.
 - Finally taake this encrypted raw signature, make it a string and then encrypt it using Base64 to produce the signature for the header.
 
-### Postman Example
-```
+### Postman Pre-Req Script Example
+```javaScript
+
 var key = postman.getEnvironmentVariable('clientKey');
 var secret = postman.getEnvironmentVariable('clientSecret');
 var time = new Date().getTime();
 var method = request.method;
 var rawSignature = key + ":" + time;
 var requestBody = request.data;
+
 if (method != 'GET' && method != 'DELETE') {
-var payload_digest = CryptoJS.SHA256(requestBody);
-var b64BodyContent = CryptoJS.enc.Base64.stringify(payload_digest);
-rawSignature = rawSignature + ":" + b64BodyContent;
+    var payload_digest = CryptoJS.SHA256(requestBody);
+    var b64BodyContent = CryptoJS.enc.Base64.stringify(payload_digest);
+    rawSignature = rawSignature + ":" + b64BodyContent;
 }
+
 var signature = CryptoJS.HmacSHA256(rawSignature, secret);
 postman.setEnvironmentVariable('time', time);
 postman.setEnvironmentVariable('signature', CryptoJS.enc.Base64.stringify(signature));
+
 ```
