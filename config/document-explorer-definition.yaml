@@ -62,6 +62,7 @@
       - title: How to Save Payment Method (Acount Vaulting)
         link: docs/interactive-guide/api-flow/vault-payment.md
       - title: How to Initiate, Cancel, and View Transactions
+        link: docs/interactive-guide/api-flow/create-disbursement.md
         sections:
         - title: How to initiate a Transaction.
           link: docs/interactive-guide/api-flow/create-disbursement.md

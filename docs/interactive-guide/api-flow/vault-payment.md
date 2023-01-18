@@ -9,4 +9,5 @@ This request will take our generated nonce from Step 3 in the payload as well as
 >| ---------- | ------ |
 >| Authorization | returns to normal HMAC signature |
 >| access_token  | the same `tokenId` used in the Bearer authorization in step 3 (*ex.* `access_token: AGG596cV67WF8DjYLE3kS6nSu36x`) |
+><!-- TODO: ADD EXAMPLES HERE-->
 

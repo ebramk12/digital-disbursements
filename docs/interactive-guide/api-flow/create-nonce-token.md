@@ -12,4 +12,4 @@ In this request you will utilize the publicKey returned in step 4 to encrypt you
 ><!-- theme: success-->
 >> *Example `Autorization: Bearer AGG596cV67WF8DjYLE3kS6nSu36x`*
 
-[![See Examples](../../../../assets/images/button.png)]()
+[![See Examples](/product/UniversalCommerce/api/?type=get&path=/v1/account-tokens/{nonceTokenId}&branch=develop&version=1.0.0)]
