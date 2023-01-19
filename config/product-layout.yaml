@@ -35,66 +35,43 @@ header:
     link: "/assets/images/Fiserv_Logo.jpg"
     altText: DigitalDisbursements™
 featuredFeatures:
-  - title: Credit Issuance
-    description:  DigitalDisbursements solution allows financial Institution to issue and manage the Credit Card products to their end customers.
+  - title: Recipient Portal
+    description:  DigitalDisbursements solution allows financial Institution to issue and manage the Credit Card products to their end customers via an easy to use and integrate Customer Portal
     tags: ["APAC", "FirstVision", "Credit"]
     bullets: ["Activate Card", "Block Card", "Lost Stolen Card Transfer", "CVV2 Validation" ]
     relatedDocs:
       - relatedDoc: 
-        title: Account Management
-        description: Allows management of an accounts that holds financial information of Credit available/ used.
-        link: ./docs/Account-Management.md
+        title: Interactive Guide
+        description: Gives an easy to follow walk through of how integrate the Recipient Protal.
+        link: .docs/interactive-guide/portal-flow/singleConsumerflow.md
       - relatedDoc: 
-        title: Customer Management
-        description: Allows management of a cardholder's demographic information like Name, Address, phone numbers.  
-        link: ./docs/Customer-Management.md
+        title: Portal Demo <Needs link>
+        description: Gives a walk through of the customer experiance using the Recipient Protal. 
+        link: 
       - relatedDoc: 
-        title: Card Management
+        title: Sending Payments to multiple recipients.
         description: Allows management of payment instrument that is used to perform financial transaction.  Example physical Card, Virtual Card, Wallet Token. 
         link: ./docs/Card-Management.md
     relatedAPIs:
       - relatedAPI: 
-        title: Block-Unblock Account
+        title: Create and Initiate payment.
         description: This service is used to update the Account Block Code.
         type: "patch"        
-        path: "/v1/accounts/blockUnblock"
-      - relatedAPI: 
-        title: Block-Unblock Card
-        description: This service is used to update the block codes and the reason codes for the block codes for cards and accounts
-        type: "patch"        
-        path: "/v1/cards/blockUnblock"
-      - relatedAPI: 
-        title: Spend Limit Updates
-        description: This service is used to update the spending limits to control the card usage.  These limits are set at individual card level.
-        type: "patch"        
-        path: "/v1/cardS/spendLimits"
-      - relatedAPI: 
-        title: Fetch Clear PAN from Token
-        description: This service is used to fetch the clear pan for the requested First Vision's Token PAN.
-        type: "get"        
-        path: "/v1/cards/clearPan"
-      - relatedAPI: 
-        title: CVV2 Validation
-        description: The Card Secure Code Validation service is used to validate the CVV2  and optionally the expiry date of a given card. 
-        type: "post"        
-        path: "/v1/cards/secureCode"
-      - relatedAPI: 
-        title: Lost Stolen Card Transfer
-        description: This Lost or Stolen service is used to block the lost card and request for the replacement card. 
-        type: "put"        
-        path: "/v1/cards/transfer"
-      - relatedAPI: 
-        title: Activate Card
-        description: This service is used to activate the card after successful verification of the cardholder.  
-        type: "put"        
-        path: "/v1/cards/activate"
-      - relatedAPI: 
-        title: Inquire Customer Demographic Information
-        description: This service will be used to enquire the customer demographic details such as Name / Address / Phone Number / Email ID/ Date of Birth of the given customer.  
-        type: "get"        
-        path: "/v1/customers/nameAddress"
-      - relatedAPI: 
-        title: Update Customer Demographic Information
-        description: This service will be used to update the customer demographic details such as Name / Address / Phone Number / Email ID/ Date of Birth of the given customer.  
-        type: "patch"        
-        path: "/v1/customers/nameAddress"
+        path: "../api/?type=post&path=/ddp/v1/payments"
+  - title: Hosted Pages
+    description:  Digital Disbursements solution allows financial Institution to embed the customer portal into their existing website.
+    tags: ["APAC", "FirstVision", "Credit"]
+    bullets: ["Activate Card", "Block Card", "Lost Stolen Card Transfer", "CVV2 Validation" ]
+    relatedDocs:
+      - relatedDoc: 
+        title: Interactive Guide
+        description: Gives an easy to follow walk through of how integrate hosted pages in your application.
+        link: .docs/interactive-guide/portal-flow/singleConsumerflow.md
+      - relatedDoc: 
+        title: Hasted Pages Demo <Needs link>
+        description: Gives a walk through of the customer experiance using the Recipient Protal. 
+        link: 
+      - relatedDoc: 
+        title: FAQs
+        description: Source to refrence frequently asked questions about digital dibursements.
+        link: ./docs/Card-Management.md
