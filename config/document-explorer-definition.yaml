@@ -35,6 +35,12 @@
 #     link: docs/interactive-guide/interactive-guide.md
     - title: Frequently Asked Questions
       link: docs/faq/faq.md
+    - title: Troubleshooting
+      sections:
+      - title: Complete Error Code list
+        link: docs/troubleshooting/error-codes.md
+      - title: Transaction/Payments Status
+        link: docs/troubleshooting/Transaction-payment-status.md
     - title: Request a Sandbox
       link: docs/sandbox/request.md
 - sections:
