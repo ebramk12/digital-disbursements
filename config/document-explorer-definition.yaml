@@ -53,6 +53,7 @@
       - title: Header Setup
         link: docs/interactive-guide/api-flow/header_sample.md
       - title: How to Create, Read and Update Recipient Profiles
+        link: docs/interactive-guide/api-flow/create-recipient.md
         sections:
         - title: Create Recipient
           link: docs/interactive-guide/api-flow/create-recipient.md
@@ -77,14 +78,16 @@
           link: docs/interactive-guide/api-flow/cancel-payment.md
     - title: PORTAL Flow
       sections:
-      - title: How to Initiate Single Consumer Payment
-        link: docs/interactive-guide/portal-flow/singleConsumerflow.md
-      - title: How to Initiate Multi Consumer Payment
-        link: docs/interactive-guide/portal-flow/multiConsumerflow.md
-      - title: How to Initiate Single Company Payment
-        link: docs/interactive-guide/portal-flow/singleCompanyflow.md
-      - title: How to Initiate Multi Company Payment
-        link: docs/interactive-guide/portal-flow/multiCompanyflow.md
+        - title: How to initiate a Transaction.
+            sections:
+            - title: How to Initiate Single Consumer Payment
+              link: docs/interactive-guide/portal-flow/singleConsumerflow.md
+            - title: How to Initiate Multi Consumer Payment
+              link: docs/interactive-guide/portal-flow/multiConsumerflow.md
+            - title: How to Initiate Single Company Payment
+              link: docs/interactive-guide/portal-flow/singleCompanyflow.md
+            - title: How to Initiate Multi Company Payment
+              link: docs/interactive-guide/portal-flow/multiCompanyflow.md
       - title: How to Cancel a Payment
         link: docs/interactive-guide/portal-flow/cancelPaymentflow.md
     - title: BATCH Flow
