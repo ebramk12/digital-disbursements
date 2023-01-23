@@ -1,7 +1,7 @@
 # Step 3: Create the Account Nonce Token
 
 ### Description
-In this request you will utilize the publicKey returned in step 4 to encrypt your PCI data. Once that is done you will pass that data into this call and receive a nonce token to be used in the upcoming step. Keep in mind the encrypted payload for each variable should be surrounded by `ENC[ ]` as shown in the examples.
+In this request you are going to encrypt your PCI (Payment Card Industry) data with the help of Public Key and TokenId generated in "Create a Public Token" API call in previous step. Once that is done you will pass that data into this call and receive a nonce token to be used in the upcoming step for account vaulting. Keep in mind the encrypted payload for each variable should be surrounded by `ENC[ ]` as shown in the examples.
 
 <!-- theme: failure -->
 >### **Header Change**
