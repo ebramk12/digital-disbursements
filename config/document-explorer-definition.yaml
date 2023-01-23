@@ -79,7 +79,7 @@
     - title: PORTAL Flow
         sections: 
         - title: Initiate Payment
-        - link:
+        - link: docs/interactive-guide/portal-flow/singleConsumerflow.md
             sections:
             - title: How to Initiate Single Consumer Payment
               link: docs/interactive-guide/portal-flow/singleConsumerflow.md
