@@ -29,7 +29,7 @@ The below table identifies the parameters of File format.
 | Field Name 		  | Datatype  | Maximum Length | Required | Comments |
 | ------------------- | --------- | ---------------| ---------| ------------------------------------- |
 | `AMOUNT` 			  |  String	  |				   | &#10004;	| amount to be used to initiate payment |
-| `CURRENCY` 		  |  String	  |		 		   | No 		| currency used to initiate the payment. default is set to USD if value is not present |
+| `CURRENCY` 		  |  String	  |		 		   |  		| currency used to initiate the payment. default is set to USD if value is not present |
 | `MERCHANT_ID` 	  | String	  |		 32		   | &#10004;	| merchant who initiated the request |
 | `MERCHANT_CUSTOMER_ID OR VENDOR_ID` | String  |	 32  | &#10004;	| merchant who initiated the request |
 | `PAYMENT_TYPE OR DISBURSEMENT_TYPE` | String  |  20 | &#10004;	| free text - Type of disbursement - Wages, Claims, promotions,Loans, refund etc- refer the extract taken from QA environment "types-of-payment-types.txt"  |

@@ -53,7 +53,6 @@
       - title: Header Setup
         link: docs/interactive-guide/api-flow/header_sample.md
       - title: How to Create, Read and Update Recipient Profiles
-        link: docs/interactive-guide/api-flow/create-recipient.md
         sections:
         - title: Create Recipient
           link: docs/interactive-guide/api-flow/create-recipient.md
