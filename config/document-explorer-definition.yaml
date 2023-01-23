@@ -92,11 +92,6 @@
       sections:
       - title: BATCH File
         link: docs/interactive-guide/batch-flow/batchflow.md
-         sections:
-        - title: How to Initiate Single Consumer Payment
-            link: docs/interactive-guide/portal-flow/singleConsumerflow.md
-        - title: How to Initiate Multi Consumer Payment
-            link: docs/interactive-guide/portal-flow/multiConsumerflow.md
 #      open: true
 #      sections:
 #      - title: Contact Us
