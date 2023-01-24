@@ -1,4 +1,4 @@
-											#BATCH FILE
+										#BATCH FILE
 																
 # File Name Standard
 
@@ -21,11 +21,11 @@ The below table identifies the parameters of File format.
 
 ## Batch Flex config
 
-##Headers
+###Headers
 <!-- theme: success -->
 >"amount.value","amount.currency","merchantId","merchantCustomerId","paymentType","recipient.type","recipient.email","recipient.firstName","recipient.lastName","recipient.dob","recipient.tin","recipient.phone.value","recipient.phone.ext","recipient.address.street","recipient.address.city","recipient.address.state","recipient.address.postalCode","recipient.address.country","recipient.dba","merchantTransactionId","customFields.recipient"
 
-##Mapping Details
+###Mapping Details
 
 | Field Name 		  | Datatype  | Maximum Length | Required       | Comments |
 | ------------------- | --------- | ---------------| ---------------| --------------------------------------------------------------------		|
@@ -51,12 +51,16 @@ The below table identifies the parameters of File format.
 | `MERCHANT_TRANSACTION_ID OR REFERENCE_ID` | String |	100  | &#10004;	| unique for each request 												|
 | `CUSTOM_FIELDS` 	  |	String	|				    | 				| optional and value will be list of key value pairs(key and value pairs will be delimited by colon( : )) and delimited by comma(,) |
 
+##Batch Summary Output
 
-DDP will share thh two type of response
+DDP will share the two type of response.
+
 		1. Batch Summary email
+		
 		2. Batch Summary Output File
 
-## Summary Email
+### Summary Email
+
 DDP send the summary email of the below format to the corresponding merchant.
 
 | Record Type 		| Description |
@@ -67,23 +71,23 @@ DDP send the summary email of the below format to the corresponding merchant.
 | `Failed records` 	|	No of records which failed during processing. |
 | `Invalid records`	|	No of records which invalid during processing.|
 
+###Response Output
 
-##Batch Summary Output File
-###Response File Headers
+Headers
 
 <!-- theme: success -->
 > ACTION_CODE|MERCHANT_ID|MERCHANT_CUSTOMER_ID|MERCHANT_TRANSACTION_ID|STATUS_CODE|STATUS_DESCRIPTION
 
-| Field Name 		  | Datatype  | Comments |
-| ------------------- | --------- | ------------------------------------- |
-| `ACTION_CODE` 	  |  String	  |	identify the action performed initiate payment, cancel payment, etc. |
-| `MERCHANT_ID` 	  |  String	  |	merchant who initiated the request |
-| `MERCHANT_CUSTOMER_ID OR VENDOR_ID` |  String	  |	merchant recipient mapping id  |
-| `MERCHANT_TRANSACTION_ID` |  String |	Reference ID sent by merchant during payment initiation |
-| `STATUS_CODE` 	  |  String	  |	This will be code return via api. For success we'll use 00 but for error we'll pass actual error code received from API eg. 400011|
-| `STATUS_DESCRIPTION`|  String	  |	For Success value will be SUCESS and for error it will be reason of API failure. eg. Invalid email id|
+| Field Name 		  | Comments 															|
+| ------------------- | ------------------------------------------------------------------- |
+| `ACTION_CODE` 	  |	identify the action performed initiate payment, cancel payment, etc.|
+| `MERCHANT_ID` 	  |	merchant who initiated the request 									|
+| `MERCHANT_CUSTOMER_ID OR VENDOR_ID` |	merchant recipient mapping id  						|
+| `MERCHANT_TRANSACTION_ID` | Reference ID sent by merchant during payment initiation 		|
+| `STATUS_CODE` 	  | This will be code return via api. For success we'll use 00 but for error we'll pass actual error code received from API eg. 400011|
+| `STATUS_DESCRIPTION`|	For Success value will be SUCESS and for error it will be reason of API failure. eg. Invalid email id|
 
-##Example
+###Example
 FH|||1234|
 BH|1
 CI|000000000000|012345678|012345678|00|SUCCESS|
