@@ -80,14 +80,14 @@
       sections:
       - title: Initiate Payment
         link: docs/interactive-guide/portal-flow/initiateportalflow.md
-      - title: How to Initiate Single Consumer Payment
-        link: docs/interactive-guide/portal-flow/singleConsumerflow.md
-      - title: How to Initiate Multi Consumer Payment
-        link: docs/interactive-guide/portal-flow/multiConsumerflow.md
-      - title: How to Initiate Single Company Payment
-        link: docs/interactive-guide/portal-flow/singleCompanyflow.md
-      - title: How to Initiate Multi Company Payment
-        link: docs/interactive-guide/portal-flow/multiCompanyflow.md
+#     - title: How to Initiate Single Consumer Payment
+#       link: docs/interactive-guide/portal-flow/singleConsumerflow.md
+#     - title: How to Initiate Multi Consumer Payment
+#       link: docs/interactive-guide/portal-flow/multiConsumerflow.md
+#     - title: How to Initiate Single Company Payment
+#       link: docs/interactive-guide/portal-flow/singleCompanyflow.md
+#     - title: How to Initiate Multi Company Payment
+#       link: docs/interactive-guide/portal-flow/multiCompanyflow.md
       - title: Cancelling a Payment
         link: docs/interactive-guide/portal-flow/cancelPaymentflow.md
     - title: BATCH Flow
