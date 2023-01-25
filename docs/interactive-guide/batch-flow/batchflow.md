@@ -24,9 +24,7 @@ The file should have comma separated fields in specific order.
 
 Each field should be quoted with double-quotes (") for data reliability.
 
-###Headers
-<!-- theme: success -->
->"amount.value","amount.currency","merchantId","merchantCustomerId","paymentType","recipient.type","recipient.email","recipient.firstName","recipient.lastName","recipient.dob","recipient.tin","recipient.phone.value","recipient.phone.ext","recipient.address.street","recipient.address.city","recipient.address.state","recipient.address.postalCode","recipient.address.country","recipient.dba","merchantTransactionId","customFields.recipient"
+Refer below table for DDP CSV Fields 
 
 ###Mapping Details
 
@@ -54,9 +52,19 @@ Each field should be quoted with double-quotes (") for data reliability.
 | `MERCHANT_TRANSACTION_ID OR REFERENCE_ID` | 100  		| &#10004;	| unique for each request 												|
 | `CUSTOM_FIELDS` 	  |						| 				| optional and value will be list of key value pairs(key and value pairs will be delimited by colon( : )) and delimited by comma(,) |
 
+
+####Sample File
+<!-- theme: success -->
+>"amount.value","amount.currency","merchantId","merchantCustomerId","paymentType","recipient.type","recipient.email","recipient.firstName","recipient.>lastName","recipient.dob","recipient.tin","recipient.phone.value","recipient.phone.ext","recipient.address.street","recipient.address.city","recipien>t.address.state","recipient.address.postalCode","recipient.address.country","recipient.dba","merchantTransactionId","customFields.recipient"
+
+>"1.00","USD","526287175883","vmfs","Claims","Consumer","test.maridu@test.com","Test","Maridu","19890628",,,,"2900 Westside >Pkwy","Alpharetta","GA","30004","USA",,"a298fc671a505445","Custom Recipient 1"
+>"1.00","USD","526287175883","pvgc","Claims","Consumer","testvjec@test.com","Test","Maridu","19890628",,,,"2900 Westside >Pkwy","Alpharetta","GA","30004","USA",,"a298fc671a505446","Custom Recipient 2"
+
+
 ##Outbound file name 
 
 •	DDP exports a batch summary report - containing status of each input file record, success/failure, error-description if failed. 
+
 Ex: If merchant submits an inbound file with 100 records then outbound file should have 100 entries and their response info. 
 
 •	Outbound file name will be in FLXO<FLEX_MID>.<TYPE>.<EPOCH>.<NAME>.<VERSION>_Summary.<EXT> format 
@@ -77,17 +85,22 @@ Record format  CI|<MERCHANT_ID>|<MERCHANT_CUSTOMER_ID>|<MERCHANT_TRANSACTION_ID>
 | `STATUS_CODE` 	  | This will be code return via api. For success we'll use 00 but for error we'll pass actual error code received from API eg. 400011|
 | `STATUS_DESCRIPTION`|	For Success value will be SUCESS and for error it will be reason of API failure. eg. Invalid email id|
 
-###Example
-FH|||1234|
-BH|1
-CI|000000000000|012345678|012345678|00|SUCCESS|
-CI|000000000000|1324324324344|1324324324344|00|SUCCESS|
-CI|000000000000|343543653656|343543653656|00|SUCCESS|
-CI|000000000000|6587686786789|6587686786789|00|SUCCESS|
-CI|||||269902|RecordIndex=4;ValidationError=totalFieldCount violation; expected=22 actual=21
-CI|000000000000|8956565466666|8956565466666|00|SUCCESS|
-CI|000000000000|7684543535543|7684543535543|00|SUCCESS|
-CI|000000000000|4354654767677|4354654767677|00|SUCCESS|
-CI|000000000000|8769789789879|8769789789879|00|SUCCESS|
-BT|9|8|1
-FT|1|8|1
+###Sample File Content 
+
+####Sample File
+<!-- theme: success -->
+>FH|||AON1234|
+>BH|5
+>CI|526287175883|bqcaonmb051|TXNBQC02a2398fc671a505445|00|SUCCESS|
+>CI|526287175883|bqcaonmb0091|TXNBQC03a298fc671a5053446|00|SUCCESS|
+>BT|2|2|0
+>FT|1|2|0
+
+####Sample File
+<!-- theme: success -->
+>FH|||1234|
+>BH|23
+>CI|526287175883|bqcflexaon101fc|BQCUZJ1500115342|400024|Payment Type not allowed|
+>CI|526287175883|bqcflexaon102fc|BQCIJZM2765224269|400024|Payment Type not allowed|
+>BT|2|0|2
+>FT|1|0|2
