@@ -4,7 +4,7 @@
 
 •	Merchant should upload files to SFTP location with below file name pattern. Each segment is separated by dot (.)
 
-•	FLXI{FLEX_MID}.{TYPE}.{EPOCH}.{NAME}.{VERSION}.{EXT}; Sample File name : FLXINMM.CI.1654537809.BAT97.1.csv
+•	FLXI{FLEX_MID}.{TYPE}.{EPOCH}.{NAME}.{VERSION}.{EXT}.csv; Sample File name : FLXINMM.CI.1654537809.BAT97.1.csv
 
 The below table identifies the parameters of File format.
 
@@ -64,11 +64,10 @@ Refer below table for DDP CSV Fields
 ##Outbound file name 
 
 •	DDP exports a batch summary report - containing status of each input file record, success/failure, error-description if failed. 
-
 Ex: If merchant submits an inbound file with 100 records then outbound file should have 100 entries and their response info. 
 
-•	Outbound file name will be in FLXO{FLEX_MID}.{TYPE}.{EPOCH}.{NAME}.{VERSION}_Summary.{EXT} format 
- Ex : If inbound file is FLXINMM.CI.1654537809.BAT97.1.csv then. outbound file will be FLXONMM.CI.1654537809.BAT97.1.csv_Summary.CSV
+•	Outbound file name will be in FLXO{FLEX_MID}.{TYPE}.{EPOCH}.{NAME}.{VERSION}_Summary.{EXT}.csv format.
+ Ex : If inbound file is FLXINMM.CI.1654537809.BAT97.1.csv then. outbound file will be FLXONMM.CI.1654537809.BAT97.1.csv_Summary.csv
  
 ### Outbound file content
 
@@ -90,27 +89,17 @@ Record format  CI|MERCHANT_ID|MERCHANT_CUSTOMER_ID|MERCHANT_TRANSACTION_ID|STATU
 ####Sample File
 <!-- theme: success -->
 >FH|||AON1234|
-
 >BH|5
-
 >CI|526287175883|bqcaonmb051|TXNBQC02a2398fc671a505445|00|SUCCESS|
-
 >CI|526287175883|bqcaonmb0091|TXNBQC03a298fc671a5053446|00|SUCCESS|
-
 >BT|2|2|0
-
 >FT|1|2|0
 
 ####Sample File
 <!-- theme: success -->
 >FH|||1234|
-
 >BH|23
-
 >CI|526287175883|bqcflexaon101fc|BQCUZJ1500115342|400024|Payment Type not allowed|
-
->CI|526287175883|bqcflexaon102fc|BQCIJZM2765224269|400024|Payment Type not allowed|
-
+>CI|526287175883|bqcflexaon102fc|BQCIJZM2765224269|400024|Invalid Email Address|
 >BT|2|0|2
-
 >FT|1|0|2
