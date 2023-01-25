@@ -6,12 +6,11 @@ Digital Disbursement clients are allowed to determine if the recipient should be
 
 Recipients determine who will receive the funds:   If this option is being used, then the first recipient to enter his/her disbursement information will receive all of the funds.  The remaining recipients will have to approve the disbursement to the recipient receiving the funds prior to the completion of the disbursement.  If the payment expires before all recipients have approved or a recipient rejects the payment, then the payment is cancelled, funds are released in the DFA, and recipients are notified of the expiration. 
 
-The Merchant can initiate the below type of payment for recipient.
+The Merchant can initiate the below type of payment Initiation for recipient.
 
 ### Initiate Single Consumer Payment
 
 Objective Merchant will want to initiate a payment for a single consumer recipient through the merchant portal and send email to recipient for the payment disbursement.
-
 
 ### Initiate Single Company Payment
 

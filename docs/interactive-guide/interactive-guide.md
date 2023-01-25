@@ -1,5 +1,5 @@
 
-DDP Will support the below features.
+DDP is supporting the below features.
 
 •	API Flow
 

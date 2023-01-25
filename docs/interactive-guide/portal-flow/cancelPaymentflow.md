@@ -5,7 +5,9 @@ Merchant can only cancel payments that are in a “Pending” status. Once a dis
 Clients are able to initiate a payment cancellation at any time during the process, unless the disbursement is being processed.   When a cancellation is successful:
 
 The Transaction and Payment statuses are updated
+
 The hold is removed from the funds in the DFA
+
 Notification is sent to the recipient(s)
 
 

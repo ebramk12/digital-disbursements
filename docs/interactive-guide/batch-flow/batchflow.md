@@ -73,7 +73,9 @@ Ex: If merchant submits an inbound file with 100 records then outbound file shou
 
 Response file contains multiple records. Each field in a record is separated by pipe (|) delimiter.
 
-Record format  CI|MERCHANT_ID|MERCHANT_CUSTOMER_ID|MERCHANT_TRANSACTION_ID|STATUS_CODE|STATUS_DESCRIPTION
+####Record format  
+
+CI|MERCHANT_ID|MERCHANT_CUSTOMER_ID|MERCHANT_TRANSACTION_ID|STATUS_CODE|STATUS_DESCRIPTION
 
 | Field Name 		  | Comments 															|
 | ------------------- | ------------------------------------------------------------------- |
@@ -100,6 +102,7 @@ Record format  CI|MERCHANT_ID|MERCHANT_CUSTOMER_ID|MERCHANT_TRANSACTION_ID|STATU
 >FH|||1234|
 >BH|23
 >CI|526287175883|bqcflexaon101fc|BQCUZJ1500115342|400024|Payment Type not allowed|
+
 >CI|526287175883|bqcflexaon102fc|BQCIJZM2765224269|400024|Invalid Email Address|
 >BT|2|0|2
 >FT|1|0|2
