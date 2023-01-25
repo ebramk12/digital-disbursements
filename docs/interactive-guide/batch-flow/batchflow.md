@@ -1,25 +1,28 @@
-										#BATCH FILE
+										BATCH FILE
 																
 # File Name Standard
 
 •	Merchant should upload files to SFTP location with below file name pattern. Each segment is separated by dot (.)
-•	FLXBAT.{FLEX_MID}.{TYPE}.{EPOCH}.{NAME}.{VERSION}.{EXT}. Sample File name : FLXBAT.NMM.CI.1654537809.BAT97.1.csv
+
+•	FLXI{FLEX_MID}.{TYPE}.{EPOCH}.{NAME}.{VERSION}.{EXT}; Sample File name : FLXINMM.CI.1654537809.BAT97.1.csv
 
 The below table identifies the parameters of File format.
 
-| Variable | Description | Ex |
-| -------- | ------------------ | ------- |
-| `FLXBAT` | Static Prefix |  |
-| `FLEX_MID` | Alpha Numeric Flex MID provided to merchant at the time of onboarding | SF,NMM |
-| `TYPE` | 2 letter record type from below list | CI |
-| `EPOCH` | number of seconds that have elapsed since January 1, 1970 (midnight UTC/GMT) | 1654537809 |
-| `NAME` | merchant preferred alpha-numeric (label or name) max-length : 20 | STLMNT220510 batch93 |
-| `VERSION` | file version as integer. | 1 |
-| `EXT` | file extension | CI |
+| Variable 		| Description 															| Ex 	  |
+| --------		| ----------------------------------------------------------------------| ------- |
+| `FLXI` 		| Static Prefix 														|  		  |
+| `FLEX_MID`	| Alpha Numeric Flex MID provided to merchant at the time of onboarding. max-length = 3	 | SF,NMM  |
+| `TYPE` 		| 2 letter record type 				 									| CI 	  |
+| `EPOCH`		| number of seconds that have elapsed since January 1, 1970 (midnight UTC/GMT) | 1654537809 |
+| `NAME`		| merchant preferred alpha-numeric (label or name) max-length : 20 		| STLMNT220510 batch93 |
+| `VERSION`		| file version as integer. 												| 1 	  |
+| `EXT`			| file extension														| CI	  |
 
-•	Depending on DB and Git Configurations Flex Reader will pick files from SFTP Location.
+##Inbound file content
 
-## Batch Flex config
+The file should have comma separated fields in specific order. 
+
+Each field should be quoted with double-quotes (") for data reliability.
 
 ###Headers
 <!-- theme: success -->
@@ -27,56 +30,43 @@ The below table identifies the parameters of File format.
 
 ###Mapping Details
 
-| Field Name 		  | Datatype  | Maximum Length | Required       | Comments |
-| ------------------- | --------- | ---------------| ---------------| --------------------------------------------------------------------		|
-| `AMOUNT` 			  |  String	  |		(16,4) 	   | &#10004;		| amount to be used to initiate payment 									|
-| `CURRENCY` 		  |  String	  |		 20    	   | &#10004;		| currency used to initiate the payment. default is set to USD 				|
-| `MERCHANT_ID` 	  | String	  |		 32		   | &#10004;		| merchant who initiated the request 										|
-| `MERCHANT_CUSTOMER_ID OR VENDOR_ID` | String  |  32  | &#10004;	| merchant who initiated the request 										|
-| `PAYMENT_TYPE OR DISBURSEMENT_TYPE` | String  |  20  | &#10004;	| free text - Type of disbursement - Wages, Claims, promotions,Loans etc"   |
-| `RECIPIENT_TYPE` 	  |  String	|		100	        | &#10004;		| recipient type. possible values Consumer/Company 							|
-| `EMAIL` 			  |  String	|		100			| &#10004;		| recipient email address 													|
-| `FIRST_NAME` 		  |  String	|		100 		| Conditional 	| recipient first name should be sent if the recipient type is "Consumer"	|
-| `LAST_NAME` 		  |  String	|		100 		| Conditional 	| recipient last name should be sent if the recipient type is "Consumer"	|
-| `DATE_OF_BIRTH` 	  |  String	|		 			| Conditional 	| date of birth should be sent if the recipient is "Consumer"				|
-| `TIN` 			  |	 String	|		10 			| Conditional 	| TIN should be sent if the recipient is "Company" 							|
-| `PHONE_NUMBER`	  |  String	|		50			| Conditional	| recipient phone number													|
-| `PHONE_NUMBER_EXTENSION` |  String  |		 		| 				| recipient phone number extension											|
-| `STREET` 			  | String	|		200 		| &#10004;		| recipient address street													|
-| `CITY` 			  |	String	|		50			| &#10004;		| recipient city street 													|
-| `STATE`			  | String	|		50 			| &#10004;		| recipient state street 													|
-| `POSTAL_CODE` 	  | String	|		20			| &#10004;		| recipient address postal code												|
-| `COUNTRY` 		  | String	|		20 			| &#10004;		| recipient address country 												|
-| `DBA`				  | String	|   				| Conditional 	| DBA should be sent if the recipient Company name  						|
-| `MERCHANT_TRANSACTION_ID OR REFERENCE_ID` | String |	100  | &#10004;	| unique for each request 												|
-| `CUSTOM_FIELDS` 	  |	String	|				    | 				| optional and value will be list of key value pairs(key and value pairs will be delimited by colon( : )) and delimited by comma(,) |
+| Field Name 		  | Max Length/Format 	| Required      | Comments 																|
+| ------------------- | ----------------	| --------------| --------------------------------------------------------------------			|
+| `AMOUNT` 			  |	###.## 	 		  	| &#10004;		| Amount to be used to initiate payment. ex : 10.88 , 879.00					|
+| `CURRENCY` 		  |	ISO 4217 3-letter currency code | &#10004;	| Only USD supported at the moment										|
+| `MERCHANT_ID` 	  |	 32		   			| &#10004;		| Merchant who initiated the request.Can be different in non-prod and prod.		|
+| `MERCHANT_CUSTOMER_ID OR VENDOR_ID` |  32  | &#10004;	| Merchant generated customer-id. Used as unique customer identifier for merchant. 	|
+| `PAYMENT_TYPE OR DISBURSEMENT_TYPE` |  20  | &#10004; | free text - Type of disbursement - Wages,Claims,promotions,Loans etc"				|
+| `RECIPIENT_TYPE` 	  |	100	       			| &#10004;		| recipient type. possible values Consumer/Company 								|
+| `EMAIL` 			  |		100	   			| &#10004;		| recipient email address 														|
+| `FIRST_NAME` 		  |		100    			| &#10004;, if RECIPIENT_TYPE = 'Consumer' 	| recipient first name should be sent if the recipient type is "Consumer"	|
+| `LAST_NAME` 		  |		100    			| &#10004;, if RECIPIENT_TYPE = 'Consumer' 	| recipient last name should be sent if the recipient type is "Consumer"	|
+| `DATE_OF_BIRTH` 	  |	 					| &#10004;, if RECIPIENT_TYPE = 'Consumer' 	| date of birth should be sent if the recipient is "Consumer". Recipient's Date of Birth. Preferred format YYYYMMDD. Ex : 19891228	|
+| `TIN` 			  |	10 					| &#10004;, if RECIPIENT_TYPE = 'Company' 	| TIN should be sent if the recipient is "Company" 	|
+| `PHONE_NUMBER`	  |	50					| &#10004;, if If merchant enforces 2-factor auth	| recipient phone number					|
+| `PHONE_NUMBER_EXTENSION` | 				| 				| recipient phone number extension												|
+| `STREET` 			  | 200 				| &#10004;		| Recipient's addres - street													|
+| `CITY` 			  |	50					| &#10004;		| Recipient's address - city  													|
+| `STATE`			  | 50 					| &#10004;		| Recipient's address - state  													|
+| `POSTAL_CODE` 	  | 20					| &#10004;		| Recipient's address - postal code												|
+| `COUNTRY` 		  | 20 					| &#10004;		| Recipient's address - country 												|
+| `DBA`				  | 					| &#10004;, if RECIPIENT_TYPE = 'Company'	| DBA should be sent if the recipient Company name  |
+| `MERCHANT_TRANSACTION_ID OR REFERENCE_ID` | 100  		| &#10004;	| unique for each request 												|
+| `CUSTOM_FIELDS` 	  |						| 				| optional and value will be list of key value pairs(key and value pairs will be delimited by colon( : )) and delimited by comma(,) |
 
-##Batch Summary Output
+##Outbound file name 
 
-DDP will share the two type of response.
+•	DDP exports a batch summary report - containing status of each input file record, success/failure, error-description if failed. 
+Ex: If merchant submits an inbound file with 100 records then outbound file should have 100 entries and their response info. 
 
-		1. Batch Summary email
-		
-		2. Batch Summary Output File
+•	Outbound file name will be in FLXO<FLEX_MID>.<TYPE>.<EPOCH>.<NAME>.<VERSION>_Summary.<EXT> format 
+ Ex : If inbound file is FLXINMM.CI.1654537809.BAT97.1.csv then. outbound file will be FLXONMM.CI.1654537809.BAT97.1.csv_Summary.CSV
+ 
+### Outbound file content
 
-### Summary Email
+Response file contains multiple records. Each field in a record is separated by pipe (|) delimiter.
 
-DDP send the summary email of the below format to the corresponding merchant.
-
-| Record Type 		| Description |
-| ----------------	| ------------------------------------- 		  |
-| `File Name` 	  	|	name of the processed file					  |
-| `Total Records` 	|	No of records present in file. 				  |
-| `Success Records` |	No of records which processed successfully.	  |
-| `Failed records` 	|	No of records which failed during processing. |
-| `Invalid records`	|	No of records which invalid during processing.|
-
-###Response Output
-
-Headers
-
-<!-- theme: success -->
-> ACTION_CODE|MERCHANT_ID|MERCHANT_CUSTOMER_ID|MERCHANT_TRANSACTION_ID|STATUS_CODE|STATUS_DESCRIPTION
+Record format  CI|<MERCHANT_ID>|<MERCHANT_CUSTOMER_ID>|<MERCHANT_TRANSACTION_ID>|<STATUS_CODE>|<STATUS_DESCRIPTION>
 
 | Field Name 		  | Comments 															|
 | ------------------- | ------------------------------------------------------------------- |
