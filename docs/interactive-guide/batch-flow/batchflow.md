@@ -55,18 +55,21 @@ Refer below table for DDP CSV Fields
 
 ####Sample File
 <!-- theme: success -->
->"amount.value","amount.currency","merchantId","merchantCustomerId","paymentType","recipient.type","recipient.email","recipient.firstName","recipient.>lastName","recipient.dob","recipient.tin","recipient.phone.value","recipient.phone.ext","recipient.address.street","recipient.address.city","recipien>t.address.state","recipient.address.postalCode","recipient.address.country","recipient.dba","merchantTransactionId","customFields.recipient"
+>"amount.value","amount.currency","merchantId","merchantCustomerId","paymentType","recipient.type","recipient.email","recipient.firstName","recipient.lastName","recipient.dob","recipient.tin","recipient.phone.value","recipient.phone.ext","recipient.address.street","recipient.address.city","recipient.address.state","recipient.address.postalCode","recipient.address.country","recipient.dba","merchantTransactionId","customFields.recipient"
 
 >"1.00","USD","526287175883","vmfs","Claims","Consumer","test.maridu@test.com","Test","Maridu","19890628","","","","2900 Westside Pkwy","Alpharetta","GA","30004","USA","","a298fc671a505445","Custom Recipient 1"
 >"1.00","USD","526287175883","pvgc","Claims","Consumer","testvjec@test.com","Test","Maridu","19890628","","","","2900 Westside Pkwy","Alpharetta","GA","30004","USA","","a298fc671a505446","Custom Recipient 2"
 
 
+
 ##Outbound file name 
 
 •	DDP exports a batch summary report - containing status of each input file record, success/failure, error-description if failed. 
+
 Ex: If merchant submits an inbound file with 100 records then outbound file should have 100 entries and their response info. 
 
 •	Outbound file name will be in FLXO{FLEX_MID}.{TYPE}.{EPOCH}.{NAME}.{VERSION}_Summary.{EXT}.csv format.
+
  Ex : If inbound file is FLXINMM.CI.1654537809.BAT97.1.csv then. outbound file will be FLXONMM.CI.1654537809.BAT97.1.csv_Summary.csv
  
 ### Outbound file content
