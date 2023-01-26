@@ -122,7 +122,7 @@ Inline `code` has back-ticks (`) around it.
 var s = "JavaScript syntax highlighting";
 alert(s);
 ```
-
+ 
 >Use language tags to change the syntax highlighting.
 
 ```json
