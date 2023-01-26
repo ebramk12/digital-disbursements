@@ -61,10 +61,10 @@
           link: docs/interactive-guide/api-flow/update-recipient.md
         - title: Get Recipient
           link: docs/interactive-guide/api-flow/retrieve-recipient.md
-      - title: How to Rerieve Encryption Key
-        link: docs/interactive-guide/api-flow/create-public-token.md
-      - title: How to Rerieve Single Use Token
-        link: docs/interactive-guide/api-flow/create-nonce-token.md
+#       - title: How to Rerieve Encryption Key
+#        link: docs/interactive-guide/api-flow/create-public-token.md
+#       - title: How to Rerieve Single Use Token
+#         link: docs/interactive-guide/api-flow/create-nonce-token.md
       - title: How to Save Payment Method (Acount Vaulting)
         link: docs/interactive-guide/api-flow/vault-payment.md
       - title: How to Initiate, Cancel, and View Transactions
