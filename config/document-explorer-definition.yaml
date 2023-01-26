@@ -43,6 +43,8 @@
         link: docs/troubleshooting/Transaction-payment-status.md
     - title: Request a Sandbox
       link: docs/sandbox/request.md
+    - title: Kitchen Sink Syntax
+      link: docs/documentation/kitchensink.md
 - sections:
   - title: Interactive guide
     link: docs/interactive-guide/interactive-guide.md
