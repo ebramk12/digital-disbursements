@@ -184,7 +184,7 @@ Quote break.
 
 ## Horizontal Rule
 
-...
+---
 
 ```
 Three or more...
@@ -326,3 +326,4 @@ JSON string format for `additionalDataCommon`:
       }
    }
 }
+```
