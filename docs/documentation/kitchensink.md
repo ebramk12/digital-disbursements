@@ -122,11 +122,14 @@ Inline `code` has back-ticks (`) around it.
 var s = "JavaScript syntax highlighting";
 alert(s);
 ```
+
 ```no-highlight
+
 ```javascript
 var s = "JavaScript syntax highlighting";
 alert(s);
 ```
+
 ```
 >Use language tags to change the syntax highlighting.
 
@@ -137,11 +140,13 @@ alert(s);
 ```
 
 ```no-highlight
+
 ```json
 {
   "JSON": "Syntax Highlighting"
 }
 ```
+
 ```
 
 ## Tables
