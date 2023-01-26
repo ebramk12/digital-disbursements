@@ -49,11 +49,11 @@
   - title: Interactive guide
     link: docs/interactive-guide/interactive-guide.md
     sections:
+    - title: Header Setup
+      link: docs/interactive-guide/api-flow/header_sample.md
     - title: API Flow
       link: docs/interactive-guide/api-flow/apiflow.md
       sections:
-      - title: Header Setup
-        link: docs/interactive-guide/api-flow/header_sample.md
       - title: How to Create, Read and Update Recipient Profiles
         link: docs/interactive-guide/api-flow/create-recipient.md
         sections:
@@ -63,10 +63,10 @@
           link: docs/interactive-guide/api-flow/update-recipient.md
         - title: Get Recipient
           link: docs/interactive-guide/api-flow/retrieve-recipient.md
-      - title: How to Rerieve Encryption Key
-        link: docs/interactive-guide/api-flow/create-public-token.md
-      - title: How to Rerieve Single Use Token
-        link: docs/interactive-guide/api-flow/create-nonce-token.md
+#       - title: How to Rerieve Encryption Key
+#        link: docs/interactive-guide/api-flow/create-public-token.md
+#       - title: How to Rerieve Single Use Token
+#         link: docs/interactive-guide/api-flow/create-nonce-token.md
       - title: How to Save Payment Method (Acount Vaulting)
         link: docs/interactive-guide/api-flow/vault-payment.md
       - title: How to Initiate, Cancel, and View Transactions
@@ -80,15 +80,17 @@
           link: docs/interactive-guide/api-flow/cancel-payment.md
     - title: PORTAL Flow
       sections:
-      - title: How to Initiate Single Consumer Payment
-        link: docs/interactive-guide/portal-flow/singleConsumerflow.md
-      - title: How to Initiate Multi Consumer Payment
-        link: docs/interactive-guide/portal-flow/multiConsumerflow.md
-      - title: How to Initiate Single Company Payment
-        link: docs/interactive-guide/portal-flow/singleCompanyflow.md
-      - title: How to Initiate Multi Company Payment
-        link: docs/interactive-guide/portal-flow/multiCompanyflow.md
-      - title: How to Cancel a Payment
+      - title: Initiate Payment
+        link: docs/interactive-guide/portal-flow/initiateportalflow.md
+#     - title: How to Initiate Single Consumer Payment
+#       link: docs/interactive-guide/portal-flow/singleConsumerflow.md
+#     - title: How to Initiate Multi Consumer Payment
+#       link: docs/interactive-guide/portal-flow/multiConsumerflow.md
+#     - title: How to Initiate Single Company Payment
+#       link: docs/interactive-guide/portal-flow/singleCompanyflow.md
+#     - title: How to Initiate Multi Company Payment
+#       link: docs/interactive-guide/portal-flow/multiCompanyflow.md
+      - title: Cancelling a Payment
         link: docs/interactive-guide/portal-flow/cancelPaymentflow.md
     - title: BATCH Flow
       sections:

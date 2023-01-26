@@ -1,7 +1,7 @@
 # Step 2: Create a Public Token
 
 ## Description
-This request will generate a public key to be used in encrypting PCI data as well as a `tokenId` to be passed to subsequent calls through the header. You will use the public Key to perform ecrytion on the account details as follow:
+This request will generate a public key to be used in encrypting PCI data as well as a `tokenId` to be passed to subsequent calls through the header. This `tokenId` and the `publicKey` is valid for 20 minutes and after than its expired, you will use the public Key to perform encryption  on the account details as follow:
 
 | Account Type | Items to Encrypt             |
 | ------------ | ---------------------------- |

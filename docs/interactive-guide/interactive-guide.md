@@ -1,3 +1,8 @@
-# Interactive guide
 
-This section helps you to cover the flows to perform a particular feature
+DDP is supporting the below features.
+
+•	API Flow
+
+•	Portal Flow
+
+•	Batch Flow
