@@ -6,7 +6,7 @@ Fiserv’s Digital Disbursement product allows merchants to provide customers wi
 fast, more secure and cost-effective payout options how and when they 
 want – on weekends, holidays and after hours. ikewise, the product allows the recipient to select the method to be used to disburse the payment.
 
-Flowchart LR
+flowchart LR
     A[Create Recipient] --> B([Get Encryption Key])
     B --|Encrypt Card Data|> c[Request Nonce Token]
 
