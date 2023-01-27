@@ -29,11 +29,3 @@ The minimal request can be any single entity that requires updating, any of the 
 [![Try it out](../../../../assets/images/button.png)](../api/?type=post&path=/ddp/v1/recipients)
 
 
-
-## Retrieve Recipient Info (Optional/Informative)
-
-### Description
-This request will retrieve the information for a recipient based upon its valid `merchantCustomerId` passed in the URL. With this retrieve call you can get the detailed information of the previously created recipient. 
-
-
-[![Try it out](../../../../assets/images/button.png)](../api/?type=post&path=/ddp/v1/recipients)
