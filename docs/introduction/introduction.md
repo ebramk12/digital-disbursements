@@ -4,15 +4,13 @@ DDP is a payment platform that enables business to send payments to your custome
 
 Fiserv’s Digital Disbursement product allows merchants to provide customers with 
 fast, more secure and cost-effective payout options how and when they 
-want – on weekends, holidays and after hours. ikewise, the product allows the recipient to select the method to be used to disburse the payment.L
-
-Digital Disbursements allows several flexible integration options to make integrating with your invronment easy and accessible.
+want – on weekends, holidays and after hours. ikewise, the product allows the recipient to select the method to be used to disburse the payment.
 
 ---
 
 # Integration Options
 
-Start Disbursing payments quickly today by using one of the integration methods below!
+Digital Disbursements allows several flexible integration options to make onboarding easy and accessible.
 
 <!-- type: row -->
 
