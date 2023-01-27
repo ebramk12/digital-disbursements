@@ -2,14 +2,14 @@
 
 ### Description
 
-There are following payment methods for disbursments
+There are following different payment methods for the disbursments, there are detailed descriptions are provided below for each of the payment methnods.
 
  1. Debit
  2. ACH
  3. PayPal
  4. Venmo
  5. Money Network
- 6. ECHEK
+ 6. E-CHEK
  7. Coinbase
 
 
