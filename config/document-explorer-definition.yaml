@@ -49,12 +49,12 @@
   - title: Interactive guide
 #     link: docs/interactive-guide/interactive-guide.md
     sections:
-    - title: Header Setup
-      link: docs/interactive-guide/api-flow/header_sample.md
     - title: API Flow
       link: docs/interactive-guide/api-flow/apiflow.md
       sections:
-      - title: How to Create, Read and Update Recipient Profiles
+      - title: Header Setup
+        link: docs/interactive-guide/api-flow/header_sample.md
+      - title: How to Create and Update Recipient Profiles
         link: docs/interactive-guide/api-flow/create-recipient.md
  #        sections:
  #        - title: Create Recipient
@@ -65,7 +65,7 @@
  #          link: docs/interactive-guide/api-flow/retrieve-recipient.md
 #       - title: How to Rerieve Encryption Key
 #        link: docs/interactive-guide/api-flow/create-public-token.md
-      - title: How to Save Payment Method (Acount Vaulting)
+      - title: How to save a Payment Method (Acount Vaulting)
         link: docs/interactive-guide/api-flow/vault-payment.md
       - title: How to Initiate and Cancel Transactions
         link: docs/interactive-guide/api-flow/create-disbursement.md        
@@ -81,7 +81,9 @@
     - title: PORTAL Flow
       link: docs/interactive-guide/portal-flow/portalflow.md
       sections:
-      - title: Initiate Payment
+      - title: Header Setup
+        link: docs/interactive-guide/api-flow/header_sample.md
+      - title: How to Initiate Payment
         link: docs/interactive-guide/portal-flow/initiateportalflow.md
 #     - title: How to Initiate Single Consumer Payment
 #       link: docs/interactive-guide/portal-flow/singleConsumerflow.md
@@ -91,7 +93,7 @@
 #       link: docs/interactive-guide/portal-flow/singleCompanyflow.md
 #     - title: How to Initiate Multi Company Payment
 #       link: docs/interactive-guide/portal-flow/multiCompanyflow.md
-      - title: Cancelling a Payment
+      - title: How to Cancelling a Payment
         link: docs/interactive-guide/portal-flow/cancelPaymentflow.md
     - title: BATCH Flow
       sections:
