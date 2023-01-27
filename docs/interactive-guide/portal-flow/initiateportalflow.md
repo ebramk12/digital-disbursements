@@ -1,5 +1,6 @@
 
 # Recipient 
+
 Digital Disbursement clients are allowed to determine if the recipient should be allowed to register on the recipient portal or not.  Typically, the decision is based on the number of times that a consumer/business is expected to receive a payment. 
 
 DDP allow two types of recipient flow.
@@ -8,9 +9,11 @@ DDP allow two types of recipient flow.
 •	Register
 
 Guest
+
 If the payment is a one-time event, then the guest option is used.  
 
 Register
+
 If more than one payment is expected to be sent to the recipient, then registration is requested.
 
 # Multiple Recipient Payments
