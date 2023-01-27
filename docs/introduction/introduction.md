@@ -6,33 +6,30 @@ Fiserv’s Digital Disbursement product allows merchants to provide customers wi
 fast, more secure and cost-effective payout options how and when they 
 want – on weekends, holidays and after hours. ikewise, the product allows the recipient to select the method to be used to disburse the payment.
 
-graph LR
-    A[Create Recipient] --> B([Get Encryption Key])
-    B --|Encrypt Card Data|> c[Request Nonce Token]
-
 ---
 
 # Integration Options
 
-Digital Disbursements allows several flexible integration options to make onboarding easy and accessible.
+Digital Disbursements allows several flexible integration options to make onboarding easy and accessible. Choose an integration path below to learn more.
+
 
 <!-- type: row -->
 
 <!-- type: card
 title: Payments Portal
-Description: Disburse payouts through the most popular channels to multiple recipients and create custom configurations in a Client-branded Portal
+Description: Disburse payouts through the most popular channels in a Client-branded Portal that minimizes cost and maximizes speed to market.
 link: ?path=docs/interactive-guide/api-flow/initiateportalflow.md
 -->
 
 <!-- type: card
 title: Hosted Payments Page
-description: Offers the use of a client-branded iframe to facilitate sending account infomration to Fiserv and the merchant will recieve a multi-use token for future use.
+description: Offers the use of a client-branded iframe to manage customer experience, send account infomration (PCI data) directly to Fiserv, and recieve an encrypted token for future use.
 link: ?path=docs/interactive-guide/api-flow/hosted-pages.md
 -->
 
 <!-- type: card
 title: API Only
-description: With our easy to use APIs you can create your own unique user experiance with the confidence of a secure and fast Payments backend.
+description: With Fiserv's simple, modern APIs you can direct flow to users with the confidence of a secure and fast Payments backend.
 link: ?path=docs/interactive-guide/api-flow/apiflow.md
 -->
 
@@ -42,3 +39,66 @@ description: Simply upload a file with payment data via a Maganged File Gateway 
 -->
 
 <!-- type: row-end --> 
+
+---
+
+# Features
+
+<!-- type: row -->
+
+<!-- type: card 
+title: Fraud Controls
+description: Help reduce risk through our AI-based fraud engine which recognizes and predicts new fraud patterns.
+link: ?path=docs/documentation/features/fraud.md
+-->
+
+<!-- type: card 
+title:Tokenization
+description: Eliminate PCI burden and secure your customers’ payment credentials
+link: ?path=docs/documentation/features/tokenization.md
+-->
+
+<!-- type: card 
+title:Payment Options
+description: Deliver fast, secure, cost-effective digital payout capabilities to your customers how and when they want – on weekends, holidays and after hours.
+link: ?path=docs/documentation/features/payment-options.md
+-->
+
+<!-- type: row-end -->
+
+---
+
+# Services
+
+<!-- type: row -->
+
+<!-- type: card 
+title: Account Verification
+description: 
+link:
+-->
+
+<!-- type: card 
+title:Vaulting Services
+description:
+link:
+-->
+
+<!-- type: row-end -->
+
+<!-- type: row -->
+
+<!-- type: card 
+title:Payment Services
+description:
+link:
+-->
+
+<!-- type: card 
+title:Merchant Services
+description: Standardize your back office, customer service and compliance services.
+link:
+-->
+
+<!-- type: row-end -->
+
