@@ -26,7 +26,7 @@ Each field should be quoted with double-quotes (") for data reliability.
 
 Refer below table for DDP CSV Fields 
 
-## Inbound Mapping Details
+## Inbound File Mapping Details
 
 | Field Name 		  | Max Length/Format 	| Required      | Comments 																|
 | ------------------- | ----------------	| --------------| --------------------------------------------------------------------			|
@@ -71,7 +71,7 @@ Ex: If merchant submits an inbound file with 100 records then outbound file shou
 
  Ex : If inbound file is FLXINMM.CI.1654537809.BAT97.1.csv then. outbound file will be FLXONMM.CI.1654537809.BAT97.1.csv_Summary.csv
  
-## Outbound file content
+## Outbound file Mapping Details
 
 Response file contains multiple records. Each field in a record is separated by pipe (|) delimiter. find the below record format.
 
@@ -86,7 +86,7 @@ CI|MERCHANT_ID|MERCHANT_CUSTOMER_ID|MERCHANT_TRANSACTION_ID|STATUS_CODE|STATUS_D
 | `STATUS_CODE` 	  | This will be code return via api. For success we'll use 00 but for error we'll pass actual error code received from API eg. 400011|
 | `STATUS_DESCRIPTION`|	For Success value will be SUCESS and for error it will be reason of API failure. eg. Invalid email id|
 
-### Sample File Content 
+### Sample Output File 
 
 ####Sample File
 <!-- theme: success -->
