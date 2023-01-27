@@ -1,5 +1,3 @@
-											 BATCH FILE
-																
 # File Name Standard
 
 •	Merchant should upload files to SFTP location with below file name pattern. Each segment is separated by dot (.)
