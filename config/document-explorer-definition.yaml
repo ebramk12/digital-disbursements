@@ -65,12 +65,12 @@
           link: docs/interactive-guide/api-flow/retrieve-recipient.md
 #       - title: How to Rerieve Encryption Key
 #        link: docs/interactive-guide/api-flow/create-public-token.md
-#       - title: How to Rerieve Single Use Token
-#         link: docs/interactive-guide/api-flow/create-nonce-token.md
       - title: How to Save Payment Method (Acount Vaulting)
         link: docs/interactive-guide/api-flow/vault-payment.md
-      - title: How to Initiate, Cancel, and View Transactions
-        link: docs/interactive-guide/api-flow/create-disbursement.md
+      - title: How to Initiate and Cancel Transactions
+        link: docs/interactive-guide/api-flow/create-disbursement.md        
+      - title: How to Get Status of Recipients, Merchant and Transactions
+        link: docs/interactive-guide/api-flow/get-transaction-details.md
         sections:
         - title: How to initiate a Transaction.
           link: docs/interactive-guide/api-flow/create-disbursement.md
