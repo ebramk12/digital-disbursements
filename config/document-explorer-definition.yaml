@@ -47,7 +47,7 @@
       link: docs/documentation/kitchensink.md
 - sections:
   - title: Interactive guide
-    link: docs/interactive-guide/interactive-guide.md
+#     link: docs/interactive-guide/interactive-guide.md
     sections:
     - title: Header Setup
       link: docs/interactive-guide/api-flow/header_sample.md
@@ -56,28 +56,28 @@
       sections:
       - title: How to Create, Read and Update Recipient Profiles
         link: docs/interactive-guide/api-flow/create-recipient.md
-        sections:
-        - title: Create Recipient
-          link: docs/interactive-guide/api-flow/create-recipient.md
-        - title: Update Recipient
-          link: docs/interactive-guide/api-flow/update-recipient.md
-        - title: Get Recipient
-          link: docs/interactive-guide/api-flow/retrieve-recipient.md
+ #        sections:
+ #        - title: Create Recipient
+ #          link: docs/interactive-guide/api-flow/create-recipient.md
+ #        - title: Update Recipient
+ #          link: docs/interactive-guide/api-flow/update-recipient.md
+ #        - title: Get Recipient
+ #          link: docs/interactive-guide/api-flow/retrieve-recipient.md
 #       - title: How to Rerieve Encryption Key
 #        link: docs/interactive-guide/api-flow/create-public-token.md
-#       - title: How to Rerieve Single Use Token
-#         link: docs/interactive-guide/api-flow/create-nonce-token.md
       - title: How to Save Payment Method (Acount Vaulting)
         link: docs/interactive-guide/api-flow/vault-payment.md
-      - title: How to Initiate, Cancel, and View Transactions
-        link: docs/interactive-guide/api-flow/create-disbursement.md
-        sections:
-        - title: How to initiate a Transaction.
-          link: docs/interactive-guide/api-flow/create-disbursement.md
-        - title: How to view a Transaction.
-          link: docs/interactive-guide/api-flow/get-transaction-details.md
-        - title: How to Cancel a Transaction.
-          link: docs/interactive-guide/api-flow/cancel-payment.md
+      - title: How to Initiate and Cancel Transactions
+        link: docs/interactive-guide/api-flow/create-disbursement.md        
+      - title: How to Get Status of Recipient, Merchant and Transactions
+        link: docs/interactive-guide/api-flow/get-transaction-details.md
+  #       sections:
+  #      - title: How to initiate a Transaction.
+  #         link: docs/interactive-guide/api-flow/create-disbursement.md
+  #       - title: How to view a Transaction.
+  #         link: docs/interactive-guide/api-flow/get-transaction-details.md
+  #       - title: How to Cancel a Transaction.
+  #         link: docs/interactive-guide/api-flow/cancel-payment.md
     - title: PORTAL Flow
       link: docs/interactive-guide/portal-flow/portalflow.md
       sections:
