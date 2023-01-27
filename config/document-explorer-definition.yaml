@@ -79,6 +79,7 @@
         - title: How to Cancel a Transaction.
           link: docs/interactive-guide/api-flow/cancel-payment.md
     - title: PORTAL Flow
+      link: docs/interactive-guide/portal-flow/portalflow.md
       sections:
       - title: Initiate Payment
         link: docs/interactive-guide/portal-flow/initiateportalflow.md
