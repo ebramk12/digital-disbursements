@@ -32,7 +32,7 @@ This request is the payment call using the PayPal payment method, where we can u
 [![Try it out](../../../../assets/images/button.png)](../api/?type=post&path=/ddp/v1/recipients)
 
 
-## Venmo 
+### Venmo 
 
 This request is the payment call using the Venmo payment method, where we can use the `email` or `phoneNumber`  variables to initate the payments. The key variables here are `merchantTransactionId`, this must be unique for every transaction call , as well as paymentType which should correspond to the payment type associated with your environment.
 
@@ -61,4 +61,10 @@ This request is the payment call using the Coinbase payment method to create a d
 [![Try it out](../../../../assets/images/button.png)](../api/?type=post&path=/ddp/v1/recipients)
 
 
+## Cancel a Payment
+
+### Description
+This request will cancel an in-flight transaction from moving to completed. This will generally only apply to slower payment methods such as ACH or Echeck.
+
+[![Try it out](../../../../assets/images/button.png)](../api/?type=post&path=/ddp/v1/recipients)
 
