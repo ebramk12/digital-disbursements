@@ -8,6 +8,12 @@ want – on weekends, holidays and after hours. ikewise, the product allows the 
 
 Digital Disbursements allows several flexible integration options to make integrating with your invronment easy and accessible.
 
+---
+
+# Integration Options
+
+Start Disbursing payments quickly today by using one of the integration methods below!
+
 <!-- type: row -->
 
 <!-- type: card
