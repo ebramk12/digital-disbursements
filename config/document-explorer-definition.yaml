@@ -29,7 +29,7 @@
 ################################################################################
 
 - sections:
-    - title: Introduction
+    - title: Getting Started
       link: docs/introduction/introduction.md
 #   - title: Interactive guide
 #     link: docs/interactive-guide/interactive-guide.md

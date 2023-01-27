@@ -2,14 +2,35 @@
 
 DDP is a payment platform that enables business to send payments to your customers, the digitized payments reduce the friction and time required for your customers to recieve the money.
 
-Fiserv’s Digital Disbursement product allows a business to create a payment to a consumer (B2C) or another business (B2B) electronically. Likewise, the product allows the recipient to select the method to be used to disburse the payment.
+Fiserv’s Digital Disbursement product allows merchants to provide customers with 
+fast, more secure and cost-effective payout options how and when they 
+want – on weekends, holidays and after hours. ikewise, the product allows the recipient to select the method to be used to disburse the payment.L
 
-The basic steps used to complete a Digital Disbursement are as follows:
+Digital Disbursements allows several flexible integration options to make integrating with your invronment easy and accessible.
 
-1. Merchant Identifies the Recipient(s)
-2. Merchant Initiates the Payment(s)
-3. Merchant Approves the Payment(s) via Workflow Management 
-4. Merchant Notifies the Recipient(s)
-5. Recipient accepts the Payment (Acceptance Process)
-6. Recipient selects a Disbursement Method
-7. Fiserv disburses Funds to the recipient  via the chosen method.
+<!-- type: row -->
+
+<!-- type: card
+title: Payments Portal
+Description: Disburse payouts through the most popular channels to multiple recipients and create custom configurations in a Client-branded Portal
+link: ?path=docs/interactive-guide/api-flow/initiateportalflow.md
+-->
+
+<!-- 
+title: Hosted Payments Page
+description: Offers the use of a client-branded iframe to facilitate sending account infomration to Fiserv and the merchant will recieve a multi-use token for future use.
+link: ?path=docs/interactive-guide/api-flow/hosted-pages.md
+-->
+
+<!--
+title: API Only
+description: With our easy to use APIs you can create your own unique user experiance with the confidence of a secure and fast Payments backend.
+link: ?path=docs/interactive-guide/api-flow/apiflow.md
+-->
+
+<!--
+title: Batch and Bulk Options
+description: Simply upload a file with payment data via a Maganged File Gateway or Fiserv's ClientLine Enterprise reporting suite. Once Uploaded Fiserv systems will read the file and complete the 
+-->
+
+<!-- type: row-end -->
