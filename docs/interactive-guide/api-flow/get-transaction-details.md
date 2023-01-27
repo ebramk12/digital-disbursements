@@ -3,8 +3,7 @@
 1. Get Recipient Info
 2. Get Recipent Accounts
 3. Get Transaction Status
-4. Get Payment Status
-5. Get Merchant Info
+4. Get Merchant Info
 
 ## Get Recipient Info 
 
@@ -37,14 +36,6 @@ Using `merchantTransactionId`: This request to be used when you want to view the
 
 [![Try it out](../../../../assets/images/button.png)](../api/?type=post&path=/ddp/v1/recipients)
 
-
-## Get Payment Status
-
-### Description
-This request will get the details of a transaction and will take either `merchantCustomerId` or 'merchantTransactionId' in the request parameter. The prerequisite is to have a transaction initiated or disbursed using the payment API. Please refer transaction initiate/disburse section in the following link for more information [Link: TBD] 
-
-
-[![Try it out](../../../../assets/images/button.png)](../api/?type=post&path=/ddp/v1/recipients)
 
 
 ## Get Merchant Info
