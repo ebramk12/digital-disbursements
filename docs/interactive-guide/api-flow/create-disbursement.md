@@ -39,14 +39,14 @@ This request is the payment call using the Venmo payment method, where we can us
 [![Try it out](../../../../assets/images/button.png)](../api/?type=post&path=/ddp/v1/recipients)
 
 
-## Money Network 
+### Money Network 
 
 This request is the payment call using the Money Network payment method, where we will take our `enrolment_vault` token and use it to create a disbursement payment for a recipient. The key variables here are `merchantTransactionId`, this must be unique for every transaction call , as well as paymentType which should correspond to the payment type associated with your environment for eg. Gaming, Claims, Wages etc. The EV token will never expire for the same `merchantCustomerId` and we can perform many number of transactions using same EV token.
 
 [![Try it out](../../../../assets/images/button.png)](../api/?type=post&path=/ddp/v1/recipients)
 
 
-## E-CHECK
+### E-CHECK
 
 This request is the payment call using the E-Check payment method to create a disbursement payment for a recipient. The key variables here are `merchantTransactionId`, this must be unique for every transaction call , as well as paymentType which should correspond to the payment type associated with your environment for eg. Gaming, Claims, Wages etc. 
 
@@ -54,8 +54,11 @@ This request is the payment call using the E-Check payment method to create a di
 
 
 
-## Coinbase
+### Coinbase
 
 This request is the payment call using the Coinbase payment method to create a disbursement payment for a recipient. The key variables here are `merchantTransactionId`, this must be unique for every transaction call , as well as paymentType which should correspond to the payment type associated with your environment for eg. Gaming, Claims, Wages etc. The EV token will never expire for the same `merchantCustomerId` and we can perform many number of transactions using same EV token.
 
 [![Try it out](../../../../assets/images/button.png)](../api/?type=post&path=/ddp/v1/recipients)
+
+
+
