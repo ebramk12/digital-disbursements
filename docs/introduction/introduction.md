@@ -17,19 +17,19 @@ Description: Disburse payouts through the most popular channels to multiple reci
 link: ?path=docs/interactive-guide/api-flow/initiateportalflow.md
 -->
 
-<!-- 
+<!-- type: card
 title: Hosted Payments Page
 description: Offers the use of a client-branded iframe to facilitate sending account infomration to Fiserv and the merchant will recieve a multi-use token for future use.
 link: ?path=docs/interactive-guide/api-flow/hosted-pages.md
 -->
 
-<!--
+<!-- type: card
 title: API Only
 description: With our easy to use APIs you can create your own unique user experiance with the confidence of a secure and fast Payments backend.
 link: ?path=docs/interactive-guide/api-flow/apiflow.md
 -->
 
-<!--
+<!-- type: card
 title: Batch and Bulk Options
 description: Simply upload a file with payment data via a Maganged File Gateway or Fiserv's ClientLine Enterprise reporting suite. Once Uploaded Fiserv systems will read the file and complete the 
 -->
