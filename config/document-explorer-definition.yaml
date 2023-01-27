@@ -78,7 +78,7 @@
   #         link: docs/interactive-guide/api-flow/get-transaction-details.md
   #       - title: How to Cancel a Transaction.
   #         link: docs/interactive-guide/api-flow/cancel-payment.md
-    - title: PORTAL Flow
+    - title: Portal Flow
       link: docs/interactive-guide/portal-flow/portalflow.md
       sections:
       - title: Header Setup
