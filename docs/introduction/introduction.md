@@ -33,4 +33,4 @@ title: Batch and Bulk Options
 description: Simply upload a file with payment data via a Maganged File Gateway or Fiserv's ClientLine Enterprise reporting suite. Once Uploaded Fiserv systems will read the file and complete the 
 -->
 
-<!-- type: row-end -->
+<!-- type: row-end --> 
