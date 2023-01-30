@@ -18,7 +18,6 @@ Create recipient is always the first step that needs to be taken to for any tran
 [![Try it out](../../../../assets/images/button.png)](../api/?type=post&path=/ddp/v1/recipients)
 
 
-
 ## Update Recipient Info (Optional/Informative)
 
 ### Description
@@ -26,6 +25,6 @@ This request will update the previously created recipient with the necessary inf
 The minimal request can be any single entity that requires updating, any of the objects or entities in the parameters of the create recipient schema will work here.
 
 
-[![Try it out](../../../../assets/images/button.png)](../api/?type=post&path=/ddp/v1/recipients)
+[![Try it out](../../../../assets/images/button.png)](../api/?type=patch&path=/ddp/v1/recipients/{id})
 
 
