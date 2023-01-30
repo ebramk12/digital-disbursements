@@ -12,13 +12,6 @@ There are 2 recipient types – Consumer and Company.
 </details>
 
 <details>
-<summary><b>Is the user experience in the portal different once payment notification goes out between a consumer and business?</b></summary>
-
-No, both will have same user experience.
-
-</details>
-
-<details>
 <summary><b>What is TIN? Also, which use case involves passing value for TIN?</b></summary>
 
 TIN (Taxpayer Identification Number) here refers to TIN of the business recipient. This is mandatory for business recipient.
@@ -26,16 +19,16 @@ TIN (Taxpayer Identification Number) here refers to TIN of the business recipien
 </details>
 
 <details>
-<summary><b>Will we receive a response and notification at the same time (if we send a POST Payment request do we expect to receive a response and to be notified also for that status)?</b></summary>
+  <summary><b>Is the mobile number mandatory for create recipient?</b></summary>
 
-Yes it’s in same time.
+No. 
 
 </details>
 
 <details>
-<summary><b>What are all custom fields support available in payment request?</b></summary>
+<summary><b>Will we receive a response and notification at the same time (if we send a POST Payment request do we expect to receive a response and to be notified also for that status)?</b></summary>
 
-There is no limit for custom fields in payment request. we can add as many as required.
+Yes it’s in same time.
 
 </details>
 
@@ -52,20 +45,6 @@ How many times a recipient can attempt to disburse a payment with wrong payment 
 <summary><b>Is “TV – Transaction Cancelled”, “DNF - Delivery Notification Failed” a final state? Should we VOID this payment? Or will this eventually become expired or another status? </b></summary>
 
 This is final state and can be considered as payment cancelled. No need to VOID or any other action required. 
-
-</details>
-
-<details>
-<summary><b> Can a merchant cancel (“TV – Transaction Cancelled”, “PC- Payment Cancelled”) a payment from an Admin access to the portal? </b></summary>
-
-Portal is only for recipients and Merchant cannot cancel a payment using portal.  
-
-</details>
-
-<details>
-<summary><b>What should be supplied as tokenId to /payments with tokenProvider as ENROLMENT_VAULT?</b></summary>
-
-Yes, it is the token we get back from /accounts.
 
 </details>
 
@@ -94,10 +73,6 @@ DD & DH is only applicable and the possible values are
 
 </details>
 
-
-
-### Customer Services FAQs
-
 <details>
 <summary><b>What are the IPS to be whitelisted for webhooks by client?</b></summary>
 
@@ -112,13 +87,19 @@ Note : If any difficulties whitelisting the above IPS please use below ones
 
 </details>
 
-
-### Account Services FAQs
+### API Flow FAQs
 
 <details>
-  <summary><b>Is the mobile number mandatory for create recipient?</b></summary>
+<summary><b>What should be supplied as tokenId to /payments with tokenProvider as ENROLMENT_VAULT?</b></summary>
 
-No. 
+Yes, it is the token we get back from /accounts.
+
+</details>
+
+<details>
+<summary><b>What are all custom fields support available in payment request?</b></summary>
+
+There is no limit for custom fields in payment request. we can add as many as required.
 
 </details>
 
@@ -130,7 +111,30 @@ If Guest is false for Recipient of type Consumer, then payment cannot be initial
 </details>
 
 
-### Payment Services FAQs 
+### Portal Flow FAQs
+
+<details>
+<summary><b>Is the user experience in the portal different once payment notification goes out between a consumer and business?</b></summary>
+
+No, both will have same user experience.
+
+</details>
+
+<details>
+<summary><b> Can a merchant cancel (“TV – Transaction Cancelled”, “PC- Payment Cancelled”) a payment from an Admin access to the portal? </b></summary>
+
+Portal is only for recipients and Merchant cannot cancel a payment using portal.  
+
+</details>
+
+<details>
+<summary><b>The source, tokenprovider and tokened are listed as required. Would we be passing any of the card source or maintaining tokens for this integration. Can you clarify these parameters? </b></summary>
+
+You would just need to call initiate payment which would contain the information about the recipients, the amount, and merchantTransactionID. There is no need to call recipient as the portal will handle that. Only the initiate payment needs.
+
+</details>
+
+### Payment Services FAQs
 
 
 <details>
