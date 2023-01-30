@@ -59,13 +59,17 @@ In this request you are going to encrypt your PCI (Payment Card Industry) data w
 type: tab
 -->
 
-[UCOM Account Service](/product/UniversalCommerce/api/?type=get&path=/v1/account-tokens/{nonceTokenId}&branch=develop&version=1.0.0)
+### Description
+
+HPP is a web SDK and iFrame solution. DDP is intended to provide merchants with an option to capture the cardholder data in secure manner through HPP. Secure card capture is to allow merchants to embed the HP SDK into their existing website/web view. This SDK solution offered by DDP platform shall load in iFrame and comply the PCI requirements. In addition to the core functionality of HPP, It shall provide a capability to customize the UI to match the merchant's website style.
+
+[![Guide](../../../../assets/uCom_HostedPages2_Integration_Guide.pdf)]
 
 <!-- type: tab-end -->
 
 ---
 
-## Vault a Payment Method
+# Vault a Payment Method
 
 ### Description
 
@@ -79,3 +83,4 @@ This request will take our generated nonce token from previous step in the paylo
 >| access_token  | the same `tokenId` used in the Bearer authorization in step 3 (*ex.* `access_token: AGG596cV67WF8DjYLE3kS6nSu36x`) |
 ><!-- TODO: ADD EXAMPLES HERE-->
 
+[![Try it out](../../../../assets/images/button.png)](../api/?type=post&path=/ddp/v1/recipients)
