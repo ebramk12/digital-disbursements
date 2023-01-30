@@ -5,7 +5,7 @@
 There are following steps require to save (vault) a payment methond for the recipient.
 
  1. Create a Public Token
- 2. Create the Account Nonce Token
+ 2. Create the Account Nonce Token (API or Hosted)
  3. Vault the paymment method
 
 
@@ -50,10 +50,10 @@ In this request you are going to encrypt your PCI (Payment Card Industry) data w
 ><!-- theme: success-->
 >> *Example `Autorization: Bearer AGG596cV67WF8DjYLE3kS6nSu36x`*
 
-[![See Examples](../../../../assets/images/button.png)](/product/UniversalCommerce/api/?type=get&path=/v1/account-tokens/{nonceTokenId}&branch=develop&version=1.0.0)
+[![See Examples](../../../../assets/images/button.png)](/product/UniversalCommerce/api/?type=post&path=/v1/account-tokens&branch=develop&version=1.0.0)
 
 
-[UCOM Account Service](/product/UniversalCommerce/api/?type=get&path=/v1/account-tokens/{nonceTokenId}&branch=develop&version=1.0.0)
+[UCOM Account Service](/product/UniversalCommerce/api/?type=post&path=/v1/account-tokens&branch=develop&version=1.0.0)
 
 <!--
 type: tab
