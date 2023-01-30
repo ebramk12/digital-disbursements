@@ -99,6 +99,10 @@
       sections:
       - title: Batch File
         link: docs/interactive-guide/batch-flow/batchflow.md
+    - title: Bulk Flow
+      sections:
+      - title: Batch Template
+        link: docs/interactive-guide/bulk-flow/bulkflow.md
 #      open: true
 #      sections:
 #      - title: Contact Us
