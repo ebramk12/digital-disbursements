@@ -1,3 +1,94 @@
+# How we can help you? 
+
+**Here are few common questions that may help you while you are exploring our API.**
+
+### General FAQs
+
+<details>
+<summary><b>What are the recipient types available for digital disbursement payments?</b></summary>
+
+There are 2 recipient types – Consumer and Company.
+
+</details>
+
+<details>
+<summary><b>Is the user experience in the portal different once payment notification goes out between a consumer and business?</b></summary>
+
+No, both will have same user experience.
+
+</details>
+
+<details>
+<summary><b>What is TIN? Also, which use case involves passing value for TIN?</b></summary>
+
+TIN (Taxpayer Identification Number) here refers to TIN of the business recipient. This is mandatory for business recipient.
+
+</details>
+
+
+### Customer Services FAQs
+
+<details>
+<summary><b>What are the IPS to be whitelisted for webhooks by client?</b></summary>
+
+204.194.141.0/24
+204.194.143.0/24
+
+Subnet(/24) will cover a total of 256 ips (204.194.143.0 - 204.194.143.255).
+
+Note : If any difficulties whitelisting the above IPS please use below ones
+
+204.194.141.29 204.194.141.30 204.194.143.29 204.194.143.30
+
+</details>
+
+
+### Account Services FAQs
+
+<details>
+  <summary><b>Is the mobile number mandatory for create recipient?</b></summary>
+
+No. 
+
+</details>
+
+
+### Payment Services FAQs 
+
+
+<details>
+<summary><b>How should we differentiate between a declined payment response?</b></summary>
+
+You can differentiate based on the error codes, but the best way to get the payment status is using our [GET API] (../api?type=get&path=/ddp/v1/transactions/{transactionId}) request for transactions
+  
+</details>
+
+
+### Security FAQs
+
+<details>
+<summary><b>What kind of fraud check mechanism exists?</b></summary>
+
+We have vigilance Fraud check is enabled, which means any suspicious card or account will be declined for disbursements.
+
+</details>
+
+
+
+[//]: # (These are reference links used in markdown file)
+
+[Setup Tenant]: <?path=docs/getting-started/setup-tenant/setup-tenant.md>
+
+[Register Tenant]: <?path=docs/getting-started/setup-tenant/register-tenant.md>
+
+[Deploy Tenant]: <?path=docs/getting-started/setup-tenant/deploy-tenant.md>
+
+[Sample tenant repo]: <https://github.com/fiserv/sample-tenant>
+
+
+
+
+
 ## Some frequently asked questions
 
 [What are the recipient types available for digital disbursement payments?](?path=docs/faq/ans/recipientTypes.md)
@@ -31,3 +122,5 @@
 [Is there any transaction limits for a individual recipient?] (?path=docs/faq/ans/recipientLimit.md)
 
 [What are all custom fields available in payment Request?] (?path=docs/faq/ans/customFields.md)
+
+
