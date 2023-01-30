@@ -63,6 +63,8 @@ type: tab
 
 <!-- type: tab-end -->
 
+---
+
 ## Vault a Payment Method
 
 ### Description
