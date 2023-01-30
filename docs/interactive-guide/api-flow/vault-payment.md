@@ -33,6 +33,11 @@ This request will generate a public key to be used in encrypting PCI data as wel
 
 # Create the Account Nonce Token
 
+<!--
+type: tab
+titles: API, Hosted 
+-->
+
 ### Description
 In this request you are going to encrypt your PCI (Payment Card Industry) data with the help of `publicKey` and `tokenId` generated in "Create a Public Token" API call in previous step. Once that is done you will pass that data into this call and receive a nonce token to be used in the upcoming step for account vaulting. Keep in mind the encrypted payload for each variable should be surrounded by `ENC[ ]` as shown in the examples.
 
@@ -50,6 +55,13 @@ In this request you are going to encrypt your PCI (Payment Card Industry) data w
 
 [UCOM Account Service](/product/UniversalCommerce/api/?type=get&path=/v1/account-tokens/{nonceTokenId}&branch=develop&version=1.0.0)
 
+<!--
+type: tab
+-->
+
+[UCOM Account Service](/product/UniversalCommerce/api/?type=get&path=/v1/account-tokens/{nonceTokenId}&branch=develop&version=1.0.0)
+
+<!-- type: tab-end -->
 
 ## Vault a Payment Method
 
