@@ -5,7 +5,7 @@
 There are following steps require to save (vault) a payment methond for the recipient.
 
  1. Create a Public Token
- 2. Create the Account Nonce Token
+ 2. Create the Account Nonce Token (API or Hosted)
  3. Vault the paymment method
 
 
@@ -33,6 +33,11 @@ This request will generate a public key to be used in encrypting PCI data as wel
 
 # Create the Account Nonce Token
 
+<!--
+type: tab
+titles: API, Hosted 
+-->
+
 ### Description
 In this request you are going to encrypt your PCI (Payment Card Industry) data with the help of `publicKey` and `tokenId` generated in "Create a Public Token" API call in previous step. Once that is done you will pass that data into this call and receive a nonce token to be used in the upcoming step for account vaulting. Keep in mind the encrypted payload for each variable should be surrounded by `ENC[ ]` as shown in the examples.
 
@@ -45,13 +50,26 @@ In this request you are going to encrypt your PCI (Payment Card Industry) data w
 ><!-- theme: success-->
 >> *Example `Autorization: Bearer AGG596cV67WF8DjYLE3kS6nSu36x`*
 
-[![See Examples](../../../../assets/images/button.png)](/product/UniversalCommerce/api/?type=get&path=/v1/account-tokens/{nonceTokenId}&branch=develop&version=1.0.0)
+[![See Examples](../../../../assets/images/button.png)](/product/UniversalCommerce/api/?type=post&path=/v1/account-tokens&branch=develop&version=1.0.0)
 
 
-[UCOM Account Service](/product/UniversalCommerce/api/?type=get&path=/v1/account-tokens/{nonceTokenId}&branch=develop&version=1.0.0)
+[UCOM Account Service](/product/UniversalCommerce/api/?type=post&path=/v1/account-tokens&branch=develop&version=1.0.0)
 
+<!--
+type: tab
+-->
 
-## Vault a Payment Method
+### Description
+
+HPP is a web SDK and iFrame solution. DDP is intended to provide merchants with an option to capture the cardholder data in secure manner through HPP. Secure card capture is to allow merchants to embed the HP SDK into their existing website/web view. This SDK solution offered by DDP platform shall load in iFrame and comply the PCI requirements. In addition to the core functionality of HPP, It shall provide a capability to customize the UI to match the merchant's website style.
+
+[Hosted flow Guide](?path=assets/uCom_HostedPages2_Integration_Guide.pdf)
+
+<!-- type: tab-end -->
+
+---
+
+# Vault a Payment Method
 
 ### Description
 
@@ -65,3 +83,4 @@ This request will take our generated nonce token from previous step in the paylo
 >| access_token  | the same `tokenId` used in the Bearer authorization in step 3 (*ex.* `access_token: AGG596cV67WF8DjYLE3kS6nSu36x`) |
 ><!-- TODO: ADD EXAMPLES HERE-->
 
+[![Try it out](../../../../assets/images/button.png)](../api/?type=post&path=/ddp/v1/recipients)

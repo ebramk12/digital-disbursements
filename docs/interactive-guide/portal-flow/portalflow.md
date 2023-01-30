@@ -1,4 +1,4 @@
-# PORTAL Flow
+# Portal Flow
 
 The Digital Payouts Recipient Portal is a platform that allows customers to quickly and securely collect payments you’ve issued to them. The user-friendly platform guides customers through the process of claiming funds and allows them to choose among various payout options that would give them access to their money in a matter of minutes or days, depending on the payout method selected.
 

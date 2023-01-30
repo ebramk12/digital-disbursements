@@ -95,10 +95,14 @@
 #       link: docs/interactive-guide/portal-flow/multiCompanyflow.md
       - title: How to Cancelling a Payment
         link: docs/interactive-guide/portal-flow/cancelPaymentflow.md
-    - title: BATCH Flow
+    - title: Batch Flow
       sections:
-      - title: BATCH File
+      - title: Batch File
         link: docs/interactive-guide/batch-flow/batchflow.md
+    - title: Bulk Flow
+      sections:
+      - title: Batch Template
+        link: docs/interactive-guide/bulk-flow/bulkflow.md
 #      open: true
 #      sections:
 #      - title: Contact Us
