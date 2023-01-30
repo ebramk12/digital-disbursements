@@ -35,7 +35,8 @@ link: ?path=docs/interactive-guide/api-flow/apiflow.md
 
 <!-- type: card
 title: Batch and Bulk Options
-description: Simply upload a file with payment data via a Maganged File Gateway or Fiserv's ClientLine Enterprise reporting suite. Once Uploaded Fiserv systems will read the file and complete the 
+description: Simply upload a file with payment data via a Maganged File Gateway or Fiserv's ClientLine Enterprise reporting suite. Once Uploaded Fiserv systems will read the file, disburse the payments, and return a summary file.
+linl: ?path=docs/interactive-guide/batch-flow/batchflow.md
 -->
 
 <!-- type: row-end --> 
@@ -75,7 +76,7 @@ link: ?path=docs/documentation/features/payment-options.md
 <!-- type: card 
 title: Account Verification
 description: 
-link:
+link: 
 -->
 
 <!-- type: card 

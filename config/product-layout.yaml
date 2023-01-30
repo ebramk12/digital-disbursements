@@ -35,43 +35,48 @@ header:
     link: "/assets/images/Fiserv_Logo.jpg"
     altText: DigitalDisbursements™
 featuredFeatures:
-  - title: Recipient Portal
-    description:  DigitalDisbursements solution allows financial Institution to issue and manage the Credit Card products to their end customers via an easy to use and integrate Customer Portal
+  - title: FEATURE 2
+    description:  Description
     tags: ["APAC", "FirstVision", "Credit"]
     bullets: ["Activate Card", "Block Card", "Lost Stolen Card Transfer", "CVV2 Validation" ]
     relatedDocs:
       - relatedDoc: 
-        title: Interactive Guide
-        description: Gives an easy to follow walk through of how integrate the Recipient Protal.
-        link: .docs/interactive-guide/portal-flow/singleConsumerflow.md
-      - relatedDoc: 
-        title: Portal Demo <Needs link>
-        description: Gives a walk through of the customer experiance using the Recipient Protal. 
+        title: REPLACE ME WITH DOC
+        description: Description
         link: 
       - relatedDoc: 
-        title: Sending Payments to multiple recipients.
-        description: Allows management of payment instrument that is used to perform financial transaction.  Example physical Card, Virtual Card, Wallet Token. 
-        link: ./docs/Card-Management.md
+        title: REPLACE ME WITH DOC
+        description: Description. 
+        link: 
+      - relatedDoc: 
+        title: REPLACE ME WITH DOC
+        description: Description
+        link: 
     relatedAPIs:
       - relatedAPI: 
-        title: Create and Initiate payment.
-        description: This service is used to update the Account Block Code.
+        title: REPLACE ME WITH API LINK
+        description: Description
         type: "patch"        
         path: "../api/?type=post&path=/ddp/v1/payments"
-  - title: Hosted Pages
-    description:  Digital Disbursements solution allows financial Institution to embed the customer portal into their existing website.
+  - title: FEATURE 2
+    description:  Description
     tags: ["APAC", "FirstVision", "Credit"]
     bullets: ["Activate Card", "Block Card", "Lost Stolen Card Transfer", "CVV2 Validation" ]
     relatedDocs:
       - relatedDoc: 
-        title: Interactive Guide
-        description: Gives an easy to follow walk through of how integrate hosted pages in your application.
-        link: .docs/interactive-guide/portal-flow/singleConsumerflow.md
+        title: REPLACE ME WITH DOC
+        description: Description
+        link:
       - relatedDoc: 
-        title: Hasted Pages Demo <Needs link>
-        description: Gives a walk through of the customer experiance using the Recipient Protal. 
-        link: 
+        title: REPLACE ME WITH DOC
+        description: Description
       - relatedDoc: 
-        title: FAQs
-        description: Source to refrence frequently asked questions about digital dibursements.
-        link: ./docs/Card-Management.md
+        title: REPLACE ME WITH DOC
+        description: Description
+        link:
+    relatedAPIs:
+      - relatedAPI: 
+        title: REPLACE ME WITH API LINK
+        description: Description
+        type: "patch"        
+        path: "../api/?type=post&path=/ddp/v1/payments"
