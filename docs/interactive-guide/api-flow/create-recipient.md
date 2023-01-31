@@ -29,3 +29,7 @@ The minimal request can be any single entity that requires updating, any of the 
 [![Previous](../../../../assets/images/previous.png)](../api/?type=patch&path=/ddp/v1/recipients/{id})<div style="text-align: right">  
 
 [![Next](../../../../assets/images/next.png)](../docs/?path=docs/interactive-guide/api-flow/vault-payment.md)<div style="text-align: left">
+
+<img align="left" width="100" height="100" src="(../../../../assets/images/next.png)"> (../api/?type=patch&path=/ddp/v1/recipients/{id})
+
+<img align="left" width="100" height="100" src="(../../../../assets/images/previous.png)"> (../docs/?path=docs/interactive-guide/api-flow/vault-payment.md)
