@@ -34,6 +34,7 @@ paths:
         - {$ref: '#/components/parameters/AuthorizationHeader'}
         - {$ref: '#/components/parameters/ClientRequestIdHeader'}
         - {$ref: '#/components/parameters/AccessTokenHeader'}
+        - {$ref: '#/components/parameters/ContentTypeHeader' }
         - {$ref: '#/components/parameters/RecipientIdPathVariable'}
 
       requestBody:
@@ -81,6 +82,7 @@ paths:
               schema:
                 $ref: '#/components/schemas/ServerError'
 
+  /ddp/v1/recipients/{merchantCustomerId}/accounts:
     get:
       x-group-name: Recipient Accounts
       x-proxy-name: Get Accounts
@@ -94,7 +96,8 @@ paths:
         - { $ref: '#/components/parameters/TimestampHeader' }
         - { $ref: '#/components/parameters/AuthorizationHeader' }
         - { $ref: '#/components/parameters/ClientRequestIdHeader' }
-        - { $ref: '#/components/parameters/RecipientIdPathVariable' }
+        - { $ref: '#/components/parameters/ContentTypeHeader' }
+        - { $ref: '#/components/parameters/MerchantCustomerIdPathVariable' }
 
 
       responses:
@@ -148,6 +151,7 @@ paths:
         - { $ref: '#/components/parameters/AuthorizationHeader' }
         - { $ref: '#/components/parameters/ClientRequestIdHeader' }
         - { $ref: '#/components/parameters/AccessTokenHeader' }
+        - { $ref: '#/components/parameters/ContentTypeHeader' }
         - { $ref: '#/components/parameters/RecipientIdPathVariable' }
         - { $ref: '#/components/parameters/EVTokenIdPathVariable' }
 
@@ -202,6 +206,7 @@ paths:
         - { $ref: '#/components/parameters/AuthorizationHeader' }
         - { $ref: '#/components/parameters/ClientRequestIdHeader' }
         - { $ref: '#/components/parameters/AccessTokenHeader'}
+        - { $ref: '#/components/parameters/ContentTypeHeader' }
         - { $ref: '#/components/parameters/RecipientIdPathVariable'}
         - { $ref: '#/components/parameters/EVTokenIdPathVariable'}
 
@@ -218,6 +223,7 @@ paths:
               ActivateInactiveAccount: { summary: Reactivate vaulted account, $ref: '#/components/examples/ActivateInactiveAccountRequest' }
               UpdateDefaultPaymentMethod: { summary: Change default payment method, $ref: '#/components/examples/UpdateDefaultPaymentMethodRequest'}
               UpdateAccountFull: { summary: Default includes all fields, $ref: '#/components/examples/UpdateAccountFullRequest' }
+              CompanyRequest : {summary: Update Company Details, $ref: '#/components/examples/CompanyRequest' }
       responses:
         '204':
           description: Success
@@ -249,6 +255,66 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/ServerError'
+                
+  /ddp/v1/recipients/{merchantCustomerId}/accounts:
+    post:
+      x-group-name: Account Services
+      x-proxy-name: Nonce enrollment
+      x-child-product-name: Account Vaulting Service
+      x-default-example: DebitOrCreditCard
+      tags:
+        - Digital Disbursement Platform Accounts Vault Account service APIs
+      summary: Vault account method.
+      description: Recipient on Digital Disbursement can enroll using one time enrollment.
+      parameters:
+        - {$ref: '#/components/parameters/ApiKeyHeader'}
+        - {$ref: '#/components/parameters/TimestampHeader'}
+        - {$ref: '#/components/parameters/AuthorizationHeader'}
+        - {$ref: '#/components/parameters/ClientRequestIdHeader'}
+        - {$ref: '#/components/parameters/AccessTokenHeader'}
+        - {$ref: '#/components/parameters/ContentTypeHeader' }
+        - {$ref: '#/components/parameters/MerchantCustomerIdPathVariable' }
+
+      requestBody:
+        description: Details required for Nonce enrollment.
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/NonceRequest'
+
+      responses:
+        '201':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/NonceRequest'
+        '400':
+          description: The request cannot be validated.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BadRequest'
+        '401':
+          description: The request was unauthorized.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Unauthorized'
+        '404':
+          description: The requested resource does not exist.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/NotFound'
+        '500':
+          description: An unexpected internal server error occurred.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ServerError'
+           
   
   /ddp/v1/recipients/{recipientId}/cards/session:
     post:
@@ -264,6 +330,7 @@ paths:
         - { $ref: '#/components/parameters/TimestampHeader' }
         - { $ref: '#/components/parameters/AuthorizationHeader' }
         - { $ref: '#/components/parameters/ClientRequestIdHeader' }
+        - { $ref: '#/components/parameters/ContentTypeHeader' }
         - { $ref: '#/components/parameters/RecipientIdPathVariable'}
 
       requestBody:
@@ -402,7 +469,7 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/ServerError'
-
+                
 components:
   parameters:
     AuthorizationHeader:
@@ -453,6 +520,15 @@ components:
       schema:
         type: string
       example: Qg5cNPVKdFaT7nUuDz1zcCTWNsXw
+    ContentTypeHeader:
+     in: header
+     name: Content-Type
+     description: >-
+        used to indicate the media type of the resource.
+     required: true
+     schema:
+        type: string
+     example: application/json
     RecipientIdPathVariable:
       in: path
       name: recipientId
@@ -469,6 +545,15 @@ components:
       schema:
         type: string
       example: 021d39be-078e-4e70-8271-7dbc63d3fb8c
+    MerchantCustomerIdPathVariable:
+      in: path
+      name: merchantCustomerId
+      description: This is provided by merchant at the time of payment initialization. This must be associated with recipient.
+      required: true
+      schema:
+        type: string
+      example: vendorId-0987613457398475
+     
   schemas:
 ##-------------------------------------
 ## Response Model
@@ -500,8 +585,6 @@ components:
           minItems: 0
           items:
             $ref: '#/components/schemas/Links'
-
-
 
     NewMNCardRequest:
       description: This Request model is for New MN Card information.
@@ -550,8 +633,6 @@ components:
         idCheckStatus:
          $ref: '#/components/schemas/IdCheckStatus'
 
-
-
     AccountRequest:
       title: Contains information about Payment Method to vault.
       type: object
@@ -583,6 +664,16 @@ components:
           $ref: '#/components/schemas/ExpiryDate'
         status:
           $ref: '#/components/schemas/Status'
+          
+    NonceRequest:
+      title: Contains information about enrollment to vault.
+      type: object
+      required:
+        - accounts
+      properties:
+        accounts:
+          $ref: '#/components/schemas/NonceAccount'
+          
 ##-------------------------------------
 ## Object Model
 ##------------------------------------
@@ -811,6 +902,17 @@ components:
           $ref: '#/components/schemas/Status'
         token:
             $ref: '#/components/schemas/ReferenceToken'
+            
+    NonceAccount:
+     description: Account information to be passed for nonce enrollment.
+     type: object
+     required:
+      - token
+     properties:
+      token:
+            $ref: '#/components/schemas/ReferenceToken'
+    
+    
     Check:
       description: Information about the Check
       type: object
@@ -1117,7 +1219,7 @@ components:
         paypalPayerId:
           type: string
           description: The encrypted PayPal account number.
-
+        
 #-------------------------------------
 # Common Models
 #-------------------------------------
@@ -1281,7 +1383,7 @@ components:
       description: Transaction Identifier for request
       type: string
       example: "TID-ef28cab9-9b43-40ce-bd1a-0b1ea3027f4e"
-
+    
 #-------------------------------------
 # Error Models
 #-------------------------------------
@@ -1362,6 +1464,17 @@ components:
         - CANCELLED
         - ACTIVE
         - INACTIVE
+     
+    Algorithm:
+      title: Algorithm
+      description: Algorithm used for encryption.
+      type: string
+      readOnly: true
+      enum:
+        - RSA
+        - NONE
+        - PKCS1PADDING
+      
 
     Requestor:
       description: This is to identify request requestor.
@@ -1500,3 +1613,32 @@ components:
               month: '09'
               year: '22'
               default: true
+    CompanyRequest:
+      value:
+       merchant:
+        merchantCustomerId: 'Company1234'
+       recipient: 
+        recipientType: 'Company'
+        tin: '123456789'
+        doingBusinessAs: 'Company Name'
+        emailAddress: 
+          type: 'work'
+          value: 'company@email.com'
+          primary: true
+        phoneNumber: 
+          code: 1,
+          value: '123-456-7890'
+          type: 'home'
+          extension: '0000'
+        guest: true,
+        address: 
+          type: 'work'
+          street: '100 Universal City Plaza'
+          city: 'Hollywood'
+          stateOrProvince: 'CA'
+          postalCode: '91608'
+          country: 'USA'
+        formatted: '100 Universal City Plaza, Hollywood, CA 91608 US'
+        primary: true
+       recipientIdentifier: 'SPECIAL_CODE'
+       recipientIdentifierValue: '1234567890'              

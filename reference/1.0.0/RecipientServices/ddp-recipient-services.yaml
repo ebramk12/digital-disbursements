@@ -65,8 +65,9 @@ paths:
         - $ref: '#/components/parameters/TimestampHeader'
         - $ref: '#/components/parameters/AuthorizationHeader'
         - $ref: '#/components/parameters/ClientRequestIdHeader'
+        - $ref: '#/components/parameters/ContentTypeHeader'
 
-  /ddp/v1/recipients/{id}:
+  /ddp/v1/recipients/{merchantCustomerId}:
     get:
       x-group-name: Recipient Service
       x-proxy-name: Get Recipient
@@ -94,8 +95,9 @@ paths:
         - $ref: '#/components/parameters/TimestampHeader'
         - $ref: '#/components/parameters/AuthorizationHeader'
         - $ref: '#/components/parameters/ClientRequestIdHeader'
+        - $ref: '#/components/parameters/ContentTypeHeader'
         - in: path
-          name: id
+          name: merchantCustomerId
           description: Unique Id associated with Recipient Profile while set up. The value can be MerchantCustomerId or RecipientId. Merchant provision through Apigee should always pass MerchantCustomerId.
           required: true
           schema:
@@ -114,6 +116,16 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/UpdateRecipientRequest'
+            examples:
+              Consumer Request:
+                summary: Consumer Request
+                $ref: '#/components/examples/ConsumerRequest'
+              Company Request:
+                summary: Company Request
+                $ref: '#/components/examples/CompanyRequest'
+              Full Request:
+                summary: Full Request
+                $ref: '#/components/examples/FullRequest'
       responses:
         200:
           description: Success
@@ -134,8 +146,9 @@ paths:
         - $ref: '#/components/parameters/TimestampHeader'
         - $ref: '#/components/parameters/AuthorizationHeader'
         - $ref: '#/components/parameters/ClientRequestIdHeader'
+        - $ref: '#/components/parameters/ContentTypeHeader'
         - in: path
-          name: id
+          name: merchantCustomerId
           description: Unique Id associated with Recipient Profile while set up. The value can be MerchantCustomerId or RecipientId. Merchant provision through Apigee should always pass MerchantCustomerId.
           required: true
           schema:
@@ -749,8 +762,10 @@ components:
         An API key is a string value passed by a client app to the API
         proxies. The key uniquely identifies the client app.
       required: true
-      schema:
-        type: string
+      schema: {
+	     type: string,
+	     default: "Api-Key"
+	  }
       example: Value supplied by Dev Studio
     TimestampHeader:
       in: header
@@ -758,8 +773,10 @@ components:
       description: >-
         Epoch timestamp in the request initiating system
       required: true
-      schema:
-        type: string
+      schema: {
+	     type: string,
+	     default: "Timestamp"
+	  }
       example: Value supplied by Dev Studio
     AuthorizationHeader:
       in: header
@@ -768,8 +785,10 @@ components:
         Authorization information for the request. Format- `HMAC
         {hmacToken}`
       required: true
-      schema:
-        type: string
+      schema: {
+	     type: string,
+	     default: "Authorization"
+	  }
       example: Value supplied by Dev Studio
     ClientRequestIdHeader:
       in: header
@@ -783,9 +802,22 @@ components:
         Note:- Omitting this header
         increases the risk of duplicate transactions.
       required: true
-      schema:
-        type: string
+      schema: {
+	     type: string,
+	     default: "Client-Request-Id"
+	  }
       example: Value supplied by Dev Studio
+    ContentTypeHeader:
+      in: header
+      name: Content-Type
+      description: >-
+        used to indicate the media type of the resource.
+      required: true
+      schema: {
+	    type: string,
+	    default: "Content-Type"
+	  }
+      example: application/json
 #------------------------------------------
 # Error Reponses 
 #------------------------------------------
