@@ -10,14 +10,14 @@ want – on weekends, holidays and after hours. ikewise, the product allows the 
 
 # Integration Options
 
-Digital Disbursements allows several flexible integration options to make onboarding easy and accessible. Choose an integration path below to learn more.
+Digital disbursements allows several flexible integration options to make onboarding easy and accessible. Choose an integration path below to learn more.
 
 
 <!-- type: row -->
 
 <!-- type: card
 title: Payments Portal
-Description: Disburse payouts through the most popular channels in a Client-branded Portal that minimizes cost and maximizes speed to market.
+Description: Disburse payouts through the most popular channels in a Client-Branded Portal that minimizes cost and maximizes speed to market.
 link: ?path=docs/interactive-guide/api-flow/initiateportalflow.md
 -->
 
