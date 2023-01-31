@@ -36,7 +36,7 @@ link: ?path=docs/interactive-guide/api-flow/apiflow.md
 <!-- type: card
 title: Batch and Bulk Options
 description: Process payments by uploading a batch file to a Managed File Gateway or Fiserv's ClientLine Portal.
-linl: ?path=docs/interactive-guide/batch-flow/batchflow.md
+link: ?path=docs/interactive-guide/batch-flow/batchflow.md
 -->
 
 <!-- type: row-end --> 
