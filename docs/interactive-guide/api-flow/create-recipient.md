@@ -25,7 +25,3 @@ This request will update the previously created recipient with the necessary inf
 The minimal request can be any single entity that requires updating, any of the objects or entities in the parameters of the create recipient schema will work here.
 
 [![Try it out](../../../../assets/images/button.png)](../api/?type=patch&path=/ddp/v1/recipients/{id})
-
-[![Previous](../../../../assets/images/previous.png)](../api/?type=patch&path=/ddp/v1/recipients/{id})<div style="text-align: left">  
-
-[![Next](../../../../assets/images/next.png)](../docs/?path=docs/interactive-guide/api-flow/vault-payment.md)<div style="text-align: right">
