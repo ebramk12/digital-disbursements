@@ -35,7 +35,7 @@ link: ?path=docs/interactive-guide/api-flow/apiflow.md
 
 <!-- type: card
 title: Batch and Bulk Options
-description: Simply upload a file with payment data via a Maganged File Gateway or Fiserv's ClientLine Enterprise reporting suite. Once Uploaded Fiserv systems will read the file, disburse the payments, and return a summary file.
+description: Process payments by uploading a batch file to a Managed File Gateway or Fiserv's ClientLine Portal.
 linl: ?path=docs/interactive-guide/batch-flow/batchflow.md
 -->
 
@@ -74,13 +74,13 @@ link: ?path=docs/documentation/features/payment-options.md
 <!-- type: row -->
 
 <!-- type: card 
-title: Account Verification
+title: Account Services
 description: 
 link: 
 -->
 
 <!-- type: card 
-title:Vaulting Services
+title: Token Services
 description:
 link:
 -->
@@ -90,13 +90,13 @@ link:
 <!-- type: row -->
 
 <!-- type: card 
-title:Payment Services
+title: Payment Services
 description:
 link:
 -->
 
 <!-- type: card 
-title:Merchant Services
+title: Merchant Services
 description: Standardize your back office, customer service and compliance services.
 link:
 -->
