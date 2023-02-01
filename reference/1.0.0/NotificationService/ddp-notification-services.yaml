@@ -48,15 +48,15 @@ paths:
 	        type: string,
 	        default: "Client-Request-Id"
 	      }
-        -in: header
-	     name: Content-Type
-	     description: >-
-	        used to indicate the media type of the resource.
-	     required: true
-	     schema: {
-	        type: string,
-	        default: "Content-Type"
-	     }
+        - in: header
+          name: Content-Type
+          description: >-
+           used to indicate the media type of the resource.
+          required: true
+          schema: {
+            type: string,
+            default: "Content-Type"
+	        }
 
       requestBody:
         description: Details required for provision a PAN data.
@@ -108,14 +108,14 @@ paths:
 	        default: "Client-Request-Id"
 	      }
         - in: header
-	      name: Content-Type
-	      description: >-
-	        used to indicate the media type of the resource.
-	      required: true
-	      schema: {
-	        type: string,
-	        default: "Content-Type"
-	      }
+          name: Content-Type
+          description: >-
+           used to indicate the media type of the resource.
+          required: true
+          schema: {
+            type: string,
+            default: "Content-Type"
+	        }
         - in: path
           name: id
           description: Valid ids are Paymentid, Traansactionid, or MerchantTransactionId

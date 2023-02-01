@@ -70,14 +70,15 @@ paths:
 	        default: "Client-Request-Id"
 	      }
         - in: header
-	      name: Content-Type
-	      description: >-
-	        used to indicate the media type of the resource.
-	      required: true
-	      schema: {
-	        type: string,
-	        default: "Content-Type"
-	      }
+          name: Content-Type
+          description: >-
+              used to indicate the media type of the resource.
+          required: true
+          schema: {
+           type: string,
+           default: "Content-Type"
+          }
+          example: application/json
 
       requestBody:
         description: Details required for provision a PAN data.
@@ -168,14 +169,15 @@ paths:
 	        default: "Client-Request-Id"
 	      }
         - in: header
-	      name: Content-Type
-	      description: >-
-	        used to indicate the media type of the resource.
-	      required: true
-	      schema: {
-	        type: string,
-	        default: "Content-Type"
-	      }
+          name: Content-Type
+          description: >-
+              used to indicate the media type of the resource.
+          required: true
+          schema: {
+           type: string,
+           default: "Content-Type"
+          }
+          example: application/json
         - in: path
           name: transactionId
           description: when called by merchant value can be 1. Transaction Id genearetd at the time of payment initialization 2. Merchant provided reference Number. when called by recipient, value can be 1. payment Id Id generated at the time of payment initialization
@@ -226,7 +228,7 @@ paths:
                 $ref: '#/components/schemas/ServerError'
                 
    
-   /ddp/v1/payments/{merchantTransactionId}/cancel:
+  /ddp/v1/payments/{merchantTransactionId}/cancel:
     patch:
       x-group-name: Payment Service
       x-proxy-name: Cancel Payment By Merchant TransactionId
@@ -269,14 +271,15 @@ paths:
 	        default: "Client-Request-Id"
 	      }
         - in: header
-	      name: Content-Type
-	      description: >-
-	        used to indicate the media type of the resource.
-	      required: true
-	      schema: {
-	        type: string,
-	        default: "Content-Type"
-	      }
+          name: Content-Type
+          description: >-
+              used to indicate the media type of the resource.
+          required: true
+          schema: {
+           type: string,
+           default: "Content-Type"
+          }
+          example: application/json
         - in: path
           name: merchantTransactionId
           description: Provided by merchant and must be associated with transaction Id.
@@ -377,14 +380,15 @@ paths:
 	        default: "X-Access-Token"
 	      }
         - in: header
-	      name: Content-Type
-	      description: >-
-	        used to indicate the media type of the resource.
-	      required: true
-	      schema: {
-	        type: string,
-	        default: "Content-Type"
-	      }
+          name: Content-Type
+          description: >-
+              used to indicate the media type of the resource.
+          required: true
+          schema: {
+           type: string,
+           default: "Content-Type"
+          }
+          example: application/json
         - in: path
           name: id
           description: Id genearetd at the time of payment request initialization. This is paymentId.
@@ -401,37 +405,37 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/DisbursePayment'
-      responses:
-        '201':
-          description: Disbursement response - Success
-          content:
-            application/json:
+        responses:
+          '201':
+             description: Disbursement response - Success
+             content:
+             application/json:
               schema:
                 $ref: '#/components/schemas/DisbursementResponse'
-        '400':
-          description: Disbursement response - Bad request
-          content:
-            application/json:
-              schema:
+          '400':
+              description: Disbursement response - Bad request
+              content:
+              application/json:
+               schema:
                 $ref: '#/components/schemas/BadRequest'
-        '401':
-          description: Disbursement response - Unauthorized request
-          content:
-            application/json:
+          '401':
+             description: Disbursement response - Unauthorized request
+             content:
+             application/json:
               schema:
                 $ref: '#/components/schemas/Unauthorized'
-        '404':
-          description: Disbursement response - not found.
-          content:
-            application/json:
+          '404':
+             description: Disbursement response - not found.
+             content:
+             application/json:
               schema:
                 $ref: '#/components/schemas/NotFound'
-        '500':
-          description: Disbursement response - Internal server error.
-          content:
-            application/json:
+          '500':
+             description: Disbursement response - Internal server error.
+             content:
+             application/json:
               schema:
-                $ref: '#/components/schemas/ServerError
+               $ref: '#/components/schemas/ServerError'
 
   /ddp/v1/payments:
     post:
@@ -484,14 +488,15 @@ paths:
 	        default: "X-Access-Token"
 	      }
         - in: header
-	      name: Content-Type
-	      description: >-
-	        used to indicate the media type of the resource.
-	      required: true
-	      schema: {
-	        type: string,
-	        default: "Content-Type"
-	      }
+          name: Content-Type
+          description: >-
+              used to indicate the media type of the resource.
+          required: true
+          schema: {
+           type: string,
+           default: "Content-Type"
+          }
+          example: application/json
 
       requestBody:
         description: Details required for disbursement request.
@@ -503,58 +508,58 @@ paths:
             examples:
               Debit Request:
                 summary: Consumer Request
-		        $ref: '#/components/examples/DisburseCard'
-		      ACH Request:
-		        summary: ACH Request
-		        $ref: '#/components/examples/DisburseACH'
-		      Money Network Request:
-		        summary: Money Network Request
-		        $ref: '#/components/examples/DisburseMoneyNetwork'
-		      Venmo Request:
-		        summary: Venmo Request
-		        $ref: '#/components/examples/DisburseVenmo'
-		      Paypal Email Request:
-		        summary: Paypal Email Request
-		        $ref: '#/components/examples/DisbursePaypalEmail'
-		      Paypal Phone Request:
-		        summary: Paypal Phone Request
-		        $ref: '#/components/examples/DisbursePaypalPhone'
-		      Coinbase Request:
-		        summary: Coinbase Request
-		        $ref: '#/components/examples/DisburseCoinbase'
-		      Echeck Request:
-		        summary: Coinbase Request
-		        $ref: '#/components/examples/DisburseEcheck'
-		      Token Request:
-		        summary: Token Request
-		        $ref: '#/components/examples/DisburseToken'
+                $ref: '#/components/examples/DisburseCard'
+              ACH Request:
+                summary: ACH Request
+                $ref: '#/components/examples/DisburseACH'
+              Money Network Request:
+               summary: Money Network Request
+               $ref: '#/components/examples/DisburseMoneyNetwork'
+              Venmo Request:
+                summary: Venmo Request
+                $ref: '#/components/examples/DisburseVenmo'
+              Paypal Email Request:
+                summary: Paypal Email Request
+                $ref: '#/components/examples/DisbursePaypalEmail'
+              Paypal Phone Request:
+               summary: Paypal Phone Request
+               $ref: '#/components/examples/DisbursePaypalPhone'
+              Coinbase Request:
+               summary: Coinbase Request
+               $ref: '#/components/examples/DisburseCoinbase'
+              Echeck Request:
+               summary: Coinbase Request
+               $ref: '#/components/examples/DisburseEcheck'
+              Token Request:
+               summary: Token Request
+               $ref: '#/components/examples/DisburseToken'
               
-      responses:
-        '201':
+        responses:
+         '201':
           description: Disbursement response - Success
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/DisbursementResponse'
-        '400':
+         '400':
           description: Disbursement response - Bad request
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/BadRequest'
-        '401':
+         '401':
           description: Disbursement response - Unauthorized request
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/Unauthorized'
-        '404':
+         '404':
           description: Disbursement response - not found.
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/NotFound'
-        '500':
+         '500':
           description: Disbursement response - Internal server error.
           content:
             application/json:
@@ -604,14 +609,15 @@ paths:
 	        default: "Client-Request-Id"
 	      }
         - in: header
-	      name: Content-Type
-	      description: >-
-	        used to indicate the media type of the resource.
-	      required: true
-	      schema: {
-	        type: string,
-	        default: "Content-Type"
-	      }
+          name: Content-Type
+          description: >-
+              used to indicate the media type of the resource.
+          required: true
+          schema: {
+           type: string,
+           default: "Content-Type"
+          }
+          example: application/json
         - in: path
           name: id
           description:  TransactionId/merchantTransactionId associated with a transaction.
@@ -1125,7 +1131,7 @@ components:
       properties:
         recipientProfileInfo:
             $ref: '#/components/schemas/RecipientProfileInfo'
-         payments:
+        payments:
             $ref: '#/components/schemas/PaymentInfo'
       
 
@@ -1144,18 +1150,7 @@ components:
             $ref: '#/components/schemas/PaymentInfo'
         source:
             $ref: '#/components/schemas/FundingSourceType'
-        card:
-            $ref: '#/components/schemas/Card'
-        ach:
-            $ref: '#/components/schemas/ACH'
-        prepaid:
-            $ref: '#/components/schemas/Prepaid'
-        venmo:
-            $ref: '#/components/schemas/Venmo'
-        paypal:
-            $ref: '#/components/schemas/Paypal'
-        echeck:
-            $ref: '#/components/schemas/ECheck'
+        
 
     
     RecipientProfileInformation:
@@ -1244,7 +1239,7 @@ components:
             $ref: '#/components/schemas/FundingSourceType'
      
      
-     RecipientResponse:
+    RecipientResponse:
       description: Details about create and Pay response message.
       type: object
       required:
@@ -1430,16 +1425,6 @@ components:
       type: string
       example: "8a34144657d0aa6e0157d3808ed000f2"
       readOnly: true
-      
-    tokenId:
-     description: Unique Identifier.
-     type: string
-     example: "3ddc1871-1eff-4f13-82a4-078179b9d522"
-      
-    tokenProvider:
-     description: Source from where token is obtained.
-     type: string
-     example: "ENROLMENT_VAULT"
       
       
 #-------------------------------------
@@ -1709,7 +1694,7 @@ components:
 #-------------------------------------  
   examples:
    SingleConsumerRequest:
-	 value: {
+    value: {
 		    "amount": {
 		        "total": 3,
 		        "currency": "USD"
@@ -1790,9 +1775,10 @@ components:
 		            ]
 		        }
 		    ]
-		}
-		MultiConsumerRequest:
-		 value: {
+		  }
+		 
+    MultiConsumerRequest:
+      value: {
 			    "amount": {
 			        "total": 10,
 			        "currency": "USD"
@@ -1904,8 +1890,8 @@ components:
 			        }
 			    ]
 			}
-			SingleCompanyRequest :
-			  value: {		         
+    SingleCompanyRequest :
+        value: {		         
 				    "amount": {
 				        "total": 35,
 				        "currency": "USD"
@@ -1984,8 +1970,8 @@ components:
 				        }
 				    ]
 				}
-				MultiCompanyRequest :
-				  value: {
+   MultiCompanyRequest :
+      value: {
 					      "amount": {
 					        "total": 16,
 					        "currency": "USD"
@@ -2098,8 +2084,8 @@ components:
 					        }
 					    ]
 				}
-			DisburseCard:
-			   value: {
+   DisburseCard:
+      value: {
 						 "amount": {
 							 "total": 100.00,
 							 "currency": "USD"
@@ -2124,8 +2110,8 @@ components:
 							 }
 						 ]
 				}
-			DisburseACH:
-			  value: {
+   DisburseACH:
+     value: {
 			         "amount": {
 						 "total": 50.00,
 						 "currency": "USD"
@@ -2152,8 +2138,8 @@ components:
 				]
 			    
 			 }
-			DisburseMoneyNetwork:
-			 value: {
+   DisburseMoneyNetwork:
+     value: {
 					 "amount": {
 						 "total": 50.00,
 						 "currency": "USD"
@@ -2178,8 +2164,8 @@ components:
 					  }
 				   ]
 			}
-			DisburseVenmo:
-			 value: {
+   DisburseVenmo:
+       value: {
 					 "amount": {
 						 "total": 10.75,
 						 "currency": "USD"
@@ -2203,8 +2189,8 @@ components:
 					 ],
 					 "merchantTransactionId": "MERCHANTACHE2CK62251676581VN1527"
 			}
-			DisbursePaypalEmail:
-			 value: {
+   DisbursePaypalEmail:
+    value: {
 					 "amount": {
 						 "total": 1.19,
 						 "currency": "USD"
@@ -2228,8 +2214,8 @@ components:
 					 ],
 					 "merchantTransactionId": "MERCHANTACHECK651676581VN14204"
 			}
-			DisbursePaypalPhone:
-			 value: {
+   DisbursePaypalPhone:
+    value: {
 					 "amount": {
 						 "total": 1.19,
 						 "currency": "USD"
@@ -2253,8 +2239,8 @@ components:
 					 ],
 					 "merchantTransactionId": "MERCHANTACHE1CK65161176581VN141104"
 				}
-			DisburseCoinbase:
-			 value: {
+  DisburseCoinbase:
+    value: {
 					 "amount": {
 					 		"total": 1,
 					 		"currency": "USD"
@@ -2279,8 +2265,8 @@ components:
 					   }
 					 ]
 			}
-			DisburseEcheck:
-			 value: {
+  DisburseEcheck:
+     value: {
 					 "amount": {
 						 "total": 10.75,
 						 "currency": "USD"
@@ -2299,9 +2285,8 @@ components:
 					 ],
 					 "merchantTransactionId": "MERCHNAT_Transacto222nDDPCLX16"
 			}
-			DisburseToken:
-			  value:
-			  {
+  DisburseToken:
+    value: {
 				 "amount": {
 					 "total": 5,
 					 "currency": "USD"
