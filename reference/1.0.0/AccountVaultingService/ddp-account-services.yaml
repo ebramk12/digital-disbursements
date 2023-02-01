@@ -135,6 +135,63 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/ServerError'
+    post:
+      x-group-name: Account Services
+      x-proxy-name: Nonce enrollment
+      x-child-product-name: Account Vaulting Service
+      x-default-example: DebitOrCreditCard
+      tags:
+        - Digital Disbursement Platform Accounts Vault Account service APIs
+      summary: Vault account method.
+      description: Recipient on Digital Disbursement can enroll using one time enrollment.
+      parameters:
+        - {$ref: '#/components/parameters/ApiKeyHeader'}
+        - {$ref: '#/components/parameters/TimestampHeader'}
+        - {$ref: '#/components/parameters/AuthorizationHeader'}
+        - {$ref: '#/components/parameters/ClientRequestIdHeader'}
+        - {$ref: '#/components/parameters/AccessTokenHeader'}
+        - {$ref: '#/components/parameters/ContentTypeHeader' }
+        - {$ref: '#/components/parameters/MerchantCustomerIdPathVariable' }
+
+      requestBody:
+        description: Details required for Nonce enrollment.
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/NonceRequest'
+
+      responses:
+        '201':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/NonceRequest'
+        '400':
+          description: The request cannot be validated.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BadRequest'
+        '401':
+          description: The request was unauthorized.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Unauthorized'
+        '404':
+          description: The requested resource does not exist.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/NotFound'
+        '500':
+          description: An unexpected internal server error occurred.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ServerError'
 
   /ddp/v1/recipients/{recipientId}/accounts/{id}:
     get:
@@ -255,66 +312,6 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/ServerError'
-                
-  /ddp/v1/recipients/{merchantCustomerId}/accounts:
-    post:
-      x-group-name: Account Services
-      x-proxy-name: Nonce enrollment
-      x-child-product-name: Account Vaulting Service
-      x-default-example: DebitOrCreditCard
-      tags:
-        - Digital Disbursement Platform Accounts Vault Account service APIs
-      summary: Vault account method.
-      description: Recipient on Digital Disbursement can enroll using one time enrollment.
-      parameters:
-        - {$ref: '#/components/parameters/ApiKeyHeader'}
-        - {$ref: '#/components/parameters/TimestampHeader'}
-        - {$ref: '#/components/parameters/AuthorizationHeader'}
-        - {$ref: '#/components/parameters/ClientRequestIdHeader'}
-        - {$ref: '#/components/parameters/AccessTokenHeader'}
-        - {$ref: '#/components/parameters/ContentTypeHeader' }
-        - {$ref: '#/components/parameters/MerchantCustomerIdPathVariable' }
-
-      requestBody:
-        description: Details required for Nonce enrollment.
-        required: true
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/NonceRequest'
-
-      responses:
-        '201':
-          description: Success
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/NonceRequest'
-        '400':
-          description: The request cannot be validated.
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/BadRequest'
-        '401':
-          description: The request was unauthorized.
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Unauthorized'
-        '404':
-          description: The requested resource does not exist.
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/NotFound'
-        '500':
-          description: An unexpected internal server error occurred.
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/ServerError'
-           
   
   /ddp/v1/recipients/{recipientId}/cards/session:
     post:
@@ -1521,7 +1518,7 @@ components:
 # response Models
 #-------------------------------------
     NoContent:
-      description: The request succeeded but thereâ€™s really nothing to show.
+      description: The request succeeded but there’s really nothing to show.
       example: {}
 
     BadRequest:
