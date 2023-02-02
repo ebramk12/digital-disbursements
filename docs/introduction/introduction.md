@@ -10,7 +10,7 @@ want – on weekends, holidays and after hours. ikewise, the product allows the 
 
 # Integration Options
 
-Digital disbursements allows several flexible integration options to make onboarding easy and accessible. Choose an integration path below to learn more.
+Digital disbursements allows several flexible integration options to make onboarding easy and accessible. Choose an integration path below to learn more or reach out to our sales team at <insert sales email> for a personalized assesment for your buisness.
 
 
 <!-- type: row -->
@@ -74,14 +74,14 @@ link: ?path=docs/documentation/features/payment-options.md
 <!-- type: row -->
 
 <!-- type: card 
-title: Account Services
-description: 
+title: Account Vaulting Services
+description: Securely store recipient account data to their profile for later use. 
 link: 
 -->
 
 <!-- type: card 
-title: Token Services
-description:
+title: Recipient Services
+description: Create, Update, and View Recipient information.
 link:
 -->
 
@@ -91,13 +91,13 @@ link:
 
 <!-- type: card 
 title: Payment Services
-description:
+description: Disburse funds in 5 seconds through multiple payment channels
 link:
 -->
 
 <!-- type: card 
-title: Merchant Services
-description: Standardize your back office, customer service and compliance services.
+title: Transaction Services
+description: View and cancel transactions.
 link:
 -->
 

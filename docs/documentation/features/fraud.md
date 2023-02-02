@@ -19,3 +19,6 @@ Enhance your fraud program with a simple, cost-effective and customizable digita
     **Results** - Proprietary Carat data + former law enforcement experts
     **Simple** - Pre-integrated into Digital Payouts solution
     **Economical** - Leverage Carat scale to reduce cost and prevent losses
+
+
+<<MORE DETAIL>>

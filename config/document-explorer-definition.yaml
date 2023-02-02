@@ -31,6 +31,17 @@
 - sections:
     - title: Getting Started
       link: docs/introduction/introduction.md
+    - title: Request an environment
+      link: 
+      sections:
+        - title: Features
+          sections:
+          - title: Fraud
+            link: docs/documentation/features/fraud.md
+          - title: Payment Options
+            link: docs/documentation/features/payment-options.md
+          - title: Tokenization
+            link: docs/documentation/features/tokenization.md
 #   - title: Interactive guide
 #     link: docs/interactive-guide/interactive-guide.md
     - title: Frequently Asked Questions
@@ -41,10 +52,6 @@
         link: docs/troubleshooting/error-codes.md
       - title: Transaction/Payments Status
         link: docs/troubleshooting/Transaction-payment-status.md
-    - title: Request a Sandbox
-      link: docs/sandbox/request.md
-    - title: Kitchen Sink Syntax
-      link: docs/documentation/kitchensink.md
 - sections:
   - title: Interactive guide
 #     link: docs/interactive-guide/interactive-guide.md
@@ -56,28 +63,28 @@
         link: docs/interactive-guide/api-flow/header_sample.md
       - title: How to Create and Update Recipient Profiles
         link: docs/interactive-guide/api-flow/create-recipient.md
- #        sections:
- #        - title: Create Recipient
- #          link: docs/interactive-guide/api-flow/create-recipient.md
- #        - title: Update Recipient
- #          link: docs/interactive-guide/api-flow/update-recipient.md
- #        - title: Get Recipient
- #          link: docs/interactive-guide/api-flow/retrieve-recipient.md
-#       - title: How to Rerieve Encryption Key
-#        link: docs/interactive-guide/api-flow/create-public-token.md
+#        sections:
+#        - title: Create Recipient
+#          link: docs/interactive-guide/api-flow/create-recipient.md
+#        - title: Update Recipient
+#          link: docs/interactive-guide/api-flow/update-recipient.md
+#        - title: Get Recipient
+#          link: docs/interactive-guide/api-flow/retrieve-recipient.md
+#        - title: How to Rerieve Encryption Key
+#          link: docs/interactive-guide/api-flow/create-public-token.md
       - title: How to save a Payment Method (Acount Vaulting)
         link: docs/interactive-guide/api-flow/vault-payment.md
       - title: How to Initiate and Cancel Transactions
         link: docs/interactive-guide/api-flow/create-disbursement.md        
       - title: How to Get Status of Recipient, Merchant and Transactions
         link: docs/interactive-guide/api-flow/get-transaction-details.md
-  #       sections:
-  #      - title: How to initiate a Transaction.
-  #         link: docs/interactive-guide/api-flow/create-disbursement.md
-  #       - title: How to view a Transaction.
-  #         link: docs/interactive-guide/api-flow/get-transaction-details.md
-  #       - title: How to Cancel a Transaction.
-  #         link: docs/interactive-guide/api-flow/cancel-payment.md
+#         sections:
+#        - title: How to initiate a Transaction.
+#           link: docs/interactive-guide/api-flow/create-disbursement.md
+#         - title: How to view a Transaction.
+#           link: docs/interactive-guide/api-flow/get-transaction-details.md
+#         - title: How to Cancel a Transaction.
+#           link: docs/interactive-guide/api-flow/cancel-payment.md
     - title: Portal Flow
       link: docs/interactive-guide/portal-flow/portalflow.md
       sections:
