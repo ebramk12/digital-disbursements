@@ -32,8 +32,8 @@
     - title: Getting Started
       link: docs/introduction/introduction.md
       sections: 
-        - title: Request an environment
-          link: docs/introduction/request.md
+#        - title: Request an environment
+#          link: docs/introduction/request.md
         - title: Features
           sections:
           - title: Fraud

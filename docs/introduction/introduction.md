@@ -1,10 +1,10 @@
 # Introduction
 
-DDP is a payment platform that enables business to send payments to your customers, the digitized payments reduce the friction and time required for your customers to recieve the money. 
+DDP is a payment platform that enables business to send payments to your customers, the digitized payments reduce the friction and time required for your customers to receive the money. 
 
 Fiserv’s Digital Disbursement product allows merchants to provide customers with 
 fast, more secure and cost-effective payout options how and when they 
-want – on weekends, holidays and after hours. ikewise, the product allows the recipient to select the method to be used to disburse the payment.
+want – on weekends, holidays and after hours. likewise, the product allows the recipient to select the method to be used to disburse the payment.
 
 ---
 
@@ -23,7 +23,7 @@ link: ?path=docs/interactive-guide/api-flow/initiateportalflow.md
 
 <!-- type: card
 title: Hosted Payments Page
-description: Offers the use of a client-branded iframe to manage customer experience, send account infomration (PCI data) directly to Fiserv, and recieve an encrypted token for future use.
+description: Offers the use of a client-branded iframe to manage customer experience, send account infomration (PCI data) directly to Fiserv, and receive an encrypted token for future use.
 link: ?path=docs/interactive-guide/api-flow/hosted-pages.md
 -->
 
