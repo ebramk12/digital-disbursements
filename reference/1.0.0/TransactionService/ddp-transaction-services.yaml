@@ -141,14 +141,14 @@ paths:
               schema:
                 $ref: '#/components/schemas/ServerError'
 
-  /ddp/v1/transactions/recipients/{merchantTransactionId}:
+  /ddp/v1/transactions/{merchantTransactionId}:
     get:
       x-group-name: Transaction Service
-      x-proxy-name: Get Transactions by MerchantTransaction  Id
+      x-proxy-name: Get Transaction by MerchantTransaction  Id
       # x-child-product-name: Transaction Service
       tags:
         - Digital Disbursement Platform Transactions APIs.
-      description: This API returns all transactions associated with recipient MerchantTransaction Id . This included transactions Initialized and Disbursed both.
+      description: This API returns transaction associated with recipient MerchantTransaction Id . This included transactions Initialized and Disbursed both.
       parameters:
         - in: header
           name: Api-Key

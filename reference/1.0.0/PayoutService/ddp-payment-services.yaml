@@ -22,7 +22,7 @@ paths:
   /ddp/v1/payments:
     post:
       x-group-name: Payment Service
-      x-proxy-name: Create & Pay or Direct Disbursement
+      x-proxy-name: Create & Pay
       # x-child-product-name: Payout Service
       tags:
         - Digital Disbursement Platform Payment APIs
@@ -101,7 +101,7 @@ paths:
                 summary: Multi Company Request
                 $ref: '#/components/examples/MultiCompanyRequest'
               Debit Request:
-                summary: Consumer Request
+                summary: Debit Request
                 $ref: '#/components/examples/DisburseCard'
               ACH Request:
                 summary: ACH Request
