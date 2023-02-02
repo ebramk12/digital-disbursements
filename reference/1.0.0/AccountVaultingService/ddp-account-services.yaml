@@ -907,7 +907,7 @@ components:
       - token
      properties:
       token:
-            $ref: '#/components/schemas/ReferenceToken'
+            $ref: '#/components/schemas/AccountToken'
     
     
     Check:
@@ -1181,6 +1181,21 @@ components:
           $ref: '#/components/schemas/TSPID'
         expiryDate:
           $ref: '#/components/schemas/ExpiryDate'
+    
+    AccountToken:
+      description: Surrogate value used to represent a handle to an account without sharing PCI/PII data to look it up.
+      type: object
+      required:
+      - tokenId
+      - tokenProvider
+      properties:
+        tokenId:
+          description: Actual token value
+          type: string
+          example: "292bb6b886fc4446894f878b7e32bd5e"
+        tokenProvider:
+          $ref: '#/components/schemas/TokenProvider'
+        
 
     Venmo:
       description: Information about a Venmo account.
