@@ -31,16 +31,17 @@
 - sections:
     - title: Getting Started
       link: docs/introduction/introduction.md
-    - title: Request an environment
-      link: docs/introduction/request.md
-    - title: Features
-      sections:
-      - title: Fraud
-        link: docs/documentation/features/fraud.md
-      - title: Payment Options
-        link: docs/documentation/features/payment-options.md
-      - title: Tokenization
-        link: docs/documentation/features/tokenization.md
+      sections: 
+        - title: Request an environment
+          link: docs/introduction/request.md
+        - title: Features
+          sections:
+          - title: Fraud
+            link: docs/documentation/features/fraud.md
+          - title: Payment Options
+            link: docs/documentation/features/payment-options.md
+          - title: Tokenization
+            link: docs/documentation/features/tokenization.md
 #   - title: Interactive guide
 #     link: docs/interactive-guide/interactive-guide.md
     - title: Frequently Asked Questions
