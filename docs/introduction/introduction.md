@@ -10,8 +10,7 @@ want – on weekends, holidays and after hours. likewise, the product allows the
 
 # Integration Options
 
-Digital disbursements allows several flexible integration options to make onboarding easy and accessible. Choose an integration path below to learn more or reach out to our sales team at <insert sales email> for a personalized assesment for your buisness.
-
+Digital disbursements allows several flexible integration options to make onboarding easy and accessible. Choose an integration path below to learn more or reach out to our sales team for a personalized assessment for your business.
 
 <!-- type: row -->
 
@@ -23,7 +22,7 @@ link: ?path=docs/interactive-guide/api-flow/initiateportalflow.md
 
 <!-- type: card
 title: Hosted Payments Page
-description: Offers the use of a client-branded iframe to manage customer experience, send account infomration (PCI data) directly to Fiserv, and receive an encrypted token for future use.
+description: Offers the use of a client-branded iframe to manage customer experience, send account information (PCI data) directly to Fiserv, and receive an encrypted token for future use.
 link: ?path=docs/interactive-guide/api-flow/hosted-pages.md
 -->
 
@@ -49,18 +48,18 @@ link: ?path=docs/interactive-guide/batch-flow/batchflow.md
 
 <!-- type: card 
 title: Fraud Controls
-description: Help reduce risk through our AI-based fraud engine which recognizes and predicts new fraud patterns.
+description: Help reduce risk through our AI-based fraud engine which recognizes and predicts new fraud patterns.
 link: ?path=docs/documentation/features/fraud.md
 -->
 
 <!-- type: card 
-title:Tokenization
+title: Tokenization
 description: Eliminate PCI burden and secure your customers’ payment credentials
 link: ?path=docs/documentation/features/tokenization.md
 -->
 
 <!-- type: card 
-title:Payment Options
+title: Payment Options
 description: Deliver fast, secure, cost-effective digital payout capabilities to your customers how and when they want – on weekends, holidays and after hours.
 link: ?path=docs/documentation/features/payment-options.md
 -->
@@ -102,4 +101,3 @@ link:
 -->
 
 <!-- type: row-end -->
-
