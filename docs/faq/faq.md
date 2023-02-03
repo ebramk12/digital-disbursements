@@ -44,7 +44,7 @@ How many times a recipient can attempt to disburse a payment with wrong payment 
 <details>
 <summary><b>Is “TV – Transaction Cancelled”, “DNF - Delivery Notification Failed” a final state? Should we VOID this payment? Or will this eventually become expired or another status? </b></summary>
 
-This is final state and can be considered as payment cancelled. No need to VOID or any other action required. 
+This is final state and can be considered as payment cancelled. No need to VOID or any other action required. For more info [Payment Status] (../docs/?path=docs/troubleshooting/Transaction-payment-status.md)
 
 </details>
 
@@ -69,7 +69,9 @@ DD & DH is only applicable and the possible values are
 
 400063  DH Fraud Failed 
 
-400201  DD D2D payment declined by PaySecure 
+400201  DD D2D payment declined by PaySecure. For more info [Error Codes] (../docs/?path=docs/troubleshooting/error-codes.md) and
+[Payment Status] (../docs/?path=docs/troubleshooting/Transaction-payment-status.md)
+
 
 </details>
 
@@ -92,7 +94,7 @@ Note : If any difficulties whitelisting the above IPS please use below ones
 <details>
 <summary><b>What should be supplied as tokenId to /payments with tokenProvider as ENROLMENT_VAULT?</b></summary>
 
-Yes, it is the token we get back from /accounts.
+Yes, it is the token we get back from /accounts. For more info [API Flow] (../docs/?path=docs/interactive-guide/api-flow/apiflow.md)
 
 </details>
 
@@ -116,7 +118,7 @@ If Guest is false for Recipient of type Consumer, then payment cannot be initial
 <details>
 <summary><b>Is the user experience in the portal different once payment notification goes out between a consumer and business?</b></summary>
 
-No, both will have same user experience.
+No, both will have same user experience. For more info [Portal Flow] (../docs/?path=docs/interactive-guide/portal-flow/portalflow.md)
 
 </details>
 
