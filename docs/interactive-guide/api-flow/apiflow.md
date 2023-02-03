@@ -10,3 +10,5 @@ In general, the flow of the API is as follow:
 5. disburse a payment to the recipient's account using the EV Token.
 
 [^1]: *If you are using a Trans Armor (TA) token in place of the standard Enrollment Vault (EV) token, You will jump from Step 1 directly to step 5 as you will not need to create an EV Token.*
+
+![Next](../../../../assets/images/button.png)]( /docs/?path=docs/interactive-guide/api-flow/create-recipient.md)
