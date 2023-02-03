@@ -11,3 +11,4 @@ In general, the flow of the API is as follow:
 
 [^1]: *If you are using a Trans Armor (TA) token in place of the standard Enrollment Vault (EV) token, You will jump from Step 1 directly to step 5 as you will not need to create an EV Token.*
 
+[![Next Steps](../../../../assets/images/button.png)](?path=docs/interactive-guide/api-flow/apiflow.md)
