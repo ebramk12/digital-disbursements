@@ -1,6 +1,6 @@
 ## API Flow
 
-In this section we will go over how to use the API to disburse a payment to a single consumer recipient. By the end of this section you should have a solid foundation of how the API works and how to generate the neccesary infomration for each step. 
+In this section we will go over how to use the API to disburse a payment to a single consumer recipient. By the end of this section you should have a solid foundation of how the API works and how to generate the neccesary infomration for each step.
 
 In general, the flow of the API is as follow:
 1. Create a Recipient. 
