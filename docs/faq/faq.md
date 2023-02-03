@@ -21,7 +21,7 @@ TIN (Taxpayer Identification Number) here refers to TIN of the business recipien
 <details>
   <summary><b>Is the mobile number mandatory for create recipient?</b></summary>
 
-No. 
+No, the mobile number is not the mandatory parameters for creating the recipient.
 
 </details>
 
@@ -92,9 +92,9 @@ Note : If any difficulties whitelisting the above IPS please use below ones
 ### API Flow FAQs
 
 <details>
-<summary><b>What should be supplied as tokenId to /payments with tokenProvider as ENROLMENT_VAULT?</b></summary>
+<summary><b>What should be supplied as tokenId to the payments with tokenProvider as ENROLMENT_VAULT?</b></summary>
 
-Yes, it is the token we get back from /accounts. For more info please refer [API Flow] (../docs/?path=docs/interactive-guide/api-flow/apiflow.md)
+Yes, it is the token we get back from accounts. For more info please refer [API Flow] (../docs/?path=docs/interactive-guide/api-flow/apiflow.md)
 
 </details>
 
