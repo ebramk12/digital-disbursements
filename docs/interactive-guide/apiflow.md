@@ -292,3 +292,8 @@ Using `merchantTransactionId`: This request to be used when you want to view the
 This request will get the details of an onboarded merchant with no request parameter only the headers are required. With this call you can get the full information of the merchant like ledger balance, Available balance, DFA Account Number, Merchant Name & Address details etc.
 
 [![Try it out](../../../../assets/images/button.png)](../api/?type=get&path=/ddp/v1/merchantInfo)
+
+## See Also
+
+- [Please refer our FAQ's](?path=docs/faq/faq.md&branch=develop#api-flow-faqs)
+
