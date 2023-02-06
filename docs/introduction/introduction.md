@@ -13,7 +13,7 @@ Digital disbursements allows several flexible integration options to make onboar
 <!-- type: row -->
 
 <!-- type: card
-title: ![Portal icon](../../assets/images/icons/Person-and-computer.png) Payments Portal
+title: <div><img src="../../assets/images/icons/Person-and-computer.png"></div> Payments Portal
 Description: Disburse payouts through the most popular channels in a Client-Branded Portal that minimizes cost and maximizes speed to market.
 link: ?path=docs/interactive-guide/portalflow.md
 -->
