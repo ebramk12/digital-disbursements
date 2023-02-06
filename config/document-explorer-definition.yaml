@@ -69,24 +69,24 @@
 #      - title: How to Get Status of Recipient, Merchant and Transactions
 #        link: docs/interactive-guide/api-flow/get-transaction-details.md
     - title: Portal Flow
-      link: docs/interactive-guide/portal-flow/portalflow.md
-      sections:
-      - title: Header Setup
-        link: docs/interactive-guide/api-flow/header_sample.md
-      - title: How to Initiate Payment
-        link: docs/interactive-guide/portal-flow/initiateportalflow.md
-      - title: How to Cancelling a Payment
-        link: docs/interactive-guide/portal-flow/cancelPaymentflow.md
-      - title: How to Get Merchant Info Details
-        link: docs/interactive-guide/portal-flow/merchantInfoflow.md
+      link: docs/interactive-guide/portalflow.md
+#      sections:
+#      - title: Header Setup
+#        link: docs/interactive-guide/api-flow/header_sample.md
+#      - title: How to Initiate Payment
+#        link: docs/interactive-guide/portal-flow/initiateportalflow.md
+#      - title: How to Cancelling a Payment
+#        link: docs/interactive-guide/portal-flow/cancelPaymentflow.md
+#      - title: How to Get Merchant Info Details
+#        link: docs/interactive-guide/portal-flow/merchantInfoflow.md
     - title: Batch Flow
-      sections:
-      - title: Batch File
-        link: docs/interactive-guide/batch-flow/batchflow.md
+#      sections:
+#     - title: Batch File
+      link: docs/interactive-guide/batch-flow/batchflow.md
     - title: Bulk Flow
-      sections:
-      - title: Batch Template
-        link: docs/interactive-guide/bulk-flow/bulkflow.md
+#      sections:
+#      - title: Batch Template
+      link: docs/interactive-guide/bulk-flow/bulkflow.md
 #      open: true
 #      sections:
 #      - title: Contact Us
