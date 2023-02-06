@@ -95,3 +95,141 @@ Step 4:  When all line items have been added, select the “Process Transaction�
 Step 5: Once the confirmation has been displayed, the file will have been included in a batch for processing by DDP.
 
 [![Confirmation](../../../../assets/images/confirmation.png)]
+
+#### Add a Recipient:  Upload File
+
+Step 1: 	  Select the “Bulk Upload” option.
+
+[![Upload Option](../../../../assets/images/uploadopt.png)]
+
+Step 2:  Select the template to be processed and press the “Open” button.
+
+[![Open Button](../../../../assets/images/openButton.png)]
+
+Step 3:  Select the “Process Transaction” button.  Please note:  when the file is uploaded, all line items are automatically displayed on the screen.  The “Process Transaction” button will only appear if there are no errors detected within the displayed line items.
+
+[![Transaction Button](../../../../assets/images/transButton.png)]
+
+The confirmation screen will display when the Bulk intake process is successful. 
+
+[![Confirmation](../../../../assets/images/confirmation.png)]
+
+### Initiating a Payment
+
+This action is used by clients who need to initiate a payment to a recipient.  Recipients must be associated to the MID prior to the initiation of a payment.  
+
+If you wish to use the BULK method to initiate a payment, you will need to initiate the process under the Payments / Initiate Payment menu option in CLX.  
+
+Step 1:  Select the “Payment Bulk Upload” option.
+
+[![Payment Bulk Upload](../../../../assets/images/PaymentBulk.png)]
+
+Step 2:  Determine if you want to upload a template or create a single line item and select the correct option.
+
+[![Upload file](../../../../assets/images/uploadfile.png)]
+
+#### Payment Bulk Upload:  Single Line Option
+
+Step 1:  Select the “Add New” Button
+
+[![Payment Bulk Upload](../../../../assets/images/paymentBulkUpload.png)]
+
+Step 2:  Complete all required fields and any optional fields that are needed.
+
+Step 3:  Select the “Add Button” if additional line items are needed.
+
+Step 4:  When all line items have been added, select the “Process Transaction” button.   Please Note:  The “Process Transaction” button is not enabled if there are any errors found within the line items that have been entered.
+
+[![Process Transaction](../../../../assets/images/initProcessTransaction.png)]
+
+Once the confirmation has been displayed, the file will have been included in a batch for processing by DDP.
+
+[![Confirmation](../../../../assets/images/confirmation.png)]
+
+#### Payment Bulk Upload:  Upload File Option
+
+Step 1: Select the “Bulk Upload” option.
+
+[![Upload file](../../../../assets/images/uploadfile.png)]
+
+Step 2: Select the template to be processed and press the “Open” button.
+
+[![Upload file](../../../../assets/images/openButton_uploadfile.png)]
+
+Step 3: Select the “Process Transaction” button.  Please note:  when the file is uploaded, all line items are automatically displayed on the screen.  The “Process Transaction” button will only appear if there are no errors detected within the displayed line items.
+
+[![Process Transcation](../../../../assets/images/processTrans.png)]
+
+The confirmation screen will display when the Bulk intake process is successful. 
+
+[![Confirmation](../../../../assets/images/confirmation.png)]
+
+### Cancelling a Payment
+
+This action is used by clients who need to cancel multiple payments that have been created in error.  Please note:   payments can only be cancelled if one of the following applies:
+
+
+
+If you wish to use the BULK method to cancel a payment, you will need to initiate the process under the Payments / Initiate Payment menu option in CLX.  
+
+[![Init Payment Menu](../../../../assets/images/initPaymentMenu.png)]
+
+
+### Create a Recipient and Initiate a Payment 
+
+Step 1:  Select the “Pay and Create Bulk Upload” option.
+
+[![Create Bulk Upload](../../../../assets/images/createBulkUpload.png)]
+
+Step 2:  Determine if you want to upload a template or create a single line item and select the correct option.
+
+[![Create Bulk](../../../../assets/images/payCreateBulk.png)]
+
+#### Pay & Create Bulk Upload:  Single Line Option
+
+Step 1:  Select the “Add New” Button
+
+[![New Button](../../../../assets/images/addnewButton.png)]
+
+Step 2:  Complete all required fields and any optional fields that are needed.
+
+Step 3:  Select the “Add Button” if additional line items are needed.
+
+Step 4:  When all line items have been added, select the “Process Transaction” button.   Please Note:  The “Process Transaction” button is not enabled if there are any errors found within the line items that have been entered.
+
+[![Transaction Button](../../../../assets/images/processTranButton.png)]
+
+Once the confirmation has been displayed, the file will have been included in a batch for processing by DDP.
+
+[![Confirmation](../../../../assets/images/confirmation.png)]
+
+#### Pay & Create Bulk Upload:  Upload File Option
+
+Step 1:	Select the “Bulk Upload” option.
+
+[![Upload Option](../../../../assets/images/uploadopt.png)]
+
+Step 2:  Select the template to be processed and press the “Open” button.
+
+[![Upload File](../../../../assets/images/openButton_uploadfile.png)]
+
+Step 3:  Select the “Process Transaction” button.  Please note:  when the file is uploaded, all line items are automatically displayed on the screen.  The “Process Transaction” button will only appear if there are no errors detected within the displayed line items.
+
+[![Process Transaction](../../../../assets/images/processTranButton.png)]
+
+The confirmation screen will display when the Bulk intake process is successful. 
+
+[![Confirmation](../../../../assets/images/confirmation.png)]
+
+
+## Appendix
+
+### Sample Bulk Template
+
+#### Recipient Creation 
+
+#### Payment Initiation
+
+#### Payment Cancellation
+
+#### Create Recipient & Initiate Payment
