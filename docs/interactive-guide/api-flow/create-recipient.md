@@ -36,11 +36,4 @@ The minimal request can be any single entity that requires updating, any of the 
 
 [![Previous](../../../../assets/images/previous.png)](?type=patch&path=/ddp/v1/recipients/{id})<div style="text-align: right">  
 
-
 [![Next](../../../../assets/images/next.png)](?path=docs/interactive-guide/api-flow/vault-payment.md)<div style="text-align: left">
-
-
- <tr>
-    <td> <img src="Nordic_trails.jpg" alt="Drawing" style="width: 250px;"/> </td>
-    <td> <img src="Nordic_trails.jpg" alt="Drawing" style="width: 250px;"/> </td>
-    </tr>
