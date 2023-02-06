@@ -5,9 +5,9 @@ Digital Disbursement clients are allowed to determine if the recipient should be
 
 DDP allow two types of recipient flow.
 
-•	Guest 
+• Guest
 
-•	Register
+• Register
 
 **<ins> Guest </ins>**
 
@@ -19,7 +19,7 @@ If more than one payment is expected to be sent to the recipient, then registrat
 
 **<ins> Multiple Recipient Payments  </ins>**
 
-Recipients determine who will receive the funds:   If this option is being used, then the first recipient to enter his/her disbursement information will receive all of the funds.  The remaining recipients will have to approve the disbursement to the recipient receiving the funds prior to the completion of the disbursement.  If the payment expires before all recipients have approved or a recipient rejects the payment, then the payment is cancelled, funds are released in the DFA, and recipients are notified of the expiration. 
+Recipients determine who will receive the funds:   If this option is being used, then the first recipient to enter his/her disbursement information will receive all of the funds.  The remaining recipients will have to approve the disbursement to the recipient receiving the funds prior to the completion of the disbursement.  If the payment expires before all recipients have approved or a recipient rejects the payment, then the payment is cancelled, funds are released in the DFA, and recipients are notified of the expiration.
 
 DDP Merchant can initiate the below type of payment Initiation for recipient.
 
@@ -55,12 +55,11 @@ Merchant can only cancel payments that are in a “Pending” status. Once a dis
 
 Clients are able to initiate a payment cancellation at any time during the process, unless the disbursement is being processed. When a cancellation is successful:
 
-•	The Transaction and Payment statuses are updated.
+• The Transaction and Payment statuses are updated.
 
-•	The hold is removed from the funds in the DFA.
+• The hold is removed from the funds in the DFA.
 
-•	Notification is sent to the recipient(s).
-
+• Notification is sent to the recipient(s).
 
 [![Try it out](../../../../assets/images/button.png)](../api/?type=patch&path=/ddp/v1/payments/{id}/cancel)
 

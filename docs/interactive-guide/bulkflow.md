@@ -1,14 +1,15 @@
 
 # Introduction
+
 This guide documents the BULK tool as used by the Digital Payout product.   The BULK tool allows clients to initiate and manage large numbers of payments through an easy-to-use online interface.   Below is a list of tasks for which the BULK option is available:
 
-•	Creating a Recipient
+• Creating a Recipient
 
-•	Initiating a Payment
+• Initiating a Payment
 
-•	Cancelling a Payment
+• Cancelling a Payment
 
-•	Create a Recipient & Initiate a Payment
+• Create a Recipient & Initiate a Payment
 
 ## How the Bulk Process Works
 
@@ -16,18 +17,19 @@ The process begins with the creation of a bulk template.  Once the template has 
 Please Note:  All Bulk templates are placed into a queue upon arrival on the Payout platform.   The bulk files are completed based on their position in the queue.
 Bulk Template
 
-The purpose of the Bulk Template is to allow a merchant the option of sending more than one record to the Carat Digital Payout platform for processing at a time.   The benefit of using this template is to allow clients the option of using the Digital Payout product with very little to no development required on their part. 
+The purpose of the Bulk Template is to allow a merchant the option of sending more than one record to the Carat Digital Payout platform for processing at a time.   The benefit of using this template is to allow clients the option of using the Digital Payout product with very little to no development required on their part.
 
 A Comma Separated Values (.csv) file is created by the client and uploaded to the BULK product in Client Line Enterprise.  In BULK, a line item is created for each action that is to be performed.  Please note:   The maximum number of line items for a single file is 1000.
 Clients have two options for creating a bulk template:
 
-1.	Manually create the template and upload the document into CLX
-2.	Utilize the Bulk screens within CLX to create the template
+1. Manually create the template and upload the document into CLX
+2. Utilize the Bulk screens within CLX to create the template
 Please remember:   Bulk templates are only able to include action types for a single MID at a time.   This means that each template may only include line items that pertain to one MID.
 
 ## Client Line Enterprise
 
 ### Accessing Client Line Enterprise
+
 Bulk is accessible to clients via Client Line Enterprise to those users who have been assigned the correct entitlements.
 Step 1:   Open the Business Track link.
 
@@ -55,7 +57,7 @@ Step 6:   Select the entity for which you will be processing the BULK file.
 
 ### Accessing BULK
 
-Step 1:	Select the option “Bulk Upload” from the menu on the left hand side of the screen
+Step 1: Select the option “Bulk Upload” from the menu on the left hand side of the screen
 
 [![Clx BulkUpload](../../../../assets/images/bulkupload.png)]
 
@@ -98,7 +100,7 @@ Step 5: Once the confirmation has been displayed, the file will have been includ
 
 #### Add a Recipient:  Upload File
 
-Step 1: 	  Select the “Bulk Upload” option.
+Step 1: Select the “Bulk Upload” option.
 
 [![Upload Option](../../../../assets/images/uploadopt.png)]
 
@@ -110,7 +112,7 @@ Step 3:  Select the “Process Transaction” button.  Please note:  when the fi
 
 [![Transaction Button](../../../../assets/images/transButton.png)]
 
-The confirmation screen will display when the Bulk intake process is successful. 
+The confirmation screen will display when the Bulk intake process is successful.
 
 [![Confirmation](../../../../assets/images/confirmation.png)]
 
@@ -160,7 +162,7 @@ Step 3: Select the “Process Transaction” button.  Please note:  when the fil
 
 [![Process Transcation](../../../../assets/images/processTrans.png)]
 
-The confirmation screen will display when the Bulk intake process is successful. 
+The confirmation screen will display when the Bulk intake process is successful.
 
 [![Confirmation](../../../../assets/images/confirmation.png)]
 
@@ -168,14 +170,11 @@ The confirmation screen will display when the Bulk intake process is successful.
 
 This action is used by clients who need to cancel multiple payments that have been created in error.  Please note:   payments can only be cancelled if one of the following applies:
 
-
-
 If you wish to use the BULK method to cancel a payment, you will need to initiate the process under the Payments / Initiate Payment menu option in CLX.  
 
 [![Init Payment Menu](../../../../assets/images/initPaymentMenu.png)]
 
-
-### Create a Recipient and Initiate a Payment 
+### Create a Recipient and Initiate a Payment
 
 Step 1:  Select the “Pay and Create Bulk Upload” option.
 
@@ -205,7 +204,7 @@ Once the confirmation has been displayed, the file will have been included in a 
 
 #### Pay & Create Bulk Upload:  Upload File Option
 
-Step 1:	Select the “Bulk Upload” option.
+Step 1: Select the “Bulk Upload” option.
 
 [![Upload Option](../../../../assets/images/uploadopt.png)]
 
@@ -217,23 +216,21 @@ Step 3:  Select the “Process Transaction” button.  Please note:  when the fi
 
 [![Process Transaction](../../../../assets/images/processTranButton.png)]
 
-The confirmation screen will display when the Bulk intake process is successful. 
+The confirmation screen will display when the Bulk intake process is successful.
 
 [![Confirmation](../../../../assets/images/confirmation.png)]
-
 
 ## Appendix
 
 ### Sample Bulk Template
 
-#### Recipient Creation 
+#### Recipient Creation
 
 #### Payment Initiation
 
 #### Payment Cancellation
 
 #### Create Recipient & Initiate Payment
-
 
 ## See Also
 

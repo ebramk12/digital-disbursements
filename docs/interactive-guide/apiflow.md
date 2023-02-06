@@ -196,7 +196,7 @@ This request will take our generated nonce token from previous step in the paylo
 
 **<ins> Description </ins>**
 
-This request will retrieve the account information based on the recipientId. This will return ALL associated payment methods with this `recipientId`. Remember the `recipientId` changes based upon email so if multiple merchantCustomerIds share the same email this will pull all the accounts from every merchantCustomerId associated with that email. 
+This request will retrieve the account information based on the recipientId. This will return ALL associated payment methods with this `recipientId`. Remember the `recipientId` changes based upon email so if multiple merchantCustomerIds share the same email this will pull all the accounts from every merchantCustomerId associated with that email.
 
 [![Try it out](../../../../assets/images/button.png)](../api/?type=get&path=/ddp/v1/recipients/{recipientId}/accounts)
 
@@ -204,7 +204,7 @@ This request will retrieve the account information based on the recipientId. Thi
 
 **<ins> Description </ins>**
 
-There are following different payment methods for the disbursments, there are detailed descriptions are provided below for each of the payment methnods.
+There are following different payment methods for the disbursements, there are detailed descriptions are provided below for each of the payment methods.
 
  1. Debit
  2. ACH
@@ -212,7 +212,7 @@ There are following different payment methods for the disbursments, there are de
  4. Money Network
  5. PayPal
  6. Venmo
- 7. E-CHEK
+ 7. E-CHECK
  8. TA Token
 
 **<ins> Debit </ins>**
