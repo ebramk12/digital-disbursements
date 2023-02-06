@@ -1,4 +1,12 @@
 
+Recipient is a enduser who can gets the disbursment money in their accounts provided.
+
+We have two types of recipients.
+
+1. Consumer
+
+2. Business
+
 ## Create a Recipient
 
 ### Description
@@ -30,3 +38,9 @@ The minimal request can be any single entity that requires updating, any of the 
 
 
 [![Next](../../../../assets/images/next.png)](?path=docs/interactive-guide/api-flow/vault-payment.md)<div style="text-align: left">
+
+
+ <tr>
+    <td> <img src="Nordic_trails.jpg" alt="Drawing" style="width: 250px;"/> </td>
+    <td> <img src="Nordic_trails.jpg" alt="Drawing" style="width: 250px;"/> </td>
+    </tr>
