@@ -296,4 +296,3 @@ This request will get the details of an onboarded merchant with no request param
 ## See Also
 
 - [Please refer our FAQ's](?path=docs/faq/faq.md&branch=develop#api-flow-faqs)
-

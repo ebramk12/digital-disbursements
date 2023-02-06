@@ -1,10 +1,8 @@
 # Introduction
 
-DDP is a payment platform that enables business to send payments to your customers, the digitized payments reduce the friction and time required for your customers to receive the money. 
+DDP is a payment platform that enables business to send payments to your customers, the digitized payments reduce the friction and time required for your customers to receive the money.
 
-Fiserv’s Digital Disbursement product allows merchants to provide customers with 
-fast, more secure and cost-effective payout options how and when they 
-want – on weekends, holidays and after hours. likewise, the product allows the recipient to select the method to be used to disburse the payment.
+Fiserv’s Digital Disbursement product allows merchants to provide customers with fast, more secure and cost-effective payout options how and when they want – on weekends, holidays and after hours. likewise, the product allows the recipient to select the method to be used to disburse the payment.
 
 ---
 
