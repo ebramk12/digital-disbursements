@@ -10,30 +10,28 @@ Fiserv’s Digital Disbursement product allows merchants to provide customers wi
 
 Digital disbursements allows several flexible integration options to make onboarding easy and accessible. Choose an integration path below to learn more or reach out to our sales team for a personalized assessment for your business.
 
-![Hosted pages icon](../../assets/images/icons/hosted-pages-icon.png "Hosted pages icon")
-
 <!-- type: row -->
 
 <!-- type: card
-title: <div><img src="../../assets/images/icons/Person-and-computer.png"></div> Payments Portal
+title: <img src="https://raw.githubusercontent.com/Fiserv/digital-disbursements/develop/assets/images/icons/Person-and-computer.png" alt="Portal icon" title="Portal icon"> Payments Portal
 Description: Disburse payouts through the most popular channels in a Client-Branded Portal that minimizes cost and maximizes speed to market.
 link: ?path=docs/interactive-guide/portalflow.md
 -->
 
 <!-- type: card
-title: ![Hosted pages icon](../../assets/images/icons/hosted-pages-icon.png) Hosted Payments Page
+title: <img src="https://raw.githubusercontent.com/Fiserv/digital-disbursements/develop/assets/images/icons/hosted-pages-icon.png" alt="Hosted pages icon" title="Hosted pages icon"> Hosted Payments Page
 description: Offers the use of a client-branded iframe to manage customer experience, send account information (PCI data) directly to Fiserv, and receive an encrypted token for future use.
 link: ?path=docs/interactive-guide/apiflow.md
 -->
 
 <!-- type: card
-title: ![API only icon](../../assets/images/icons/api-connection.png) API Only
+title: <img src="https://raw.githubusercontent.com/Fiserv/digital-disbursements/develop/assets/images/icons/api-connection.png" alt="API icon" title="API icon"> API Only
 description: With Fiserv's simple, modern APIs you can direct flow to users with the confidence of a secure and fast Payments backend.
 link: ?path=docs/interactive-guide/api-flow/apiflow.md
 -->
 
 <!-- type: card
-title: ![Batch and bulk icon](../../assets/images/icons/batch-bulk-icon.png) Batch and Bulk Options
+title: <img src="https://raw.githubusercontent.com/Fiserv/digital-disbursements/develop/assets/images/icons/batch-bulk-icon.png" alt="Batch icon" title="Batch icon"> Batch and Bulk Options
 description: Process payments by uploading a batch file to a Managed File Gateway or Fiserv's ClientLine Portal.
 link: ?path=docs/interactive-guide/batchflow.md
 -->
