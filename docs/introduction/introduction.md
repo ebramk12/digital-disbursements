@@ -13,25 +13,25 @@ Digital disbursements allows several flexible integration options to make onboar
 <!-- type: row -->
 
 <!-- type: card
-title: <div style="align:center,width:100%"><img src="https://raw.githubusercontent.com/Fiserv/digital-disbursements/develop/assets/images/icons/Person-and-computer.png" alt="Portal icon" title="Portal icon" style="width:50%, height:auto"></div> Payments Portal
+title: <div style="align:center; width:100%"><img src="https://raw.githubusercontent.com/Fiserv/digital-disbursements/develop/assets/images/icons/Person-and-computer.png" alt="Portal icon" title="Portal icon" style="width:50%; height:auto"></div> Payments Portal
 Description: Disburse payouts through the most popular channels in a Client-Branded Portal that minimizes cost and maximizes speed to market.
 link: ?path=docs/interactive-guide/portalflow.md
 -->
 
 <!-- type: card
-title: <div style="align:center,width:100%"><img src="https://raw.githubusercontent.com/Fiserv/digital-disbursements/develop/assets/images/icons/hosted-pages-icon.png" alt="Hosted pages icon" title="Hosted pages icon" style="width:50%, height:auto"></div> Hosted Payments Page
+title: <div style="align:center; width:100%"><img src="https://raw.githubusercontent.com/Fiserv/digital-disbursements/develop/assets/images/icons/hosted-pages-icon.png" alt="Hosted pages icon" title="Hosted pages icon" style="width:50%; height:auto"></div> Hosted Payments Page
 description: Offers the use of a client-branded iframe to manage customer experience, send account information (PCI data) directly to Fiserv, and receive an encrypted token for future use.
 link: ?path=docs/interactive-guide/apiflow.md
 -->
 
 <!-- type: card
-title: <div style="align:center,width:100%"><img src="https://raw.githubusercontent.com/Fiserv/digital-disbursements/develop/assets/images/icons/api-connection.png" alt="API icon" title="API icon" style="width:50%, height:auto"></div> API Only
+title: <div style="align:center; width:100%"><img src="https://raw.githubusercontent.com/Fiserv/digital-disbursements/develop/assets/images/icons/api-connection.png" alt="API icon" title="API icon" style="width:50%; height:auto"></div> API Only
 description: With Fiserv's simple, modern APIs you can direct flow to users with the confidence of a secure and fast Payments backend.
 link: ?path=docs/interactive-guide/api-flow/apiflow.md
 -->
 
 <!-- type: card
-title: <div style="align:center,width:100%"><img src="https://raw.githubusercontent.com/Fiserv/digital-disbursements/develop/assets/images/icons/batch-bulk-icon.png" alt="Batch icon" title="Batch icon" style="width:50%, height:auto"></div> Batch and Bulk Options
+title: <div style="align:center; width:100%"><img src="https://raw.githubusercontent.com/Fiserv/digital-disbursements/develop/assets/images/icons/batch-bulk-icon.png" alt="Batch icon" title="Batch icon" style="width:50%; height:auto"></div> Batch and Bulk Options
 description: Process payments by uploading a batch file to a Managed File Gateway or Fiserv's ClientLine Portal.
 link: ?path=docs/interactive-guide/batchflow.md
 -->
