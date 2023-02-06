@@ -233,3 +233,8 @@ The confirmation screen will display when the Bulk intake process is successful.
 #### Payment Cancellation
 
 #### Create Recipient & Initiate Payment
+
+
+## See Also
+
+- [Please refer our FAQ's](?path=docs/faq/faq.md&branch=develop#api-flow-faqs)

@@ -103,3 +103,8 @@ CI|MERCHANT_ID|MERCHANT_CUSTOMER_ID|MERCHANT_TRANSACTION_ID|STATUS_CODE|STATUS_D
 >CI|526287175883|bqcflexaon102fc|BQCIJZM2765224269|400024|Invalid Email Address| 
 >BT|2|0|2 
 >FT|1|0|2
+
+
+## See Also
+
+- [Please refer our FAQ's](?path=docs/faq/faq.md&branch=develop#api-flow-faqs)
