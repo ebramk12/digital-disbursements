@@ -8,8 +8,9 @@ Fiserv’s Digital Disbursement product allows merchants to provide customers wi
 
 ## Integration Options
 
-![Hosted pages icon](../../assets/images/icons/hosted-pages-icon.png)
 Digital disbursements allows several flexible integration options to make onboarding easy and accessible. Choose an integration path below to learn more or reach out to our sales team for a personalized assessment for your business.
+
+![Hosted pages icon](../../assets/images/icons/hosted-pages-icon.png "Hosted pages icon")
 
 <!-- type: row -->
 
