@@ -77,6 +77,8 @@
         link: docs/interactive-guide/portal-flow/initiateportalflow.md
       - title: How to Cancelling a Payment
         link: docs/interactive-guide/portal-flow/cancelPaymentflow.md
+      - title: How to Get Merchant Info Details
+        link: docs/interactive-guide/portal-flow/merchantInfoflow.md
     - title: Batch Flow
       sections:
       - title: Batch File
