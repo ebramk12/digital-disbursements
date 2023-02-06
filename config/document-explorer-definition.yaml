@@ -56,18 +56,18 @@
   - title: Interactive guide
     sections:
     - title: API Flow
-      link: docs/interactive-guide/api-flow/apiflow.md
-      sections:
-      - title: Header Setup
-        link: docs/interactive-guide/api-flow/header_sample.md
-      - title: How to Create and Update Recipient Profiles
-        link: docs/interactive-guide/api-flow/create-recipient.md
-      - title: How to save a Payment Method (Acount Vaulting)
-        link: docs/interactive-guide/api-flow/vault-payment.md
-      - title: How to Initiate and Cancel Transactions
-        link: docs/interactive-guide/api-flow/create-disbursement.md        
-      - title: How to Get Status of Recipient, Merchant and Transactions
-        link: docs/interactive-guide/api-flow/get-transaction-details.md
+      link: docs/interactive-guide/apiflow.md
+#      sections:
+#     - title: Header Setup
+#        link: docs/interactive-guide/api-flow/header_sample.md
+#      - title: How to Create and Update Recipient Profiles
+#        link: docs/interactive-guide/api-flow/create-recipient.md
+#      - title: How to save a Payment Method (Acount Vaulting)
+#        link: docs/interactive-guide/api-flow/vault-payment.md
+#      - title: How to Initiate and Cancel Transactions
+#        link: docs/interactive-guide/api-flow/create-disbursement.md        
+#      - title: How to Get Status of Recipient, Merchant and Transactions
+#        link: docs/interactive-guide/api-flow/get-transaction-details.md
     - title: Portal Flow
       link: docs/interactive-guide/portal-flow/portalflow.md
       sections:
