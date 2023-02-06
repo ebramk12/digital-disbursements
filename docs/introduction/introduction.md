@@ -8,7 +8,7 @@ want – on weekends, holidays and after hours. likewise, the product allows the
 
 ---
 
-# Integration Options
+## Integration Options
 
 Digital disbursements allows several flexible integration options to make onboarding easy and accessible. Choose an integration path below to learn more or reach out to our sales team for a personalized assessment for your business.
 
@@ -17,13 +17,13 @@ Digital disbursements allows several flexible integration options to make onboar
 <!-- type: card
 title: Payments Portal
 Description: Disburse payouts through the most popular channels in a Client-Branded Portal that minimizes cost and maximizes speed to market.
-link: ?path=docs/interactive-guide/api-flow/initiateportalflow.md
+link: ?path=docs/interactive-guide/portalflow.md
 -->
 
 <!-- type: card
 title: Hosted Payments Page
 description: Offers the use of a client-branded iframe to manage customer experience, send account information (PCI data) directly to Fiserv, and receive an encrypted token for future use.
-link: ?path=docs/interactive-guide/api-flow/hosted-pages.md
+link: ?path=docs/interactive-guide/apiflow.md
 -->
 
 <!-- type: card
@@ -35,14 +35,14 @@ link: ?path=docs/interactive-guide/api-flow/apiflow.md
 <!-- type: card
 title: Batch and Bulk Options
 description: Process payments by uploading a batch file to a Managed File Gateway or Fiserv's ClientLine Portal.
-link: ?path=docs/interactive-guide/batch-flow/batchflow.md
+link: ?path=docs/interactive-guide/batchflow.md
 -->
 
-<!-- type: row-end --> 
+<!-- type: row-end -->
 
 ---
 
-# Features
+## Features
 
 <!-- type: row -->
 
@@ -68,7 +68,7 @@ link: ?path=docs/documentation/features/payment-options.md
 
 ---
 
-# Services
+## Services
 
 <!-- type: row -->
 
@@ -81,7 +81,7 @@ link:
 <!-- type: card 
 title: Recipient Services
 description: Create, Update, and View Recipient information.
-link:
+link: ../api/?type=post&path=/ddp/v1/recipients
 -->
 
 <!-- type: row-end -->
