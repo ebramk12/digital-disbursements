@@ -124,7 +124,8 @@ There are following steps require to save (vault) a payment methond for the reci
 
 ### Create a Public Token
 
-#### Description
+**<ins> Description </ins>**
+
 This request will generate a public key to be used in encrypting PCI data as well as a `tokenId` to be passed to subsequent calls through the header. This `tokenId` and the `publicKey` is valid for 20 minutes and after than its expired, you will use the public Key to perform encryption  on the account details as follow:
 
 | Account Type | Items to Encrypt             |
@@ -133,7 +134,7 @@ This request will generate a public key to be used in encrypting PCI data as wel
 | ACH          | Acount Number                |
 
 <!-- theme: success -->
->#### Special considerations
+> **<ins> Special considerations </ins>**
 >| Parameter               | Note                                                                                                                                                                                   |
 >| ----------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | 
 >| **fdCustomerId**       | How the customer is identified in the ucom app. Best practice would be to use the same value as `merchantCustomerId`.                                                                 |
@@ -151,11 +152,12 @@ type: tab
 titles: API, Hosted 
 -->
 
-#### Description
+**<ins> Description </ins>**
+
 In this request you are going to encrypt your PCI (Payment Card Industry) data with the help of `publicKey` and `tokenId` generated in "Create a Public Token" API call in previous step. Once that is done you will pass that data into this call and receive a nonce token to be used in the upcoming step for account vaulting. Keep in mind the encrypted payload for each variable should be surrounded by `ENC[ ]` as shown in the examples.
 
 <!-- theme: failure -->
->#### **Header Change**
+> **<ins> Header Change </ins>**
 >| Header Key | Change |
 >| ---------- | ------ |
 >| **Authorization** |  changes to `Bearer <tokenId>` (generated from Step 1, example below) |
@@ -172,7 +174,7 @@ In this request you are going to encrypt your PCI (Payment Card Industry) data w
 type: tab
 -->
 
-#### Description
+**<ins> Description </ins>**
 
 HPP is a web SDK and iFrame solution. DDP is intended to provide merchants with an option to capture the cardholder data in secure manner through HPP. Secure card capture is to allow merchants to embed the HP SDK into their existing website/web view. This SDK solution offered by DDP platform shall load in iFrame and comply the PCI requirements. In addition to the core functionality of HPP, It shall provide a capability to customize the UI to match the merchant's website style.
 
@@ -184,12 +186,12 @@ HPP is a web SDK and iFrame solution. DDP is intended to provide merchants with 
 
 ### Vault a Payment Method
 
-#### Description
+**<ins> Description </ins>**
 
 This request will take our generated nonce token from previous step in the payload as well as the `tokenId` from Step 1 in the headers. Once this step is completed the payment method will be vaulted and an EV (Enrolment Vault) token will be generated. These tokens are specific to payment methods vaulted with Fiserv and are not to be confused with TA (TransArmor) tokens which are generated through other flows. This EV token can be non-expired tokens and can be used multiple times for that recipeient.
 
 <!-- theme: failure -->
->#### **Header Change**
+>**<ins> Header Change </ins>**
 >| Header Key | Change |
 >| ---------- | ------ |
 >| Authorization | returns to normal HMAC signature |
@@ -200,7 +202,8 @@ This request will take our generated nonce token from previous step in the paylo
 
 ## Get Recipient Accounts 
 
-### Description
+**<ins> Description </ins>**
+
 This request will retrieve the account information based on the recipientId. This will return ALL associated payment methods with this `recipientId`. Remember the `recipientId` changes based upon email so if multiple merchantCustomerIds share the same email this will pull all the accounts from every merchantCustomerId associated with that email. 
 
 [![Try it out](../../../../assets/images/button.png)](../api/?type=get&path=/ddp/v1/recipients/{recipientId}/accounts)
@@ -208,7 +211,7 @@ This request will retrieve the account information based on the recipientId. Thi
 
 ## Create a Payment
 
-### Description
+**<ins> Description </ins>**
 
 There are following different payment methods for the disbursments, there are detailed descriptions are provided below for each of the payment methnods.
 
@@ -221,21 +224,21 @@ There are following different payment methods for the disbursments, there are de
  7. E-CHEK
  8. TA Token
 
-#### Debit
+**<ins> Debit </ins>**
 
 This request is the payment call where we will take our `enrolment_vault` token and use it to create a disbursement payment for a recipient. The key variables here are `merchantTransactionId`, this must be unique for every transaction call , as well as paymentType which should correspond to the payment type associated with your environment for eg. Gaming, Claims, Wages etc. The EV token will never expire for the same `merchantCustomerId` and we can perform many number of transactions using same EV token.
 
 [![Try it out](../../../../assets/images/button.png)](../api/?type=post&path=/ddp/v1/payments/{id}/disburse)
 
 
-#### ACH 
+**<ins> ACH </ins>**
 
 An ACH is an electronic fund transfer made between banks and credit unions across what is called the Automated Clearing House network. This is an ACH payment request  where we will take our `enrolment_vault`token and use it to create a disbursement payment for a recipient. The key variables here are `merchantTransactionId`, this must be unique for every transaction call , as well as paymentType which should correspond to the payment type associated with your environment.
 
 [![Try it out](../../../../assets/images/button.png)](../api/?type=post&path=/ddp/v1/payments/{id}/disburse)
 
 
-#### Coinbase
+**<ins> Coinbase </ins>**
 
 This request is the payment call using the Coinbase payment method to create a disbursement payment for a recipient. The key variables here are `merchantTransactionId`, this must be unique for every transaction call , as well as paymentType which should correspond to the payment type associated with your environment for eg. Gaming, Claims, Wages etc. The EV token will never expire for the same `merchantCustomerId` and we can perform many number of transactions using same EV token.
 
@@ -243,34 +246,34 @@ This request is the payment call using the Coinbase payment method to create a d
 [![Try it out](../../../../assets/images/button.png)](../api/?type=post&path=/ddp/v1/payments/{id}/disburse)
 
 
-#### Money Network 
+**<ins> Money Network </ins>**
 
 This request is the payment call using the Money Network payment method, where we will take our `enrolment_vault` token and use it to create a disbursement payment for a recipient. The key variables here are `merchantTransactionId`, this must be unique for every transaction call , as well as paymentType which should correspond to the payment type associated with your environment for eg. Gaming, Claims, Wages etc. The EV token will never expire for the same `merchantCustomerId` and we can perform many number of transactions using same EV token.
 
 [![Try it out](../../../../assets/images/button.png)](../api/?type=post&path=/ddp/v1/payments/{id}/disburse)
 
 
-#### PayPal 
+**<ins> PayPal </ins>**
 
 This request is the payment call using the PayPal payment method, where we can use the `email` or `phoneNumber`  variables to initate the payments. The key variables here are `merchantTransactionId`, this must be unique for every transaction call , as well as paymentType which should correspond to the payment type associated with your environment.
 
 [![Try it out](../../../../assets/images/button.png)](../api/?type=post&path=/ddp/v1/payments/{id}/disburse)
 
 
-#### Venmo 
+**<ins> Venmo </ins>**
 
 This request is the payment call using the Venmo payment method, where we can use the `phoneNumber`  variables to initate the payments. The key variables here are `merchantTransactionId`, this must be unique for every transaction call , as well as paymentType which should correspond to the payment type associated with your environment.
 
 [![Try it out](../../../../assets/images/button.png)](../api/?type=post&path=/ddp/v1/payments/{id}/disburse)
 
 
-#### E-CHECK
+**<ins> E-Check </ins>**
 
 This request is the payment call using the E-Check payment method to create a disbursement payment for a recipient. The key variables here are `merchantTransactionId`, this must be unique for every transaction call , as well as paymentType which should correspond to the payment type associated with your environment for eg. Gaming, Claims, Wages etc. 
 
 [![Try it out](../../../../assets/images/button.png)](../api/?type=post&path=/ddp/v1/payments/{id}/disburse)
 
-#### TA Token
+**<ins> TA Token </ins>**
 
 This request is the payment call using the TA Token payment method to create a disbursement payment for a recipient. The key variables here are `merchantTransactionId`, this must be unique for every transaction call , as well as paymentType which should correspond to the payment type associated with your environment for eg. Gaming, Claims, Wages etc. 
 
@@ -278,7 +281,8 @@ This request is the payment call using the TA Token payment method to create a d
 
 ## Cancel a Payment
 
-### Description
+**<ins> Description </ins>**
+
 This feature is to cancel a payment transaction which is in progress or waiting for settlement. This is applicable for any ACH,Coinbase,Venmo(incase of unclaimed) and PayPal(incase of unclaimed) transaction which is waiting for settlement. The prerequisite is to have a transaction initiated or disbursed using the payment API. The parameter required is the transaction id or TID [this is the unique id generated by DDP and is mapped 1:1 against the merchant transaction id. 
  
 [![Try it out](../../../../assets/images/button.png)](../api/?type=post&path=/ddp/v1/payments/{id}/cancel)
@@ -286,7 +290,8 @@ This feature is to cancel a payment transaction which is in progress or waiting 
 
 ## Get Transaction Status
 
-### Description
+**<ins> Description </ins>**
+
 This request will get the details of a transaction and will take either `merchantCustomerId` or 'merchantTransactionId' in the request parameter. The prerequisite is to have a transaction initiated or disbursed using the payment API. Please refer transaction initiate/disburse section in the following link for more information. 
 
 Using `merchantCustomerId`: This request can be used when you want to view all the transactions for that merchant customer id  
@@ -300,7 +305,8 @@ Using `merchantTransactionId`: This request to be used when you want to view the
 
 ## Get Merchant Info
 
-### Description
+**<ins> Description </ins>**
+
 This request will get the details of the onboarded merchant with no request parameter only the headers are required. With this call you can get the full information of the merchant like ledger balance, Available balance, DFA Account Number, Merchant Name & Address details etc.
 
 [![Try it out](../../../../assets/images/button.png)](../api/?type=get&path=/ddp/v1/merchantInfo)
