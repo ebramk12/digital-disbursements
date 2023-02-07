@@ -71,13 +71,12 @@ paths:
 	      }
         - in: header
           name: Content-Type
-          description: >-
-              used to indicate the media type of the resource.
+          description: used to indicate the media type of the resource.
           required: true
           schema: {
-           type: string,
-           default: "Content-Type"
-          }
+            type: string,
+            default: "application/json"
+	      }
           example: application/json
 
       requestBody:
@@ -198,13 +197,12 @@ paths:
 	      }
         - in: header
           name: Content-Type
-          description: >-
-              used to indicate the media type of the resource.
+          description: used to indicate the media type of the resource.
           required: true
           schema: {
-           type: string,
-           default: "Content-Type"
-          }
+            type: string,
+            default: "application/json"
+	      }
           example: application/json
         - in: path
           name: transactionId
@@ -300,13 +298,12 @@ paths:
 	      }
         - in: header
           name: Content-Type
-          description: >-
-              used to indicate the media type of the resource.
+          description: used to indicate the media type of the resource.
           required: true
           schema: {
-           type: string,
-           default: "Content-Type"
-          }
+            type: string,
+            default: "application/json"
+	      }
           example: application/json
         - in: path
           name: merchantTransactionId
@@ -409,13 +406,12 @@ paths:
 	      }
         - in: header
           name: Content-Type
-          description: >-
-              used to indicate the media type of the resource.
+          description: used to indicate the media type of the resource.
           required: true
           schema: {
-           type: string,
-           default: "Content-Type"
-          }
+            type: string,
+            default: "application/json"
+	      }
           example: application/json
         - in: path
           name: id
@@ -509,13 +505,12 @@ paths:
 	      }
         - in: header
           name: Content-Type
-          description: >-
-              used to indicate the media type of the resource.
+          description: used to indicate the media type of the resource.
           required: true
           schema: {
-           type: string,
-           default: "Content-Type"
-          }
+            type: string,
+            default: "application/json"
+	      }
           example: application/json
         - in: path
           name: id

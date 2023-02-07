@@ -511,20 +511,23 @@ components:
         Used for authorization header generation and time limit (5 minutes).
     AccessTokenHeader:
       in: header
-      name: access_token
+      name: Access_token
       description: Token provided by hosted payment page public key/tokens API when PCI data is encrypted on hosted payment page. This is to identify public key associated with access token to decrypt the PCI data.
       required: false
-      schema:
-        type: string
+      schema: {
+        type: string,
+        default: "Access-Token"
+     }
       example: Qg5cNPVKdFaT7nUuDz1zcCTWNsXw
     ContentTypeHeader:
      in: header
      name: Content-Type
-     description: >-
-        used to indicate the media type of the resource.
+     description: used to indicate the media type of the resource.
      required: true
-     schema:
-        type: string
+     schema: {
+        type: string,
+        default: "application/json"
+     }
      example: application/json
     RecipientIdPathVariable:
       in: path
