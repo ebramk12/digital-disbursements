@@ -82,11 +82,11 @@
     - title: Batch Flow
 #      sections:
 #     - title: Batch File
-      link: docs/interactive-guide/batch-flow/batchflow.md
+      link: docs/interactive-guide/batchflow.md
     - title: Bulk Flow
 #      sections:
 #      - title: Batch Template
-      link: docs/interactive-guide/bulk-flow/bulkflow.md
+      link: docs/interactive-guide/bulkflow.md
 #      open: true
 #      sections:
 #      - title: Contact Us
