@@ -35,7 +35,7 @@ Step 1:   Open the Business Track link.
 
 Step 2:  Select the ‘Merchant’ log in option
 
-![Clx](../../../../assets/images/clx.png)
+[!Clx (../../../../assets/images/clx.png)]
 
 Step 3:  Enter your user name and password
 
