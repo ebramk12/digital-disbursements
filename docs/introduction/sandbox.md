@@ -7,9 +7,10 @@ The Fiserv DDP sandboxes are an extra tool provided to our clients to allow them
 Since this is a generic environment it is possible that some of the given credentials may not match up with what the personalized environment would be, such as the PaymentType. PaymentType may be “Claims” or “Loans” when really your business is “Refund”, but functionally the requests and responses would be the same so you should still be able to code to this and then simply change the paymentType to match your implementation later.
 
 The examples given in this guide are close to the minimal requirements to execute the call. For additional information on fields, errors, or specific requirements please reference the “Implementation Guide”.
-**Your Key, Secret and PaymentType will be sent in a secure email when the environment is ready for your use. **
+**Your Key, Secret and PaymentType will be sent in a secure email when the environment is ready for your use.**
 
 ## Functionalities In-Scope
+
 - Recipient
 - Create
 - Update
@@ -26,7 +27,9 @@ The examples given in this guide are close to the minimal requirements to execut
 - Portal Flow
 
 ## Functionalities Out-of-Scope
+
 ### API & Portal
+
 - Webhooks
 - Hosted Pages
 - Customized Email Templates
@@ -41,6 +44,7 @@ The examples given in this guide are close to the minimal requirements to execut
 - Custom Payment Limits
 
 ### Portal Only
+
 - Customized Logo
 - Guest only flow
 - Forced email verification (No SMS/Voice option)

@@ -38,7 +38,7 @@ link: ?path=docs/interactive-guide/batchflow.md
 
 <!-- type: row-end -->
 
----
+----
 
 ## Features
 
@@ -64,7 +64,7 @@ link: ?path=docs/documentation/features/payment-options.md
 
 <!-- type: row-end -->
 
----
+----
 
 ## Services
 
