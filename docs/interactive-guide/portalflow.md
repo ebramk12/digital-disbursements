@@ -138,11 +138,17 @@ Clients are able to initiate a payment cancellation at any time during the proce
 
 • Notification is sent to the recipient(s).
 
-[![Try it out](../../../../assets/images/button.png)](../api/?type=patch&path=/ddp/v1/payments/{id}/cancel)
+Using `merchantCustomerId`: This request can be used when you want to view all the transactions for that merchant customer id  
 
-**<ins> Description </ins>**
+[![Try it out](../../../../assets/images/button.png)](../api/?type=patch&path=/ddp/v1/payments/{merchantTransactionId}/cancel)
+
+Using `merchantTransactionId`: This request to be used when you want to view the details of a particular transactions
+
+[![Try it out](../../../../assets/images/button.png)](../api/?type=patch&path=/ddp/v1/payments/{transactionId}/cancel)
 
 ## Get Merchant Info
+
+**<ins> Description </ins>**
 
 This request will get the details of the onboarded merchant with no request parameter only the headers are required. With this call you can get the full information of the merchant like ledger balance, Available balance, DFA Account Number, Merchant Name & Address details etc.
 
