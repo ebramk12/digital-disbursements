@@ -45,15 +45,15 @@ If you do not have a user name and password, please contact your account manager
 
 Step 4:   Enter the security code that was sent to your email.  The email address used is the same email where you received your log in credentials from Business Track.
 
-[![Clx Security](../../../../assets/images/clxsecurity.png)]
+(../../../../assets/images/clxsecurity.png)
 
 Step 5:   Select the ‘Client Line Enterprise’ option under the Administration drop down box.
 
-[![Clx Admin](../../../../assets/images/clxAdmin.png)]
+(../../../../assets/images/clxAdmin.png)
 
 Step 6:   Select the entity for which you will be processing the BULK file.
 
-[![Clx Bulk](../../../../assets/images/clxbulk.png)]
+(../../../../assets/images/clxbulk.png)
 
 ### Accessing BULK
 
