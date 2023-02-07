@@ -1,7 +1,9 @@
 
 # Portal Flow
 
-**<ins> Connectivity </ins>**
+## Pre-requisites
+
+### Connectivity
 
 The DDP services are accessed through the public Internet. DDP accepts communication only via the HTTPS channel.  Custom HTTP headers are also used carry additional information in each request. 
 
@@ -11,11 +13,11 @@ The DDP services are accessed through the public Internet. DDP accepts communica
 | Pre-Production	| https://cat.api.firstdata.com  | /ddp		 |
 | Production		| https://prod.api.firstdata.com | /ddp		 |
 
-**<ins> Header Description </ins>**
+### Header Description
 
 The header of Each API call will contain several parameters. It is important that each parameter contain the specified values to have a successful API Call. Any changes to the values will be noted through out the guide.
 
-**<ins> HTTP Headers </ins>**
+#### HTTP Headers
 
 | Header Name | Required | Description |
 | --- | --- | --- |
@@ -27,7 +29,7 @@ The header of Each API call will contain several parameters. It is important tha
 | access\_token | Conditionally | Required when vaulting payment information. Utilizes the tokenId returned from the /tokens api. |
 
 
-**<ins> Sample Header </ins>**
+#### Sample Header
 
 ```JSON
 "Content-Type":"application/json"
@@ -37,13 +39,13 @@ The header of Each API call will contain several parameters. It is important tha
 "Timestamp": "1607368688646"
 ```
 
-**<ins> How to generate HMAC Signature </ins>**
+#### How to generate HMAC Signature
 
-**<ins> Description </ins>**
+##### Description
 
 HMAC signature is used in all calls made to our API and is necessary to receive a successful response from the system.
 
-**<ins> High Level Flow </ins>**
+##### High Level Flow
 
 - Get and save the current time
 - Identify and save the request method
@@ -86,47 +88,57 @@ DDP allow two types of recipient flow.
 
 • Register
 
-**<ins> Guest </ins>**
+**Guest**
 
 If the payment is a one-time event, then the guest option is used.  
 
-**<ins> Register </ins>**
+**Register**
 
 If more than one payment is expected to be sent to the recipient, then registration is requested.
 
-**<ins> Multiple Recipient Payments  </ins>**
+**Multiple Recipient Payments**
 
 Recipients determine who will receive the funds:   If this option is being used, then the first recipient to enter his/her disbursement information will receive all of the funds.  The remaining recipients will have to approve the disbursement to the recipient receiving the funds prior to the completion of the disbursement.  If the payment expires before all recipients have approved or a recipient rejects the payment, then the payment is cancelled, funds are released in the DFA, and recipients are notified of the expiration.
 
 DDP Merchant can initiate the below type of payment Initiation for recipient.
 
-## Initiate Single Consumer Payment
+## Step 1: Initiate Payment
+
+### Option 1a: Initiate Single Consumer Payment
+
+**Description**
 
 Objective Merchant will want to initiate a payment for a single consumer recipient through the merchant portal and send email to recipient for the payment disbursement.
 
 [![Try it out](../../../../assets/images/button.png)](../api/?type=post&path=/ddp/v1/payments)
 
-## Initiate Single Company Payment
+### Option 1b: Initiate Single Company Payment
+
+**Description**
 
 Objective Merchant will want to initiate a payment for a single company recipient through the merchant portal and send email to recipient for the payment disbursement.
 
 [![Try it out](../../../../assets/images/button.png)](../api/?type=post&path=/ddp/v1/payments)
 
-## Initiate Multi Consumer Payment
+### Option 1c: Initiate Multi Consumer Payment
+
+**Description**
 
 Objective Merchant will want to initiate a payment for a Multi consumer recipient through the merchant portal and send email to recipient for the payment disbursement.
 
 [![Try it out](../../../../assets/images/button.png)](../api/?type=post&path=/ddp/v1/payments)
 
-## Initiate Multi Company Payment
+### Option 1d: Initiate Multi Company Payment
+
+**Description**
 
 Objective Merchant will want to initiate a payment for a Multi company recipient through the merchant portal and send email to recipient for the payment disbursement.
 
 [![Try it out](../../../../assets/images/button.png)](../api/?type=post&path=/ddp/v1/payments)
 
-## Cancel
+### Option 1e: Cancel a Payment
 
-**<ins> Description </ins>**
+**Description**
 
 Merchant can only cancel payments that are in a “Pending” status. Once a disbursement method has been selected by the recipient, the payment is no longer able to be cancelled. After disbursement cancellation only applicable to ACH, Coinbase, E-check, Venmo and PayPal.
 
@@ -148,7 +160,7 @@ Using `merchantTransactionId`: This request to be used when you want to view the
 
 ## Get Merchant Info
 
-**<ins> Description </ins>**
+**Description**
 
 This request will get the details of the onboarded merchant with no request parameter only the headers are required. With this call you can get the full information of the merchant like ledger balance, Available balance, DFA Account Number, Merchant Name & Address details etc.
 
