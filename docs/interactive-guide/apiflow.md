@@ -103,7 +103,7 @@ Create recipient is always the first step that needs to be taken to for any tran
 
 [![Try it out](../../../../assets/images/button.png)](../api/?type=post&path=/ddp/v1/recipients)
 
-## Update Recipient Info (Optional/Informative)
+## Update Recipient Info
 
 **<ins> Description </ins>**
 
@@ -137,6 +137,8 @@ There are following steps require to save (vault) a payment methond for the reci
 
 This request will generate a public key to be used in encrypting PCI data as well as a `tokenId` to be passed to subsequent calls through the header. This `tokenId` and the `publicKey` is valid for 20 minutes and after than its expired, you will use the public Key to perform encryption  on the account details as follow:
 
+**<ins> Note: please replace /ddp with /ucom in the context path </ins>**
+
 | Account Type | Items to Encrypt             |
 | ------------ | ---------------------------- |
 | Debit        | Card Number, Month, and Date |
@@ -162,11 +164,13 @@ titles: API, Hosted
 
 In this request you are going to encrypt your PCI (Payment Card Industry) data with the help of `publicKey` and `tokenId` generated in "Create a Public Token" API call in previous step. Once that is done you will pass that data into this call and receive a nonce token to be used in the upcoming step for account vaulting. Keep in mind the encrypted payload for each variable should be surrounded by `ENC[ ]` as shown in the examples.
 
+**<ins> Note: please replace /ddp with /ucom in the context path </ins>**
+
 <!-- theme: failure -->
 > **<ins> Header Change </ins>**
 >| Header Key | Change |
 >| ---------- | ------ |
->| **Authorization** |  changes to `Bearer <tokenId>` (generated from Step 1, example below) |
+>| **Authorization** |  changes to `Bearer <tokenId>` |
 >
 ><!-- theme: success-->
 >> *Example `Autorization: Bearer AGG596cV67WF8DjYLE3kS6nSu36x`*
