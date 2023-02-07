@@ -1,5 +1,7 @@
 
-# Introduction
+# Overview
+
+**<ins> Introduction </ins>**
 
 This guide documents the BULK tool as used by the Digital Payout product.   The BULK tool allows clients to initiate and manage large numbers of payments through an easy-to-use online interface.   Below is a list of tasks for which the BULK option is available:
 
@@ -11,7 +13,7 @@ This guide documents the BULK tool as used by the Digital Payout product.   The 
 
 • Create a Recipient & Initiate a Payment
 
-## How the Bulk Process Works
+**<ins> How the Bulk Process Works </ins>**
 
 The process begins with the creation of a bulk template.  Once the template has been created and entered/uploaded into Client Line Enterprise, the information is sent to the Carat Digital Payout platform.   Once received by the Payout platform, the actions requested on the template are completed and all issues returned to Client Line Enterprise and displayed for the Merchant.
 Please Note:  All Bulk templates are placed into a queue upon arrival on the Payout platform.   The bulk files are completed based on their position in the queue.
@@ -35,7 +37,7 @@ Step 1:   Open the Business Track link.
 
 Step 2:  Select the ‘Merchant’ log in option
 
-[!Clx (../../../../assets/images/clx.png)]
+[![Clx](../../../../assets/images/clx.png)]
 
 Step 3:  Enter your user name and password
 

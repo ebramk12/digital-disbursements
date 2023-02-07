@@ -1,5 +1,5 @@
 
-# PORTAL Flow
+# Portal Flow
 
 **<ins> Connectivity </ins>**
 

@@ -24,7 +24,7 @@ Each field should be quoted with double-quotes (") for data reliability.
 
 Refer below table for DDP CSV Fields:
 
-## Inbound File Mapping Details
+**<ins> Inbound File Mapping Details </ins>**
 
 | Field Name 		  | Max Length/Format 	| Required      | Comments 																|
 | ------------------- | ----------------	| --------------| --------------------------------------------------------------------			|
@@ -50,7 +50,8 @@ Refer below table for DDP CSV Fields:
 | `MERCHANT_TRANSACTION_ID OR REFERENCE_ID` | 100  		| &#10004;	| unique for each request 												|
 | `CUSTOM_FIELDS` 	  |						| 				| optional and value will be list of key value pairs(key and value pairs will be delimited by colon( : )) and delimited by comma(,) |
 
-### Sample Input File
+**<ins> Sample Input File </ins>**
+
 <!-- theme: success -->
 >"amount.value","amount.currency","merchantId","merchantCustomerId","paymentType","recipient.type","recipient.email","recipient.firstName","recipient.lastName","recipient.dob","recipient.tin","recipient.phone.value","recipient.phone.ext","recipient.address.street","recipient.address.city","recipient.address.state","recipient.address.postalCode","recipient.address.country","recipient.dba","merchantTransactionId","customFields.recipient"
 >"1.00","USD","526287175883","vmfs","Claims","Consumer","test.maridu@test.com","Test","Maridu","19890628","","","","2900 Westside Pkwy","Alpharetta","GA","30004","USA","","a298fc671a505445","Custom Recipient 1"
@@ -66,7 +67,7 @@ Ex: If merchant submits an inbound file with 100 records then outbound file shou
 
  Ex : If inbound file is FLXINMM.CI.1654537809.BAT97.1.csv then. outbound file will be FLXONMM.CI.1654537809.BAT97.1.csv_Summary.csv
 
-## Outbound file Mapping Details
+**<ins> Outbound file Mapping Details </ins>**
 
 Response file contains multiple records. Each field in a record is separated by pipe (|) delimiter. find the below record format.
 
@@ -81,24 +82,24 @@ CI|MERCHANT_ID|MERCHANT_CUSTOMER_ID|MERCHANT_TRANSACTION_ID|STATUS_CODE|STATUS_D
 | `STATUS_CODE` 	  | This will be code return via api. For success we'll use 00 but for error we'll pass actual error code received from API eg. 400011|
 | `STATUS_DESCRIPTION`|	For Success value will be SUCCESS and for error it will be reason of API failure. eg. Invalid email id|
 
-### Sample Output File
+**<ins> Sample Output File </ins>**
 
 #### Sample File 1
 <!-- theme: success -->
->FH|||AON1234|
->BH|5
->CI|526287175883|bqcaonmb051|TXNBQC02a2398fc671a505445|00|SUCCESS|
->CI|526287175883|bqcaonmb0091|TXNBQC03a298fc671a5053446|00|SUCCESS|
->BT|2|2|0
+>FH|||AON1234|	
+>BH|5	
+>CI|526287175883|bqcaonmb051|TXNBQC02a2398fc671a505445|00|SUCCESS|	
+>CI|526287175883|bqcaonmb0091|TXNBQC03a298fc671a5053446|00|SUCCESS|	
+>BT|2|2|0	
 >FT|1|2|0
 
 #### Sample File 2
 <!-- theme: success -->
 >FH|||1234|  
->BH|23
->CI|526287175883|bqcflexaon101fc|BQCUZJ1500115342|400024|Payment Type not allowed|
->CI|526287175883|bqcflexaon102fc|BQCIJZM2765224269|400024|Invalid Email Address|
->BT|2|0|2
+>BH|23	
+>CI|526287175883|bqcflexaon101fc|BQCUZJ1500115342|400024|Payment Type not allowed|	
+>CI|526287175883|bqcflexaon102fc|BQCIJZM2765224269|400024|Invalid Email Address|	
+>BT|2|0|2	
 >FT|1|0|2
 
 ## See Also

@@ -122,6 +122,10 @@ This request will retrieve the information for a recipient based upon its valid 
 
 ## Save a Payment Method
 
+<!-- theme: success -->
+> **<ins> Note </ins>**
+>PayPal, Venmo, Echeck and TA Token payment methods Account vault is not required, can do the disbursements directly.
+
 **<ins> Description </ins>**
 
 There are following steps require to save (vault) a payment methond for the recipient.
@@ -129,7 +133,6 @@ There are following steps require to save (vault) a payment methond for the reci
  1. Create a Public Token
  2. Create the Account Nonce Token (API or Hosted)
  3. Vault the paymment method
-
 
 ### Create a Public Token
 
@@ -143,6 +146,8 @@ This request will generate a public key to be used in encrypting PCI data as wel
 | ------------ | ---------------------------- |
 | Debit        | Card Number, Month, and Date |
 | ACH          | Acount Number                |
+| Coinbase     | Acount Number                |
+| MoneyNetwork | Card Number               	  |
 
 <!-- theme: success -->
 > **<ins> Special considerations </ins>**
@@ -229,7 +234,7 @@ There are following different payment methods for the disbursements, there are d
  4. Money Network
  5. PayPal
  6. Venmo
- 7. E-CHECK
+ 7. E-Check
  8. TA Token
 
 **<ins> Debit </ins>**
