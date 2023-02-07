@@ -194,9 +194,9 @@ components:
         $ref: '#/components/schemas/FdCustomerId'
     
    Credit:
-    description: This is to hold user account details and address
-    type: object
-    required:
+     description: This is to hold user account details and address
+     type: object
+     required:
       - cardNumber
       - nameOnCard
       - cardType
@@ -204,9 +204,9 @@ components:
       - expiryDate
       - referenceToken
       - fdCustomerId
-    properties:
-     cardNumber:
-      $ref: '#/components/schemas/CardNumber'
+     properties:
+      cardNumber:
+       $ref: '#/components/schemas/CardNumber'
       nameOnCard:
           type: string
           description: Name printed on card.
