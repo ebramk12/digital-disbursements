@@ -8,9 +8,14 @@ The below table identifies the parameters of File format.
 
 | Variable 		| Description 															| Ex 	  |
 | --------		| ----------------------------------------------------------------------| ------- |
-| `FLXI` 		| Static Prefix 														|  		  |
+| `FLXI` 		| Constant																|  		  |
 | `FLEX_MID`	| Alpha Numeric Flex MID provided to merchant at the time of onboarding. max-length = 3	 | SF,NMM  |
-| `TYPE` 		| 2 letter record type 				 									| CI 	  |
+| `TYPE` 		| 2 letter record type 			
+CI Create Recipient & Initiate Payment
+IP Initiate Payment
+CP Cancel Payment
+CR Create Recipient
+UR Update Recipient	 																	| CI 	  |
 | `EPOCH`		| number of seconds that have elapsed since January 1, 1970 (midnight UTC/GMT) | 1654537809 |
 | `NAME`		| merchant preferred alpha-numeric (label or name) max-length : 20 		| STLMNT220510 batch93 |
 | `VERSION`		| file version as integer. 												| 1 	  |
@@ -18,11 +23,11 @@ The below table identifies the parameters of File format.
 
 ## Inbound file
 
-The file should have comma separated fields in specific order.
+CI Create Recipient & Initiate Payment file should have comma separated fields in specific order. 
 
-Each field should be quoted with double-quotes (") for data reliability.
+Each field should be quoted with double-quotes (") for data reliability.  
 
-Refer below table for DDP CSV Fields:
+Refer below table for DDP CSV Fields 
 
 **<ins> Inbound File Mapping Details </ins>**
 

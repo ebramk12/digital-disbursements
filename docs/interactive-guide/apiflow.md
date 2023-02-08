@@ -315,7 +315,7 @@ Using `merchantTransactionId`: This request to be used when you want to view the
 
 [![Try it out](../../../../assets/images/button.png)](../api/?type=get&path=/ddp/v1/transactions/{merchantTransactionId})
 
-## Step 4: Optional/Info: Get Merchant Info
+## Step 4: Optional/Info: Get Merchant Info 
 
 **Description**
 
