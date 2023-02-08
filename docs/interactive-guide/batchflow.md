@@ -29,7 +29,7 @@ Each field should be quoted with double-quotes (") for data reliability.
 
 Refer below table for DDP CSV Fields 
 
-**<ins> Inbound File Mapping Details </ins>**
+**Inbound File Mapping Details**
 
 | Field Name 		  | Max Length/Format 	| Required      | Comments 																|
 | ------------------- | ----------------	| --------------| --------------------------------------------------------------------			|
@@ -55,7 +55,7 @@ Refer below table for DDP CSV Fields
 | `MERCHANT_TRANSACTION_ID OR REFERENCE_ID` | 100  		| &#10004;	| unique for each request 												|
 | `CUSTOM_FIELDS` 	  |						| 				| optional and value will be list of key value pairs(key and value pairs will be delimited by colon( : )) and delimited by comma(,) |
 
-**<ins> Sample Input File </ins>**
+### Sample Input File
 
 <!-- theme: success -->
 >"amount.value","amount.currency","merchantId","merchantCustomerId","paymentType","recipient.type","recipient.email","recipient.firstName","recipient.lastName","recipient.dob","recipient.tin","recipient.phone.value","recipient.phone.ext","recipient.address.street","recipient.address.city","recipient.address.state","recipient.address.postalCode","recipient.address.country","recipient.dba","merchantTransactionId","customFields.recipient"
@@ -72,7 +72,7 @@ Ex: If merchant submits an inbound file with 100 records then outbound file shou
 
  Ex : If inbound file is FLXINMM.CI.1654537809.BAT97.1.csv then. outbound file will be FLXONMM.CI.1654537809.BAT97.1.csv_Summary.csv
 
-**<ins> Outbound file Mapping Details </ins>**
+**Outbound file Mapping Details**
 
 Response file contains multiple records. Each field in a record is separated by pipe (|) delimiter. find the below record format.
 
@@ -87,9 +87,9 @@ CI|MERCHANT_ID|MERCHANT_CUSTOMER_ID|MERCHANT_TRANSACTION_ID|STATUS_CODE|STATUS_D
 | `STATUS_CODE` 	  | This will be code return via api. For success we'll use 00 but for error we'll pass actual error code received from API eg. 400011|
 | `STATUS_DESCRIPTION`|	For Success value will be SUCCESS and for error it will be reason of API failure. eg. Invalid email id|
 
-**<ins> Sample Output File </ins>**
+### Sample Output File
 
-#### Sample File 1
+**Sample File 1**
 <!-- theme: success -->
 >FH|||AON1234|	
 >BH|5	
@@ -98,7 +98,7 @@ CI|MERCHANT_ID|MERCHANT_CUSTOMER_ID|MERCHANT_TRANSACTION_ID|STATUS_CODE|STATUS_D
 >BT|2|2|0	
 >FT|1|2|0
 
-#### Sample File 2
+**Sample File 2**
 <!-- theme: success -->
 >FH|||1234|  
 >BH|23	
