@@ -158,7 +158,7 @@ Using `merchantTransactionId`: This request to be used when you want to view the
 
 [![Try it out](../../../../assets/images/button.png)](../api/?type=patch&path=/ddp/v1/payments/{transactionId}/cancel)
 
-## Get Merchant Info
+## Step 2: Optional/Info: Get Merchant Info
 
 **Description**
 
