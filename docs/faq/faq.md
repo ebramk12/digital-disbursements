@@ -7,7 +7,9 @@
 <details>
 <summary><b>What are the recipient types available for digital disbursement payments?</b></summary>
 
-There are 2 recipient types – Consumer and Company.
+DDP supports 2 recipient types – Consumer and Company.
+
+Consumer is an individual or a person. Company is usually a business or business user.
 
 </details>
 
@@ -28,14 +30,14 @@ No, the mobile number is not the mandatory parameters for creating the recipient
 <details>
 <summary><b>Will we receive a response and notification at the same time (if we send a POST Payment request do we expect to receive a response and to be notified also for that status)?</b></summary>
 
-Yes it’s in same time.
+HTTP Responses are mostly synchronous and immediate. Notification based on the event can be immediate or time dependent. In the above scenario if notification is configured for the payment request, we will receive both at the same time. For more information on Notification please refer notification [section].
 
 </details>
 
 <details>
 <summary><b>Can you elaborate on how a retry is initiated? What is the maximum retry count? </b></summary>
 
-When recipient provides wrong payment information (Payment will be declined by backend as payment info is wrong) for fixed number of times then payment is cancelled when max retry attempt is reached. 
+When recipient provides wrong payment information (Payment will be declined by backend as payment info is wrong) for fixed number of times then payment is cancelled when max retry attempt is reached.
 
 How many times a recipient can attempt to disburse a payment with wrong payment information can be configured by using key ENABLE_PAYMENT_RETRY_COUNT.
 
@@ -94,7 +96,7 @@ Note : If any difficulties whitelisting the above IPS please use below ones
 <details>
 <summary><b>What should be supplied as tokenId to the payments with tokenProvider as ENROLMENT_VAULT?</b></summary>
 
-Yes, it is the token we get back from accounts. For more info please refer [API Flow] (../docs/?path=docs/interactive-guide/api-flow/apiflow.md)
+Enrollment Vault Id should be supplied as part of the payment request. It is the token we get back from accounts. For more info please refer [API Flow] (../docs/?path=docs/interactive-guide/api-flow/apiflow.md)
 
 </details>
 
