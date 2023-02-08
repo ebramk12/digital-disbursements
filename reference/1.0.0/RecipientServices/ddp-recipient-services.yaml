@@ -815,7 +815,7 @@ components:
       required: true
       schema: {
 	    type: string,
-	    default: "Content-Type"
+	    default: "application/json"
 	  }
       example: application/json
 #------------------------------------------
