@@ -4,7 +4,7 @@ Digital Disbursements is a payment platform that enables your business to send p
 
 Fiserv’s Digital Disbursement product allows merchants to provide customers with fast, secure, and cost-effective payout options, how and when they want – on weekends, holidays and after hours. Likewise, the product allows the recipient to select the method to be used to disburse the payment.
 
------
+----
 
 ## Integration Options
 
