@@ -29,68 +29,39 @@
 ################################################################################
 
 - sections:
-    - title: Getting Started
-      link: docs/introduction/introduction.md
-      sections: 
-#        - title: Request an environment
-#          link: docs/introduction/request.md
-        - title: Features
-          sections:
-          - title: Fraud
-            link: docs/documentation/features/fraud.md
-          - title: Payment Options
-            link: docs/documentation/features/payment-options.md
-          - title: Tokenization
-            link: docs/documentation/features/tokenization.md
-#   - title: Interactive guide
-#     link: docs/interactive-guide/interactive-guide.md
-    - title: Frequently Asked Questions
-      link: docs/faq/faq.md
-    - title: Troubleshooting
-      sections:
-      - title: Complete Error Code list
-        link: docs/troubleshooting/error-codes.md
-      - title: Transaction/Payments Status
-        link: docs/troubleshooting/Transaction-payment-status.md
-- sections:
+  - title: Getting Started
+    link: docs/introduction/introduction.md
+    sections: 
+      - title: Features
+        sections:
+        - title: Fraud
+          link: docs/documentation/features/fraud.md
+        - title: Payment Options
+          link: docs/documentation/features/payment-options.md
+        - title: Tokenization
+          link: docs/documentation/features/tokenization.md
   - title: Interactive guide
     sections:
     - title: API Flow
       link: docs/interactive-guide/apiflow.md
-#      sections:
-#     - title: Header Setup
-#        link: docs/interactive-guide/api-flow/header_sample.md
-#      - title: How to Create and Update Recipient Profiles
-#        link: docs/interactive-guide/api-flow/create-recipient.md
-#      - title: How to save a Payment Method (Acount Vaulting)
-#        link: docs/interactive-guide/api-flow/vault-payment.md
-#      - title: How to Initiate and Cancel Transactions
-#        link: docs/interactive-guide/api-flow/create-disbursement.md        
-#      - title: How to Get Status of Recipient, Merchant and Transactions
-#        link: docs/interactive-guide/api-flow/get-transaction-details.md
     - title: Portal Flow
       link: docs/interactive-guide/portalflow.md
-#      sections:
-#      - title: Header Setup
-#        link: docs/interactive-guide/api-flow/header_sample.md
-#      - title: How to Initiate Payment
-#        link: docs/interactive-guide/portal-flow/initiateportalflow.md
-#      - title: How to Cancelling a Payment
-#        link: docs/interactive-guide/portal-flow/cancelPaymentflow.md
-#      - title: How to Get Merchant Info Details
-#        link: docs/interactive-guide/portal-flow/merchantInfoflow.md
     - title: Batch Flow
-#      sections:
-#     - title: Batch File
       link: docs/interactive-guide/batchflow.md
     - title: Bulk Flow
-#      sections:
-#      - title: Batch Template
       link: docs/interactive-guide/bulkflow.md
-#      open: true
-#      sections:
-#      - title: Contact Us
-#        link: docs/introduction/contact.md
+  - title: Helpful Links
+    sections:
+    - title: Frequently Asked Questions
+      link: docs/faq/faq.md
+    - title: Complete Error Code list
+      link: docs/troubleshooting/error-codes.md
+    - title: Transaction/Payments Status
+      link: docs/troubleshooting/Transaction-payment-status.md
+  - title: Contact us
+    link: docs/introduction/contact-us.md
+    
+
 # - sections:
 #   - title: Getting Started
 #     link: docs/getting-started.md
