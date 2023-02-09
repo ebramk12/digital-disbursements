@@ -30,10 +30,20 @@ description: With Fiserv's simple, modern APIs you can direct flow to users with
 link: ?path=docs/interactive-guide/api-flow/apiflow.md
 -->
 
+<!-- type: row-end -->
+
+<!-- type: row -->
+
 <!-- type: card
-title: <div style="text-align:center;width:100%;height:25%"><img src="https://raw.githubusercontent.com/Fiserv/digital-disbursements/develop/assets/images/icons/batch-bulk-icon.png" alt="Batch icon" title="Batch icon" style="width: auto;height: 25%;max-height: 100px;"></div><div style="text-align:center;width:100%"> Batch and Bulk Options </div>
-description: Process payments by uploading a batch file to a Managed File Gateway or Fiserv's ClientLine Portal.
-link: ?path=docs/interactive-guide/batchflow.md
+title: <div style="text-align:center;width:100%;height:25%"><img src="https://raw.githubusercontent.com/Fiserv/digital-disbursements/develop/assets/images/icons/api-connection.png" alt="API icon" title="API icon" style="width: auto;height: 25%;max-height: 100px;"></div><div style="text-align:center;width:100%"> Batch Processing </div>
+description: Process a payment file using Fiserv's fast-secure payments solutions to deliver customers fast payments with little upfront development cost.
+link: ?path=docs/interactive-guide/api-flow/batchflow.md
+-->
+
+<!-- type: card
+title: <div style="text-align:center;width:100%;height:25%"><img src="https://raw.githubusercontent.com/Fiserv/digital-disbursements/develop/assets/images/icons/Bulk-processing.png" alt="Batch icon" title="Batch icon" style="width: auto;height: 25%;max-height: 100px;"></div><div style="text-align:center;width:100%"> Bulk Upload </div>
+description: Create and process payments in bulk using Fiserv's modern ClientLine Portal with no technical knowledge or integration needed.
+link: ?path=docs/interactive-guide/bulkflow.md
 -->
 
 <!-- type: row-end -->
