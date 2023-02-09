@@ -28,6 +28,26 @@ No, the mobile number is not the mandatory parameters for creating the recipient
 </details>
 
 <details>
+  <summary><b>Can we make a disbursment using credit or pre-paid cards?</b></summary>
+
+   We don’t support credit and pre-paid cards for disbursements, we supports only debit cards.
+   There are the following payment methods we support for the disbursements :
+   Debit
+   ACH
+   Coinbase
+   Money Network
+   PayPal
+   Venmo
+   E-Check
+   TA Token
+
+
+   For more info please refer [API Flow] (../docs/?path=docs/interactive-guide/api-flow/apiflow.md)
+
+
+</details>
+
+<details>
 <summary><b>Did we receive a response and notification at the same time (if we send a POST Payment request do we expect to receive a response and to be notified also for that status)?</b></summary>
 
 HTTP Responses are mostly synchronous and immediate. Notification based on the event can be immediate or time dependent. In the above scenario if notification is configured for the payment request, we will receive both at the same time. For more information on Notification please refer notification [section].
@@ -53,7 +73,8 @@ This is final state and can be considered as payment cancelled. No need to VOID 
 <details>
 <summary><b>How do we setup to get webhook notifications back from Fiserv in our lower environments? </b></summary>
 
-We must raise a firewall request from Fiserv side, which can take some time. So, the URL for this should be given at time of onboarding itself.
+   To enable the webhook notification we have to raise a firewall request from the Fiserv side and it requires a 10 days SLA to get the required approvals from the security team and enable it. 
+   The webhook URLs for non-prod and prod environments should  be given during onboarding request.
 
 </details>
 
@@ -95,16 +116,18 @@ Note : If any difficulties whitelisting the above IPS please use below ones
 ### API Flow FAQs
 
 <details>
-<summary><b>What should be supplied as tokenId to the payments with tokenProvider as ENROLMENT_VAULT?</b></summary>
+<summary><b>What should be supplied in tokenId field to the payments API where the  tokenProvider is ENROLMENT_VAULT?</b></summary>
 
-Enrollment Vault Id should be supplied as part of the payment request. It is the token we get back from accounts. For more info please refer [API Flow] (../docs/?path=docs/interactive-guide/api-flow/apiflow.md)
+Enrollment Vault Id should be supplied as part of the payment request, which we have recieved during account vaulting.
+ For more info please refer [API Flow] (../docs/?path=docs/interactive-guide/api-flow/apiflow.md)
 
 </details>
 
 <details>
-<summary><b>What are all custom fields support available in payment request?</b></summary>
+<summary><b>Can we have both email Id and phone number when we are creating a recipient and make only one of them mandatory? </b></summary>
 
-There is no limit for custom fields in payment request. we can add as many as required.
+No email id is the mandatory field and for your use case : The scenario when you don’t have the user’s email ID , you can generate random email-ID (which should be unique) to fill those values to create a successful recipient.
+For more info please refer [API Flow] (../docs/?path=docs/interactive-guide/api-flow/apiflow.md)
 
 </details>
 
@@ -119,9 +142,10 @@ If Guest is false for Recipient of type Consumer, then payment cannot be initial
 ### Portal Flow FAQs
 
 <details>
-<summary><b>Is the user experience in the portal different once payment notification goes out between a consumer and business?</b></summary>
+<summary><b>Does the user experience in the portal has a difference once the payment notification goes out between a consumer and business?</b></summary>
 
-No, both will have same user experience. For more info please refer [Portal Flow] (../docs/?path=docs/interactive-guide/portal-flow/portalflow.md)
+No, the consumer and the business have a user experience. 
+For more info please refer [Portal Flow] (../docs/?path=docs/interactive-guide/portal-flow/portalflow.md)
 
 </details>
 
