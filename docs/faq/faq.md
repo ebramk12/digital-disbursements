@@ -58,20 +58,21 @@ We must raise a firewall request from Fiserv side, which can take some time. So,
 </details>
 
 <details>
-<summary><b>Is there a DDP web console for checking transaction results or attempts like we have with IPG? </b></summary>
+<summary><b>Do we have a DDP web console to check the transaction history for the disbursements ? </b></summary>
 
- There is nothing like this available for non-prod. For production we have the CLX reporting tool.  
+ At the moment its not available for non-prod enviromnet. But for production we do have the CLX reporting tool, where we can check the transaction details. Please refer the CLX section for more details. 
 
 </details>
 
 <details>
-<summary><b>Can you provide us all possible code values for each expected payment status “DH”, “DD” and “DF”? </b></summary>
+<summary><b>Can you provide us all possible code values for each expected payment status “DH” and “DD” ? </b></summary>
 
-DD & DH is only applicable and the possible values are  
-
+Please find the error code and the description for "DH" and "DD"
 400063  DH Fraud Failed 
 
-400201  DD D2D payment declined by PaySecure. For more info please refer [Error Codes] (../docs/?path=docs/troubleshooting/error-codes.md) and
+400201  DD D2D payment declined by PaySecure. 
+
+For more info please refer [Error Codes] (../docs/?path=docs/troubleshooting/error-codes.md) and
 [Payment Status] (../docs/?path=docs/troubleshooting/Transaction-payment-status.md)
 
 
