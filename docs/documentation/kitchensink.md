@@ -105,7 +105,7 @@ Different ways to create links.
 
 Here's our logo ( hover to see the title text ):
 
-![Bobs logo](../../assets/images/Fiserv_Logo.jpg "Fiserv Logo")
+![Fiserv logo](../../assets/images/Fiserv_Logo.jpg "Fiserv Logo" Style="Width:200px")
 
 
 ## Code and Syntax Highlighting
