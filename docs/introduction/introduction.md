@@ -10,6 +10,8 @@ Fiserv’s Digital Disbursement product allows merchants to provide customers wi
 
 Digital disbursements allows several flexible integration options to make onboarding easy and accessible. Choose an integration path below to learn more or reach out to our sales team for a personalized assessment for your business.
 
+<img src="[](../../assest/images/icons/Bulk-processing.png)" alt="Bulk Icon" title="Hosted Pages Icon">
+
 <!-- type: row -->
 
 <!-- type: card
