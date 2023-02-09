@@ -28,7 +28,7 @@ No, the mobile number is not the mandatory parameters for creating the recipient
 </details>
 
 <details>
-<summary><b>Will we receive a response and notification at the same time (if we send a POST Payment request do we expect to receive a response and to be notified also for that status)?</b></summary>
+<summary><b>Did we receive a response and notification at the same time (if we send a POST Payment request do we expect to receive a response and to be notified also for that status)?</b></summary>
 
 HTTP Responses are mostly synchronous and immediate. Notification based on the event can be immediate or time dependent. In the above scenario if notification is configured for the payment request, we will receive both at the same time. For more information on Notification please refer notification [section].
 
