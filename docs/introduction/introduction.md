@@ -13,7 +13,7 @@ Digital disbursements allows several flexible integration options to make onboar
 <!-- type: row -->
 
 <!-- type: card
-title: <div style="text-align:center;width:100%;height:25%"><img src="https://raw.githubusercontent.com/Fiserv/digital-disbursements/develop/assets/images/icons/Person-and-computer.png" alt="Portal icon" title="Portal icon" style="width: auto;height: 25%;max-height: 100px;"></div><div style="text-align:center;width:100%"> Payments Portal </div>
+title: <div style="text-align:center;width:100%;height:25%;Max-height:100px">![Portal Icon](../../assets/images/icons/Person-and-computer.png)</div><div style="text-align:center;width:100%"> Payments Portal </div>
 Description: Disburse payouts through the most popular channels in a Client-Branded Portal that minimizes cost and maximizes speed to market.
 link: ?path=docs/interactive-guide/portalflow.md
 -->
