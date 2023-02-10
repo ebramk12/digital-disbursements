@@ -107,7 +107,6 @@ Here's our logo ( hover to see the title text ):
 
 ![Fiserv logo](../../assets/images/Fiserv_Logo.jpg "Fiserv Logo" "Width:200px")
 
-
 ## Code and Syntax Highlighting
 
 Inline `code` has back-ticks (`) around it.
@@ -122,7 +121,7 @@ Inline `code` has back-ticks (`) around it.
 var s = "JavaScript syntax highlighting";
 alert(s);
 ```
- 
+
 >Use language tags to change the syntax highlighting.
 
 ```json
@@ -149,7 +148,9 @@ Colons can be used to align columns.
 | col 3 is      | right-aligned | $1600 |
 | col 2 is      | centered      |   $12 |
 | zebra stripes | are neat      |    $1 |
+
 ```
+
 The outer pipes (|) are optional, and you don't need to make the raw Markdown line up prettily. You can also use inline Markdown.
 
 Markdown | Less | Pretty
@@ -186,7 +187,8 @@ Quote break.
 
 ---
 
-```
+```json
+
 Three or more...
 
 ---
@@ -202,18 +204,17 @@ ___
 Underscores
 ```
 
-
 # Extended markdown syntax
 
 Developer Studio Markdown extends standard Markdown with inline comment annotations.
 The value inside of the annotations is one or more key-value pairs, and the annotation affects the Markdown block right after it in the document.
 
 ## Image centering
+
 To center an image annotate `align` wrapped in a comment:
 
 <!-- align: center -->
 ![Image centering](../assets/images/md/align_image.png "Image centering")
-
 
 ## Callouts, themed blockquotes
 
@@ -230,8 +231,8 @@ There are four blockquote themes: the default (no annotation required), success,
 <!-- theme: danger -->
 > Blockquotes in danger theme.
 
-
 ## Cards & rows of cards
+
 A `card` has a border and optional values for a title, a description, and a link.
 To have a number of cards in a row, use `row` & `row-end` annotation before and after card(s) to be in a row.
 
@@ -253,12 +254,12 @@ link: ?path=docs/about-developer-studio.md
 
 <!-- type: row-end -->
 
+## Tab sets
 
-## Tabsets
 To organize content in tabs, indicate `titles` within the first `tab` annotation, followed by the tab content, and closed by a final `tab-end` annotation.
 > Users of Stoplight Flavored Markdown, need to include additional `title` annotation for each tab.
 
-![Tab sets](../assets/images/md/tab_syntax.png "Tabsets")
+![Tab sets](../assets/images/md/tab_syntax.png "Tab sets")
 
 <!-- theme: danger -->
 > Tab containers cannot be nested.
@@ -291,9 +292,7 @@ type: tab
 titles: additionalDataCommon, JSON Example
 -->
 
-
 The below table identifies the parameters in the `additionalDataCommon` object.
-
 
 | Variable | Type | Maximum Length | Description |
 | -------- | -- | ------------ | ------------------ |
@@ -307,7 +306,6 @@ The below table identifies the parameters in the `additionalDataCommon` object.
 | `subMerchant` | *object* | N/A | Required in transaction initiated by a [Payment Facilitator](?path=docs/Resources/Guides/Industry-Verticals/Payment-Faciliator.md) to identify the sub-merchant information. |
 | `privateLabel` | *object* | N/A | Used to process [Private Label](?path=docs/Resources/Guides/Payment-Sources/Private-Label.md) payment cards. |
 | `customFields` | *array* | N/A | Used to submit merchant custom fields used in terminal processing such as Key Value Pair. |
-
 
 ---
 
