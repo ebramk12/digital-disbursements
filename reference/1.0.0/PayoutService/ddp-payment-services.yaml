@@ -87,43 +87,43 @@ paths:
             schema:
               $ref: '#/components/schemas/CreateDisbursementRequest'
             examples:
-              Single Consumer Request:
+              Create - Single Consumer Request:
                 summary: Single Consumer Request
                 $ref: '#/components/examples/SingleConsumerRequest'
-              Multi Consumer Request:
+              Create - Multi Consumer Request:
                 summary: Multi Consumer Request
                 $ref: '#/components/examples/MultiConsumerRequest'
-              Single Company Request:
+              Create - Single Company Request:
                 summary: Single Company Request
                 $ref: '#/components/examples/SingleCompanyRequest'
-              Multi Company Request:
+              Create - Multi Company Request:
                 summary: Multi Company Request
                 $ref: '#/components/examples/MultiCompanyRequest'
-              Debit Request:
+              Create and Pay - Debit Request:
                 summary: Debit Request
                 $ref: '#/components/examples/DisburseCard'
-              ACH Request:
+              Create and Pay - ACH Request:
                 summary: ACH Request
                 $ref: '#/components/examples/DisburseACH'
-              Money Network Request:
+              Create and Pay - Money Network Request:
                summary: Money Network Request
                $ref: '#/components/examples/DisburseMoneyNetwork'
-              Venmo Request:
+              Create and Pay - Venmo Request:
                 summary: Venmo Request
                 $ref: '#/components/examples/DisburseVenmo'
-              Paypal Email Request:
+              Create and Pay - Paypal Email Request:
                 summary: Paypal Email Request
                 $ref: '#/components/examples/DisbursePaypalEmail'
-              Paypal Phone Request:
+              Create and Pay - Paypal Phone Request:
                summary: Paypal Phone Request
                $ref: '#/components/examples/DisbursePaypalPhone'
-              Coinbase Request:
+              Create and Pay - Coinbase Request:
                summary: Coinbase Request
                $ref: '#/components/examples/DisburseCoinbase'
-              Echeck Request:
+              Create and Pay - Echeck Request:
                summary: Coinbase Request
                $ref: '#/components/examples/DisburseEcheck'
-              Token Request:
+              Create and Pay - Token Request:
                summary: Token Request
                $ref: '#/components/examples/DisburseToken'
  

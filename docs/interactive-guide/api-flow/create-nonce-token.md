@@ -12,7 +12,7 @@ In this request you are going to encrypt your PCI (Payment Card Industry) data w
 ><!-- theme: success-->
 >> *Example `Autorization: Bearer AGG596cV67WF8DjYLE3kS6nSu36x`*
 
-[![See Examples](../../../../assets/images/button.png)](/product/UniversalCommerce/api/?type=get&path=/v1/account-tokens/{nonceTokenId}&branch=develop&version=1.0.0)
+[![See Examples](../../../../assets/images/button.png)](/product/UniversalCommerce/api/?type=get&path=/v1/account-tokens&branch=develop&version=1.0.0)
 
 
-[UCOM Account Service](/product/UniversalCommerce/api/?type=get&path=/v1/account-tokens/{nonceTokenId}&branch=develop&version=1.0.0)
+[UCOM Account Service](/product/UniversalCommerce/api/?type=get&path=/v1/account-tokens&branch=develop&version=1.0.0)
