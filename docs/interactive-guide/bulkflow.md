@@ -224,4 +224,4 @@ The confirmation screen will display when the Bulk intake process is successful.
 
 ## See Also
 
-- [Please refer our FAQ's](?path=docs/faq/faq.md&branch=develop#api-flow-faqs)
+- [Please refer our FAQ's](?path=docs/faq/faq.md)

@@ -1,8 +1,6 @@
 # Introduction
 
-This guide documents the Batch as used by the Digital Payout product. The Batch allows to client initiate and manage large numbers of payments through an easy-to-use through csv files. 
-
-Merchant places files in Fiserv hosted SFTP Location. DDP polls the SFTP locations for further processing. 
+This guide documents the Batch as used by the Digital Payout product. The Batch allows to client initiate and manage large numbers of payments through an easy-to-use through csv files. Merchant places files in Fiserv hosted SFTP Location. DDP polls the SFTP locations for further processing. 
 
 • Merchant should upload files to SFTP location with below file name pattern. Each segment is separated by dot (.)
 
@@ -122,4 +120,4 @@ CI|MERCHANT_ID|MERCHANT_CUSTOMER_ID|MERCHANT_TRANSACTION_ID|STATUS_CODE|STATUS_D
 
 ## See Also
 
-- [Please refer our FAQ's](?path=docs/faq/faq.md&branch=develop#api-flow-faqs)
+- [Please refer our FAQ's](?path=docs/faq/faq.md)

@@ -168,4 +168,4 @@ This request will get the details of the onboarded merchant with no request para
 
 ## See Also
 
-- [Please refer our FAQ's](?path=docs/faq/faq.md&branch=develop#portal-flow-faqs)
+- [Please refer our FAQ's](?path=docs/faq/faq.md)
