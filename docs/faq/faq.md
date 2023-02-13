@@ -163,6 +163,49 @@ You would just need to call initiate payment which would contain the information
 
 </details>
 
+### Batch Flow FAQs
+
+<details>
+<summary><b>Who will Provide MERCHANT_ID?</b></summary>
+
+DDP product team will provide.
+  
+</details>
+
+<details>
+<summary><b>Share list of Values for this Payment Type field?</b></summary>
+
+Claims, Wages, Loans, Revenue Share, Gamming
+  
+</details>
+
+<details>
+<summary><b>Can we send a formatted date string in place of epoch in the file name?</b></summary>
+
+Number of seconds that have elapsed since January 1, 1970 (midnight UTC/GMT). Example : 1654537809
+  
+</details>
+
+<details>
+<summary><b>Can we send some other number sequence instead of EPOCH in the file name?</b></summary>
+
+No. We mandate epoch & there is a separate field for version. This is standardized across all clients. We do this for few reasons. 
+•    Created Date for all records in a file is same - So it makes sense to put it on file-name - and we need that info.
+•    EPOCH by itself is a standard. By default, it enforces GMT and Consumes 10 digits.
+•    Other Date format with seconds precision takes at least 14 digits - without TZ info.
+•    EPOCH time is available in all programming languages - from java-script and shell script.
+  
+</details>
+
+<details>
+<summary><b>Who will Share the FTP and PGP Key details?</b></summary>
+
+FTP - Will it be the same from Outgoing as well as incoming files
+PGP - Used in file export from RK to Fiserv
+This FTP and PGP key information is given by our MFT team once the mailboxes are setup. Prior to this we need a File Gateway Onboarding form completed by the client. If there are any questions or concerns with this process the MFT team (@Hannon, Lynne (Omaha)/@Miriyala, Srinivasa (US - Georgia)) should be able to provide assistance or point you in the right direction as they are the main contacts of the MFT team. Once this is filled out we can submit a ticket to our MFT team to get this setup completed. Once this is completed then they should have the FTP and PGP key information readily available to be shared.
+  
+</details>
+
 ### Payment Services FAQs
 
 
