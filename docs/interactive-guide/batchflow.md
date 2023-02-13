@@ -1,4 +1,8 @@
-# File Name Standard
+# Introduction
+
+This guide documents the Batch as used by the Digital Payout product. The Batch allows to client initiate and manage large numbers of payments through an easy-to-use through csv files. 
+
+Merchant places files in Fiserv hosted SFTP Location. DDP polls the SFTP locations for further processing. 
 
 • Merchant should upload files to SFTP location with below file name pattern. Each segment is separated by dot (.)
 
@@ -10,16 +14,19 @@ The below table identifies the parameters of File format.
 | --------		| ----------------------------------------------------------------------| ------- |
 | `FLXI` 		| Constant																|  		  |
 | `FLEX_MID`	| Alpha Numeric Flex MID provided to merchant at the time of onboarding. max-length = 3	 | SF,NMM  |
-| `TYPE` 		| 2 letter record type 			
-CI Create Recipient & Initiate Payment
-IP Initiate Payment
-CP Cancel Payment
-CR Create Recipient
-UR Update Recipient	 																	| CI 	  |
+| `TYPE` 		| 2 letter record type 	CI Create Recipient & Initiate Payment, IP Initiate Payment, CP Cancel Payment, CR Create Recipient, UR Update Recipient	 													  | CI  	|
 | `EPOCH`		| number of seconds that have elapsed since January 1, 1970 (midnight UTC/GMT) | 1654537809 |
 | `NAME`		| merchant preferred alpha-numeric (label or name) max-length : 20 		| STLMNT220510 batch93 |
 | `VERSION`		| file version as integer. 												| 1 	  |
 | `EXT`			| file extension														| CI	  |
+
+**How Merchant Sends files to SFTP ?** 
+
+INBOUND FDFG moves files from MERCHANT's mail-box to SFTP '/available/' directory with file-name <INBOUND_JOB_ID><FILE_NAME>
+
+OUTBOUND FDFG moves files from SFTP '/' directory with file-name <OUTBOUND_JOB_ID><FILE_NAME> to MERCHANT mail-box with <OUTBOUND_JOB_ID><FILE_NAME>
+
+Both JOB_IDs should be diffrent; Ex : INBOUD FLXI<MID>   OUTBOUND FLXO<MID>
 
 ## Inbound file
 
@@ -62,6 +69,8 @@ Refer below table for DDP CSV Fields
 >"1.00","USD","526287175883","vmfs","Claims","Consumer","test.maridu@test.com","Test","Maridu","19890628","","","","2900 Westside Pkwy","Alpharetta","GA","30004","USA","","a298fc671a505445","Custom Recipient 1"
 >"1.00","USD","526287175883","pvgc","Claims","Consumer","testvjec@test.com","Test","Maridu","19890628","","","","2900 Westside Pkwy","Alpharetta","GA","30004","USA","","a298fc671a505446","Custom Recipient 2"
 
+[Download Input file](?path=assets/FLXINMM.CI.1654537809.BAT97.1.csv)
+
 ## Outbound file
 
 • DDP exports a batch summary report - containing status of each input file record, success/failure, error-description if failed.
@@ -98,6 +107,8 @@ CI|MERCHANT_ID|MERCHANT_CUSTOMER_ID|MERCHANT_TRANSACTION_ID|STATUS_CODE|STATUS_D
 >BT|2|2|0	
 >FT|1|2|0
 
+[Download Output file](?path=assets/FLXONMM.CI.1654537809.BAT97.1_Summary)
+
 **Sample File 2**
 <!-- theme: success -->
 >FH|||1234|  
@@ -106,6 +117,8 @@ CI|MERCHANT_ID|MERCHANT_CUSTOMER_ID|MERCHANT_TRANSACTION_ID|STATUS_CODE|STATUS_D
 >CI|526287175883|bqcflexaon12|BQCIJZM276|400024|Invalid Email Address|	
 >BT|2|0|2	
 >FT|1|0|2
+
+[Download Output file](?path=assets/FLXONMM.CI.1654537809.BAT97.2_Summary)
 
 ## See Also
 

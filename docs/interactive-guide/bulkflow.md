@@ -1,7 +1,5 @@
 
-# Overview
-
-**Introduction**
+# Introduction
 
 This guide documents the BULK tool as used by the Digital Payout product.   The BULK tool allows clients to initiate and manage large numbers of payments through an easy-to-use online interface.   Below is a list of tasks for which the BULK option is available:
 
@@ -223,18 +221,6 @@ Step 3:  Select the “Process Transaction” button.  Please note:  when the fi
 The confirmation screen will display when the Bulk intake process is successful.
 
 [![Confirmation](../../../../assets/images/confirmation.png)]
-
-## Appendix
-
-### Sample Bulk Template
-
-#### Recipient Creation
-
-#### Payment Initiation
-
-#### Payment Cancellation
-
-#### Create Recipient & Initiate Payment
 
 ## See Also
 
