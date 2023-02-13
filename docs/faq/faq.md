@@ -11,19 +11,50 @@ DDP supports 2 recipient types – Consumer and Company.
 
 Consumer is an individual or a person. Company is usually a business or business user.
 
+For more information on recipient please refer a recipient section [API Flow] (../docs/?path=docs/interactive-guide/apiflow.md)
+
+</details>
+
+<details>
+<summary><b>What should a customer do if the amount of the payment issued to them is incorrect? </b></summary>
+
+This can be handled in 2 ways: 
+
+1) The portal allows the customer to reject a payout due to incorrect amount. Once rejected, the customer can enter the reason for the rejection—i.e. Incorrect amount—and a notification will be sent to the client. The client can issue a new payment for the correct amount. 
+
+2) The client can cancel the payment and void it prior to the customer accepting. Once the transaction is canceled, the client can issue a new payment for the correct amount. 
+
+</details>
+
+
+<details>
+<summary><b>How often can I send my customers payments? </b></summary>
+
+There is no limit on how many payments a client can send their customer through this system. The customer, however, may have limits on how much they can accept on their debit card on daily or monthly basis. 
+
+</details>
+
+<details>
+<summary><b>Can I stop a payment once it has been sent to a customer? </b></summary>
+
+If the payment has been sent but not accepted, the client can perform a cancelation through the Digital Payouts platform. If the payment has been accepted by the customer, the client would need to perform a reversal. A reversal can only be completed if the payment was accepted to a bank account via Bank Transfer. A payment accepted to a debit card cannot be reversed. 
+
 </details>
 
 <details>
 <summary><b>What is TIN? Also, which use case involves passing value for TIN?</b></summary>
 
-TIN (Taxpayer Identification Number) here refers to TIN of the business recipient. This is mandatory for business recipient.
+A Tax Identification Number (TIN) is internationally used as an identification number for tax purposes. This is mandatory field when we are creating a  business type recipients.
+For more information on recipient please refer a recipient section [API Flow] (../docs/?path=docs/interactive-guide/apiflow.md)
 
 </details>
 
 <details>
   <summary><b>Is the mobile number mandatory for create recipient?</b></summary>
 
-No, the mobile number is not the mandatory parameters for creating the recipient.
+No, the mobile number is not the mandatory parameters for creating the recipient. Its an optional parameter while creating the recipient either for consumer or business.
+
+For more information on recipient please refer a recipient section [API Flow] (../docs/?path=docs/interactive-guide/apiflow.md)
 
 </details>
 
@@ -42,15 +73,15 @@ No, the mobile number is not the mandatory parameters for creating the recipient
    TA Token
 
 
-   For more info please refer [API Flow] (../docs/?path=docs/interactive-guide/api-flow/apiflow.md)
+   For more information please refer to the payment section [API Flow] (../docs/?path=docs/interactive-guide/apiflow.md)
 
 
 </details>
 
 <details>
-<summary><b>Did we receive a response and notification at the same time (if we send a POST Payment request do we expect to receive a response and to be notified also for that status)?</b></summary>
+<summary><b>Do we expect an API response and the webhook notification at the same time ?</b></summary>
 
-HTTP Responses are mostly synchronous and immediate. Notification based on the event can be immediate or time dependent. In the above scenario if notification is configured for the payment request, we will receive both at the same time. For more information on Notification please refer notification [section].
+HTTP Responses are mostly synchronous and immediate. Notifications are configured based on the event and can be immediate or time dependent. For eg: if the notification is configured for the payment request, we will receive both at the same time. For more information on Notification please refer notification [section].
 
 </details>
 
@@ -64,9 +95,10 @@ How many times a recipient can attempt to disburse a payment with wrong payment 
 </details>
 
 <details>
-<summary><b>Is “TV – Transaction Cancelled”, “DNF - Delivery Notification Failed” a final state? Should we VOID this payment? Or will this eventually become expired or another status? </b></summary>
+<summary><b> Does “TV – Transaction Cancelled” or “DNF - Delivery Notification Failed” is a final state and we have to VOID this payment? </b></summary>
 
-This is final state and can be considered as payment cancelled. No need to VOID or any other action required. For more info please refer [Payment Status] (../docs/?path=docs/troubleshooting/Transaction-payment-status.md)
+This is the final state and can be considered as a payment cancelled. There is no need to VOID the payment or any other action required. 
+For more information please refer [Payment Status] (../docs/?path=docs/troubleshooting/Transaction-payment-status.md)
 
 </details>
 
@@ -79,14 +111,15 @@ This is final state and can be considered as payment cancelled. No need to VOID 
 </details>
 
 <details>
-<summary><b>Do we have a DDP web console to check the transaction history for the disbursements ? </b></summary>
+<summary><b>Do we have a DDP web console or monitoring portal to check the transaction history for the disbursements ? </b></summary>
 
- At the moment its not available for non-prod enviromnet. But for production we do have the CLX reporting tool, where we can check the transaction details. Please refer the CLX section for more details. 
+ At the moment its not available for the non-prod enviromnet. But for production we do have the CLX reporting tool, where we can check the transaction details. 
+ Please refer the CLX section for more details. 
 
 </details>
 
 <details>
-<summary><b>Can you provide us all possible code values for each expected payment status “DH” and “DD” ? </b></summary>
+<summary><b>Can you provide us all the possible code values for each expected payment status “DH” and “DD” ? </b></summary>
 
 Please find the error code and the description for "DH" and "DD"
 400063  DH Fraud Failed 
@@ -100,7 +133,7 @@ For more info please refer [Error Codes] (../docs/?path=docs/troubleshooting/err
 </details>
 
 <details>
-<summary><b>What are the IPS to be whitelisted for webhooks by client?</b></summary>
+<summary><b>What are the IPs needs to be whitelisted to enable the webhooks by client?</b></summary>
 
 204.194.141.0/24
 204.194.143.0/24
@@ -116,7 +149,7 @@ Note : If any difficulties whitelisting the above IPS please use below ones
 ### API Flow FAQs
 
 <details>
-<summary><b>What should be supplied in tokenId field to the payments API where the  tokenProvider is ENROLMENT_VAULT?</b></summary>
+<summary><b>What should be supplied in a tokenId field to the payment API where the  tokenProvider is ENROLMENT_VAULT?</b></summary>
 
 Enrollment Vault Id should be supplied as part of the payment request, which we have recieved during account vaulting.
  For more info please refer [API Flow] (../docs/?path=docs/interactive-guide/api-flow/apiflow.md)
@@ -135,6 +168,7 @@ For more info please refer [API Flow] (../docs/?path=docs/interactive-guide/api-
   <summary><b>Why is Consumer recipient GUEST value is passed as True? Why is this required when posting the recipient?</b></summary>
 
 If Guest is false for Recipient of type Consumer, then payment cannot be initialized for the recipient as it will be considered as an INACTIVE recipient. 
+For more information on recipient please refer a recipient section [API Flow] (../docs/?path=docs/interactive-guide/apiflow.md)
 
 </details>
 
@@ -150,32 +184,40 @@ For more info please refer [Portal Flow] (../docs/?path=docs/interactive-guide/p
 </details>
 
 <details>
-<summary><b> Can a merchant cancel (“TV – Transaction Cancelled”, “PC- Payment Cancelled”) a payment from an Admin access to the portal? </b></summary>
+<summary><b> Can a merchant able to cancel (“TV – Transaction Cancelled”, “PC- Payment Cancelled”) a payment from the portal? </b></summary>
 
 Portal is only for recipients and Merchant cannot cancel a payment using portal.  
+
+For more information please refer [Portal Flow] (../docs/?path=docs/interactive-guide/portalflow.md)
 
 </details>
 
 <details>
-<summary><b>The source, tokenprovider and tokened are listed as required. Would we be passing any of the card source or maintaining tokens for this integration. Can you clarify these parameters? </b></summary>
+<summary><b> What causes a customer to be locked out of the portal and how long will the lockout last?  </b></summary>
 
-You would just need to call initiate payment which would contain the information about the recipients, the amount, and merchantTransactionID. There is no need to call recipient as the portal will handle that. Only the initiate payment needs.
+When an incorrect One-time Passcode (OTP) is entered 3 times, the customer will be locked out for 30 minutes and their payment will be canceled. An email notification will be sent to the customer stating why the payment was canceled. 
 
 </details>
 
 ### Batch Flow FAQs
 
 <details>
-<summary><b>Who will Provide MERCHANT_ID?</b></summary>
+<summary><b>Whom we need to contact for the MERCHANT_ID?</b></summary>
 
-DDP product team will provide.
+DDP product team will provide the merchant id.
+
+For more information please refer [Batch Flow] (../docs/?path=docs/interactive-guide/batchflow.md)
+
   
 </details>
 
 <details>
-<summary><b>Share list of Values for this Payment Type field?</b></summary>
+<summary><b>Share the list of values for the Payment Type field?</b></summary>
 
+These are the following payment type values :
 Claims, Wages, Loans, Revenue Share, Gamming
+
+For more information please refer [Batch Flow] (../docs/?path=docs/interactive-guide/batchflow.md)
   
 </details>
 
