@@ -16,4 +16,4 @@ This request will generate a public key to be used in encrypting PCI data as wel
 
 
 <!-- TODO: Needs correct link to Get Encryption Key API -->
-[![Try it out](../../../../assets/images/button.png)](../api/?type=post&path=/ddp/v1/recipients)
+[![Try it out](../../../../assets/images/button.png)](../api/?type=post&path=/ucom/v1/tokens)
