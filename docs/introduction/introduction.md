@@ -1,8 +1,17 @@
 # Introduction
 
-Digital Disbursements is a payment platform that enables your business to send payments to your customers. The digitized payments reduce the friction and time required for your customers to receive the money.
+There are a few things necessary to get started and make your first disbursement using Fiserv's Services. The High level staps are as follows:
 
-Fiserv’s Digital Disbursement product allows merchants to provide customers with fast, secure, and cost-effective payout options, how and when they want – on weekends, holidays and after hours. Likewise, the product allows the recipient to select the method to be used to disburse the payment.
+1) Determine the integration path you want to take.
+2) Request a test environment.
+3) Work with our sales team to finalize a contract.
+4) Finalize and request your personal environment.
+5) Validate your use case and sign off on your personalized environment
+6) Begin Disbursing in lighting speed!
+
+Below you will find all the necessary information and resources to determine which integration path is right for you and get development of the ground with documentation of all of the digital disbursement's API services. Be sure to visit the [FAQ](?path=docs/faq/faq.md) if you have any questions. If you are ready to begin discussions with our sales or have any other questions, you can always contact us [here](https://www.carat.fiserv.com/en-us/contact/?utm_campaign=payouts_content).
+
+If you are ready to start developing you can find guides for all our use cases below under integration options. The API Explorer offers a way to test the APIs with simulated responses. In the Helpful Links section you will find more information regarding error codes, Transaction status' webhooks and more.
 
 ----
 
@@ -13,7 +22,7 @@ Digital disbursements allows several flexible integration options to make onboar
 <!-- type: row -->
 
 <!-- type: card
-title: <div style="text-align:center;width:100%;height:25%;Max-height:100px">![Portal Icon](../../assets/images/icons/Person-and-computer.png)</div><div style="text-align:center;width:100%"> Payments Portal </div>
+title: <div style="text-align:center;width:100%;height:25%;Max-height:100px"><img src="https://raw.githubusercontent.com/Fiserv/digital-disbursements/develop/assets/images/icons/Person-and-computer.png alt="Portal Icon" title="Portal Icon" style="width: auto;height: 25%;max-height: 100px;"></div><div style="text-align:center;width:100%"> Payments Portal </div>
 Description: Disburse payouts through the most popular channels in a Client-Branded Portal that minimizes cost and maximizes speed to market.
 link: ?path=docs/interactive-guide/portalflow.md
 -->
