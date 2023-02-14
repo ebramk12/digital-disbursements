@@ -157,8 +157,7 @@ This request will generate a public key to be used in encrypting PCI data as wel
 >| ----------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | 
 >| **fdCustomerId**       | How the customer is identified in the ucom app. Best practice would be to use the same value as `merchantCustomerId`.                                                                 |
 
-<!-- TODO: Needs correct link to Get Encryption Key API -->
-[![Try it out](../../../../assets/images/button.png)](../api/?type=post&path=/ddp/v1/recipients)
+[![Try it out](../../../../assets/images/button.png)](product/ConnectedCommerce/api/?type=post&path=/v1/tokens)
 
 ### Step 2b: Create the Account Nonce Token
 
@@ -182,9 +181,7 @@ In this request you are going to encrypt your PCI (Payment Card Industry) data w
 ><!-- theme: success-->
 >> *Example `Autorization: Bearer AGG596cV67WF8DjYLE3kS6nSu36x`*
 
-[![See Examples](../../../../assets/images/button.png)](/product/UniversalCommerce/api/?type=post&path=/v1/account-tokens&branch=develop&version=1.0.0)
-
-[UCOM Account Service](/product/UniversalCommerce/api/?type=post&path=/v1/account-tokens&branch=develop&version=1.0.0)
+[![Try it out](../../../../assets/images/button.png)](product/ConnectedCommerce/api/?type=post&path=/v1/account-tokens/{nonceTokenId}/tokenization)
 
 <!--
 type: tab
@@ -214,7 +211,7 @@ This request will take our generated nonce token from previous step in the paylo
 >| access_token  | the same `tokenId` used in the Bearer authorization in step 3 (*ex.* `access_token: AGG596cV67WF8DjYLE3kS6nSu36x`) |
 ><!-- TODO: ADD EXAMPLES HERE-->
 
-[![Try it out](../../../../assets/images/button.png)](../api/?type=post&path=/ddp/v1/recipients)
+[![Try it out](../../../../assets/images/button.png)](../api/?type=post&path=/ddp/v1/recipients/{merchantCustomerId}/accounts)
 
 ### Get Recipient Accounts
 
@@ -243,49 +240,49 @@ There are following different payment methods for the disbursements, there are d
 
 This request is the payment call where we will take our `enrolment_vault` token and use it to create a disbursement payment for a recipient. The key variables here are `merchantTransactionId`, this must be unique for every transaction call , as well as paymentType which should correspond to the payment type associated with your environment for eg. Gaming, Claims, Wages etc. The EV token will never expire for the same `merchantCustomerId` and we can perform many number of transactions using same EV token.
 
-[![Try it out](../../../../assets/images/button.png)](../api/?type=post&path=/ddp/v1/payments/{id}/disburse)
+[![Try it out](../../../../assets/images/button.png)](../api/?type=post&path=/ddp/v1/payments)
 
 **ACH**
 
 An ACH is an electronic fund transfer made between banks and credit unions across what is called the Automated Clearing House network. This is an ACH payment request  where we will take our `enrolment_vault`token and use it to create a disbursement payment for a recipient. The key variables here are `merchantTransactionId`, this must be unique for every transaction call , as well as paymentType which should correspond to the payment type associated with your environment.
 
-[![Try it out](../../../../assets/images/button.png)](../api/?type=post&path=/ddp/v1/payments/{id}/disburse)
+[![Try it out](../../../../assets/images/button.png)](../api/?type=post&path=/ddp/v1/payments)
 
 **Coinbase**
 
 This request is the payment call using the Coinbase payment method to create a disbursement payment for a recipient. The key variables here are `merchantTransactionId`, this must be unique for every transaction call , as well as paymentType which should correspond to the payment type associated with your environment for eg. Gaming, Claims, Wages etc. The EV token will never expire for the same `merchantCustomerId` and we can perform many number of transactions using same EV token.
 
-[![Try it out](../../../../assets/images/button.png)](../api/?type=post&path=/ddp/v1/payments/{id}/disburse)
+[![Try it out](../../../../assets/images/button.png)](../api/?type=post&path=/ddp/v1/payments)
 
 **Money Network**
 
 This request is the payment call using the Money Network payment method, where we will take our `enrolment_vault` token and use it to create a disbursement payment for a recipient. The key variables here are `merchantTransactionId`, this must be unique for every transaction call , as well as paymentType which should correspond to the payment type associated with your environment for eg. Gaming, Claims, Wages etc. The EV token will never expire for the same `merchantCustomerId` and we can perform many number of transactions using same EV token.
 
-[![Try it out](../../../../assets/images/button.png)](../api/?type=post&path=/ddp/v1/payments/{id}/disburse)
+[![Try it out](../../../../assets/images/button.png)](../api/?type=post&path=/ddp/v1/payments)
 
 **PayPal**
 
 This request is the payment call using the PayPal payment method, where we can use the `email` or `phoneNumber`  variables to initate the payments. The key variables here are `merchantTransactionId`, this must be unique for every transaction call , as well as paymentType which should correspond to the payment type associated with your environment.
 
-[![Try it out](../../../../assets/images/button.png)](../api/?type=post&path=/ddp/v1/payments/{id}/disburse)
+[![Try it out](../../../../assets/images/button.png)](../api/?type=post&path=/ddp/v1/payments)
 
 **Venmo**
 
 This request is the payment call using the Venmo payment method, where we can use the `phoneNumber`  variables to initate the payments. The key variables here are `merchantTransactionId`, this must be unique for every transaction call , as well as paymentType which should correspond to the payment type associated with your environment.
 
-[![Try it out](../../../../assets/images/button.png)](../api/?type=post&path=/ddp/v1/payments/{id}/disburse)
+[![Try it out](../../../../assets/images/button.png)](../api/?type=post&path=/ddp/v1/payments)
 
 **E-Check**
 
 This request is the payment call using the E-Check payment method to create a disbursement payment for a recipient. The key variables here are `merchantTransactionId`, this must be unique for every transaction call , as well as paymentType which should correspond to the payment type associated with your environment for eg. Gaming, Claims, Wages etc. 
 
-[![Try it out](../../../../assets/images/button.png)](../api/?type=post&path=/ddp/v1/payments/{id}/disburse)
+[![Try it out](../../../../assets/images/button.png)](../api/?type=post&path=/ddp/v1/payments)
 
 **TA Token**
 
 This request is the payment call using the TA Token payment method to create a disbursement payment for a recipient. The key variables here are `merchantTransactionId`, this must be unique for every transaction call , as well as paymentType which should correspond to the payment type associated with your environment for eg. Gaming, Claims, Wages etc. 
 
-[![Try it out](../../../../assets/images/button.png)](../api/?type=post&path=/ddp/v1/payments/{id}/disburse)
+[![Try it out](../../../../assets/images/button.png)](../api/?type=post&path=/ddp/v1/payments)
 
 ### Step 3a:  Cancel a Payment
 
