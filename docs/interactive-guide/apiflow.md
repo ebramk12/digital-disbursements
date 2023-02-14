@@ -194,10 +194,7 @@ type: tab
 
 HPP is a web SDK and iFrame solution. DDP is intended to provide merchants with an option to capture the cardholder data in secure manner through HPP. Secure card capture is to allow merchants to embed the HP SDK into their existing website/web view. This SDK solution offered by DDP platform shall load in iFrame and comply the PCI requirements. In addition to the core functionality of HPP, It shall provide a capability to customize the UI to match the merchant's website style.
 
-[Hosted flow Guide](?path=assets/uCom_HostedPages2_Integration_Guide.pdf)
-
-[Hosted flow Guide](?path=docs/interactive-guide/hostedPage.md)
-
+[Hosted Page Flow](?path=docs/interactive-guide/hostedPageflow.md)
 
 <!-- type: tab-end -->
 

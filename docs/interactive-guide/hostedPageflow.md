@@ -1,7 +1,7 @@
 
-HostedPage Flow
+# HostedPage Flow
 
-# Introduction
+## Introduction
 
 The scope of the document is to describe how to use the Hosted Page. It is not intended to describe all the interactions between App, Mobile Application Server, and uCom Server.
 
@@ -44,13 +44,44 @@ App calls MAS to get tokenId, encryptionKey and pageLink. tokenId and encryption
 
 **3.1.2. MAS calls uCom to getToken** MAS has to call uCom to get a tokenId. MAS should not cache the tokenId. getToken call will provide the one time session token and public key which needs to be passed to SDK to launch HP. 
 
-| ------------------| ----------------	|  
-|	Api (HTTP POST) |           CAT:   https://int.api.firstdata.com/ucom/v1/tokens\n PREPROD: https://cat.api.firstdata.com/ucom/v1/tokens\n  PROD:   https://prod.api.firstdata.com/ucom/v1/tokens |
-| Headers  		| Content-Type = application/json   Headers 	Api-Key = {api-key} Authorization = HMAC {signature}  Timestamp = {time UTC in milliseconds} 	|	
-|	Body 	|			{ "token" : { Body 	"fdCustomerId" : "123456789" } }, publicKeyRequired: true 	|	
-|	Sample Response HTTP 201 |	{  "tokenId": "cZq0YBzOZuhS90Udzl8Nlp35uq4w", "fdCustomerId": "1234", "issuedOn": 1507684425488, "expiresInSeconds": 599, "publicKey": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBC gKCAQEAwoEfMkE6Ly12XoucbmT1f7Hvn BLSXZvOowzMKg57EqpWeB1F4JmeZTsqiC8X2t0xnhaY6SjD1xBEPfsFXN07smIsntWfzENPxyPhbtwqXtDau hfr1yqTxHRCzO393KwotFio6tkwLUsR76 zsqJ4tIm49zp4JAzE8gHK4S3 71k/X6YOIFOefuzc9mLcg+L+fakRcVOMhF/HldKyw+tda4TBPE+S/RMdksoF+IYFaD668hzUrwMK oBYg1ZCc6YmnthWTIM1mWr5wGKYoQnMDWPsWAcG6N5r28vk4YHBfA9gnuxC7EehDkDk4CR3TjrIhg+W2yTkew8YJYRbKwUeEhZqQIDAQAB", "algorithm": "RSA/NONE/PKCS1Padding", "status": "ACTIVE" } |
+**Api (HTTP GET) **
 
-How to generate HMAC signature 
+CAT:  	 https://int.api.firstdata.com/ucom/v1/tokens 
+PREPROD: https://cat.api.firstdata.com/ucom/v1/tokens 
+PROD:    https://prod.api.firstdata.com/ucom/v1/tokens 
+
+**Headers **
+
+Content-Type = application/json 
+Headers 	Api-Key = {api-key} 
+Authorization = HMAC {signature} 
+Timestamp = {time UTC in milliseconds} 
+
+**Body **
+
+```json
+{ 
+"token" : { 
+Body 	"fdCustomerId" : "123456789" } 
+}, publicKeyRequired: true 
+```
+
+Sample Response HTTP 201 
+
+```json
+{ 
+"tokenId": "cZq0YBzOZuhS90Udzl8Nlp35uq4w", 
+"fdCustomerId": "1234", 
+"issuedOn": 1507684425488, 
+"expiresInSeconds": 599, 
+"publicKey": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAwoEfMkE6Ly12XoucbmT1f7Hvn 
+BLSXZvOowzMKg57EqpWeB1F4JmeZTsqiC8X2t0xnhaY6SjD1xBEPfsFXN07smIsntWfzENPxyPhbtwqXtDauhfr1yqTxHRCzO393KwotFio6tkwLUsR76zsqJ4tIm49zp4JAzE8gHK4S371k/X6YOIFOefuzc9mLcg+L+fakRcVOM hF/HldKyw+tda4TBPE+S/RMdksoF+IYFaD668hzUrwMK oBYg1ZCc6YmnthWTIM1mWr5wGK YoQnMDWPsWAcG6N5r28vk4YHBfA9gnu xC7EehDkDk4CR3TjrIhg+W2yTkew8YJYRbKwUeEhZqQIDAQAB", 
+"algorithm": "RSA/NONE/PKCS1Padding", 
+"status": "ACTIVE" 
+} 
+```
+
+**How to generate HMAC signature** 
 
 ```json
 var key = “”;//the 'Api-Key' var secret = “”;//the 'Api-Secret'; 
@@ -65,12 +96,13 @@ if(method != 'GET' && method != 'DELETE'){
 var signature = 
 CryptoJS.enc.Base64.stringify(CryptoJS.HmacSHA256(rawSignature, secret))); 
 ```
+
 **3. MAS calls uCom to get page link** MAS can cache the page link for future reference though we do not recommend that. Merchant may have configured multiple pages and therefore this api will return all of them. Each page can be identified by the relation.
 
 ### 3.2 Load Hosted Page
 To start the hosted page, app needs api-key, pageLink, tokenId, fdCustomerId, encryptionKey and redirectUrl. Mobile apps must make sure that they have disabled webview caching and enabled loading javascript in webview. 
 
-Api (HTTP GET) 
+**Api (HTTP GET)** 
 
 https://int.api.firstdata.com/ucom/v1/hosted-pages/pages 
 
@@ -81,7 +113,7 @@ Authorization = HMAC {signature}
 Api-Key = {api-key} 
 Timestamp = {time UTC in milliseconds} 
 
-**Sample Response **
+**Sample Response**
 
 ```json
 { 
@@ -96,7 +128,7 @@ Timestamp = {time UTC in milliseconds}
 }
 ```
 
-3.2.1 Mobile Webview Integration Steps 
+**3.2.1 Mobile Webview Integration Steps** 
 
 Step1:  
 
@@ -151,7 +183,8 @@ Note: Webview redirection listener URL should be decoded before handle it.
 11.	dispatch_async(dispatch_get_main_queue(), ^{   
 12.	[self->_webView loadRequest:hostedPageRequest];   
 13.	[self->_webView reloadFromOrigin];   
-14.	});   15.  }   
+14.	});   
+15.  }   
 16.   
 17.	#Once webview loaded then pass configuration object and call HP javascript method   
 18.	- (void) webView:(WKWebView *)webView didFinishNavigation:(WKNavigation *)navigatio n {   
@@ -171,8 +204,9 @@ Note: Webview redirection listener URL should be decoded before handle it.
 32.	[_webView evaluateJavaScript:exec completionHandler:nil];   
 33.	if ([_activityIndicatorView isAnimating]) {   
 34.	[_activityIndicatorView stopAnimating];   
-35.	}   36.     }   
-37.   
+35.	}  
+36. }   
+
 38.	#pragma mark WKNavigationDelegate methods (Redirection Listener Methods)   
 39.	- (void) webView:(WKWebView *)webView decidePolicyForNavigationAction:(WKNavigation Action *)navigationAction decisionHandler:(void (^)(WKNavigationActionPolicy))decisionH andler {   
 40.	//Step 4 - Handle finish redirection   
@@ -197,7 +231,7 @@ Note: Webview redirection listener URL should be decoded before handle it.
 59.	decisionHandler(WKNavigationActionPolicyAllow);   
 60.	} }   
 
-3.2.1.2 Android Sample Code Snippets 
+**3.2.1.2 Android Sample Code Snippets** 
 
 ```json
 @Override 
@@ -280,7 +314,8 @@ protected void onCreate(Bundle savedInstanceState) {
 ### 3.2.2. Website Integration Steps
 
 1.	Include the uCom SDK library on head tag on your html page 
-URL:  https://<env>.api.firstdata.com/ucom/v2/static/v2/js/ucom-sdk.js Environment Variable: <int/cat/prod> 
+
+**URL:  https://<env>.api.firstdata.com/ucom/v2/static/v2/js/ucom-sdk.js Environment Variable: <int/cat/prod>** 
 
 | Variable    |	Environment |
 | ---------   | ------------|  
@@ -288,20 +323,20 @@ URL:  https://<env>.api.firstdata.com/ucom/v2/static/v2/js/ucom-sdk.js Environme
 |	CAT 	  |	PRE-PROD    |
 |	PROD	  |	PRODUCTION  |
 
-2.	Initialize the SDK with SDK configuration params by call this ucomSDK.init() method 
+2.	Initialize the SDK with SDK configuration params by call this **ucomSDK.init()** method 
 	a.	Pass access toekn 
 	b.	Pass API Key 
 	c.	Pass fdCustomerId d: Pass pageURL 
 	e: Pass Mount Id where SDK needs to be mounted on the screen f. Pass EncryptionKey 
 	g. Pass RedirectUrl 
 	
-3.	Call uComSDK.start() method to render SDK on mounted element on your page 
+3.	Call **uComSDK.start()** method to render SDK on mounted element on your page 
 
-4.	Call uComSDK.stop() whenever you want to kill the SDK from the page. 
+4.	Call **uComSDK.stop()** whenever you want to kill the SDK from the page. 
 
 **Note: The javascript method should be called after the web content is loaded. Refer the sample code below** 
 
-3.2.2.1 Web Sample Code 
+**3.2.2.1 Web Sample Code** 
 
 ```json
 <html> 
@@ -375,7 +410,7 @@ URL:  https://<env>.api.firstdata.com/ucom/v2/static/v2/js/ucom-sdk.js Environme
 
 Please refer below table for additional sdk configurations properties 
 
-3.2.3. SDK Configuration property Value** 
+**3.2.3. SDK Configuration property Value** 
 
 | SDK Params     |	Required/Optional  | Description |
 | ---------   | ------------| --------------|
@@ -784,3 +819,5 @@ HP will allow to submit the form through mobile native button or website button 
 ```json
 //Trigger form save from outside iFrame or web view ucomSDK.triggerSaveAction(); 
 ```
+
+[![Back Button](../../../../assets/images/previous.png)](..docs/?path=docs/interactive-guide/apiflow.md)
