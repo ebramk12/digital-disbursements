@@ -820,4 +820,4 @@ HP will allow to submit the form through mobile native button or website button 
 //Trigger form save from outside iFrame or web view ucomSDK.triggerSaveAction(); 
 ```
 
-[![Back Button](../../../../assets/images/previous.png)](..docs/?path=docs/interactive-guide/apiflow.md)
+[![Back Button](../../../../assets/images/previous.png)](?path=docs/interactive-guide/apiflow.md)
