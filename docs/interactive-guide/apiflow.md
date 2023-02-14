@@ -196,6 +196,9 @@ HPP is a web SDK and iFrame solution. DDP is intended to provide merchants with 
 
 [Hosted flow Guide](?path=assets/uCom_HostedPages2_Integration_Guide.pdf)
 
+[Hosted flow Guide](?path=docs/interactive-guide/hostedPage.md)
+
+
 <!-- type: tab-end -->
 
 ---
