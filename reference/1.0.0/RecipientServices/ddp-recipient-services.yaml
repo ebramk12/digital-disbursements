@@ -169,7 +169,7 @@ components:
         merchant:
            $ref: '#/components/schemas/MerchantInfo'
         recipient:
-          $ref: '#/components/schemas/RecipientProfileInfo'
+           $ref: '#/components/schemas/RecipientProfileInfo'
         customFields:
           type: array
           minItems: 0
@@ -461,42 +461,29 @@ components:
       type: object
       required:
        - recipientType
-       - recipientId
        - firstName
        - lastName
-       - doingBusinessAs
        - emailAddress
-       - recipientIdentifier
-       - recipientIdentifierValue
+       - DateOfBirth/TIN
+       - merchantCustomerId/recipientId
        - address
-       - guest
       properties:
         recipientType:
           $ref: '#/components/schemas/RecipientType'
         recipientId:
           $ref: '#/components/schemas/RecipientId'
+        merchantCustomerId:
+           $ref: '#/components/schemas/MerchantCustomerId'
         firstName:
           $ref: '#/components/schemas/FirstName'
         lastName:
           $ref: '#/components/schemas/LastName'
-        doingBusinessAs:
-          $ref: '#/components/schemas/DBA'
         dateOfBirth:
           $ref: '#/components/schemas/DateOfBirth'
         tin:
           $ref: '#/components/schemas/TIN'
-        ssn:
-          $ref: '#/components/schemas/SSN'
         emailAddress:
            $ref: '#/components/schemas/Email'
-        additionalEmailAddresses:
-          type: array
-          items:
-            $ref: '#/components/schemas/Email'
-        userId:
-           $ref: '#/components/schemas/userId'
-        password:
-           $ref: '#/components/schemas/Password'
         phoneNumber:
           $ref: '#/components/schemas/Phone'
         recipientIdentifier:
@@ -511,8 +498,8 @@ components:
           $ref: '#/components/schemas/Guest'
         address:
           $ref: '#/components/schemas/Address'
-        Description:
-          $ref: '#/components/schemas/Description'
+        doingBusinessAs:
+          $ref: '#/components/schemas/DBA'
         ceatedBy:
           $ref: '#/components/schemas/CreatedBy'
         updatedBy:
