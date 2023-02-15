@@ -266,6 +266,29 @@ ISO response + DDP internal response code.
 
 </details>
 
+
+### TPSP FAQs
+
+<details>
+<summary><b>What is TPSP client?</b></summary>
+
+ TPSP stands for Third Party Service Providers, A third-party service provider is generally defined as an external person or company who provides a service or technology as part of a contract.
+
+</details>
+
+<details>
+<summary><b>What is the process to onboard a TPSP clients?</b></summary>
+
+  The onboarding process is similar with our regular merchants, the only difference is we can perform the certification testing in our CAT (Client Testing Environment) once the TPSP customers can execute and validated their test cases.
+
+</details>
+
+<details>
+<summary><b>What is the process & time duration for certification testing?</b></summary>
+Certification testing usually conducts in a two-hour attended session which can cover the maximum scenario's for the onboarded features, from Fiserv Testing and Delivery team require to attend the sessions and validate the backend system for the tested scenarios.
+   
+</details>
+
 ### Security FAQs
 
 <details>
