@@ -13,7 +13,7 @@ The Digital Disbursement (DDP) recipient portal offers a ready to use website wh
 
 DDP merchants are allowed to determine if the recipient should be allowed to register on the recipient portal or use a guest only approach.  Typically, the decision is based on the number of times that a consumer/business is expected to receive a payment. See an example of a registered recipients dashboard for viewing and managing payouts below.
 
-![Portal Dashboard image](../../assets/images/create-account-landing.png "Portal Dashboard image" "Width:300px")
+![Portal Dashboard image](../../assets/images/create-account-landing.png "Portal Dashboard image")
 
 ## Pre-requisites
 
