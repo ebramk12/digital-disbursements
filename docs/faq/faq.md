@@ -277,14 +277,14 @@ ISO response + DDP internal response code.
 
 </details>
 
-</details>
+<details>
 <summary><b>What is the process to onboard a TPSP clients?</b></summary>
 
   The onboarding process is similar with our regular merchants, the only difference is we can perform the certification testing in our CAT (Client Testing Environment) once the TPSP customers can execute and validated their test cases.
 
 </details>
 
-</details>
+<details>
 <summary><b>What is the process & time duration for certification testing?</b></summary>
 
      Certification testing usually conducts in a two-hour attended session which can cover the maximum scenario's for the onboarded features, from Fiserv Testing and Delivery team require to attend the sessions and validate the backend system for the tested scenarios.
