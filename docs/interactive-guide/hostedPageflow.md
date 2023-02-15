@@ -170,6 +170,7 @@ Note: Webview redirection listener URL should be decoded before handle it.
 
 **3.2.1.1 IOS Sample Code Snippets** 
 
+```json
 1.	#Load HP static URL in webview   
 2.	- (void) successfulMASRequestWithResponseDictionary:(NSDictionary *)response {   
 3.	// Step 2 - Load Hosted Pages   
@@ -230,6 +231,7 @@ Note: Webview redirection listener URL should be decoded before handle it.
 58.	// Otherwise don't intercept   
 59.	decisionHandler(WKNavigationActionPolicyAllow);   
 60.	} }   
+```
 
 **3.2.1.2 Android Sample Code Snippets** 
 
@@ -820,4 +822,4 @@ HP will allow to submit the form through mobile native button or website button 
 //Trigger form save from outside iFrame or web view ucomSDK.triggerSaveAction(); 
 ```
 
-[![Next Button](../../../../assets/images/nextButton.png)](?path=docs/interactive-guide/apiflow.md#step-2b-create-the-account-nonce-token)<div style="text-align: right">
+[![Next Button](../../../../assets/images/nextButton.png)](?path=docs/interactive-guide/apiflow.md#step-2b-create-the-account-nonce-token)<div style="text-align: left">
