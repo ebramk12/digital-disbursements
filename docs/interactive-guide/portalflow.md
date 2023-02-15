@@ -2,14 +2,14 @@
 
 The Digital Disbursement (DDP) recipient portal offers a ready to use website where recipients can accept and manage their disbursements. The DDP Recipient Portal offers three paths users as described below:
 
--**Guest**
-  -If the payment is a one-time event, then the guest option is used.  
+- **Guest**
+  - If the payment is a one-time event, then the guest option is used.  
 
--**Register**
-  -If more than one payment is expected to be sent to the recipient, then registration is requested.
+- **Register**
+  - If more than one payment is expected to be sent to the recipient, then registration is requested.
 
--**Multiple Recipient Payments**
-  -Recipients determine who will receive the funds:   If this option is being used, then the first recipient to enter his/her disbursement information will receive all of the funds.  The remaining recipients will have to approve the disbursement to the recipient receiving the funds prior to the completion of the disbursement.  If the payment expires before all recipients have approved or a recipient rejects the payment, then the payment is cancelled, funds are released in the DFA, and recipients are notified of the expiration.
+- **Multiple Recipient Payments**
+  - Recipients determine who will receive the funds:   If this option is being used, then the first recipient to enter his/her disbursement information will receive all of the funds.  The remaining recipients will have to approve the disbursement to the recipient receiving the funds prior to the completion of the disbursement.  If the payment expires before all recipients have approved or a recipient rejects the payment, then the payment is cancelled, funds are released in the DFA, and recipients are notified of the expiration.
 
 DDP merchants are allowed to determine if the recipient should be allowed to register on the recipient portal or use a guest only approach.  Typically, the decision is based on the number of times that a consumer/business is expected to receive a payment. See an example of a registered recipients dashboard for viewing and managing payouts below.
 
