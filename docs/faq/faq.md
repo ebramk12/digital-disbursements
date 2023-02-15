@@ -286,6 +286,7 @@ ISO response + DDP internal response code.
 
 <details>
 <summary><b>What is the process & time duration for certification testing?</b></summary>
+<details>
 
      Certification testing usually conducts in a two-hour attended session which can cover the maximum scenario's for the onboarded features, from Fiserv Testing and Delivery team require to attend the sessions and validate the backend system for the tested scenarios.
 
