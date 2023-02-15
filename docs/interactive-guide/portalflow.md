@@ -1,4 +1,3 @@
-
 # Portal Flow
 
 The Digital Disbursement (DDP) recipient portal offers a ready to use website where recipients can accept and manage their disbursements. The DDP Recipient Portal offers three paths users as described below:
