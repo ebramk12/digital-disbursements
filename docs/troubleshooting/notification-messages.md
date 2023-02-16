@@ -1,30 +1,42 @@
-#Transaction and Payment Status
+#Webhook Notifications
+
+Description: 
+A webhook is essentially the same as any web page URI.  It's a client-specific URI for incoming HTTP POST notification messages.  Responses should be a standard 2xx HTTP response code and anything else would be considered a failure and subject to a retry POST. In this mechanism, consumer application exposes an endpoint and when the producer application has any updated information, it sends a message to a consumer application over URL. The communication between the two applications is Asynchronous and nonblocking. Webhooks are much like SMS notifications. Say your bank sends you an SMS for any transaction. You already told the bank your phone number, so they knew where to send the message.  
+
+
+Endpoint URL: 
+Client must provide the merchant_endpoint and the suggest URL is https://<<merchant_endpoint>>/payments/notification. DDP will be able to support Basic Authorization or HMAC for verifications. The endpoint URL should be provided by client for non-production & production respectively. Automated notifications will be posted by DDP on pre-configured payment status. The list of pre-configured notification events shared with clients as part of the onboarding form to choose 
 
 
 
-| Transaction Status | Individual Payment Status | Description|
-| ------------------ | ------------------------- | ---------- |
-| **TF** - Transaction Failed| **DF** – Disbursement Failed| Validation failed while processing request| 
-| **PA** - Pending Approval| **DP** - Disbursement Pending| Transaction accepted into the disbursement's platform but waiting on merchant approval workflow.| 
-| **PD** - Pending Disbursement| **DP** – Disbursement Pending| At this point this transaction is ready for recipient acceptance| 
-| **IP** - In Process| **DS** – Disbursement Selected| When at least one of the recipients has provided payment information| 
-| **IP** – In Process| **DA** – Disbursement Accepted| Payment status for secondary recipients once accepted| 
-| **IP** – In Process| **IP** – In Process| Only applied for Venmo/Paypal disbursement. This is due to async nature of Venmo/Paypal payout.| 
-| **TC** – Transaction Completed| **DR** – Disbursement Rejected| If Primary or secondary recipient declines the payment.| 
-| **TC** – Transaction Completed| **DI** – Disbursed| After all recipients have accepted. Primary recipient status is updated to Disbursed| 
-| **IP** - In Process| **DD**  - Disbursement Declined| Declined by downstream issuer| 
-| **TC** – Transaction Completed| **DH** – Disbursement Fraud Hold| Declined by Fiserv Fraud system| 
-| **TC** – Transaction Completed| **DA** – Disbursement Accepted| After all recipients have accepted. Secondary recipient status will remain Accepted| 
-| **TV** – Transaction Cancelled| **PC**- Payment Cancelled| Before the payment status moves to Disbursed, the merchant can cancel a payment. database will show this as **`CANCELLED`** |  
-| **TC** – Transaction Completed| **AR** – Inhouse Reversal| Merchant cancel the payment after the disbursement but NACHA file has not prepared. Fund is still at blue check. As of now this happens at 7:00PM ET. database will show this as **`INHOUSE_REVERSED`**"| 
-| **TC** – Transaction Completed| **RP** - Reversal Pending| Transactions for which refund is initiated after Disbursement. | 
-| **TR** – Transaction Reversed| **PC**- Payment Cancelled| database will still show this as **`DISBURSED`** | 
-| **TC** – Transaction Completed| **RS** – Reversal Success | Merchant cancel the payment|  after the disbursement and NACHA file has been send to the bank. ACH reversal status updated to success after 5 working days. This is the confirmation that no reversal failure notification came to DDP platform from bank."| 
-| **TV** – Transaction Cancelled| **PC**- Payment Cancelled| database will show this as **`REVERSED`** | 
-| **TC** – Transaction Completed| **RF** – Reversal Failed | ACH reversal after disbursement failed. | 
-| **TR**- Transaction Reversed| **ARF** – ACH Reversal failed | (Settlement/Reconciliation Scheduler)  batabase will show this as **`REJECTED`** | 
-| **TE** – Transaction Expired | **PE**- Payment Expired| If all recipients have not accepted payment within set number of days defined at a merchant level| 
-| **TC** – Transaction Completed | **DC** – Disbursement Charged back| For ACH Rejects/Issuer chargebacks/ACH Returns<br>Cause: <ul><li>Wrong card number</li><li>ACH Account Closed</li><li>User returned the credit</li><ul> | 
-| **TC**- Transaction Completed | **AF** – Authentication Failed | Authentication failed after 3 retry (Phone#/OTP)| 
-| **TC**- Transaction Completed | **RE** – Retry Exceeded | Max retry count reached for payment/disbursement | 
-| **TV**- Transaction Cancelled | **DNF** – Delivery notification failed| Email/SMS delivery failed.(Failed Email Scheduler) | 
+
+| Feature Name |Description|
+| ------------------ |  ---------- |
+|	ENABLE_WEBHOOK_ACH_SALE_REVERSAL	| 	Triggered when the ACH reversal process is successful	| 
+| 	ENABLE_WEBHOOK_ACH_SALE_REVERSAL_FAILED	| 	Triggered when the ACH reversal process is NOT successful	| 
+| 	ENABLE_WEBHOOK_ACH_CANCEL_SALE_REVERSAL	| 	Triggered when the ACH transaction is successfully cancelled.	| 
+| 	ENABLE_WEBHOOK_DISBURSEMENT_FAILED	| 	Triggred when a payment has NOT been successfully disbursed using the recipient's chosen selection	| 
+| 	ENABLE_WEBHOOK_FRAUD_HOLD	| 	Triggered when a payment is placed on Fraud Hold and is not sent to the recipient.	| 
+| 	ENABLE_WEBHOOK_PAYMENT_CANCELLED	| 	Triggered when a payment status is successfully changed to cancelled.	| 
+| 	ENABLE_WEBHOOK_PAYMENT_REJECTED	| 	Triggered when a recipient rejects the payment.	| 
+| 	ENABLE_WEBHOOK_PAYMENT_EXPIRED	| 	Triggered when a pending payment expires and is no longer able to be disbursed.	| 
+| 	ENABLE_WEBHOOK_PAYMENT_DISBURSED	| 	Triggered when a payment is disbursed.	| 
+| 	ENABLE_WEBHOOK_PAYMENT_SELECTED	| 	Enable web hook to merchant when payment method is selected by recipient	| 
+| 	ENABLE_WEBHOOK_ACH_CREDIT_REJECT	| 	Triggered when an ACH Disbursement is rejected. 	| 
+| 	ENABLE_WEBHOOK_PAYMENT_SELECTED_CANCELLED	| 	triggerred when a payment has been rejected by a recipient	| 
+| 	ENABLE_WEBHOOK_ACH_CANCELLED	| 	Triggered when an ACH disbursement is successfully canceled.	| 
+| 	ENABLE_WEBHOOK_EMAIL_BOUNCED	| 	Triggered when an email notification sent to a recipient bounces back.  The notification considered is payment initiation.	| 
+| 	ENABLE_DFA_BALANCE_WEBHOOK_ALERT	| 	Triggered when the DFA balance meets or drops below a set balance	| 
+| 	ENABLE_WEBHOOK_PAYMENT_PROCESSING	| 	Enable web hook to merchant when Venmo/Paypal payment is disbursed.	| 
+| 	ENABLE_WEBHOOK_VENMO_CREDIT_REJECT	| 	Enable Webhook to Merchant When payment is rejected by the payer.	| 
+| 	ENABLE_WEBHOOK_VENMO_CANCELLED	| 	Webhook to merchant for unclaimed status	| 
+| 	ENABLE_WEBHOOK_VENMO_DISBURSEMENT_UNCLAIMED	| 	Webhook to merchant for unclaimed status	| 
+| 	ENABLE_WEBHOOK_VENMO_DISBURSEMENT_FAILED	| 	Webhook to merchant for Failed status	| 
+| 	ENABLE_WEBHOOK_VENMO_PAYPAL_PAYMENT_DISBURSE_HELD	| 	Enable web hook to merchant when Venmo/Paypal payment is held.	| 
+| 	ENABLE_WEBHOOK_VENMO_DISBURSEMENT_BLOCKED	| 	Enable web hook to merchant when Venmo/Paypal payment is blocked	| 
+| 	ENABLE_WEBHOOK_CHECK_DISBURSEMENT_PRINTED	| 	webhook to merchant after receiving printed webhook from chekbook.io	| 
+| 	ENABLE_WEBHOOK_PAYMENT_ECHECK_DISBURSED	| 	Enable webhook when Echeck payment is disbursed.	| 
+| 	ENABLE_WEBHOOK_CHECK_REVERSAL_SUCCESS	| 	Webhook to merchant for reversal success	| 
+| 	ENABLE_WEBHOOK_CHECK_REVERSAL_FAIL	| 	Webhook to merchant for reversal fail	| 
+| 	ENABLE_WEBHOOK_BATCH_ACKNOWLEDGEMENT	| 	Webhook to merchant for Batch Acknowledgement	| 
+| 	ENABLE_WEBHOOK_BATCH_SUMMARY	| 	Webhook to merchant for Batch Summary	| 
