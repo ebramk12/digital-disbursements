@@ -13,7 +13,7 @@ The Digital Disbursement (DDP) recipient portal offers a ready to use website wh
 - **Multiple Recipient Payments**
   - If this option is being used, then the first recipient to enter his/her disbursement information will receive all of the funds.  The remaining recipients will have to approve the disbursement to the recipient receiving the funds prior to the completion of the disbursement.  If the payment expires before all recipients have approved or a recipient rejects the payment, then the payment is cancelled, funds are released in the DFA, and recipients are notified of the expiration.
 
-![Portal Dashboard image](../../assets/images/create-account-landing.png  "Portal Dashboard image")
+![Portal Dashboard image](../../assets/images/accept-payment-reg-user.png  "Portal Dashboard image")
 
 ## Pre-requisites
 
