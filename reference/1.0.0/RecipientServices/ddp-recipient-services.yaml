@@ -461,12 +461,15 @@ components:
       type: object
       required:
        - recipientType
+       - recipientId
        - firstName
        - lastName
+       - doingBusinessAs
        - emailAddress
-       - DateOfBirth/TIN
-       - merchantCustomerId/recipientId
+       - recipientIdentifier
+       - recipientIdentifierValue
        - address
+       - guest
       properties:
         recipientType:
           $ref: '#/components/schemas/RecipientType'
@@ -482,8 +485,14 @@ components:
           $ref: '#/components/schemas/DateOfBirth'
         tin:
           $ref: '#/components/schemas/TIN'
+        ssn:
+          $ref: '#/components/schemas/SSN'
         emailAddress:
            $ref: '#/components/schemas/Email'
+        userId:
+           $ref: '#/components/schemas/userId'
+        password:
+           $ref: '#/components/schemas/Password'
         phoneNumber:
           $ref: '#/components/schemas/Phone'
         recipientIdentifier:
@@ -498,6 +507,8 @@ components:
           $ref: '#/components/schemas/Guest'
         address:
           $ref: '#/components/schemas/Address'
+        Description:
+          $ref: '#/components/schemas/Description'
         doingBusinessAs:
           $ref: '#/components/schemas/DBA'
         ceatedBy:
