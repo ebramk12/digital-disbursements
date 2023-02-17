@@ -110,7 +110,7 @@ For more information please refer [Payment Status] (../docs/?path=docs/troublesh
 <details>
 <summary><b>Do we have a DDP web console or monitoring portal to check the transaction history for the disbursements ? </b></summary>
 
- At the moment its not available for the non-prod enviromnet. But for production we do have the CLX reporting tool, where we can check the transaction details.
+ At the moment its not available for the non-prod environment. But for production we do have the CLX reporting tool, where we can check the transaction details.
  Please refer the CLX section for more details.
 
 </details>
@@ -209,7 +209,7 @@ For more information please refer [Batch Flow] (../docs/?path=docs/interactive-g
 <summary><b>Share the list of values for the Payment Type field?</b></summary>
 
 These are the following payment type values :
-Claims, Wages, Loans, Revenue Share, Gamming
+Claims, Wages, Loans, Revenue Share, Gaming
 
 For more information please refer [Batch Flow] (../docs/?path=docs/interactive-guide/batchflow.md)
   
