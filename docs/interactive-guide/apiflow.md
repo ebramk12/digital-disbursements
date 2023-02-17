@@ -137,15 +137,15 @@ This request will generate a public key to be used in encrypting PCI data as wel
 | Account Type | Items to Encrypt             |
 | ------------ | ---------------------------- |
 | Debit        | Card Number, Month, and Date |
-| ACH          | Account Number                |
-| Coinbase     | Account Number                |
+| ACH          | Account Number               |
+| Coinbase     | Account Number               |
 | MoneyNetwork | Card Number                  |
 
 <!-- theme: success -->
 > **Special considerations**
 >| Parameter               | Note                                                                                                                                                                                   |
 >| ----------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
->| **fdCustomerId**       | How the customer is identified in the uCom app. Best practice would 
+>| **fdCustomerId*       | How the customer is identified in the uCom app. Best practice would
 be to use the same value as `merchantCustomerId`.                                                                 |
 
 [![Try it out](../../../../assets/images/button.png)](../../ConnectedCommerce/api/?type=post&path=/v1/tokens)
