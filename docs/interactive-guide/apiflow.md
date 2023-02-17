@@ -145,7 +145,8 @@ This request will generate a public key to be used in encrypting PCI data as wel
 > **Special considerations**
 >| Parameter               | Note                                                                                                                                                                                   |
 >| ----------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
->| **fdCustomerId**       | How the customer is identified in the uCom app. Best practice would be to use the same value as `merchantCustomerId`.                                                                 |
+>| **fdCustomerId**       | How the customer is identified in the uCom app. Best practice would 
+be to use the same value as `merchantCustomerId`.                                                                 |
 
 [![Try it out](../../../../assets/images/button.png)](../../product/ConnectedCommerce/api/?type=post&path=/v1/tokens)
 
