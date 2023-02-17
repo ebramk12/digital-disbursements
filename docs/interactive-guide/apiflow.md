@@ -148,7 +148,7 @@ This request will generate a public key to be used in encrypting PCI data as wel
 >| **fdCustomerId**       | How the customer is identified in the uCom app. Best practice would 
 be to use the same value as `merchantCustomerId`.                                                                 |
 
-[![Try it out](../../../../assets/images/button.png)](../../product/ConnectedCommerce/api/?type=post&path=/v1/tokens)
+[![Try it out](../../../../assets/images/button.png)](../../ConnectedCommerce/api/?type=post&path=/v1/tokens)
 
 ### Step 2b: Create the Account Nonce Token
 
@@ -170,7 +170,7 @@ In this request you are going to encrypt your PCI (Payment Card Industry) data w
 ><!-- theme: success-->
 >> *Example `Authorization: Bearer AGG596cV67WF8DjYLE3kS6nSu36x`*
 
-[![Try it out](../../../../assets/images/button.png)](../../product/ConnectedCommerce/api/?type=post&path=/v1/account-tokens/{nonceTokenId}/tokenization)
+[![Try it out](../../../../assets/images/button.png)](../../ConnectedCommerce/api/?type=post&path=/v1/account-tokens/{nonceTokenId}/tokenization)
 
 <!--
 type: tab
