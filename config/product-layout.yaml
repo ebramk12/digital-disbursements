@@ -51,7 +51,7 @@ featuredFeatures:
         title: Create and Pay
         description: create and send a payment with this single API endpoint.
         type: "POST"        
-        path: /ddp/v1/payments&branch=develop&version=1.0.0
+        path: /ddp/v1/payments&version=1.0.0
   - title: Built-in Security
     description:  Digital Disbursements provides built-in security features such as fraud prevention, tokenization, and optimization that reduce risk and ensure high approval rates. By leveraging our value-added services, businesses can eliminate the PCI burden, secure payment credentials, and achieve the highest approval rates.
     relatedDocs:
@@ -65,7 +65,7 @@ featuredFeatures:
       - relatedDoc: 
         title: Create a Payment
         description: Here you will find a list of each available payment method.
-        link: docs/interactive-guide/apiflow.md&branch=develop#step-3-create-a-payment
+        link: docs/interactive-guide/apiflow.md#step-3-create-a-payment
       - relatedDoc: 
         title: FAQs
         description: Take a look at our FAQa. 
@@ -75,4 +75,4 @@ featuredFeatures:
         title: Disburse a Payment
         description: Use this API to send payments in as little as 5 seconds!
         type: "patch"        
-        path: /ddp/v1/payments/{id}/disburse&branch=develop&version=1.0.0
+        path: /ddp/v1/payments/{id}/disburse&version=1.0.0
