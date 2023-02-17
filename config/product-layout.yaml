@@ -36,7 +36,7 @@ header:
     altText: DigitalDisbursements™
 featuredFeatures:
   - title: Operational Efficiency 
-    description:  Digital Disbursements offers operational efficiency by simplifying operations and reducing resource demand across treasury, accounting, technical, and support teams. Our single client portal provides settlement, reconciliation, and reporting for all your payout capabilities, streamlining your operations and enabling you to allocate resources more efficiently.
+    description:  Digital Disbursements simplifies operations and reduces resource demand, streamlining your payouts process. Our client portal provides settlement, reconciliation, and reporting for all payout capabilities.
     relatedDocs:
       - relatedDoc: 
         title: Portal Flow
@@ -53,14 +53,14 @@ featuredFeatures:
         type: post        
         path: /ddp/v1/payments&version=1.0.0
   - title: Built-in Security
-    description:  Digital Disbursements provides built-in security features such as fraud prevention, tokenization, and optimization that reduce risk and ensure high approval rates. By leveraging our value-added services, businesses can eliminate the PCI burden, secure payment credentials, and achieve the highest approval rates.
+    description:  Digital Disbursements reduces risk and ensures high approval rates with built-in fraud prevention, tokenization, and optimization. You can also leverage functionality that eliminates PCI Burden.
     relatedDocs:
       - relatedDoc: 
         title: FAQs
         description: Take a look at our FAQa. 
         link: docs/faq/faq.md
   - title: Recipient benefits
-    description:  Digital Disbursements provides recipients with access to a variety of payout methods, allowing them to choose their preferred method of receiving funds. Recipients can easily select payment preferences, with the ability to split single payouts to multiple endpoints, and can complete payouts in "guest mode" for added convenience.
+    description:  Digital Disbursements offers recipients access to a variety of payout methods and the ability to select payment preferences in a variety of languages. Recipients can receive funds instantly day or night.
     relatedDocs:
       - relatedDoc: 
         title: Create a Payment
