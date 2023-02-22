@@ -1,6 +1,6 @@
 # Error Codes
 
-Listed below are the error codes being returned during DDP operations. The codes are seperated into sections based on what was being done in the software at the time the error occured.
+Listed below are the error codes being returned during DDP operations. The codes are separated into sections based on what was being done in the software at the time the error occurred.
 
 ## Payment Services (General)
 
@@ -39,7 +39,7 @@ Listed below are the error codes being returned during DDP operations. The codes
 |/payments/{id}/cancel  | 400034 | Do not allow merchants to cancel ACH transactions after 5 days of the transaction. | """ACH cancellation is not possible after 5 days of payout."""|
 |/payments  | 400021 | If source and token is different in disbursement request. | """Source/Token mismatch"""|
 
-#  Paysecure Adapter for Debit Disbursement Method
+## Paysecure Adapter for Debit Disbursement Method
 
 |API | Error code | Scenario | Error message|
 |--- | -----------|--------- | -------------|
@@ -105,7 +105,7 @@ Listed below are the error codes being returned during DDP operations. The codes
 |/payments  | 400025 |  | Invalid request format/data.  |
 |/payments  | 400026 |  | Invalid request format/data.  |
 |/payments  | 400027 |  | Invalid request format/data.  |
-|/payments  | 500004 |  | Ofac service is not available. Please try again later.  |
+|/payments  | 500004 |  | OFAC service is not available. Please try again later.  |
 |/payments  | 500004 |  | Fraud service is not available.Please try again later.  |
 |/payments  | 500004 |  | AWS store is not available.Please try again later.  |
 |/payments  | 401021 |  | "Authentication failed  access  Invalid code"") | "|
@@ -116,7 +116,7 @@ Listed below are the error codes being returned during DDP operations. The codes
 |/payments  | 400061 |  | Invalid Transaction  Notification  Invalid Transaction.|
 |/payments  | 400062 |  | Invalid Recipient Id  Recipient  Invalid Recipient Id.|
 |/payments  | 400063 |  | Fraud Failed  Fraud  Fraud Failed.|
-|/payments  | 400064 |  | Ofac Failed  Ofac  Ofac Failed.|
+|/payments  | 400064 |  | OFAC Failed  OFAC  OFAC Failed.|
 |/payments  | 400065 |  | Invalid Transaction Id.  common  Invalid Transaction Id.|
 |/payments  | 400066 |  | Invalid Payment Id.  common  Invalid Payment Id.|
 |/payments  | 400030 |  | "This service is down at the moment |  please try again later. "|
@@ -142,8 +142,8 @@ Listed below are the error codes being returned during DDP operations. The codes
 |API | Error code | Scenario | Error message|
 |--- | -----------|--------- | -------------|
 |/otp | 401091 | Invalid request format/data | Invalid or Missing otp|
-|/otp | 400092 | Passing invalid recipeint Id | Invalid or missing recipient profile|
-|/otp | 401093 | Invalid request format/data | OTP has been rejetced.|
+|/otp | 400092 | Passing invalid recipient Id | Invalid or missing recipient profile|
+|/otp | 401093 | Invalid request format/data | OTP has been rejected.|
 |/otp | 400091 |  | Invalid request format/data|
 |/otp | 400092 |  | Invalid or missing recipient profile|
 |/otp | 400093 |  | User already exists.|

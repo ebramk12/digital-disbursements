@@ -1,6 +1,6 @@
 # Introduction
 
-<!-- There are a few things necessary to get started and make your first disbursement using Fiserv's Services. The High level stepss are as follows: -->
+<!-- There are a few things necessary to get started and make your first disbursement using Fiserv's Services. The High level steps are as follows: -->
 
 1) Determine the integration path you want to take.
 2) Request a test environment.

@@ -123,7 +123,7 @@ Objective Merchant will want to initiate a payment for a Multi company recipient
 
 ### Option 1e: Cancel a Payment
 
-Merchant can only cancel payments that are in a “Pending” status. Once a disbursement method has been selected by the recipient, the payment is no longer able to be cancelled. Aftr disbursement cancellation only applicable to ACH, Coinbase, E-check, Venmo and PayPal.
+Merchant can only cancel payments that are in a “Pending” status. Once a disbursement method has been selected by the recipient, the payment is no longer able to be cancelled. After disbursement cancellation only applicable to ACH, Coinbase, E-check, Venmo and PayPal.
 
 Clients are able to initiate a payment cancellation at any time during the process, unless the disbursement is being processed. When a cancellation is successful:
 

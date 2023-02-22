@@ -240,7 +240,7 @@ No. We mandate epoch & there is a separate field for version. This is standardiz
 - FTP - Will it be the same from Outgoing as well as incoming files
 - PGP - Used in file export from RK to Fiserv
 
-This FTP and PGP key information is given by our MFT team once the mailboxes are setup. Prior to this we need a File Gateway Onboarding form completed by the client. If there are any questions or concerns with this process the MFT team (@Hannon, Lynne (Omaha)/@Miriyala, Srinivasa (US - Georgia)) should be able to provide assistance or point you in the right direction as they are the main contacts of the MFT team. Once this is filled out we can submit a ticket to our MFT team to get this setup completed. Once this is completed then they should have the FTP and PGP key information readily available to be shared.
+This FTP and PGP key information is given by our MFT team once the mailboxes are setup. Prior to this we need a File Gateway Onboarding form completed by the client. If there are any questions or concerns with this process the MFT team should be able to provide assistance or point you in the right direction. Once this is filled out we can submit a ticket to our MFT team to get this setup completed. Once this is completed then they should have the FTP and PGP key information readily available to be shared.
   
 </details>
 

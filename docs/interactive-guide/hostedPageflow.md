@@ -11,46 +11,46 @@ There are 4 roles
 
 ![Hosted Role](../../../../assets/images/hosted_roles.png)
 
-**1.1 Mobile Application (App)** - This could be a native mobile application running on IOS or Android devices. This could also be a web application running on a browser.
+**Mobile Application (App)** - This could be a native mobile application running on IOS or Android devices. This could also be a web application running on a browser.
 
-**1.2 Mobile Application Server (MAS)** - This is a server which is a
-communication bridge between the App and uCom. It also stores uCom developer account information like app id, app secret, and encryption key securely.
+**Mobile Application Server (MAS)** - This is a server which is a communication bridge between the App and uCom. It also stores uCom developer account information like app id, app secret, and encryption key securely.
 
-**1.3 Hosted Page (HP)** - This is a web page rendered on native webview or
-browser which will display the UI to let user enter their account information like Credit card, debit card, gift card etc. This page securely captures the account information from user and passes it to uCom server. When finished, the page sends the result to redirectUrl. 1.4 uCom Server (uCom) - This is the Fiserv solution server which provides all the apis. This server sits behind Apigee.
+**Hosted Page (HP)** - This is a web page rendered on native webview or browser which will display the UI to let user enter their account information like Credit card, debit card, gift card etc. This page securely captures the account information from user and passes it to uCom server. When finished, the page sends the result to redirectUrl. 1.4 uCom Server (uCom) - This is the Fiserv solution server which provides all the apis. This server sits behind Apigee.
 
 ## 2. Setup
 
-We need following parameters to use HP.
+We need the following parameters to use a Hosted Page.
 
-**2.1. Api-Key** - This will be generated for you when you create an Apigee account. This should be saved securely on MAS and shared with App. Api-key is fixed for a merchant. 2.2. Api-Secret - This will be generated for you when you create an Apigee account. This should be saved securely on the application server. This should NOT be shared with app. Api-key is fixed for a merchant.
+<!-- **Api-Key** - This will be generated for you when you create an Apigee account. This should be saved securely on MAS and shared with App. Api-key is fixed for a merchant. 2.2. Api-Secret - This will be generated for you when you create an Apigee account. This should be saved securely on the application server. This should NOT be shared with app. Api-key is fixed for a merchant. -->
 
-**2.3. Redirect Url/MAS Url (Asynchronous)** - All the Hosted pages
-responses(error/success) will be responded back to JavaScript main return callback only. Responses should be parsed and handled from JavaScript callback. Additionally same responses will be delivered to your MAS URL by Hosted pages via HTTP POST (Ajax Call) asynchronously. This API should be provided by MAS. MAS has to enable CORS for Fiserv origin “int.api.firstdata.com/cat.api.firstdata.com /prod.api.firstdata.com””. This can be used for auditing purposes when web browser or app got crashed accidentally.
+**Redirect Url/MAS Url (Asynchronous)** - All the Hosted pages responses(error/success) will be responded back to JavaScript main return callback only. Responses should be parsed and handled from JavaScript callback. Additionally same responses will be delivered to your MAS URL by Hosted pages via HTTP POST (Ajax Call) asynchronously. This API should be provided by MAS. MAS has to enable CORS for Fiserv origin “int.api.firstdata.com/cat.api.firstdata.com /prod.api.firstdata.com””. This can be used for auditing purposes when web browser or app got crashed accidentally.
 
-**2.4. FDCustomerId** - This must be obtained using other uCom apis. This is optional when you initiate SDK with guest checkout option.  
+**FDCustomerId** - This must be obtained using other uCom apis. This is optional when you initiate SDK with guest checkout option.  
 
-**2.5. PageLink (url and relation)** - This is the unique page which is going to display the use case. Url is the address where page is hosted, and Relation is the name of the use case. PageLink can be retrieved run time via the api (ucom/v1/hostedpages/pages) and can be cached. We prefer that PageLink should be freshly fetched. The page contents are configured offline.
+**PageLink (url and relation)** - This is the unique page which is going to display the use case. Url is the address where page is hosted, and Relation is the name of the use case. PageLink can be retrieved run time via the api (ucom/v1/hostedpages/pages) and can be cached. We prefer that PageLink should be freshly fetched. The page contents are configured offline.
 
 ## 3. Flow
 
 ![Hosted Flow](../../../../assets/images/hosted_flow.png)
 
-### 3.1 Start a New Session
+### Start a New Session
 
 App calls MAS to get tokenId, encryptionKey and pageLink. tokenId and encryptionKey should not be cached or stored on the app and should be fetched from MAS. The tokenId and encryptionKey expires frequently and therefore this step should be done every time user starts the flow.
 
 ![Hosted Session](../../../../assets/images/hosted_session.png)
 
-**3.1.1. App calls MAS** The api between app and MAS is not part of this document. It’s up to the merchant to decide this part of the transaction.
+### App calls MAS
 
-**3.1.2. MAS calls uCom to getToken** MAS has to call uCom to get a tokenId. MAS should not cache the tokenId. getToken call will provide the one time session token and public key which needs to be passed to SDK to launch HP.
+The api between app and MAS is not part of this document. It’s up to the merchant to decide this part of the transaction.
 
-**Api (HTTP GET)**
+### MAS calls uCom to getToken
 
-CAT:    <https://int.api.firstdata.com/ucom/v1/tokens>
-PREPROD: <https://cat.api.firstdata.com/ucom/v1/tokens>
-PROD:    <https://prod.api.firstdata.com/ucom/v1/tokens>
+MAS has to call uCom to get a tokenId. MAS should not cache the tokenId. getToken call will provide the one time session token and public key which needs to be passed to SDK to launch HP.
+
+<-- theme: success -->
+>Api (HTTP GET)
+>CAT:    <https://int.api.firstdata.com/ucom/v1/tokens>
+>PROD:    <https://prod.api.firstdata.com/ucom/v1/tokens>
 
 **Headers**
 

@@ -86,7 +86,7 @@ Step 1:  Select the “Add New” Button
 
 Step 2:  Complete all required fields and any optional fields that are needed.
 
-![bulkload](../../../../assets/images/bulkload.png)
+![bulk load](../../../../assets/images/bulkload.png)
 
 Step 3:  Select the “Add Button” if additional line items are needed.
 
