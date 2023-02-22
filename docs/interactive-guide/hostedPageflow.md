@@ -9,7 +9,7 @@ The scope of the document is to describe how to use the Hosted Page. It is not i
 
 There are 4 roles
 
-![Hotsed Role](../../../../assets/images/hosted_roles.png)
+![Hosted Role](../../../../assets/images/hosted_roles.png)
 
 **1.1 Mobile Application (App)** - This could be a native mobile application running on IOS or Android devices. This could also be a web application running on a browser.
 
@@ -26,21 +26,21 @@ We need following parameters to use HP.
 **2.1. Api-Key** - This will be generated for you when you create an Apigee account. This should be saved securely on MAS and shared with App. Api-key is fixed for a merchant. 2.2. Api-Secret - This will be generated for you when you create an Apigee account. This should be saved securely on the application server. This should NOT be shared with app. Api-key is fixed for a merchant.
 
 **2.3. Redirect Url/MAS Url (Asynchronous)** - All the Hosted pages
-responses(error/success) will be responded back to JavaScript main return callback only. Responses should be parsed and handled from JavaScript callback. Additionally same responses will be delivered to your MAS URL by Hosted pages via HTTP POST (Ajax Call) asynchronously. This API should be provided by MAS. MAS has to enable CORS for Fiserv origin “int.api.firstdata.com/cat.api.firstdata.com /prod.api.firstdata.com””. This can be used for auditing purposes when web browser or app got crashed accidently.
+responses(error/success) will be responded back to JavaScript main return callback only. Responses should be parsed and handled from JavaScript callback. Additionally same responses will be delivered to your MAS URL by Hosted pages via HTTP POST (Ajax Call) asynchronously. This API should be provided by MAS. MAS has to enable CORS for Fiserv origin “int.api.firstdata.com/cat.api.firstdata.com /prod.api.firstdata.com””. This can be used for auditing purposes when web browser or app got crashed accidentally.
 
-**2.4. FDCustomerId** - This must be obtained using other uCom apis. This is optional when you initate SDK with guest checkout option.  
+**2.4. FDCustomerId** - This must be obtained using other uCom apis. This is optional when you initiate SDK with guest checkout option.  
 
 **2.5. PageLink (url and relation)** - This is the unique page which is going to display the use case. Url is the address where page is hosted, and Relation is the name of the use case. PageLink can be retrieved run time via the api (ucom/v1/hostedpages/pages) and can be cached. We prefer that PageLink should be freshly fetched. The page contents are configured offline.
 
 ## 3. Flow
 
-![Hotsed Flow](../../../../assets/images/hosted_flow.png)
+![Hosted Flow](../../../../assets/images/hosted_flow.png)
 
 ### 3.1 Start a New Session
 
 App calls MAS to get tokenId, encryptionKey and pageLink. tokenId and encryptionKey should not be cached or stored on the app and should be fetched from MAS. The tokenId and encryptionKey expires frequently and therefore this step should be done every time user starts the flow.
 
-![Hotsed Session](../../../../assets/images/hosted_session.png)
+![Hosted Session](../../../../assets/images/hosted_session.png)
 
 **3.1.1. App calls MAS** The api between app and MAS is not part of this document. It’s up to the merchant to decide this part of the transaction.
 
@@ -191,7 +191,7 @@ Note: Webview redirection listener URL should be decoded before handle it.
 15.  }   
 16.   
 17. #Once webview loaded then pass configuration object and call HP javascript method   
-18. - (void) webView:(WKWebView *)webView didFinishNavigation:(WKNavigation *)navigatio n {   
+18. - (void) webView:(WKWebView *)webView didFinishNavigation:(WKNavigation *)navigation {   
 19. MAS *sharedInstance = [MAS masSharedManager];   
 20. NSString *execTemplate =    
 21. @"uComClient.init({   
@@ -212,7 +212,7 @@ Note: Webview redirection listener URL should be decoded before handle it.
 36. }   
 
 38. #pragma mark WKNavigationDelegate methods (Redirection Listener Methods)   
-39. - (void) webView:(WKWebView *)webView decidePolicyForNavigationAction:(WKNavigation Action *)navigationAction decisionHandler:(void (^)(WKNavigationActionPolicy))decisionH andler {   
+39. - (void) webView:(WKWebView *)webView decidePolicyForNavigationAction:(WKNavigation Action *)navigationAction decisionHandler:(void (^)(WKNavigationActionPolicy))decision handler {   
 40. //Step 4 - Handle finish redirection   
 41. NSString *requestURL = navigationAction.request.URL.absoluteString;   
 42. NSLog(@"Redirect has occurred ...");   
@@ -225,7 +225,7 @@ Note: Webview redirection listener URL should be decoded before handle it.
 49. decisionHandler(WKNavigationActionPolicyCancel);   
 50. NSString *resultStr = [[requestURL componentsSeparatedByString:@"ucom://fin ish?response="].lastObject stringByRemovingPercentEncoding];   
 51. UIAlertController *alertController = [UIAlertController alertControllerWith Title:@"Result" message:resultStr preferredStyle:UIAlertControllerStyleAlert];   
-52. UIAlertAction *okButton = [UIAlertAction actionWithTitle:@"OK" style:UIAler tActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {   
+52. UIAlertAction *okButton = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {   
 53. [self.navigationController popViewControllerAnimated:YES];   
 54. }];   
 55. [alertController addAction:okButton];   
@@ -329,7 +329,7 @@ protected void onCreate(Bundle savedInstanceState) {
   | PROD   | PRODUCTION  |
 
 2. Initialize the SDK with SDK configuration params by call this **ucomSDK.init()** method
-  a. Pass access toekn
+  a. Pass access token
   b. Pass API Key
   c. Pass fdCustomerId d: Pass pageURL
   e: Pass Mount Id where SDK needs to be mounted on the screen f. Pass EncryptionKey
