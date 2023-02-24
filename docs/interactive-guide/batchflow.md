@@ -4,13 +4,13 @@ This guide documents the Batch as used by the Digital Payout product. The Batch 
 
 • Merchant should upload files to SFTP location with below file name pattern. Each segment is separated by dot (.)
 
-• FLXI{FLEX_MID}.{TYPE}.{EPOCH}.{NAME}.{VERSION}.{EXT}.csv; Sample File name : FLXINMM.CI.1654537809.BAT97.1.csv
+• FLXPI{FLEX_MID}.{TYPE}.{EPOCH}.{NAME}.{VERSION}.{EXT}.csv; Sample File name : FLXPINMM.CI.1654537809.BAT97.1.csv
 
 The below table identifies the parameters of File format.
 
 | Variable   | Description                | Ex    |
 | --------  | ----------------------------------------------------------------------| ------- |
-| `FLXI`   | Constant                |      |
+| `FLXPI`   | Constant                |      |
 | `FLEX_MID` | Alpha Numeric Flex MID provided to merchant at the time of onboarding. max-length = 3  | SF,NMM  |
 | `TYPE`   | 2 letter record type  CI Create Recipient & Initiate Payment, IP Initiate Payment, CP Cancel Payment, CR Create Recipient, UR Update Recipient                 | CI   |
 | `EPOCH`  | number of seconds that have elapsed since January 1, 1970 (midnight UTC/GMT) | 1654537809 |
@@ -24,7 +24,7 @@ INBOUND FDFG moves files from MERCHANT's mail-box to SFTP '/available/' director
 
 OUTBOUND FDFG moves files from SFTP '/' directory with file-name <OUTBOUND_JOB_ID><FILE_NAME> to MERCHANT mail-box with <OUTBOUND_JOB_ID><FILE_NAME>
 
-Both JOB_IDs should be different; Ex : INBOUD FLXI<MID>   OUTBOUND FLXO<MID>
+Both JOB_IDs should be different; Ex : INBOUD FLXPI<MID>   OUTBOUND FLXPO<MID>
 
 ## Inbound file
 
@@ -67,7 +67,7 @@ Refer below table for DDP CSV Fields
 >"1.00","USD","526287175883","vmfs","Claims","Consumer","test.maridu@test.com","Test","Maridu","19890628","","","","2900 Westside Pkwy","Alpharetta","GA","30004","USA","","a298fc671a505445","Custom Recipient 1"
 >"1.00","USD","526287175883","pvgc","Claims","Consumer","testvjec@test.com","Test","Maridu","19890628","","","","2900 Westside Pkwy","Alpharetta","GA","30004","USA","","a298fc671a505446","Custom Recipient 2"
 
-[Download Input file](?path=assets/FLXINMM.CI.1654537809.BAT97.1.csv)
+[Download Input file](?path=assets/FLXPINMM.CI.1654537809.BAT97.1.csv)
 
 ## Outbound file
 
@@ -75,9 +75,9 @@ Refer below table for DDP CSV Fields
 
 Ex: If merchant submits an inbound file with 100 records then outbound file should have 100 entries and their response info.
 
-• Outbound file name will be in FLXO{FLEX_MID}.{TYPE}.{EPOCH}.{NAME}.{VERSION}_Summary.{EXT}.csv format.
+• Outbound file name will be in FLXPO{FLEX_MID}.{TYPE}.{EPOCH}.{NAME}.{VERSION}_Summary.{EXT}.csv format.
 
- Ex : If inbound file is FLXINMM.CI.1654537809.BAT97.1.csv then. outbound file will be FLXONMM.CI.1654537809.BAT97.1.csv_Summary.csv
+ Ex : If inbound file is FLXPINMM.CI.1654537809.BAT97.1.csv then. outbound file will be FLXPONMM.CI.1654537809.BAT97.1.csv_Summary.csv
 
 ### Outbound file Mapping Details
 
@@ -105,7 +105,7 @@ CI|MERCHANT_ID|MERCHANT_CUSTOMER_ID|MERCHANT_TRANSACTION_ID|STATUS_CODE|STATUS_D
 >BT|2|2|0
 >FT|1|2|0
 
-[Download Output file](?path=assets/FLXONMM.CI.1654537809.BAT97.1_Summary)
+[Download Output file](?path=assets/FLXPONMM.CI.1654537809.BAT97.1_Summary)
 
 ### Sample Failure
 <!-- theme: danger -->
@@ -116,7 +116,7 @@ CI|MERCHANT_ID|MERCHANT_CUSTOMER_ID|MERCHANT_TRANSACTION_ID|STATUS_CODE|STATUS_D
 >BT|2|0|2
 >FT|1|0|2
 
-[Download Output file](?path=assets/FLXONMM.CI.1654537809.BAT97.2_Summary)
+[Download Output file](?path=assets/FLXPONMM.CI.1654537809.BAT97.2_Summary)
 
 ## See Also
 
