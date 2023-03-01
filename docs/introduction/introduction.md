@@ -1,13 +1,13 @@
 # Introduction
 
-<!-- There are a few things necessary to get started and make your first disbursement using Fiserv's Services. The High level steps are as follows: -->
+There are a few things necessary to get started and make your first disbursement using Fiserv's Services. The High level steps are as follows:
 
-1) Determine the integration path you want to take.
-2) Request a test environment.
-3) Work with our sales team to finalize a contract.
-4) Finalize and request your personal environment.
-5) Validate your use case and sign off on your personalized environment
-6) Begin Disbursing in lighting speed!
+1. Determine the integration path you want to take.
+2. Request a test environment.
+3. Work with our sales team to finalize a contract.
+4. Finalize and request your personal environment.
+5. Validate your use case and sign off on your personalized environment
+6. Begin Disbursing in lighting speed!
 
 Below you will find all the necessary information and resources to determine which integration path is right for you and get development of the ground with documentation of all of the digital disbursement's API services. Be sure to visit the [FAQ](?path=docs/faq/faq.md) if you have any questions. If you are ready to begin discussions with our sales or have any other questions, you can always contact us [here](https://www.carat.fiserv.com/en-us/contact/?utm_campaign=payouts_content).
 
