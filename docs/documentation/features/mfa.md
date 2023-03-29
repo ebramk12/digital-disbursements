@@ -16,12 +16,12 @@ Below the are the steps you have to follow
 
 ### Step 1 : Identity verification & OTP delivery preference
 
-(../../../../assets/images/md/otp1.png)
+![Step 1](../../../../assets/images/md/otp1.png)
 
 ### Step 2 : OTP delivery confirmation
 
-(../../../../assets/images/md/otp2.png)
+![Step 2](../../../../assets/images/md/otp2.png)
 
 ### Step 3 : OTP submission
 
-(../../../../assets/images/md/otp3.png)
+![Step 3](../../../../assets/images/md/otp3.png)
