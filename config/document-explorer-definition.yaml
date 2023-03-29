@@ -36,6 +36,8 @@
         sections:
         - title: Fraud
           link: docs/documentation/features/fraud.md
+        - title: Multi Factor Authentication
+          link: docs/documentation/features/mfa.md
         - title: Payment Options
           link: docs/documentation/features/payment-options.md
         - title: Tokenization
