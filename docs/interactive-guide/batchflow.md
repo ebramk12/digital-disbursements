@@ -68,7 +68,7 @@ Refer below table for DDP CSV Fields
 >"1.00","USD","526287175883","pvgc","Claims","Consumer","testvjec@test.com","Test","Maridu","19890628","","","","2900 Westside Pkwy","Alpharetta","GA","30004","USA","","a298fc671a505446","Custom Recipient 2"
 
 [Download Input file](../../assets/FLXPINMM.CI.1654537809.BAT97.1.csv)
-<a href='../../assets/FLXPINMM.CI.1654537809.BAT97.1.csv'>href Download</a>
+<a href="../../assets/FLXPINMM.CI.1654537809.BAT97.1.csv" href download>
 
 ## Outbound file
 
