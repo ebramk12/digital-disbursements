@@ -67,7 +67,8 @@ Refer below table for DDP CSV Fields
 >"1.00","USD","526287175883","vmfs","Claims","Consumer","test.maridu@test.com","Test","Maridu","19890628","","","","2900 Westside Pkwy","Alpharetta","GA","30004","USA","","a298fc671a505445","Custom Recipient 1"
 >"1.00","USD","526287175883","pvgc","Claims","Consumer","testvjec@test.com","Test","Maridu","19890628","","","","2900 Westside Pkwy","Alpharetta","GA","30004","USA","","a298fc671a505446","Custom Recipient 2"
 
-[Download Input file](?path=assets/FLXPINMM.CI.1654537809.BAT97.1.csv)
+[Download Input file](../../assets/FLXPINMM.CI.1654537809.BAT97.1.csv)
+<a href='../../assets/FLXPINMM.CI.1654537809.BAT97.1.csv'>href Download</a>
 
 ## Outbound file
 
