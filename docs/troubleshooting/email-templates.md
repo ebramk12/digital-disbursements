@@ -1,6 +1,8 @@
 # Email Templates
 
-DDP Offers the ability to send email notifications to recipients and to the merchant. This is done through HTML merging to generate emails based on templates. You can customize each notification or use one of out pre-made templates. Below you will find a list of each email notification that is available with a brief description and a link to the default template.
+DDP Offers the ability to send email notifications to recipients and to the merchant. This is done through HTML merging to generate emails based on templates. You can customize each notification or use one of our pre-made templates. Below you will find a list of events that will trigger email notifications and who (recipient or Client) they are intended for.
+
+![Email Template Example](..\..\assets\images\email_template.png)
 
 ## Email Notification Table
 
