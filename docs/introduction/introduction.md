@@ -91,7 +91,7 @@ link: ?path=docs/documentation/features/payment-options.md
 
 ## Services
 
-Below are some of the core services offered in the Digital Disbursements platform. If you are looking for a more guided approach be sure to visit the [Integration Options](Integration Options) above.
+Below are some of the core services offered in the Digital Disbursements platform. If you are looking for a more guided approach be sure to visit the [Integration Options](?path=docs/introduction/introduction.md&branch=develop#integration-options) above.
 
 <!-- type: row -->
 
