@@ -21,4 +21,15 @@ Enhance your fraud program with a simple, cost-effective and customizable digita
     **Economical** - Leverage Carat scale to reduce cost and prevent losses
 
 
-<<MORE DETAIL>>
+
+
+## Fraud System in DDP
+
+ There are two types of Fraud Systems we have in DDP
+
+ 1. ThreatMetrix (TMX) - Detects the use of technologies, such as hidden proxies and VPNs and helps your business detect payment fraud and see the true IP address, geolocation and other attributes of each event, backed by global identity data over time.
+
+ 2. Office of Foreign Assets Control  (OFAC)  - The U.S. Department of the Treasury has established an OFAC sanctions list against targeted individuals, groups, and entities to control international transactions and contribute to national security. These rules are governed by the Office of Foreign Assets Control (OFAC). 
+
+
+
