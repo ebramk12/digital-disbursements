@@ -312,3 +312,71 @@ if (method != 'GET' && method != 'DELETE') { var payload_digest = CryptoJS.SHA25
 var signature = CryptoJS.HmacSHA256(rawSignature, secret); postman.setEnvironmentVariable('time', time); postman.setEnvironmentVariable('signature', CryptoJS.enc.Base64.stringify(signature));
 
 </details>
+
+## Hosted Pages 
+
+<details>
+<summary>**How to enable CORS on Mobile App server?** </summary>
+
+Browser/App will be sending the preflight request (OPTIONS method) instead of actual method(POST/GET) to server when access different domain in ajax call. In this case, we have to handle and enable CORS in server to handle this preflight request. OPTIONS method has to be handled and respond with following request:
+
+```code
+access-control-allow-headers !ACCEPT, fdCustomerId, ORIGIN, 
+AUTHORIZATION, CONTENT-TYPE
+ access-control-allow-methods !POST, GET, OPTIONS
+ access-control-allow-origin !*
+ allow !GET, HEAD, POST, PUT, DELETE, TRACE, OPTIONS, PATCH
+ connection !Keep-Alive
+ content-language !en-US
+ content-length !0
+ date !Tue, 19 Dec 2017 23:14:23 GMT
+ keep-alive !timeout=10, max=100
+ x-powered-by !Servlet/3.0          
+```
+>Once browser/app receives the above as a response header then, it will subsequently invoke actual methods.
+
+</details>
+
+<details>
+<summary>**Does Hosted Pages support other Languages?**</summary>
+
+HP supports all texts in multiple languages. This process is manual and someone has to provide all texts displayed by HP in different languages. Please note that error messages from uCom server do not support multiple languages in current version.
+
+</details>
+
+<details>
+<summary>**How to enable Threatmetrix feature on Hosted Pages?**</summary>
+
+Threatmetrix feature can be enabled on HP when you pass the orgId and sessionId in SDK configuration parameters.
+
+</details>
+
+
+
+<details>
+<summary>**Is it possible to control the look and feel of Hosted Pages?** </summary>
+
+HP customization is limited. But it provides option to change the following style properties
+
+1. Background Color, Text color 
+1. Label Changes 
+1. Native Button (Form can be triggered from outside of iFrame)
+1. Fields position changes 
+1. Label position (Above or floating) Changes 
+1. Hint text changes 
+
+**Default View** 
+<center><img src="https://raw.githubusercontent.com/Fiserv/universal-commerce/develop/assets/images/HostedPages%20(1).jpeg" alt="HP Diagram" class="center"></center>
+**Error View** 
+
+ <center><img src="https://github.com/Fiserv/universal-commerce/blob/develop/assets/images/HostedPages%20(5).png?raw=true" alt="HP Diagram" class="center"></center>         
+          
+</details>
+
+
+<details>
+<summary>**Does Hosted Pages support Local Validation?**</summary>
+
+HP will do its own local validation of fields and show errors to the end-user as needed. Local validation is configurable. 
+
+</details>
